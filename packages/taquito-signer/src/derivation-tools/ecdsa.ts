@@ -2,7 +2,6 @@
 import { ec, curve } from 'elliptic';
 import { Hard, ExtendedPrivateKey } from './index';
 import createHmac from "create-hmac"
-import { SHA512 } from '@stablelib/sha512';
 import BN from 'bn.js';
 import { parseHex } from './utils';
 import { InvalidBitSize, InvalidCurveError, InvalidSeedLengthError, PrivateKeyError } from '../errors';

@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-this-alias */
 import createHmac from "create-hmac"
-import { SHA512 } from '@stablelib/sha512';
 import { generateKeyPairFromSeed } from '@stablelib/ed25519';
 import { ExtendedPrivateKey, Hard } from './index';
 import { parseHex } from './utils';
