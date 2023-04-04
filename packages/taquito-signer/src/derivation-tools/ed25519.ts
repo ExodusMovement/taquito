@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-this-alias */
-import { HMAC } from '@stablelib/hmac';
+import createHmac from "create-hmac"
 import { SHA512 } from '@stablelib/sha512';
 import { generateKeyPairFromSeed } from '@stablelib/ed25519';
 import { ExtendedPrivateKey, Hard } from './index';
@@ -32,7 +32,7 @@ export class PrivateKey implements ExtendedPrivateKey {
       throw new InvalidSeedLengthError(seed.length);
     }
     const key = new TextEncoder().encode(ed25519Key);
-    const sum = new HMAC(SHA512, key).update(seed).digest();
+    const sum = createHmac('sha512', Buffer.from(key)).update(seed).digest();
     return new PrivateKey(generateKeyPairFromSeed(sum.subarray(0, 32)).secretKey, sum.subarray(32));
   }
   /**
@@ -53,7 +53,7 @@ export class PrivateKey implements ExtendedPrivateKey {
     const data = new Uint8Array(37);
     data.set(this.seed(), 1);
     new DataView(data.buffer).setUint32(33, index);
-    const sum = new HMAC(SHA512, this.chainCode).update(data).digest();
+    const sum = createHmac('sha512', Buffer.from(this.chainCode)).update(data).digest();
     return new PrivateKey(generateKeyPairFromSeed(sum.subarray(0, 32)).secretKey, sum.subarray(32));
   }
   /**

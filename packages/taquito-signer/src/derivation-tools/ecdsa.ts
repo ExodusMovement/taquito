@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-this-alias */
 import { ec, curve } from 'elliptic';
 import { Hard, ExtendedPrivateKey } from './index';
-import { HMAC } from '@stablelib/hmac';
+import createHmac from "create-hmac"
 import { SHA512 } from '@stablelib/sha512';
 import BN from 'bn.js';
 import { parseHex } from './utils';
@@ -57,7 +57,7 @@ export class PrivateKey implements ExtendedPrivateKey {
     let chain: Uint8Array = new Uint8Array();
     let i = 0;
     while (i === 0) {
-      const sum = new HMAC(SHA512, key).update(seed).digest();
+      const sum = createHmac('sha512', Buffer.from(key)).update(seed).digest();
       d = new BN(sum.subarray(0, 32));
       chain = sum.subarray(32);
       if (d.isZero() || d.cmp(c.n as BN) >= 0) {
@@ -90,7 +90,7 @@ export class PrivateKey implements ExtendedPrivateKey {
     let chain: Uint8Array = new Uint8Array;
     let i = 0;
     while (i === 0) {
-      const sum = new HMAC(SHA512, this.chainCode).update(data).digest();
+      const sum = createHmac('sha512', Buffer.from(this.chainCode)).update(data).digest();
       d = new BN(sum.subarray(0, 32));
       chain = sum.subarray(32);
       if (this.keyPair.ec.n && d.cmp(this.keyPair.ec.n as BN) < 0) {

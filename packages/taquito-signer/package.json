@@ -69,7 +69,6 @@
   "dependencies": {
     "@stablelib/blake2b": "^1.0.1",
     "@stablelib/ed25519": "^1.0.3",
-    "@stablelib/hmac": "^1.0.1",
     "@stablelib/nacl": "^1.0.4",
     "@stablelib/pbkdf2": "^1.0.1",
     "@stablelib/sha512": "^1.0.1",
@@ -77,12 +76,14 @@
     "@taquito/utils": "^16.1.1",
     "@types/bn.js": "^5.1.1",
     "bip39": "^3.0.4",
+    "create-hmac": "^1.1.7",
     "elliptic": "^6.5.4",
     "pbkdf2": "^3.1.2",
     "typedarray-to-buffer": "^4.0.0"
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.36",
+    "@types/create-hmac": "^1.1.0",
     "@types/elliptic": "^6.4.14",
     "@types/jest": "^26.0.23",
     "@types/node": "^16",
