@@ -1,4 +1,4 @@
-import { verify } from '@stablelib/ed25519';
+import * as nacl from "tweetnacl";
 import blake from 'blakejs';
 import {
   b58cdecode,
@@ -113,7 +113,7 @@ function verifyEdSignature(
   decodedPublicKey: Uint8Array
 ) {
   try {
-    return verify(decodedPublicKey, bytesHash, decodedSig);
+    return nacl.sign.detached.verify(bytesHash, decodedSig, decodedPublicKey);
   } catch (e) {
     return false;
   }
