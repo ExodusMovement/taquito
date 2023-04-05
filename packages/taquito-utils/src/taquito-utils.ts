@@ -12,7 +12,6 @@
 import { Buffer } from 'buffer';
 import { Prefix, prefix, prefixLength } from './constants';
 import { validatePkAndExtractPrefix } from './verify-signature';
-import { hash } from '@stablelib/blake2b';
 import blake from 'blakejs';
 import bs58check from 'bs58check';
 import { ValueConversionError, InvalidHexStringError } from './errors';
@@ -317,7 +316,7 @@ export const getPkhfromPk = (publicKey: string): string => {
       prefixLen = prefixLength[Prefix.TZ4];
   }
 
-  const hashed = hash(decoded, prefixLen);
+  const hashed = blake.blake2b(decoded, undefined, prefixLen);
   const result = b58cencode(hashed, encodingPrefix);
 
   return result;

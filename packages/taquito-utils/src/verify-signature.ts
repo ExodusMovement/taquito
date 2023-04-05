@@ -1,5 +1,5 @@
 import { verify } from '@stablelib/ed25519';
-import { hash } from '@stablelib/blake2b';
+import blake from 'blakejs';
 import {
   b58cdecode,
   buf2hex,
@@ -46,7 +46,7 @@ export function verifySignature(
 
   const decodedPublicKey = b58cdecode(publicKey, prefix[pkPrefix]);
   const decodedSig = b58cdecode(signature, prefix[sigPrefix]);
-  const bytesHash = hash(hex2buf(validateMessageNotEmpty(messageBytes)), 32);
+  const bytesHash = blake.blake2b(hex2buf(validateMessageNotEmpty(messageBytes)), undefined, 32);
 
   if (pkPrefix === Prefix.EDPK) {
     return verifyEdSignature(decodedSig, bytesHash, decodedPublicKey);
