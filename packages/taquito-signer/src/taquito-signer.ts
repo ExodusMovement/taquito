@@ -2,7 +2,7 @@
  * @packageDocumentation
  * @module @taquito/signer
  */
-import { openSecretBox } from '@stablelib/nacl';
+import * as nacl from "tweetnacl";
 import blake from 'blakejs';
 import { hex2buf, mergebuf, b58cencode, prefix, InvalidKeyError } from '@taquito/utils';
 import toBuffer from 'typedarray-to-buffer';
@@ -100,10 +100,10 @@ export class InMemorySigner {
         const encryptedSk = constructedKey.slice(8);
         const encryptionKey = pbkdf2.pbkdf2Sync(passphrase, salt, 32768, 32, 'sha512');
 
-        return openSecretBox(
-          new Uint8Array(encryptionKey),
+        return nacl.secretbox.open(
+          new Uint8Array(encryptedSk),
           new Uint8Array(24),
-          new Uint8Array(encryptedSk)
+          new Uint8Array(encryptionKey)
         );
       };
     }
