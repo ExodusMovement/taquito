@@ -67,13 +67,13 @@
     ]
   },
   "dependencies": {
-    "@stablelib/blake2b": "^1.0.1",
     "@stablelib/nacl": "^1.0.4",
     "@stablelib/pbkdf2": "^1.0.1",
     "@taquito/taquito": "^16.1.1",
     "@taquito/utils": "^16.1.1",
     "@types/bn.js": "^5.1.1",
     "bip39": "^3.0.4",
+    "blakejs": "^1.2.1",
     "create-hmac": "^1.1.7",
     "elliptic": "^6.5.4",
     "pbkdf2": "^3.1.2",

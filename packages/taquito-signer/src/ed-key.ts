@@ -1,4 +1,4 @@
-import { hash } from '@stablelib/blake2b';
+import blake from 'blakejs';
 import * as nacl from "tweetnacl";
 import {
   b58cencode,
@@ -81,7 +81,7 @@ export class Tz1 {
    */
   async publicKeyHash(): Promise<string> {
     await this.isInit;
-    return b58cencode(hash(new Uint8Array(this._publicKey), 20), prefix.tz1);
+    return b58cencode(blake.blake2b(new Uint8Array(this._publicKey), undefined, 20), prefix.tz1);
   }
 
   /**

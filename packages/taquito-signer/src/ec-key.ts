@@ -1,4 +1,4 @@
-import { hash } from '@stablelib/blake2b';
+import blake from 'blakejs';
 import { b58cencode, b58cdecode, prefix, isValidPrefix, InvalidKeyError } from '@taquito/utils';
 import toBuffer from 'typedarray-to-buffer';
 import elliptic from 'elliptic';
@@ -84,7 +84,7 @@ export class ECKey {
    * @returns Encoded public key hash
    */
   async publicKeyHash(): Promise<string> {
-    return b58cencode(hash(new Uint8Array(this._publicKey), 20), pref[this.curve].pkh);
+    return b58cencode(blake.blake2b(new Uint8Array(this._publicKey), undefined, 20), pref[this.curve].pkh);
   }
 
   /**

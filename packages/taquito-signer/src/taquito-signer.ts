@@ -3,7 +3,7 @@
  * @module @taquito/signer
  */
 import { openSecretBox } from '@stablelib/nacl';
-import { hash } from '@stablelib/blake2b';
+import blake from 'blakejs';
 import { hex2buf, mergebuf, b58cencode, prefix, InvalidKeyError } from '@taquito/utils';
 import toBuffer from 'typedarray-to-buffer';
 import { Tz1 } from './ed-key';
@@ -137,7 +137,7 @@ export class InMemorySigner {
       bb = mergebuf(watermark, bb);
     }
 
-    const bytesHash = hash(bb, 32);
+    const bytesHash = blake.blake2b(bb, undefined, 32);
 
     return this._key.sign(bytes, bytesHash);
   }
