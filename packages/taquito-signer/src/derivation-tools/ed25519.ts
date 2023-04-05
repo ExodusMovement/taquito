@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-this-alias */
 import createHmac from "create-hmac"
-import { generateKeyPairFromSeed } from '@stablelib/ed25519';
+import * as nacl from "tweetnacl";
 import { ExtendedPrivateKey, Hard } from './index';
 import { parseHex } from './utils';
 import { InvalidDerivationPathError, InvalidSeedLengthError } from '../errors';
@@ -32,7 +32,8 @@ export class PrivateKey implements ExtendedPrivateKey {
     }
     const key = new TextEncoder().encode(ed25519Key);
     const sum = createHmac('sha512', Buffer.from(key)).update(seed).digest();
-    return new PrivateKey(generateKeyPairFromSeed(sum.subarray(0, 32)).secretKey, sum.subarray(32));
+    const { secretKey } = nacl.sign.keyPair.fromSeed(sum.subarray(0, 32));
+    return new PrivateKey(secretKey, sum.subarray(32));
   }
   /**
    *
@@ -53,7 +54,8 @@ export class PrivateKey implements ExtendedPrivateKey {
     data.set(this.seed(), 1);
     new DataView(data.buffer).setUint32(33, index);
     const sum = createHmac('sha512', Buffer.from(this.chainCode)).update(data).digest();
-    return new PrivateKey(generateKeyPairFromSeed(sum.subarray(0, 32)).secretKey, sum.subarray(32));
+    const { secretKey } = nacl.sign.keyPair.fromSeed(sum.subarray(0, 32));
+    return new PrivateKey(secretKey, sum.subarray(32));
   }
   /**
    * @param path array of numbers pre adjusted for hardened paths ie: 44' -> 2^31 + 44

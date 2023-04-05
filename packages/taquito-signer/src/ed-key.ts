@@ -1,5 +1,5 @@
 import { hash } from '@stablelib/blake2b';
-import { generateKeyPairFromSeed, sign } from '@stablelib/ed25519';
+import * as nacl from "tweetnacl";
 import {
   b58cencode,
   b58cdecode,
@@ -42,7 +42,7 @@ export class Tz1 {
 
   private async init() {
     if (this._key.length !== 64) {
-      const { publicKey, secretKey } = generateKeyPairFromSeed(new Uint8Array(this._key));
+      const { publicKey, secretKey } = nacl.sign.keyPair.fromSeed(this._key)
       this._publicKey = publicKey;
       this._key = secretKey;
     }
@@ -56,7 +56,7 @@ export class Tz1 {
    */
   async sign(bytes: string, bytesHash: Uint8Array) {
     await this.isInit;
-    const signature = sign(new Uint8Array(this._key), new Uint8Array(bytesHash));
+    const signature = nacl.sign.detached(new Uint8Array(bytesHash), new Uint8Array(this._key));
     const signatureBuffer = toBuffer(signature);
     const sbytes = bytes + buf2hex(signatureBuffer);
 
@@ -90,7 +90,7 @@ export class Tz1 {
   async secretKey(): Promise<string> {
     await this.isInit;
     let key = this._key;
-    const { secretKey } = generateKeyPairFromSeed(new Uint8Array(key).slice(0, 32));
+    const { secretKey } = nacl.sign.keyPair.fromSeed(new Uint8Array(key).slice(0, 32))
     key = toBuffer(secretKey);
 
     return b58cencode(key, prefix[`edsk`]);

@@ -68,7 +68,6 @@
   },
   "dependencies": {
     "@stablelib/blake2b": "^1.0.1",
-    "@stablelib/ed25519": "^1.0.3",
     "@stablelib/nacl": "^1.0.4",
     "@stablelib/pbkdf2": "^1.0.1",
     "@taquito/taquito": "^16.1.1",
@@ -78,6 +77,7 @@
     "create-hmac": "^1.1.7",
     "elliptic": "^6.5.4",
     "pbkdf2": "^3.1.2",
+    "tweetnacl": "^1.0.3",
     "typedarray-to-buffer": "^4.0.0"
   },
   "devDependencies": {
