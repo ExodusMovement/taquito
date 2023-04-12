@@ -4,14 +4,14 @@ import { OperationEmitter } from '../operations/operation-emitter';
 import { Operation } from '../operations/operations';
 import { RPCActivateOperation } from '../operations/types';
 import { TzProvider } from './interface';
-import { OpKind } from '@taquito/rpc';
+import { OpKind } from '@exodus/taquito-rpc';
 import {
   validateAddress,
   ValidationResult,
   validateKeyHash,
   InvalidAddressError,
   InvalidKeyHashError,
-} from '@taquito/utils';
+} from '@exodus/taquito-utils';
 
 export class RpcTzProvider extends OperationEmitter implements TzProvider {
   constructor(context: Context) {

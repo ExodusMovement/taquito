@@ -6,9 +6,9 @@ import {
   MichelsonV1Expression,
   BallotVote,
   PvmKind,
-} from '@taquito/rpc';
+} from '@exodus/taquito-rpc';
 
-export { OpKind } from '@taquito/rpc';
+export { OpKind } from '@exodus/taquito-rpc';
 
 export type withKind<T, K extends OpKind> = T & { kind: K };
 

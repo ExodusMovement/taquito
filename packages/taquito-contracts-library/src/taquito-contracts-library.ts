@@ -1,11 +1,11 @@
 /**
  * @packageDocumentation
- * @module @taquito/contracts-library
+ * @module @exodus/taquito-contracts-library
  */
 
-import { EntrypointsResponse, ScriptedContracts } from '@taquito/rpc';
-import { Extension, Context } from '@taquito/taquito';
-import { validateAddress, ValidationResult } from '@taquito/utils';
+import { EntrypointsResponse, ScriptedContracts } from '@exodus/taquito-rpc';
+import { Extension, Context } from '@exodus/taquito-taquito';
+import { validateAddress, ValidationResult } from '@exodus/taquito-utils';
 import { InvalidAddressError, InvalidScriptFormatError } from './errors';
 import { ReadWrapperContractsLibrary } from './read-provider-wrapper';
 
@@ -18,8 +18,8 @@ interface ContractsData {
  *
  * @example
  * ```
- * import { ContractsLibrary } from '@taquito/contracts-library';
- * import { TezosToolkit } from '@taquito/taquito';
+ * import { ContractsLibrary } from '@exodus/taquito-contracts-library';
+ * import { TezosToolkit } from '@exodus/taquito-taquito';
  *
  * const Tezos = new TezosToolkit('rpcUrl');
  * const contractsLibrary = new ContractsLibrary();

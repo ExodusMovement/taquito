@@ -1,17 +1,17 @@
-import { ParameterSchema, Schema, ViewSchema } from '@taquito/michelson-encoder';
+import { ParameterSchema, Schema, ViewSchema } from '@exodus/taquito-michelson-encoder';
 import {
   EntrypointsResponse,
   MichelsonV1Expression,
   RpcClientInterface,
   ScriptResponse,
-} from '@taquito/rpc';
+} from '@exodus/taquito-rpc';
 import {
   validateChain,
   validateContractAddress,
   ValidationResult,
   InvalidChainIdError,
   DeprecationError,
-} from '@taquito/utils';
+} from '@exodus/taquito-utils';
 import { ChainIds } from '../constants';
 import { TzReadProvider } from '../read-provider/interface';
 import { Wallet } from '../wallet';

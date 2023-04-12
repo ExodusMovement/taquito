@@ -1,4 +1,4 @@
-import { OperationContentsAndResult, OperationContentsAndResultDrainDelegate } from '@taquito/rpc';
+import { OperationContentsAndResult, OperationContentsAndResultDrainDelegate } from '@exodus/taquito-rpc';
 import { Context } from '../context';
 import { Operation } from './operations';
 import { ForgedBytes, RPCDrainDelegateOperation } from './types';

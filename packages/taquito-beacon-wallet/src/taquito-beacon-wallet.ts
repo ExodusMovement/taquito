@@ -1,6 +1,6 @@
 /**
  * @packageDocumentation
- * @module @taquito/beacon-wallet
+ * @module @exodus/taquito-beacon-wallet
  */
 
 import {
@@ -21,7 +21,7 @@ import {
   WalletOriginateParams,
   WalletProvider,
   WalletTransferParams,
-} from '@taquito/taquito';
+} from '@exodus/taquito-taquito';
 
 export { VERSION } from './version';
 

@@ -3,7 +3,7 @@ import {
   MichelsonV1ExpressionBase,
   MichelsonV1ExpressionExtended,
   ScriptResponse,
-} from '@taquito/rpc';
+} from '@exodus/taquito-rpc';
 import { BigMapToken } from '../tokens/bigmap';
 import { createToken } from '../tokens/createToken';
 import { MapToken } from '../tokens/map';

@@ -5,7 +5,7 @@ import {
   TokenValidationError,
   SemanticEncoding,
 } from '../token';
-import { b58decode, encodePubKey, validateAddress, ValidationResult } from '@taquito/utils';
+import { b58decode, encodePubKey, validateAddress, ValidationResult } from '@exodus/taquito-utils';
 import { BaseTokenSchema } from '../../schema/types';
 
 export class AddressValidationError extends TokenValidationError {

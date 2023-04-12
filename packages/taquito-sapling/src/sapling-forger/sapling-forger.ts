@@ -4,7 +4,7 @@ import {
   SaplingTransactionOutput,
   SaplingTransactionPlaintext,
 } from '../types';
-import { char2Bytes, toHexBuf } from '@taquito/utils';
+import { char2Bytes, toHexBuf } from '@exodus/taquito-utils';
 import BigNumber from 'bignumber.js';
 
 export class SaplingForger {

@@ -1,4 +1,4 @@
-import { HttpResponseError } from '@taquito/http-utils';
+import { HttpResponseError } from '@exodus/taquito-http-utils';
 
 export function formatErrorMessage(error: HttpResponseError, stringToReplace: string) {
   const body = JSON.parse(error.body);

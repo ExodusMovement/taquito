@@ -1,11 +1,11 @@
 /**
  * @packageDocumentation
- * @module @taquito/ledger-signer
+ * @module @exodus/taquito-ledger-signer
  */
 
-import { Signer } from '@taquito/taquito';
+import { Signer } from '@exodus/taquito-taquito';
 import Transport from '@ledgerhq/hw-transport';
-import { b58cencode, prefix, Prefix, ProhibitedActionError } from '@taquito/utils';
+import { b58cencode, prefix, Prefix, ProhibitedActionError } from '@exodus/taquito-utils';
 import {
   appendWatermark,
   transformPathToBuffer,

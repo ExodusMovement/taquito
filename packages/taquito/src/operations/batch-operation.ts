@@ -1,4 +1,4 @@
-import { OperationContentsAndResult, OperationContentsAndResultOrigination } from '@taquito/rpc';
+import { OperationContentsAndResult, OperationContentsAndResultOrigination } from '@exodus/taquito-rpc';
 import BigNumber from 'bignumber.js';
 import { BATCH_KINDS } from '../batch/rpc-batch-provider';
 import { Context } from '../context';

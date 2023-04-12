@@ -1,12 +1,12 @@
-import { ViewSchema } from '@taquito/michelson-encoder';
+import { ViewSchema } from '@exodus/taquito-michelson-encoder';
 import {
   MichelsonV1Expression,
   MichelsonV1ExpressionExtended,
   RpcClientInterface,
   RPCRunCodeParam,
   RPCRunScriptViewParam,
-} from '@taquito/rpc';
-import { validateAddress, ValidationResult } from '@taquito/utils';
+} from '@exodus/taquito-rpc';
+import { validateAddress, ValidationResult } from '@exodus/taquito-utils';
 import { TzReadProvider } from '../../read-provider/interface';
 import {
   InvalidViewSimulationContext,

@@ -1,4 +1,4 @@
-import { OperationContentsAndResult, OperationContentsAndResultTransaction } from '@taquito/rpc';
+import { OperationContentsAndResult, OperationContentsAndResultTransaction } from '@exodus/taquito-rpc';
 import BigNumber from 'bignumber.js';
 import { Context } from '../context';
 import { flattenErrors, flattenOperationResult, MergedOperationResult } from './operation-errors';

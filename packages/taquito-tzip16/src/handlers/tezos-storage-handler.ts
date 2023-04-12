@@ -1,7 +1,7 @@
-import { Schema } from '@taquito/michelson-encoder';
-import { Context, ContractAbstraction, ContractProvider, Wallet } from '@taquito/taquito';
+import { Schema } from '@exodus/taquito-michelson-encoder';
+import { Context, ContractAbstraction, ContractProvider, Wallet } from '@exodus/taquito-taquito';
 import { Handler, Tzip16Uri } from '../metadata-provider';
-import { bytes2Char } from '@taquito/utils';
+import { bytes2Char } from '@exodus/taquito-utils';
 import {
   InvalidMetadataType,
   BigMapMetadataNotFound,

@@ -1,8 +1,8 @@
-import { Schema, Semantic } from '@taquito/michelson-encoder';
+import { Schema, Semantic } from '@exodus/taquito-michelson-encoder';
 import { BigMapAbstraction } from './big-map';
 import { ContractProvider } from './interface';
 import BigNumber from 'bignumber.js';
-import { MichelsonV1Expression } from '@taquito/rpc';
+import { MichelsonV1Expression } from '@exodus/taquito-rpc';
 import { SaplingStateAbstraction } from './sapling-state-abstraction';
 
 // Override the default michelson encoder semantic to provide richer abstraction over storage properties

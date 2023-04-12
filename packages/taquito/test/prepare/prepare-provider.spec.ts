@@ -6,7 +6,7 @@ import { preparedOriginationOpWithReveal, preparedOriginationOpNoReveal } from '
 import { Estimate } from '../../src/estimate';
 
 import { TransferTicketParams, OpKind } from '../../src/operations/types';
-import { PvmKind } from '@taquito/rpc';
+import { PvmKind } from '@exodus/taquito-rpc';
 import { preparedTransactionMock } from '../helpers';
 import { PreparedOperation } from '../../src/prepare';
 

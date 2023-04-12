@@ -1,12 +1,12 @@
-import { MichelsonMap, Schema } from '@taquito/michelson-encoder';
-import { ContractAbstraction, ContractProvider, Wallet } from '@taquito/taquito';
+import { MichelsonMap, Schema } from '@exodus/taquito-michelson-encoder';
+import { ContractAbstraction, ContractProvider, Wallet } from '@exodus/taquito-taquito';
 import {
   Tzip16ContractAbstraction,
   MetadataContext,
   View,
   bytes2Char,
   BigMapId,
-} from '@taquito/tzip16';
+} from '@exodus/taquito-tzip16';
 import { InvalidTokenMetadata, TokenIdNotFound, TokenMetadataNotFound } from './tzip12-errors';
 
 const tokenMetadataBigMapType = {

@@ -1,4 +1,4 @@
-import { PvmKind } from '@taquito/rpc';
+import { PvmKind } from '@exodus/taquito-rpc';
 import { OperationBatch } from '../../src/batch/rpc-batch-provider';
 import { Context } from '../../src/context';
 import { Estimate } from '../../src/estimate/estimate';

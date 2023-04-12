@@ -174,7 +174,7 @@
       "entry": "packageJson/v1alpha2",
       "value": {
         "packageJson": {
-          "name": "@taquito/local-forging",
+          "name": "@exodus/taquito-local-forging",
           "version": "8.0.4-beta.0",
           "description": "Provide local forging functionality to be with taquito",
           "keywords": [
@@ -230,7 +230,7 @@
               "js"
             ],
             "moduleNameMapper": {
-              "^@taquito/utils$": "<rootDir>/../taquito-utils/src/taquito-utils.ts"
+              "^@exodus/taquito-utils$": "<rootDir>/../taquito-utils/src/taquito-utils.ts"
             },
             "coveragePathIgnorePatterns": [
               "/node_modules/",
@@ -241,11 +241,11 @@
             ]
           },
           "dependencies": {
-            "@taquito/utils": "^8.0.4-beta.0",
+            "@exodus/taquito-utils": "^8.0.4-beta.0",
             "bignumber.js": "^9.0.1"
           },
           "devDependencies": {
-            "@taquito/taquito": "^8.0.4-beta.0",
+            "@exodus/taquito-taquito": "^8.0.4-beta.0",
             "@types/jest": "^26.0.16",
             "@types/node": "^16",
             "colors": "^1.4.0",

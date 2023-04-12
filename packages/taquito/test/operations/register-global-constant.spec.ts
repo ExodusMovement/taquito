@@ -1,5 +1,5 @@
 import { ForgedBytes } from '../../src/operations/types';
-import { OperationContentsAndResult } from '@taquito/rpc';
+import { OperationContentsAndResult } from '@exodus/taquito-rpc';
 import { defaultConfigConfirmation } from '../../src/context';
 import { RegisterGlobalConstantOperation } from '../../src/operations/register-global-constant-operation';
 import { RegisterGlobalConstantOperationBuilder, RevealOperationBuilder } from '../helpers';

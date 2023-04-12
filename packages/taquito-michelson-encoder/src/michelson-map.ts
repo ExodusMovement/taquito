@@ -1,4 +1,4 @@
-import { MichelsonV1Expression } from '@taquito/rpc';
+import { MichelsonV1Expression } from '@exodus/taquito-rpc';
 import { Schema } from './schema/storage';
 import stringify from 'fast-json-stable-stringify';
 

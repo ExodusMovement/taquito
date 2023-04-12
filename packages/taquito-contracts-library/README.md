@@ -1,9 +1,9 @@
 # Taquito Contracts Library package
 
-`@taquito/contracts-library` allows developers to specify static data related to contracts (i.e., script and entrypoints) avoiding Taquito to fetch them from the network. The `contracts-library` module provide a `ContractsLibrary` class that can be injected as an extension to a TezosToolkit instance in order to increase dApps performance.
+`@exodus/taquito-contracts-library` allows developers to specify static data related to contracts (i.e., script and entrypoints) avoiding Taquito to fetch them from the network. The `contracts-library` module provide a `ContractsLibrary` class that can be injected as an extension to a TezosToolkit instance in order to increase dApps performance.
 
 ```ts
-import { ContractsLibrary } from '@taquito/contracts-library';
+import { ContractsLibrary } from '@exodus/taquito-contracts-library';
 
 const contractsLibrary = new ContractsLibrary();
 contractsLibrary.addContract({

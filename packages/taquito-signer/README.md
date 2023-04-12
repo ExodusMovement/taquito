@@ -2,7 +2,7 @@
 *Documentation can be found [here](https://tezostaquito.io/docs/inmemory_signer)*  
 *TypeDoc style documentation is available on-line [here](https://tezostaquito.io/typedoc/modules/_taquito_signer.html)*
 
-`@taquito/signer` is an npm package that provides developers with signing functionality for Taquito.
+`@exodus/taquito-signer` is an npm package that provides developers with signing functionality for Taquito.
 
 ## General Information
 
@@ -15,16 +15,16 @@ production use-cases! Use the InMemorySigner appropriately given your risk profi
 
 ## Install 
 ```
-npm i --save @taquito/taquito
-npm i --save @taquito/signer
+npm i --save @exodus/taquito-taquito
+npm i --save @exodus/taquito-signer
 ```
 
 ## Usage
 ### Loading an unencrypted private key
 
 ```js
-import { InMemorySigner } from '@taquito/signer';
-import { TezosToolkit } from '@taquito/taquito';
+import { InMemorySigner } from '@exodus/taquito-signer';
+import { TezosToolkit } from '@exodus/taquito-taquito';
 
 const Tezos = new TezosToolkit('https://YOUR_PREFERRED_RPC_URL');
 
@@ -36,8 +36,8 @@ Tezos.setProvider({ signer: await InMemorySigner.fromSecretKey('edsk...') });
 If your private key is encrypted, you can specify a passphrase to decrypt it. Doing so will automatically decrypt the key and allow you to use the signer to sign transactions.
 
 ```js
-import { InMemorySigner } from '@taquito/signer';
-import { TezosToolkit } from '@taquito/taquito';
+import { InMemorySigner } from '@exodus/taquito-signer';
+import { TezosToolkit } from '@exodus/taquito-taquito';
 
 const Tezos = new TezosToolkit('https://YOUR_PREFERRED_RPC_URL');
 Tezos.setProvider({

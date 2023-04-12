@@ -161,7 +161,7 @@
       "entry": "packageJson/v1alpha2",
       "value": {
         "packageJson": {
-          "name": "@taquito/tzip12",
+          "name": "@exodus/taquito-tzip12",
           "version": "8.0.4-beta.0",
           "description": "Tzip12",
           "keywords": [
@@ -220,9 +220,9 @@
             ]
           },
           "dependencies": {
-            "@taquito/michelson-encoder": "^8.0.4-beta.0",
-            "@taquito/taquito": "^8.0.4-beta.0",
-            "@taquito/tzip16": "^8.0.4-beta.0",
+            "@exodus/taquito-michelson-encoder": "^8.0.4-beta.0",
+            "@exodus/taquito-taquito": "^8.0.4-beta.0",
+            "@exodus/taquito-tzip16": "^8.0.4-beta.0",
             "bignumber.js": "^9.0.1"
           },
           "devDependencies": {

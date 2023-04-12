@@ -2,7 +2,7 @@ import {
   BlockResponse,
   OperationContentsAndResult,
   OperationContentsAndResultReveal,
-} from '@taquito/rpc';
+} from '@exodus/taquito-rpc';
 import { BehaviorSubject, defer, EMPTY, of, range, ReplaySubject, throwError } from 'rxjs';
 import {
   catchError,
@@ -18,7 +18,7 @@ import {
 } from 'rxjs/operators';
 import { Context } from '../context';
 import { ForgedBytes, hasMetadataWithResult } from './types';
-import { validateOperation, ValidationResult, InvalidOperationHashError } from '@taquito/utils';
+import { validateOperation, ValidationResult, InvalidOperationHashError } from '@exodus/taquito-utils';
 import { createObservableFromSubscription } from '../subscribe/create-observable-from-subscription';
 import { InvalidConfirmationCountError } from '../error';
 

@@ -1,5 +1,5 @@
-import { HttpBackend } from "@taquito/http-utils";
-import { ContractAbstraction, ContractProvider, Wallet, Context } from "@taquito/taquito";
+import { HttpBackend } from "@exodus/taquito-http-utils";
+import { ContractAbstraction, ContractProvider, Wallet, Context } from "@exodus/taquito-taquito";
 import { Handler, Tzip16Uri } from "../metadata-provider";
 
 export class IpfsHttpHandler implements Handler {

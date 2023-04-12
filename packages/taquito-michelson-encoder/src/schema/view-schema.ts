@@ -1,4 +1,4 @@
-import { MichelsonV1Expression, MichelsonV1ExpressionExtended, ScriptResponse } from '@taquito/rpc';
+import { MichelsonV1Expression, MichelsonV1ExpressionExtended, ScriptResponse } from '@exodus/taquito-rpc';
 import { createToken } from '../tokens/createToken';
 import { Semantic, Token } from '../tokens/token';
 import { InvalidScriptError, ViewEncodingError } from './error';

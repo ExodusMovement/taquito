@@ -1,7 +1,7 @@
 import {
   OperationContentsAndResult,
   OperationContentsAndResultIncreasePaidStorage,
-} from '@taquito/rpc';
+} from '@exodus/taquito-rpc';
 import { Context } from '../context';
 import { Operation } from './operations';
 import {

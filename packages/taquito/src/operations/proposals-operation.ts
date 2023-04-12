@@ -1,4 +1,4 @@
-import { OperationContentsAndResult, OperationContentsAndResultProposals } from '@taquito/rpc';
+import { OperationContentsAndResult, OperationContentsAndResultProposals } from '@exodus/taquito-rpc';
 import { Context } from '../context';
 import { Operation } from './operations';
 import { ForgedBytes, RPCProposalsOperation } from './types';

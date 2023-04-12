@@ -5,7 +5,7 @@ import {
   RpcClientInterface,
   RPCRunOperationParam,
   VotingPeriodBlockResult,
-} from '@taquito/rpc';
+} from '@exodus/taquito-rpc';
 import { Protocols } from '../constants';
 import { Context } from '../context';
 import { Estimate } from '../estimate/estimate';
@@ -16,7 +16,7 @@ import {
   TezosPreapplyFailureError,
   InvalidEstimateValueError,
 } from './operation-errors';
-import { InvalidOperationKindError, DeprecationError } from '@taquito/utils';
+import { InvalidOperationKindError, DeprecationError } from '@exodus/taquito-utils';
 import {
   ForgedBytes,
   isOpRequireReveal,

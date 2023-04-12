@@ -3,12 +3,12 @@
 *TypeDoc style documentation is available [here](https://tezostaquito.io/typedoc/modules/_taquito_ledger_signer.html)*
 
 ## General Information
-`@taquito/ledger-signer` is an npm package that provides developers with ledger signing functionality for Taquito. It implements the Signer interface of Taquito, allowing you to sign operations from a Ledger Nano device.
+`@exodus/taquito-ledger-signer` is an npm package that provides developers with ledger signing functionality for Taquito. It implements the Signer interface of Taquito, allowing you to sign operations from a Ledger Nano device.
 
 ## Install
 Install the package as follows
 ```
-npm install @taquito/ledger-signer
+npm install @exodus/taquito-ledger-signer
 ```
 
 ## Usage
@@ -20,7 +20,7 @@ The Ledger Signer has currently been tested with `@ledgerhq/hw-transport-node-hi
 Pass an instance of the transport of your choice to the Ledger Signer as follows:
 ```ts
 import transportWeb from '@ledgerhq/hw-transport-webhid';
-import { LedgerSigner } from '@taquito/ledger-signer';
+import { LedgerSigner } from '@exodus/taquito-ledger-signer';
 
 const transport = await transportWeb.create();
 const ledgerSigner = new LedgerSigner(transport);
@@ -36,7 +36,7 @@ The constructor of the `LedgerSigner` class takes three other optional parameter
   It can be DerivationType.ED25519 | DerivationType.BIP32_ED25519 (tz1), DerivationType.SECP256K1 (tz2) or DerivationType.P256 (tz3).
 
 ```ts
-import { LedgerSigner, DerivationType, HDPathTemplate } from '@taquito/ledger-signer';
+import { LedgerSigner, DerivationType, HDPathTemplate } from '@exodus/taquito-ledger-signer';
 
 const ledgerSigner = new LedgerSigner(
   transport, //required
@@ -49,9 +49,9 @@ const ledgerSigner = new LedgerSigner(
 ### Code Example
 
 ```ts
-import { LedgerSigner } from '@taquito/ledger-signer';
+import { LedgerSigner } from '@exodus/taquito-ledger-signer';
 import TransportWeb from '@ledgerhq/hw-transport-webhid';
-import { TezosToolkit } from '@taquito/taquito';
+import { TezosToolkit } from '@exodus/taquito-taquito';
 
 const Tezos = new TezosToolkit('https://YOUR_PREFERRED_RPC_URL');
 

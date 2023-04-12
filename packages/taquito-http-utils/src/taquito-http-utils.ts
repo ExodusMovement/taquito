@@ -1,6 +1,6 @@
 /**
  * @packageDocumentation
- * @module @taquito/http-utils
+ * @module @exodus/taquito-http-utils
  */
 
 import { STATUS_CODE } from './status_code';

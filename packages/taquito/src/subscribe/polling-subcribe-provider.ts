@@ -2,7 +2,7 @@ import {
   BlockResponse,
   InternalOperationResult,
   OperationContentsAndResultTransaction,
-} from '@taquito/rpc';
+} from '@exodus/taquito-rpc';
 import { BehaviorSubject, from, Observable, ObservableInput, OperatorFunction, timer } from 'rxjs';
 import {
   concatMap,

@@ -1,5 +1,5 @@
 {
-  "name": "@taquito/michelson-encoder",
+  "name": "@exodus/taquito-michelson-encoder",
   "version": "16.1.1",
   "description": "converts michelson data and types into convenient JS/TS objects",
   "keywords": [
@@ -57,7 +57,7 @@
       "js"
     ],
     "moduleNameMapper": {
-      "^@taquito/utils$": "<rootDir>/../taquito-utils/src/taquito-utils.ts"
+      "^@exodus/taquito-utils$": "<rootDir>/../taquito-utils/src/taquito-utils.ts"
     },
     "coveragePathIgnorePatterns": [
       "/node_modules/",
@@ -68,8 +68,8 @@
     ]
   },
   "dependencies": {
-    "@taquito/rpc": "^16.1.1",
-    "@taquito/utils": "^16.1.1",
+    "@exodus/taquito-rpc": "^16.1.1",
+    "@exodus/taquito-utils": "^16.1.1",
     "bignumber.js": "^9.1.0",
     "fast-json-stable-stringify": "^2.1.0"
   },

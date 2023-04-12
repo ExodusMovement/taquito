@@ -6,7 +6,7 @@ import {
   OpKind,
   OperationContentsAndResultReveal,
   OperationContentsAndResultIncreasePaidStorage,
-} from '@taquito/rpc';
+} from '@exodus/taquito-rpc';
 
 export class IncreasePaidStorageWalletOperation extends WalletOperation {
   constructor(

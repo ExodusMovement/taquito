@@ -1,4 +1,4 @@
-import { OperationContentsAndResult, OperationContentsAndResultDelegation } from '@taquito/rpc';
+import { OperationContentsAndResult, OperationContentsAndResultDelegation } from '@exodus/taquito-rpc';
 import { BigNumber } from 'bignumber.js';
 import { Context } from '../context';
 import { Operation } from './operations';

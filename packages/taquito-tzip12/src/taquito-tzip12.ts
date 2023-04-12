@@ -1,6 +1,6 @@
 /**
  * @packageDocumentation
- * @module @taquito/tzip12
+ * @module @exodus/taquito-tzip12
  */
 export * from './tzip12-contract-abstraction';
 export * from './composer';

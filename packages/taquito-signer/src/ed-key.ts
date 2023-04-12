@@ -7,7 +7,7 @@ import {
   buf2hex,
   isValidPrefix,
   InvalidKeyError,
-} from '@taquito/utils';
+} from '@exodus/taquito-utils';
 import toBuffer from 'typedarray-to-buffer';
 
 /**

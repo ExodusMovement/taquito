@@ -59,7 +59,7 @@ import {
   validateContractAddress,
   validateAddress,
   ValidationResult,
-} from '@taquito/utils';
+} from '@exodus/taquito-utils';
 
 interface CachedDataInterface {
   [key: string]: {

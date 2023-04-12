@@ -1,6 +1,6 @@
 import { Packer } from './interface';
 import { Context } from '../context';
-import { PackDataParams, PackDataResponse } from '@taquito/rpc';
+import { PackDataParams, PackDataResponse } from '@exodus/taquito-rpc';
 
 export class RpcPacker implements Packer {
   constructor(private context: Context) {}

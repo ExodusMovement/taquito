@@ -1,4 +1,4 @@
-import { Context, Extension } from "@taquito/taquito";
+import { Context, Extension } from "@exodus/taquito-taquito";
 import { Handler, MetadataProvider, MetadataProviderInterface } from "./metadata-provider";
 import { HttpHandler } from "./handlers/http-handler";
 import { TezosStorageHandler } from "./handlers/tezos-storage-handler";

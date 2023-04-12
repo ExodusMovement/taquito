@@ -2,12 +2,12 @@
 
 *TypeDoc style documentation is available on-line [here](https://tezostaquito.io/typedoc/modules/_taquito_taquito.html)*
 
-The `@taquito/taquito` package contains higher-level functionality that builds upon the other packages in the Tezos Typescript Library Suite.
+The `@exodus/taquito-taquito` package contains higher-level functionality that builds upon the other packages in the Tezos Typescript Library Suite.
 
 ## CDN Bundle
 
 ```html
-<script src="https://unpkg.com/@taquito/taquito@16.1.1/dist/taquito.min.js"
+<script src="https://unpkg.com/@exodus/taquito-taquito@16.1.1/dist/taquito.min.js"
 crossorigin="anonymous" integrity="sha384-aoF/c3t0snVS3cQRL0pjHDvDMZidG2D59nwa/1rWdDaUHyAPxgH3wZX3Qr8q1NKU"></script>
 ```
 
@@ -18,7 +18,7 @@ The `TezosToolkit` is a facade class that surfaces all of the library's capabili
 ## Install 
 
 ```
-npm i --save @taquito/taquito
+npm i --save @exodus/taquito-taquito
 ```
 
 
@@ -28,12 +28,12 @@ npm i --save @taquito/taquito
 The `TezosToolkit` constructor takes at least an RPC URL as a parameter. When instantiating the toolkit with a URL, a default instance of `RpcClient` is created. The `RpcClient` class is used to interact with the Tezos network. 
 
 ```ts
-import { TezosToolkit } from '@taquito/taquito';
+import { TezosToolkit } from '@exodus/taquito-taquito';
 
 const Tezos = new TezosToolkit('https://YOUR_PREFERRED_RPC_URL');
 ```
 
-It is also possible to instantiate the `TezosToolkit` with a class that implements the `RpcClientInterface`. See the `RpcClientCache` from the `@taquito/rpc` package as an example that provides caching functionality.
+It is also possible to instantiate the `TezosToolkit` with a class that implements the `RpcClientInterface`. See the `RpcClientCache` from the `@exodus/taquito-rpc` package as an example that provides caching functionality.
 
 ### Choosing between the contract or the wallet APIs
 
@@ -44,8 +44,8 @@ In most cases, you want to use the Wallet API when you give the users of your da
 Sending operations using the Contract API requires a signer to be configured. Taquito provides different signer implementations (e.g. see the `taquito/remote-signer`, `taquito/signer` and `taquito/legder-signer`). Here is an example using the `InMemorySigner`:
 
 ```js
-import { InMemorySigner } from '@taquito/signer';
-import { TezosToolkit } from '@taquito/taquito';
+import { InMemorySigner } from '@exodus/taquito-signer';
+import { TezosToolkit } from '@exodus/taquito-taquito';
 
 const Tezos = new TezosToolkit('https://YOUR_PREFERRED_RPC_URL');
 
@@ -57,11 +57,11 @@ await Tezos.contract.transfer({ to: publicKeyHash, amount: 2 });
 
 **Configure a wallet to use the Wallet API**
 
-Sending operations using the Wallet API requires a wallet to be configured. The wallet API supports different kinds of wallets. For example, the `BeaconWallet` from the `@taquito/beacon-wallet` can be used. Use the `setWalletProvider` method of the `TezosToolkit` to set the wallet and refer to the `@taquito/beacon-wallet` for specific configuration:
+Sending operations using the Wallet API requires a wallet to be configured. The wallet API supports different kinds of wallets. For example, the `BeaconWallet` from the `@exodus/taquito-beacon-wallet` can be used. Use the `setWalletProvider` method of the `TezosToolkit` to set the wallet and refer to the `@exodus/taquito-beacon-wallet` for specific configuration:
 
 ```ts
-import { TezosToolkit } from '@taquito/taquito';
-import { BeaconWallet } from '@taquito/beacon-wallet';
+import { TezosToolkit } from '@exodus/taquito-taquito';
+import { BeaconWallet } from '@exodus/taquito-beacon-wallet';
 
 const Tezos = new TezosToolkit('https://YOUR_PREFERRED_RPC_URL');
 const wallet = new BeaconWallet(options);
@@ -83,7 +83,7 @@ The `TezosToolkit` contains different default providers that are customizable to
 Replace the default `RpcForger` with an instance of `LocalForger`:
 
 ```ts
-import { localForger } from '@taquito/local-forger'
+import { localForger } from '@exodus/taquito-local-forger'
 Tezos.setForgerProvider(localForger);
 ```
 
@@ -92,7 +92,7 @@ Tezos.setForgerProvider(localForger);
 To fetch values of the big map using the local implementation to pack data, replace the default `RpcPacker` with an instance of `MichelCodecPacker`:
 
 ```ts
-import { MichelCodecPacker } from '@taquito/taquito';
+import { MichelCodecPacker } from '@exodus/taquito-taquito';
 // Fetch values of the big map using local implementation to pack data
 Tezos.setPackerProvider(new MichelCodecPacker());
 ```

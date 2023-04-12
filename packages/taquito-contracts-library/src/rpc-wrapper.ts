@@ -49,7 +49,7 @@ import {
   PendingOperations,
   PendingOperationsQueryArguments,
   OriginationProofParams,
-} from '@taquito/rpc';
+} from '@exodus/taquito-rpc';
 import { ContractsLibrary } from './taquito-contracts-library';
 
 /**

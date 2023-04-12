@@ -1,5 +1,5 @@
 {
-  "name": "@taquito/contracts-library",
+  "name": "@exodus/taquito-contracts-library",
   "version": "16.1.1",
   "description": "Can be used as an extension on the TezosToolkit to provide contracts data",
   "keywords": [
@@ -54,10 +54,10 @@
       "js"
     ],
     "moduleNameMapper": {
-      "^@taquito/taquito$": "<rootDir>/../taquito/src/taquito.ts",
-      "^@taquito/rpc$": "<rootDir>/../taquito-rpc/src/taquito-rpc.ts",
-      "^@taquito/taquito-utils$": "<rootDir>/../taquito-utils/src/taquito-utils.ts",
-      "^@taquito/taquito-http-utils$": "<rootDir>/../taquito-http-utils/src/taquito-http-utils.ts"
+      "^@exodus/taquito-taquito$": "<rootDir>/../taquito/src/taquito.ts",
+      "^@exodus/taquito-rpc$": "<rootDir>/../taquito-rpc/src/taquito-rpc.ts",
+      "^@exodus/taquito-taquito-utils$": "<rootDir>/../taquito-utils/src/taquito-utils.ts",
+      "^@exodus/taquito-taquito-http-utils$": "<rootDir>/../taquito-http-utils/src/taquito-http-utils.ts"
     },
     "coveragePathIgnorePatterns": [
       "/node_modules/",
@@ -68,9 +68,9 @@
     ]
   },
   "dependencies": {
-    "@taquito/rpc": "^16.1.1",
-    "@taquito/taquito": "^16.1.1",
-    "@taquito/utils": "^16.1.1",
+    "@exodus/taquito-rpc": "^16.1.1",
+    "@exodus/taquito-taquito": "^16.1.1",
+    "@exodus/taquito-utils": "^16.1.1",
     "bignumber.js": "^9.1.0"
   },
   "devDependencies": {

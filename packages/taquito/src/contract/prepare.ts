@@ -1,6 +1,6 @@
-import { Schema } from '@taquito/michelson-encoder';
-import { OpKind, MichelsonV1Expression } from '@taquito/rpc';
-import { Prim, Expr } from '@taquito/michel-codec';
+import { Schema } from '@exodus/taquito-michelson-encoder';
+import { OpKind, MichelsonV1Expression } from '@exodus/taquito-rpc';
+import { Prim, Expr } from '@exodus/taquito-michel-codec';
 import {
   OriginateParams,
   RPCOriginationOperation,
@@ -35,7 +35,7 @@ import {
   SmartRollupOriginateParamsWithProof,
 } from '../operations/types';
 import { DEFAULT_FEE, DEFAULT_GAS_LIMIT, DEFAULT_STORAGE_LIMIT } from '../constants';
-import { format } from '@taquito/utils';
+import { format } from '@exodus/taquito-utils';
 import {
   InvalidCodeParameter,
   InvalidInitParameter,

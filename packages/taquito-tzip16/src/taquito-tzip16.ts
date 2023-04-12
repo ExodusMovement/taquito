@@ -1,6 +1,6 @@
 /**
  * @packageDocumentation
- * @module @taquito/tzip16
+ * @module @exodus/taquito-tzip16
  */
 export * from './handlers/http-handler';
 export * from './handlers/tezos-storage-handler';
@@ -18,8 +18,8 @@ export * from './viewKind/viewFactory';
 export { VERSION } from './version';
 
 /**
- * @deprecated `import { bytes2Char, char2Bytes } from "@taquito/tzip16"` is deprecated in favor of 
- * `import { bytes2Char, char2Bytes } from "@taquito/utils"`
+ * @deprecated `import { bytes2Char, char2Bytes } from "@exodus/taquito-tzip16"` is deprecated in favor of 
+ * `import { bytes2Char, char2Bytes } from "@exodus/taquito-utils"`
  *
  */
-export { bytes2Char, char2Bytes } from "@taquito/utils";
+export { bytes2Char, char2Bytes } from "@exodus/taquito-utils";

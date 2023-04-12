@@ -1,5 +1,5 @@
 {
-  "name": "@taquito/michel-codec",
+  "name": "@exodus/taquito-michel-codec",
   "version": "16.1.1",
   "description": "Michelson parser/validator/formatter",
   "keywords": [
@@ -56,7 +56,7 @@
       "js"
     ],
     "moduleNameMapper": {
-      "^@taquito/utils$": "<rootDir>/../taquito-utils/src/taquito-utils.ts"
+      "^@exodus/taquito-utils$": "<rootDir>/../taquito-utils/src/taquito-utils.ts"
     },
     "coveragePathIgnorePatterns": [
       "/node_modules/",

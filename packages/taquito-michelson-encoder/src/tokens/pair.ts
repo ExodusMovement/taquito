@@ -1,7 +1,7 @@
 import { Token, TokenFactory, Semantic, ComparableToken, SemanticEncoding } from './token';
 import { OrToken } from './or';
 import { PairTokenSchema } from '../schema/types';
-import { MichelsonV1Expression, MichelsonV1ExpressionExtended } from '@taquito/rpc';
+import { MichelsonV1Expression, MichelsonV1ExpressionExtended } from '@exodus/taquito-rpc';
 
 /**
  *  @category Error

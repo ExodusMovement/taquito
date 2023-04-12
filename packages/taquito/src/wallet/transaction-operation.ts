@@ -6,7 +6,7 @@ import {
   OpKind,
   OperationContentsAndResultReveal,
   OperationContentsAndResultTransaction,
-} from '@taquito/rpc';
+} from '@exodus/taquito-rpc';
 
 export class TransactionWalletOperation extends WalletOperation {
   constructor(

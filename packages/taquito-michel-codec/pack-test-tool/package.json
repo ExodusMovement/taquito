@@ -8,7 +8,7 @@
   "author": "Eugene Zagidullin <eugene@ecadlabs.com>",
   "license": "MIT",
   "dependencies": {
-    "@taquito/rpc": "^16.1.1",
+    "@exodus/taquito-rpc": "^16.1.1",
     "yargs": "^16.2.0"
   }
 }

@@ -2,8 +2,8 @@ import { Wallet } from '../../wallet';
 import { ContractProvider } from '../../contract';
 import { ContractMethodObject } from './contract-method-object-param';
 import { ContractMethod } from './contract-method-flat-param';
-import { ParameterSchema, ViewSchema } from '@taquito/michelson-encoder';
-import { RpcClientInterface, MichelsonV1Expression } from '@taquito/rpc';
+import { ParameterSchema, ViewSchema } from '@exodus/taquito-michelson-encoder';
+import { RpcClientInterface, MichelsonV1Expression } from '@exodus/taquito-rpc';
 import { OnChainView } from './contract-on-chain-view';
 import { TzReadProvider } from '../../read-provider/interface';
 

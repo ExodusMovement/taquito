@@ -4,7 +4,7 @@ import {
   encodeL2Address,
   validateAddress,
   ValidationResult,
-} from '@taquito/utils';
+} from '@exodus/taquito-utils';
 import {
   ComparableToken,
   SemanticEncoding,

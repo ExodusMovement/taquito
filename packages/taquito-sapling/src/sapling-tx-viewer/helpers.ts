@@ -1,4 +1,4 @@
-import { b58cencode, bytes2Char, Prefix, prefix } from '@taquito/utils';
+import { b58cencode, bytes2Char, Prefix, prefix } from '@exodus/taquito-utils';
 import BigNumber from 'bignumber.js';
 import { Input } from '../types';
 

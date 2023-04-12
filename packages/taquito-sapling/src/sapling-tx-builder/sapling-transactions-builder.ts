@@ -16,9 +16,9 @@ import {
   SaplingTransaction,
   SaplingTransactionParams,
 } from '../types';
-import { SaplingDiffResponse } from '@taquito/rpc';
-import { b58cdecode, Prefix, prefix } from '@taquito/utils';
-import { TzReadProvider } from '@taquito/taquito';
+import { SaplingDiffResponse } from '@exodus/taquito-rpc';
+import { b58cdecode, Prefix, prefix } from '@exodus/taquito-utils';
+import { TzReadProvider } from '@exodus/taquito-taquito';
 import { convertValueToBigNumber } from '../sapling-tx-viewer/helpers';
 import { SaplingState } from '../sapling-state/sapling-state';
 import { SaplingWrapper } from '../sapling-module-wrapper';

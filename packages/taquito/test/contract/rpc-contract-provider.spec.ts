@@ -1,5 +1,5 @@
 import { RpcContractProvider } from '../../src/contract/rpc-contract-provider';
-import { HttpResponseError, STATUS_CODE } from '@taquito/http-utils';
+import { HttpResponseError, STATUS_CODE } from '@exodus/taquito-http-utils';
 import {
   sample,
   sampleStorage,
@@ -29,14 +29,14 @@ import {
   InvalidInitParameter,
 } from '../../src/contract/errors';
 import { preapplyResultFrom } from './helper';
-import { MichelsonMap, Schema } from '@taquito/michelson-encoder';
+import { MichelsonMap, Schema } from '@exodus/taquito-michelson-encoder';
 import { BigMapAbstraction } from '../../src/contract/big-map';
 import { OpKind, ParamsWithKind, TransferTicketParams } from '../../src/operations/types';
 import { NoopParser } from '../../src/taquito';
 import { OperationBatch } from '../../src/batch/rpc-batch-provider';
 import { ContractMethodObject } from '../../src/contract/contract-methods/contract-method-object-param';
 import { smallNestedMapTypecheck, ticketTokenTestMock } from '../helpers';
-import { PvmKind } from '@taquito/rpc';
+import { PvmKind } from '@exodus/taquito-rpc';
 
 /**
  * RPCContractProvider test

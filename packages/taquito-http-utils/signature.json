@@ -86,7 +86,7 @@
       "entry": "packageJson/v1alpha2",
       "value": {
         "packageJson": {
-          "name": "@taquito/http-utils",
+          "name": "@exodus/taquito-http-utils",
           "version": "8.0.4-beta.0",
           "description": "",
           "keywords": [],

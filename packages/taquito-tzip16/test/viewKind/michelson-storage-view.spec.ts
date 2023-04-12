@@ -1,4 +1,4 @@
-import { RpcReadAdapter } from '@taquito/taquito';
+import { RpcReadAdapter } from '@exodus/taquito-taquito';
 import { ForbiddenInstructionInViewCode, NoParameterExpectedError } from '../../src/tzip16-errors';
 import { MichelsonStorageView } from '../../src/viewKind/michelson-storage-view';
 

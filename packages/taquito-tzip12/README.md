@@ -2,7 +2,7 @@
 *Documentation can be found [here](https://tezostaquito.io/docs/tzip12)*  
 *TypeDoc style documentation is available on-line [here](https://tezostaquito.io/typedoc/modules/_taquito_tzip12.html)*
 
-`@taquito/tzip12` is an npm package that provides developers with TZIP-12 functionality for Taquito. The package allows retrieving metadata associated with tokens of FA2 contracts.
+`@exodus/taquito-tzip12` is an npm package that provides developers with TZIP-12 functionality for Taquito. The package allows retrieving metadata associated with tokens of FA2 contracts.
 
 ## General Information
 
@@ -14,10 +14,10 @@ The `getTokenMetadata` method of the `Tzip12ContractAbstraction` class will find
 
 ## Install
 
-The package can be used to extend the well-known Taquito contract abstraction. The `@taquito/tzip12` and the `@taquito/taquito` packages need to be installed as follows:
+The package can be used to extend the well-known Taquito contract abstraction. The `@exodus/taquito-tzip12` and the `@exodus/taquito-taquito` packages need to be installed as follows:
 ```
-npm i --save @taquito/tzip12
-npm i --save @taquito/taquito
+npm i --save @exodus/taquito-tzip12
+npm i --save @exodus/taquito-taquito
 ```
 
 ## Usage
@@ -29,9 +29,9 @@ The constructor of the `Tzip12Module` takes an optional `MetadataProvider` as a 
 **Use the `tzip12` function to extend a contract abstraction**
 
 ```ts
-import { TezosToolkit } from '@taquito/taquito';
-import { Tzip12Module } from '@taquito/tzip12';
-import { tzip12 } from '@taquito/tzip12';
+import { TezosToolkit } from '@exodus/taquito-taquito';
+import { Tzip12Module } from '@exodus/taquito-tzip12';
+import { tzip12 } from '@exodus/taquito-tzip12';
 
 const Tezos = new TezosToolkit('https://YOUR_PREFERRED_RPC_URL');
 Tezos.addExtension(new Tzip12Module());

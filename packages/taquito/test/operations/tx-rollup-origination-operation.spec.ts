@@ -1,5 +1,5 @@
 import { ForgedBytes } from '../../src/operations/types';
-import { OperationContentsAndResult } from '@taquito/rpc';
+import { OperationContentsAndResult } from '@exodus/taquito-rpc';
 import { defaultConfigConfirmation } from '../../src/context';
 import { RevealOperationBuilder, TxRollupOriginationOperationBuilder } from '../helpers';
 import { TxRollupOriginationOperation } from '../../src/operations/tx-rollup-origination-operation';

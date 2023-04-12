@@ -1,4 +1,4 @@
-import { Expr } from "@taquito/michel-codec";
+import { Expr } from "@exodus/taquito-michel-codec";
 import { UnconfiguredGlobalConstantsProviderError } from "./error";
 import { GlobalConstantHash, GlobalConstantsProvider } from "./interface-global-constants-provider";
 

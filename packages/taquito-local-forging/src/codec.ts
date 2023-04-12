@@ -9,7 +9,7 @@ import {
   InvalidPublicKeyError,
   InvalidAddressError,
   InvalidContractAddressError,
-} from '@taquito/utils';
+} from '@exodus/taquito-utils';
 import {
   OversizedEntryPointError,
   InvalidBallotValueError,

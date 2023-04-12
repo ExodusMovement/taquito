@@ -1,5 +1,5 @@
-import { OpKind } from '@taquito/rpc';
-import { OperationContents } from '@taquito/rpc';
+import { OpKind } from '@exodus/taquito-rpc';
+import { OperationContents } from '@exodus/taquito-rpc';
 import {
   ActivationSchema,
   DelegationSchema,

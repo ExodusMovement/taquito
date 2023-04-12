@@ -1,4 +1,4 @@
-import { BlockResponse } from '@taquito/rpc';
+import { BlockResponse } from '@exodus/taquito-rpc';
 import { Observable } from 'rxjs';
 import { OperationContent, Subscription } from './interface';
 

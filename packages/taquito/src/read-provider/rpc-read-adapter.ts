@@ -5,7 +5,7 @@ import {
   RpcClientInterface,
   SaplingDiffResponse,
   ScriptedContracts,
-} from '@taquito/rpc';
+} from '@exodus/taquito-rpc';
 import BigNumber from 'bignumber.js';
 import { BigMapQuery, BlockIdentifier, SaplingStateQuery, TzReadProvider } from './interface';
 

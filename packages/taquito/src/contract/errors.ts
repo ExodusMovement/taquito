@@ -1,5 +1,5 @@
-import { HttpResponseError } from '@taquito/http-utils';
-import { MichelsonV1Expression } from '@taquito/rpc';
+import { HttpResponseError } from '@exodus/taquito-http-utils';
+import { MichelsonV1Expression } from '@exodus/taquito-rpc';
 
 /**
  *  @category Error

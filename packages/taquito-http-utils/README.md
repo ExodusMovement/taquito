@@ -1,7 +1,7 @@
 # Taquito HTTP Utilities package
 *TypeDoc style documentation is available [here](https://tezostaquito.io/typedoc/modules/_taquito_http_utils.html)*
 
-`@taquito/http-utils` is an npm package that provides developers with http functionality for Taquito.
+`@exodus/taquito-http-utils` is an npm package that provides developers with http functionality for Taquito.
 
 ## General Information
 
@@ -21,13 +21,13 @@ Parameters for `createRequest`:
 ## Install
 The package(s) need to be installed as follows
 ```
-npm install @taquito/http-utils
+npm install @exodus/taquito-http-utils
 ```
 
 ## Usage
 Create an instance of `HttpBackend` and call it's member function `createRequest` to construct an HTTP request. 
 ```ts
-import { HttpBackend } from '@taquito/http-utils';
+import { HttpBackend } from '@exodus/taquito-http-utils';
 
 const httpBackend = new HttpBackend();
 const response = httpBackend.createRequest<string>({

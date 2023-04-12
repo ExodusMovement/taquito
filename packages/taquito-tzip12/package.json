@@ -1,5 +1,5 @@
 {
-  "name": "@taquito/tzip12",
+  "name": "@exodus/taquito-tzip12",
   "version": "16.1.1",
   "description": "Tzip12",
   "keywords": [
@@ -63,9 +63,9 @@
     ]
   },
   "dependencies": {
-    "@taquito/michelson-encoder": "^16.1.1",
-    "@taquito/taquito": "^16.1.1",
-    "@taquito/tzip16": "^16.1.1"
+    "@exodus/taquito-michelson-encoder": "^16.1.1",
+    "@exodus/taquito-taquito": "^16.1.1",
+    "@exodus/taquito-tzip16": "^16.1.1"
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.36",

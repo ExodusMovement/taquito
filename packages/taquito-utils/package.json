@@ -1,5 +1,5 @@
 {
-  "name": "@taquito/utils",
+  "name": "@exodus/taquito-utils",
   "version": "16.1.1",
   "description": "converts michelson data and types into convenient JS/TS objects",
   "keywords": [

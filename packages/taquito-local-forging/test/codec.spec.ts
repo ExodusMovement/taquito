@@ -9,7 +9,7 @@ import {
   paddedBytesDecoder,
 } from '../src/codec';
 import { Uint8ArrayConsumer } from '../src/uint8array-consumer';
-import { InvalidKeyHashError, InvalidPublicKeyError } from '@taquito/utils';
+import { InvalidKeyHashError, InvalidPublicKeyError } from '@exodus/taquito-utils';
 import { pkhEncoder, publicKeyDecoder, publicKeyEncoder } from '../src/codec';
 import {
   DecodeBallotValueError,

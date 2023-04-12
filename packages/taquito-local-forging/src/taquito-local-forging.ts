@@ -1,6 +1,6 @@
 /**
  * @packageDocumentation
- * @module @taquito/local-forging
+ * @module @exodus/taquito-local-forging
  */
 
 import { ForgeParams, Forger } from './interface';
@@ -8,7 +8,7 @@ import { CODEC } from './constants';
 import { decoders } from './decoder';
 import { encoders } from './encoder';
 import { Uint8ArrayConsumer } from './uint8array-consumer';
-import { validateBlock, ValidationResult, InvalidOperationKindError } from '@taquito/utils';
+import { validateBlock, ValidationResult, InvalidOperationKindError } from '@exodus/taquito-utils';
 import { InvalidBlockHashError, InvalidOperationSchemaError } from './error';
 import { validateMissingProperty, validateOperationKind } from './validator';
 import { ProtocolsHash } from './protocols';

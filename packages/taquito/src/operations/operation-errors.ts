@@ -11,7 +11,7 @@ import {
   OperationResultTxRollupSubmitBatch,
   PreapplyResponse,
   TezosGenericOperationError,
-} from '@taquito/rpc';
+} from '@exodus/taquito-rpc';
 import {
   hasMetadata,
   hasMetadataWithInternalOperationResult,

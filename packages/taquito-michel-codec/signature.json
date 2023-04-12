@@ -221,7 +221,7 @@
       "entry": "packageJson/v1alpha2",
       "value": {
         "packageJson": {
-          "name": "@taquito/michel-codec",
+          "name": "@exodus/taquito-michel-codec",
           "version": "8.0.4-beta.0",
           "description": "Michelson parser/validator/formatter",
           "keywords": ["tezos", "blockchain", "signer"],
@@ -262,7 +262,7 @@
             "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
             "moduleFileExtensions": ["ts", "tsx", "js"],
             "moduleNameMapper": {
-              "^@taquito/utils$": "<rootDir>/../taquito-utils/src/taquito-utils.ts"
+              "^@exodus/taquito-utils$": "<rootDir>/../taquito-utils/src/taquito-utils.ts"
             },
             "coveragePathIgnorePatterns": ["/node_modules/", "/test/"],
             "collectCoverageFrom": ["src/**/*.{js,ts}"]

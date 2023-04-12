@@ -4,7 +4,7 @@ import { RpcContractProvider } from '../src/contract/rpc-contract-provider';
 import { PrepareProvider } from '../src/prepare/prepare-provider';
 import { PollingSubscribeProvider } from '../src/subscribe/polling-subcribe-provider';
 import { NoopSigner } from '../src/signer/noop';
-import { RpcClient } from '@taquito/rpc';
+import { RpcClient } from '@exodus/taquito-rpc';
 import { RPCEstimateProvider } from '../src/estimate/rpc-estimate-provider';
 import { OperationFactory } from '../src/wallet/operation-factory';
 import { NoopGlobalConstantsProvider } from '../src/global-constants/noop-global-constants-provider';

@@ -1,7 +1,7 @@
 import { InvalidSpendingKey } from '../error';
 import { InMemoryViewingKey } from './in-memory-viewing-key';
 import * as sapling from '@airgap/sapling-wasm';
-import { Prefix, prefix, b58cencode, ValidationResult } from '@taquito/utils';
+import { Prefix, prefix, b58cencode, ValidationResult } from '@exodus/taquito-utils';
 import * as bip39 from 'bip39';
 import {
   ParametersSpendProof,

@@ -4,7 +4,7 @@ const fs = require('fs');
 const process = require('process');
 const yargs = require('yargs');
 const path = require('path');
-const rpc = require('@taquito/rpc');
+const rpc = require('@exodus/taquito-rpc');
 
 const argv = yargs(process.argv.slice(2)).options({
   url: {

@@ -1,4 +1,4 @@
-import { SaplingDiffResponse } from '@taquito/rpc';
+import { SaplingDiffResponse } from '@exodus/taquito-rpc';
 import BigNumber from 'bignumber.js';
 
 export const witnessString =

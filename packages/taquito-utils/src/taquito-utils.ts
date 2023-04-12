@@ -1,6 +1,6 @@
 /**
  * @packageDocumentation
- * @module @taquito/utils
+ * @module @exodus/taquito-utils
  */
 
 /*

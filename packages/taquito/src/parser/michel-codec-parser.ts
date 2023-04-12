@@ -1,10 +1,10 @@
 import { Context } from '../context';
 import { ParserProvider } from './interface';
-import { Expr, GlobalConstantHashAndValue, Parser, Prim, ProtocolID } from '@taquito/michel-codec';
+import { Expr, GlobalConstantHashAndValue, Parser, Prim, ProtocolID } from '@exodus/taquito-michel-codec';
 import { OriginateParams } from '../operations/types';
 import { InvalidInitParameter, InvalidCodeParameter } from '../contract/errors';
-import { Schema } from '@taquito/michelson-encoder';
-import { MichelsonV1Expression, MichelsonV1ExpressionBase } from '@taquito/rpc';
+import { Schema } from '@exodus/taquito-michelson-encoder';
+import { MichelsonV1Expression, MichelsonV1ExpressionBase } from '@exodus/taquito-rpc';
 import { Protocols } from '../constants';
 
 export class MichelCodecParser implements ParserProvider {

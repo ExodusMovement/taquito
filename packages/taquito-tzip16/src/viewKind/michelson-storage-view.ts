@@ -1,21 +1,21 @@
-import { ParameterSchema } from '@taquito/michelson-encoder';
+import { ParameterSchema } from '@exodus/taquito-michelson-encoder';
 import {
   RpcClientInterface,
   MichelsonV1Expression,
   MichelsonV1ExpressionExtended,
-} from '@taquito/rpc';
+} from '@exodus/taquito-rpc';
 import {
   ContractAbstraction,
   ContractProvider,
   Wallet,
   ViewSimulationError,
-} from '@taquito/taquito';
+} from '@exodus/taquito-taquito';
 import {
   ForbiddenInstructionInViewCode,
   InvalidViewParameterError,
   NoParameterExpectedError,
 } from '../tzip16-errors';
-import { validateAndExtractFailwith, TzReadProvider } from '@taquito/taquito';
+import { validateAndExtractFailwith, TzReadProvider } from '@exodus/taquito-taquito';
 import { View } from './interface';
 
 export class MichelsonStorageView implements View {

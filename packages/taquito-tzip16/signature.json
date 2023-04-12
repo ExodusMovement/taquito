@@ -337,7 +337,7 @@
       "entry": "packageJson/v1alpha2",
       "value": {
         "packageJson": {
-          "name": "@taquito/tzip16",
+          "name": "@exodus/taquito-tzip16",
           "version": "8.0.4-beta.0",
           "description": "Tzip16",
           "keywords": [
@@ -395,11 +395,11 @@
             ]
           },
           "dependencies": {
-            "@taquito/http-utils": "^8.0.4-beta.0",
-            "@taquito/michelson-encoder": "^8.0.4-beta.0",
-            "@taquito/rpc": "^8.0.4-beta.0",
-            "@taquito/taquito": "^8.0.4-beta.0",
-            "@taquito/utils": "^8.0.4-beta.0",
+            "@exodus/taquito-http-utils": "^8.0.4-beta.0",
+            "@exodus/taquito-michelson-encoder": "^8.0.4-beta.0",
+            "@exodus/taquito-rpc": "^8.0.4-beta.0",
+            "@exodus/taquito-taquito": "^8.0.4-beta.0",
+            "@exodus/taquito-utils": "^8.0.4-beta.0",
             "bignumber.js": "^9.0.1",
             "crypto-js": "^4.0.0"
           },

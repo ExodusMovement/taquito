@@ -1,5 +1,5 @@
 {
-  "name": "@taquito/signer",
+  "name": "@exodus/taquito-signer",
   "version": "16.1.1",
   "description": "Provide signing functionality to be with taquito",
   "keywords": [
@@ -56,7 +56,7 @@
       "js"
     ],
     "moduleNameMapper": {
-      "^@taquito/utils$": "<rootDir>/../taquito-utils/src/taquito-utils.ts"
+      "^@exodus/taquito-utils$": "<rootDir>/../taquito-utils/src/taquito-utils.ts"
     },
     "coveragePathIgnorePatterns": [
       "/node_modules/",
@@ -67,8 +67,8 @@
     ]
   },
   "dependencies": {
-    "@taquito/taquito": "^16.1.1",
-    "@taquito/utils": "^16.1.1",
+    "@exodus/taquito-taquito": "^16.1.1",
+    "@exodus/taquito-utils": "^16.1.1",
     "@types/bn.js": "^5.1.1",
     "bip39": "^3.0.4",
     "blakejs": "^1.2.1",

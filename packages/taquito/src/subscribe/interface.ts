@@ -1,4 +1,4 @@
-import { BlockResponse, InternalOperationResult, OperationEntry } from '@taquito/rpc';
+import { BlockResponse, InternalOperationResult, OperationEntry } from '@exodus/taquito-rpc';
 
 export type FilterExpression = {
   or?: ExpressionOrOpFilter[];

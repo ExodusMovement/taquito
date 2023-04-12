@@ -9,7 +9,7 @@ import {
   OperationContent,
 } from './interface';
 
-import { InternalOperationResult } from '@taquito/rpc';
+import { InternalOperationResult } from '@exodus/taquito-rpc';
 
 import { InvalidFilterExpressionError } from '../error';
 

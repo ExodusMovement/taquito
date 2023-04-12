@@ -24,7 +24,7 @@ import {
   InvalidAddressError,
   ValidationResult,
   InvalidOperationKindError,
-} from '@taquito/utils';
+} from '@exodus/taquito-utils';
 
 export interface PKHOption {
   forceRefetch?: boolean;

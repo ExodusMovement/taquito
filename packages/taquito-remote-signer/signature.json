@@ -86,7 +86,7 @@
       "entry": "packageJson/v1alpha2",
       "value": {
         "packageJson": {
-          "name": "@taquito/remote-signer",
+          "name": "@exodus/taquito-remote-signer",
           "version": "8.0.4-beta.0",
           "description": "Remote signer provider",
           "keywords": [
@@ -146,9 +146,9 @@
             ]
           },
           "dependencies": {
-            "@taquito/http-utils": "^8.0.4-beta.0",
-            "@taquito/taquito": "^8.0.4-beta.0",
-            "@taquito/utils": "^8.0.4-beta.0",
+            "@exodus/taquito-http-utils": "^8.0.4-beta.0",
+            "@exodus/taquito-taquito": "^8.0.4-beta.0",
+            "@exodus/taquito-utils": "^8.0.4-beta.0",
             "@types/jest": "^26.0.16",
             "elliptic": "^6.5.3",
             "libsodium-wrappers": "^0.7.8",

@@ -1,4 +1,4 @@
-import { OperationContents, PreapplyParams } from '@taquito/rpc';
+import { OperationContents, PreapplyParams } from '@exodus/taquito-rpc';
 import {
   BallotParams,
   DelegateParams,
@@ -18,7 +18,7 @@ import { ContractMethod } from '../contract/contract-methods/contract-method-fla
 import { ContractMethodObject } from '../contract/contract-methods/contract-method-object-param';
 import { ContractProvider } from '../contract/interface';
 import { ParamsWithKind } from '../operations/types';
-import { ForgeParams } from '@taquito/local-forging';
+import { ForgeParams } from '@exodus/taquito-local-forging';
 
 /**
  * @description PrepareProvider is a utility class to output the prepared format of an operation

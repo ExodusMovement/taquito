@@ -1,8 +1,8 @@
 /**
  * @packageDocumentation
- * @module @taquito/remote-signer
+ * @module @exodus/taquito-remote-signer
  */
-import { HttpBackend, HttpResponseError, STATUS_CODE } from '@taquito/http-utils';
+import { HttpBackend, HttpResponseError, STATUS_CODE } from '@exodus/taquito-http-utils';
 import {
   b58cdecode,
   b58cencode,
@@ -17,7 +17,7 @@ import {
   InvalidKeyHashError,
   ProhibitedActionError,
   InvalidSignatureError,
-} from '@taquito/utils';
+} from '@exodus/taquito-utils';
 import { hash } from '@stablelib/blake2b';
 import toBuffer from 'typedarray-to-buffer';
 import {
@@ -26,7 +26,7 @@ import {
   OperationNotAuthorizedError,
   PublicKeyMismatch,
 } from './errors';
-import { Signer } from '@taquito/taquito';
+import { Signer } from '@exodus/taquito-taquito';
 
 /**
  *  @category Error

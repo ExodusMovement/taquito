@@ -1,5 +1,5 @@
 import blake from 'blakejs';
-import { b58cencode, b58cdecode, prefix, isValidPrefix, InvalidKeyError } from '@taquito/utils';
+import { b58cencode, b58cdecode, prefix, isValidPrefix, InvalidKeyError } from '@exodus/taquito-utils';
 import toBuffer from 'typedarray-to-buffer';
 import elliptic from 'elliptic';
 

@@ -1,5 +1,5 @@
 {
-  "name": "@taquito/ledger-signer",
+  "name": "@exodus/taquito-ledger-signer",
   "version": "16.1.1",
   "description": "Ledger signer provider",
   "keywords": [
@@ -60,8 +60,8 @@
   "dependencies": {
     "@ledgerhq/hw-transport": "^6.27.3",
     "@stablelib/blake2b": "^1.0.1",
-    "@taquito/taquito": "^16.1.1",
-    "@taquito/utils": "^16.1.1",
+    "@exodus/taquito-taquito": "^16.1.1",
+    "@exodus/taquito-utils": "^16.1.1",
     "buffer": "^6.0.3"
   },
   "devDependencies": {

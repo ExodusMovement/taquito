@@ -13,7 +13,7 @@ import {
   UnsupportedOperationError,
 } from '../src/error';
 
-import { InvalidOperationKindError } from '@taquito/utils';
+import { InvalidOperationKindError } from '@exodus/taquito-utils';
 import { schemaDecoder, SeedNonceRevelationSchema } from '../src/schema/operation';
 import { ProtoInferiorTo } from '../src/protocols';
 

@@ -12,7 +12,7 @@ Sapling is a protocol allowing to perform private transactions in a decentralize
 Install the package as follows
 
 ```
-npm install @taquito/sapling
+npm install @exodus/taquito-sapling
 ```
 ## Usage
 
@@ -21,8 +21,8 @@ npm install @taquito/sapling
 The returned balance is in mutez.
 
 ```ts
-import { TezosToolkit, RpcReadAdapter } from '@taquito/taquito';
-import { SaplingToolkit, InMemorySpendingKey } from '@taquito/sapling';
+import { TezosToolkit, RpcReadAdapter } from '@exodus/taquito-taquito';
+import { SaplingToolkit, InMemorySpendingKey } from '@exodus/taquito-sapling';
 
 const tezos = new TezosToolkit('https://jakartanet.ecadinfra.com/');
 
@@ -47,8 +47,8 @@ const initialBalance = await txViewer.getBalance();
 A shielded transaction allows sending tokens from a Tezos account (tz1, tz2, tz3) to a Sapling address (zet).
 
 ```ts
-import { TezosToolkit, RpcReadAdapter } from '@taquito/taquito';
-import { SaplingToolkit, InMemorySpendingKey } from '@taquito/sapling';
+import { TezosToolkit, RpcReadAdapter } from '@exodus/taquito-taquito';
+import { SaplingToolkit, InMemorySpendingKey } from '@exodus/taquito-sapling';
 
 const tezos = new TezosToolkit('https://jakartanet.ecadinfra.com/');
 // set up your signer on the TezosToolkit as usual

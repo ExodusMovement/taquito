@@ -1,6 +1,6 @@
 /**
  * @packageDocumentation
- * @module @taquito/michelson-encoder
+ * @module @exodus/taquito-michelson-encoder
  */
 
 export * from './schema/storage';

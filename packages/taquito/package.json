@@ -1,5 +1,5 @@
 {
-  "name": "@taquito/taquito",
+  "name": "@exodus/taquito-taquito",
   "version": "16.1.1",
   "description": "High level functionality that builds upon the other packages in the Tezos Typescript Library Suite.",
   "keywords": [
@@ -62,11 +62,11 @@
       "js"
     ],
     "moduleNameMapper": {
-      "^@taquito/rpc$": "<rootDir>/../taquito-rpc/src/taquito-rpc.ts",
-      "^@taquito/michelson-encoder$": "<rootDir>/../taquito-michelson-encoder/src/taquito-michelson-encoder.ts",
-      "^@taquito/michel-codec$": "<rootDir>/../taquito-michel-codec/src/taquito-michel-codec.ts",
-      "^@taquito/http-utils$": "<rootDir>/../taquito-http-utils/src/taquito-http-utils.ts",
-      "^@taquito/utils$": "<rootDir>/../taquito-utils/src/taquito-utils.ts"
+      "^@exodus/taquito-rpc$": "<rootDir>/../taquito-rpc/src/taquito-rpc.ts",
+      "^@exodus/taquito-michelson-encoder$": "<rootDir>/../taquito-michelson-encoder/src/taquito-michelson-encoder.ts",
+      "^@exodus/taquito-michel-codec$": "<rootDir>/../taquito-michel-codec/src/taquito-michel-codec.ts",
+      "^@exodus/taquito-http-utils$": "<rootDir>/../taquito-http-utils/src/taquito-http-utils.ts",
+      "^@exodus/taquito-utils$": "<rootDir>/../taquito-utils/src/taquito-utils.ts"
     },
     "coveragePathIgnorePatterns": [
       "/node_modules/",
@@ -77,12 +77,12 @@
     ]
   },
   "dependencies": {
-    "@taquito/http-utils": "^16.1.1",
-    "@taquito/local-forging": "^16.1.1",
-    "@taquito/michel-codec": "^16.1.1",
-    "@taquito/michelson-encoder": "^16.1.1",
-    "@taquito/rpc": "^16.1.1",
-    "@taquito/utils": "^16.1.1",
+    "@exodus/taquito-http-utils": "^16.1.1",
+    "@exodus/taquito-local-forging": "^16.1.1",
+    "@exodus/taquito-michel-codec": "^16.1.1",
+    "@exodus/taquito-michelson-encoder": "^16.1.1",
+    "@exodus/taquito-rpc": "^16.1.1",
+    "@exodus/taquito-utils": "^16.1.1",
     "bignumber.js": "^9.1.0",
     "rxjs": "^6.6.3"
   },

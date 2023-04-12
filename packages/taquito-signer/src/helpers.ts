@@ -1,4 +1,4 @@
-import { b58cencode, prefix } from "@taquito/utils";
+import { b58cencode, prefix } from "@exodus/taquito-utils";
 import { PrivateKey as PrivateKeyEd } from "./derivation-tools/ed25519";
 import { PrivateKey as PrivateKeyEc } from "./derivation-tools/ecdsa";
 import { Path } from "./derivation-tools";

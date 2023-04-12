@@ -13,7 +13,7 @@ if (fs.existsSync(readmePath)) {
   let readme = fs.readFileSync(readmePath).toString('utf8');
 
   readme = readme.replace(integrityRegex, `integrity="${manifest['main.js'].integrity}"`)
-  readme = readme.replace(versionRegex, `@taquito/taquito@${package.version}/dist`)
+  readme = readme.replace(versionRegex, `@exodus/taquito-taquito@${package.version}/dist`)
 
   fs.writeFileSync(readmePath, readme);
 }

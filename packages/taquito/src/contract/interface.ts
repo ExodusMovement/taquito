@@ -1,5 +1,5 @@
-import { BigMapKeyType, MichelsonMap, MichelsonMapKey, Schema } from '@taquito/michelson-encoder';
-import { SaplingDiffResponse } from '@taquito/rpc';
+import { BigMapKeyType, MichelsonMap, MichelsonMapKey, Schema } from '@exodus/taquito-michelson-encoder';
+import { SaplingDiffResponse } from '@exodus/taquito-rpc';
 import { OperationBatch } from '../batch/rpc-batch-provider';
 import { Context } from '../context';
 import { DelegateOperation } from '../operations/delegate-operation';

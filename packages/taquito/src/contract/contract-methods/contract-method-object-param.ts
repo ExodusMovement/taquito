@@ -2,7 +2,7 @@ import { TransactionOperation } from '../../operations/transaction-operation';
 import { TransferParams } from '../../operations/types';
 import { ContractProvider } from '../interface';
 import { TransactionWalletOperation, Wallet } from '../../wallet';
-import { ParameterSchema } from "@taquito/michelson-encoder";
+import { ParameterSchema } from "@exodus/taquito-michelson-encoder";
 import { ContractMethodInterface, ExplicitTransferParams, SendParams } from './contract-method-interface';
 import { DEFAULT_SMART_CONTRACT_METHOD_NAME } from '../contract';
 

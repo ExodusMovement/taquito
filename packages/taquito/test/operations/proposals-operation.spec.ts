@@ -1,5 +1,5 @@
 import { ProposalsOperation } from '../../src/operations/proposals-operation';
-import { OperationContentsAndResult } from '@taquito/rpc';
+import { OperationContentsAndResult } from '@exodus/taquito-rpc';
 import { ForgedBytes } from '../../src/operations/types';
 import { defaultConfigConfirmation } from '../../src/context';
 

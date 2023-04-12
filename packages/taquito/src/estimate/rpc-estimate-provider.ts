@@ -1,4 +1,4 @@
-import { PreapplyResponse, RPCRunOperationParam, OpKind, ConstantsResponse } from '@taquito/rpc';
+import { PreapplyResponse, RPCRunOperationParam, OpKind, ConstantsResponse } from '@exodus/taquito-rpc';
 import BigNumber from 'bignumber.js';
 import { DEFAULT_FEE, DEFAULT_GAS_LIMIT, DEFAULT_STORAGE_LIMIT } from '../constants';
 import { OperationEmitter } from '../operations/operation-emitter';
@@ -48,7 +48,7 @@ import {
   InvalidAddressError,
   ValidationResult,
   InvalidOperationKindError,
-} from '@taquito/utils';
+} from '@exodus/taquito-utils';
 import { RevealEstimateError } from './error';
 import { ContractMethod, ContractMethodObject, ContractProvider } from '../contract';
 

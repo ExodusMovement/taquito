@@ -6,7 +6,7 @@ import {
   Token,
   SemanticEncoding,
 } from '../token';
-import { stripHexPrefix } from '@taquito/utils';
+import { stripHexPrefix } from '@exodus/taquito-utils';
 
 export class BytesValidationError extends TokenValidationError {
   name = 'BytesValidationError';

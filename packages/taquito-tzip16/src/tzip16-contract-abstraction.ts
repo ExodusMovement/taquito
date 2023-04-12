@@ -5,8 +5,8 @@ import {
   ContractAbstraction,
   ContractProvider,
   Wallet,
-} from '@taquito/taquito';
-import { bytes2Char } from '@taquito/utils';
+} from '@exodus/taquito-taquito';
+import { bytes2Char } from '@exodus/taquito-utils';
 import { MetadataEnvelope, MetadataProviderInterface } from './metadata-provider';
 import {
   BigMapMetadataNotFound,
@@ -14,7 +14,7 @@ import {
   UriNotFound,
 } from './tzip16-errors';
 import BigNumber from 'bignumber.js';
-import { Schema } from '@taquito/michelson-encoder';
+import { Schema } from '@exodus/taquito-michelson-encoder';
 import { ViewFactory } from './viewKind/viewFactory';
 import { View } from './viewKind/interface';
 import { ViewDefinition } from './metadata-interface';

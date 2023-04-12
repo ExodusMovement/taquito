@@ -1,5 +1,5 @@
 {
-  "name": "@taquito/rpc",
+  "name": "@exodus/taquito-rpc",
   "version": "16.1.1",
   "description": "Provides low level methods, and types to invoke RPC calls from a Nomadic Tezos RPC node",
   "keywords": [
@@ -56,7 +56,7 @@
       "js"
     ],
     "moduleNameMapper": {
-      "^@taquito/http-utils$": "<rootDir>/../taquito-http-utils/src/taquito-http-utils.ts"
+      "^@exodus/taquito-http-utils$": "<rootDir>/../taquito-http-utils/src/taquito-http-utils.ts"
     },
     "coveragePathIgnorePatterns": [
       "/node_modules/",
@@ -67,8 +67,8 @@
     ]
   },
   "dependencies": {
-    "@taquito/http-utils": "^16.1.1",
-    "@taquito/utils": "^16.1.1",
+    "@exodus/taquito-http-utils": "^16.1.1",
+    "@exodus/taquito-utils": "^16.1.1",
     "bignumber.js": "^9.1.0"
   },
   "devDependencies": {

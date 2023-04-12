@@ -5,7 +5,7 @@ import {
   TokenValidationError,
   SemanticEncoding,
 } from '../token';
-import { encodeKeyHash, validateKeyHash, ValidationResult } from '@taquito/utils';
+import { encodeKeyHash, validateKeyHash, ValidationResult } from '@exodus/taquito-utils';
 import { BaseTokenSchema } from '../../schema/types';
 
 export class KeyHashValidationError extends TokenValidationError {

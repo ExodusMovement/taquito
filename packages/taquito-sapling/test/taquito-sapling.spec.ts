@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { MichelCodecPacker } from '@taquito/taquito';
+import { MichelCodecPacker } from '@exodus/taquito-taquito';
 import BigNumber from 'bignumber.js';
 import { SaplingForger } from '../src/sapling-forger/sapling-forger';
 import {

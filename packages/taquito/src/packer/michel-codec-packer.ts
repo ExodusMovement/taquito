@@ -1,6 +1,6 @@
 import { Packer } from './interface';
-import { packDataBytes, MichelsonData, MichelsonType } from '@taquito/michel-codec'
-import { PackDataResponse, PackDataParams } from '@taquito/rpc';
+import { packDataBytes, MichelsonData, MichelsonType } from '@exodus/taquito-michel-codec'
+import { PackDataResponse, PackDataParams } from '@exodus/taquito-rpc';
 
 export class MichelCodecPacker implements Packer {
 

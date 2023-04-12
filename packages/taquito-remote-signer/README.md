@@ -1,7 +1,7 @@
 # Taquito Remote Signer package
 *TypeDoc style documentation is available on-line [here](https://tezostaquito.io/typedoc/modules/_taquito_remote_signer.html)*
 
-`@taquito/remote-signer` is an npm package that provides developers with remote signing functionality for Taquito. 
+`@exodus/taquito-remote-signer` is an npm package that provides developers with remote signing functionality for Taquito. 
 
 ## General Information
 
@@ -10,8 +10,8 @@ If you require the server-side signing of operations on the mainnet, we recommen
 ## Install 
 
 ```
-npm i --save @taquito/taquito
-npm i --save @taquito/remote-signer
+npm i --save @exodus/taquito-taquito
+npm i --save @exodus/taquito-remote-signer
 ```
 
 ## Usage
@@ -19,8 +19,8 @@ npm i --save @taquito/remote-signer
 When the `RemoteSigner` is configured on the `TezosToolkit`, Taquito features that require signing support can be used. The Contract API operations will be signed using the signer. Validation of the signature will be conducted before the operation is injected. The `RemoteSigner` can be injected into the `TezosToolkit` as follows:
 
 ```ts
-import { TezosToolkit } from '@taquito/taquito';
-import { RemoteSigner } from '@taquito/remote-signer';
+import { TezosToolkit } from '@exodus/taquito-taquito';
+import { RemoteSigner } from '@exodus/taquito-remote-signer';
 
 const Tezos = new TezosToolkit('https://YOUR_PREFERRED_RPC_URL');
 const signer = new RemoteSigner(pkh, rootUrl);

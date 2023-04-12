@@ -3,7 +3,7 @@ import {
   OperationContentsAndResultOrigination,
   OperationContentsAndResultReveal,
   OpKind,
-} from '@taquito/rpc';
+} from '@exodus/taquito-rpc';
 import { Observable } from 'rxjs';
 import { Context } from '../context';
 import { DefaultWalletType } from '../contract/contract';

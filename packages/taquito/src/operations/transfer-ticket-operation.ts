@@ -2,7 +2,7 @@ import {
   OperationContentsAndResult,
   OperationContentsAndResultTransferTicket,
   OpKind,
-} from '@taquito/rpc';
+} from '@exodus/taquito-rpc';
 import { BigNumber } from 'bignumber.js';
 import { Context } from '../context';
 import { Operation } from '../operations';

@@ -1,8 +1,8 @@
 /**
  * @packageDocumentation
- * @module @taquito/rpc
+ * @module @exodus/taquito-rpc
  */
-import { HttpBackend, HttpResponseError, STATUS_CODE } from '@taquito/http-utils';
+import { HttpBackend, HttpResponseError, STATUS_CODE } from '@exodus/taquito-http-utils';
 import BigNumber from 'bignumber.js';
 import {
   defaultChain,
@@ -69,7 +69,7 @@ import {
   validateAddress,
   validateContractAddress,
   ValidationResult,
-} from '@taquito/utils';
+} from '@exodus/taquito-utils';
 
 export { castToBigNumber } from './utils/utils';
 
@@ -921,7 +921,7 @@ export class RpcClient implements RpcClientInterface {
    * Note: You should always verify the packed bytes before signing or requesting that they be signed when using the the RPC to pack.
    * This precaution helps protect you and your applications users from RPC nodes that have been compromised.
    * A node that is operated by a bad actor, or compromised by a bad actor could return a fully formed operation that does not correspond to the input provided to the RPC endpoint.
-   * A safer solution to pack and sign data would be to use the `packDataBytes` function available in the `@taquito/michel-codec` package.
+   * A safer solution to pack and sign data would be to use the `packDataBytes` function available in the `@exodus/taquito-michel-codec` package.
    *
    * @example packData({ data: { string: "test" }, type: { prim: "string" } })
    *

@@ -1,4 +1,4 @@
-import { TezosToolkit } from '@taquito/taquito';
+import { TezosToolkit } from '@exodus/taquito-taquito';
 import { InMemorySigner, importKey } from '../src/taquito-signer';
 
 describe('ImportKey', () => {

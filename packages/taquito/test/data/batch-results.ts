@@ -1,4 +1,4 @@
-import { OperationContentsAndResult } from '@taquito/rpc';
+import { OperationContentsAndResult } from '@exodus/taquito-rpc';
 
 export const resultOriginations = [
   {

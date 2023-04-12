@@ -1,4 +1,4 @@
-import { BlockResponse, OperationContentsAndResult, OperationResultStatusEnum } from '@taquito/rpc';
+import { BlockResponse, OperationContentsAndResult, OperationResultStatusEnum } from '@exodus/taquito-rpc';
 import { combineLatest, from, Observable, of, range, ReplaySubject } from 'rxjs';
 import {
   catchError,
@@ -16,7 +16,7 @@ import {
 } from 'rxjs/operators';
 import { Context } from '../context';
 import { Receipt, receiptFromOperation } from './receipt';
-import { validateOperation, ValidationResult, InvalidOperationHashError } from '@taquito/utils';
+import { validateOperation, ValidationResult, InvalidOperationHashError } from '@exodus/taquito-utils';
 import { BlockIdentifier } from '../read-provider/interface';
 import { InvalidConfirmationCountError, ConfirmationUndefinedError } from '../error';
 

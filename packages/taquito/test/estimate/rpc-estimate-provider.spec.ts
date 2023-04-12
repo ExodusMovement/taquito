@@ -26,9 +26,9 @@ import {
   smartRollupAddMessagesNoReveal,
   smartRollupOriginateWithReveal,
 } from '../contract/helper';
-import { OpKind, PvmKind } from '@taquito/rpc';
+import { OpKind, PvmKind } from '@exodus/taquito-rpc';
 import { TransferTicketParams } from '../../src/operations/types';
-import { InvalidAddressError } from '@taquito/utils';
+import { InvalidAddressError } from '@exodus/taquito-utils';
 import { ContractAbstraction } from '../../src/contract';
 import { genericMultisig } from '../../../../integration-tests/data/multisig';
 import { RpcContractProvider } from '../../src/contract/rpc-contract-provider';

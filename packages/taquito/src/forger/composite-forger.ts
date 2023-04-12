@@ -1,4 +1,4 @@
-import { Forger, ForgeParams, ForgeResponse } from '@taquito/local-forging';
+import { Forger, ForgeParams, ForgeResponse } from '@exodus/taquito-local-forging';
 
 /**
  *  @category Error

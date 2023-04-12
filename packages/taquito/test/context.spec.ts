@@ -1,4 +1,4 @@
-import { RpcClient } from '@taquito/rpc';
+import { RpcClient } from '@exodus/taquito-rpc';
 import { Protocols } from '../src/constants';
 import { Context } from '../src/context';
 

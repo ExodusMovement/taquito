@@ -1,5 +1,5 @@
 {
-  "name": "@taquito/local-forging",
+  "name": "@exodus/taquito-local-forging",
   "version": "16.1.1",
   "description": "Provide local forging functionality to be with taquito",
   "keywords": [
@@ -57,7 +57,7 @@
       "js"
     ],
     "moduleNameMapper": {
-      "^@taquito/utils$": "<rootDir>/../taquito-utils/src/taquito-utils.ts"
+      "^@exodus/taquito-utils$": "<rootDir>/../taquito-utils/src/taquito-utils.ts"
     },
     "coveragePathIgnorePatterns": [
       "/node_modules/",
@@ -68,11 +68,11 @@
     ]
   },
   "dependencies": {
-    "@taquito/utils": "^16.1.1",
+    "@exodus/taquito-utils": "^16.1.1",
     "bignumber.js": "^9.1.0"
   },
   "devDependencies": {
-    "@taquito/rpc": "^16.1.1",
+    "@exodus/taquito-rpc": "^16.1.1",
     "@types/bluebird": "^3.5.36",
     "@types/estree": "^1.0.0",
     "@types/jest": "^26.0.23",

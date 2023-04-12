@@ -1,4 +1,4 @@
-import { GlobalConstantHashAndValue } from '@taquito/michel-codec';
+import { GlobalConstantHashAndValue } from '@exodus/taquito-michel-codec';
 import { GlobalConstantNotFound } from './error';
 import { GlobalConstantHash, GlobalConstantsProvider } from './interface-global-constants-provider';
 

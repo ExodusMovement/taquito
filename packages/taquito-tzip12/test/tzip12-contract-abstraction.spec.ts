@@ -1,5 +1,5 @@
-import { MichelsonMap, ViewSimulationError } from '@taquito/taquito';
-import { char2Bytes, InvalidUri } from '@taquito/tzip16';
+import { MichelsonMap, ViewSimulationError } from '@exodus/taquito-taquito';
+import { char2Bytes, InvalidUri } from '@exodus/taquito-tzip16';
 import { Tzip12ContractAbstraction } from '../src/tzip12-contract-abstraction';
 import { InvalidTokenMetadata, TokenIdNotFound, TokenMetadataNotFound } from '../src/tzip12-errors';
 

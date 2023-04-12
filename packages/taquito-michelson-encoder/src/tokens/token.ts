@@ -1,4 +1,4 @@
-import { MichelsonV1Expression, MichelsonV1ExpressionExtended } from '@taquito/rpc';
+import { MichelsonV1Expression, MichelsonV1ExpressionExtended } from '@exodus/taquito-rpc';
 import { TokenSchema } from '../schema/types';
 
 /**

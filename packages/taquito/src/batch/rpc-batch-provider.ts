@@ -36,7 +36,7 @@ import {
   SmartRollupAddMessagesParams,
   SmartRollupOriginateParamsWithProof,
 } from '../operations/types';
-import { OpKind } from '@taquito/rpc';
+import { OpKind } from '@exodus/taquito-rpc';
 import { ContractMethodObject } from '../contract/contract-methods/contract-method-object-param';
 import {
   validateAddress,
@@ -45,7 +45,7 @@ import {
   InvalidKeyHashError,
   ValidationResult,
   InvalidOperationKindError,
-} from '@taquito/utils';
+} from '@exodus/taquito-utils';
 import { EstimationProvider } from '../estimate/estimate-provider-interface';
 
 export const BATCH_KINDS = [

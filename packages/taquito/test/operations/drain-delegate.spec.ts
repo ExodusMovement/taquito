@@ -3,7 +3,7 @@ import {
   OperationContentsAndResult,
   OpKind,
   OperationContentsAndResultDrainDelegate,
-} from '@taquito/rpc';
+} from '@exodus/taquito-rpc';
 import { ForgedBytes } from '../../src/operations/types';
 import { defaultConfigConfirmation } from '../../src/context';
 

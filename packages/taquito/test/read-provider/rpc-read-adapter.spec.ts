@@ -13,7 +13,7 @@ import {
   liveBlocks,
   saplingState,
 } from './data';
-import { RpcClient } from '@taquito/rpc';
+import { RpcClient } from '@exodus/taquito-rpc';
 
 describe('RpcReadAdapter test', () => {
   let readProvider: RpcReadAdapter;

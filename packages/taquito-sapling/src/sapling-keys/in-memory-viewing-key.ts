@@ -1,4 +1,4 @@
-import { b58cencode, Prefix, prefix } from '@taquito/utils';
+import { b58cencode, Prefix, prefix } from '@exodus/taquito-utils';
 import * as sapling from '@airgap/sapling-wasm';
 import { InMemorySpendingKey } from './in-memory-spending-key';
 

@@ -1,4 +1,4 @@
-import { Forger, ForgeParams, ForgeResponse } from '@taquito/local-forging';
+import { Forger, ForgeParams, ForgeResponse } from '@exodus/taquito-local-forging';
 import { Context } from '../context';
 
 export class RpcForger implements Forger {

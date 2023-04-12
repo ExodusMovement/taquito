@@ -1,10 +1,10 @@
 /**
  * @packageDocumentation
- * @module @taquito/sapling
+ * @module @exodus/taquito-sapling
  */
 
 import BigNumber from 'bignumber.js';
-import { MichelCodecPacker, Packer, TzReadProvider } from '@taquito/taquito';
+import { MichelCodecPacker, Packer, TzReadProvider } from '@exodus/taquito-taquito';
 import {
   b58cdecode,
   format,
@@ -14,7 +14,7 @@ import {
   Prefix,
   validateKeyHash,
   ValidationResult,
-} from '@taquito/utils';
+} from '@exodus/taquito-utils';
 import { InsufficientBalance, InvalidMemo } from './error';
 import { convertValueToBigNumber } from './sapling-tx-viewer/helpers';
 import { InMemorySpendingKey } from './sapling-keys/in-memory-spending-key';

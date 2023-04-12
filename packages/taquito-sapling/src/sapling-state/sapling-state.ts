@@ -4,11 +4,11 @@
  *
  */
 
-import { SaplingDiffResponse, SaplingTransactionCiphertext } from '@taquito/rpc';
+import { SaplingDiffResponse, SaplingTransactionCiphertext } from '@exodus/taquito-rpc';
 import { InvalidMerkleRootError, TreeConstructionFailure } from '../error';
 import { merkleHash } from '@airgap/sapling-wasm';
 import { Lazy, pairNodes, changeEndianness } from './utils';
-import { hex2Bytes, num2PaddedHex } from '@taquito/utils';
+import { hex2Bytes, num2PaddedHex } from '@exodus/taquito-utils';
 import BigNumber from 'bignumber.js';
 import { MerkleTree, SaplingStateTree } from '../types';
 

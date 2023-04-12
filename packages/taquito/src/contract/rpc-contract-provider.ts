@@ -1,7 +1,7 @@
-import { HttpResponseError, STATUS_CODE } from '@taquito/http-utils';
-import { BigMapKeyType, MichelsonMap, MichelsonMapKey, Schema } from '@taquito/michelson-encoder';
-import { OpKind, ScriptResponse } from '@taquito/rpc';
-import { encodeExpr } from '@taquito/utils';
+import { HttpResponseError, STATUS_CODE } from '@exodus/taquito-http-utils';
+import { BigMapKeyType, MichelsonMap, MichelsonMapKey, Schema } from '@exodus/taquito-michelson-encoder';
+import { OpKind, ScriptResponse } from '@exodus/taquito-rpc';
+import { encodeExpr } from '@exodus/taquito-utils';
 import { OperationBatch } from '../batch/rpc-batch-provider';
 import { Context } from '../context';
 import { DelegateOperation } from '../operations/delegate-operation';
@@ -60,7 +60,7 @@ import {
   InvalidContractAddressError,
   InvalidAddressError,
   ValidationResult,
-} from '@taquito/utils';
+} from '@exodus/taquito-utils';
 import { EstimationProvider } from '../estimate/estimate-provider-interface';
 import { TxRollupOriginationOperation } from '../operations/tx-rollup-origination-operation';
 import { TxRollupBatchOperation } from '../operations/tx-rollup-batch-operation';

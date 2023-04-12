@@ -4,7 +4,7 @@ import {
   MichelsonV1Expression,
   SaplingDiffResponse,
   ScriptedContracts,
-} from '@taquito/rpc';
+} from '@exodus/taquito-rpc';
 import BigNumber from 'bignumber.js';
 
 export type BigMapQuery = {

@@ -4,7 +4,7 @@ import {
   OperationContentsAndResult,
   OperationContentsAndResultTransferTicket,
   OpKind,
-} from '@taquito/rpc';
+} from '@exodus/taquito-rpc';
 import { defaultConfigConfirmation } from '../../src/context';
 import { TransferTicketOperation } from '../../src/operations/transfer-ticket-operation';
 

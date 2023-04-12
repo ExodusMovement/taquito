@@ -1,4 +1,4 @@
-import { MichelsonContract, MichelsonData, MichelsonContractStorage, MichelsonType } from "@taquito/michel-codec";
+import { MichelsonContract, MichelsonData, MichelsonContractStorage, MichelsonType } from "@exodus/taquito-michel-codec";
 
 export const sampleStorage: MichelsonData = {
   prim: 'Pair',

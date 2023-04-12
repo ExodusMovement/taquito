@@ -12,7 +12,7 @@ import {
   Prefix,
   b58cdecode,
   prefix,
-} from '@taquito/utils';
+} from '@exodus/taquito-utils';
 import { BaseTokenSchema } from '../schema/types';
 
 const publicKeyPrefixLength = 4;

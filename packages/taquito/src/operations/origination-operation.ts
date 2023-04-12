@@ -1,4 +1,4 @@
-import { OperationContentsAndResult, OperationContentsAndResultOrigination } from '@taquito/rpc';
+import { OperationContentsAndResult, OperationContentsAndResultOrigination } from '@exodus/taquito-rpc';
 import { BigNumber } from 'bignumber.js';
 import { Context } from '../context';
 import { DefaultContractType } from '../contract/contract';

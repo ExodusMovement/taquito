@@ -1,7 +1,7 @@
 import * as sapling from '@airgap/sapling-wasm';
 import BigNumber from 'bignumber.js';
-import { hex2buf, mergebuf } from '@taquito/utils';
-import { CommitmentsAndCiphertexts, SaplingDiffResponse } from '@taquito/rpc';
+import { hex2buf, mergebuf } from '@exodus/taquito-utils';
+import { CommitmentsAndCiphertexts, SaplingDiffResponse } from '@exodus/taquito-rpc';
 import blake from 'blakejs';
 import { openSecretBox } from '@stablelib/nacl';
 import { InMemoryViewingKey } from '../sapling-keys/in-memory-viewing-key';
@@ -9,7 +9,7 @@ import { bufToUint8Array, convertValueToBigNumber, readableFormat } from './help
 import { KDF_KEY, OCK_KEY } from '../constants';
 import { Input, SaplingContractId, SaplingIncomingAndOutgoingTransaction } from '../types';
 import { InvalidParameter } from '../error';
-import { TzReadProvider } from '@taquito/taquito';
+import { TzReadProvider } from '@exodus/taquito-taquito';
 
 /**
  * @description Allows to retrieve and decrypt sapling transactions using on a viewing key
