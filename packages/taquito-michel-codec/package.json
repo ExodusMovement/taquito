@@ -7,12 +7,10 @@
     "blockchain",
     "signer"
   ],
-  "main": "./dist/taquito-michel-codec.umd.js",
-  "module": "./dist/taquito-michel-codec.es6.js",
+  "main": "./dist/lib/taquito-michel-codec.js",
   "typings": "./dist/types/taquito-michel-codec.d.ts",
   "files": [
-    "dist",
-    "signature.json"
+    "dist"
   ],
   "publishConfig": {
     "access": "public"

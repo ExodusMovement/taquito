@@ -5,11 +5,9 @@
   "keywords": [
     "tezos"
   ],
-  "main": "dist/taquito-http-utils.umd.js",
-  "module": "dist/taquito-http-utils.es6.js",
+  "main": "dist/lib/taquito-http-utils.js",
   "typings": "dist/types/taquito-http-utils.d.ts",
   "files": [
-    "signature.json",
     "dist"
   ],
   "author": "Simon Boissonneault-Robert <simon@ecadlabs.com>",

@@ -56,7 +56,10 @@
       "tsx",
       "js"
     ],
-    "moduleNameMapper": {},
+    "moduleNameMapper": {
+      "^@exodus/taquito-utils$": "<rootDir>/../taquito-utils/src/taquito-utils.ts",
+      "^@exodus/taquito-taquito$": "<rootDir>/../taquito/src/taquito.ts"
+    },
     "coveragePathIgnorePatterns": [
       "/node_modules/",
       "/test/"

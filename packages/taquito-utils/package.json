@@ -8,12 +8,10 @@
     "michelson",
     "smart-contract"
   ],
-  "main": "dist/taquito-utils.umd.js",
-  "module": "dist/taquito-utils.es6.js",
+  "main": "dist/lib/taquito-utils.js",
   "typings": "dist/types/taquito-utils.d.ts",
   "files": [
-    "dist",
-    "signature.json"
+    "dist"
   ],
   "publishConfig": {
     "access": "public"

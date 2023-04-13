@@ -7,12 +7,10 @@
     "blockchain",
     "signer"
   ],
-  "main": "dist/taquito-local-forging.umd.js",
-  "module": "dist/taquito-local-forging.es6.js",
+  "main": "dist/lib/taquito-local-forging.js",
   "typings": "dist/types/taquito-local-forging.d.ts",
   "files": [
-    "dist",
-    "signature.json"
+    "dist"
   ],
   "publishConfig": {
     "access": "public"

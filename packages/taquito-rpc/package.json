@@ -7,11 +7,9 @@
     "blockchain",
     "rpc"
   ],
-  "main": "dist/taquito-rpc.umd.js",
-  "module": "dist/taquito-rpc.es6.js",
+  "main": "dist/lib/taquito-rpc.js",
   "typings": "dist/types/taquito-rpc.d.ts",
   "files": [
-    "signature.json",
     "dist"
   ],
   "publishConfig": {

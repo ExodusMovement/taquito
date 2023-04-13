@@ -6,12 +6,9 @@
     "tezos",
     "blockchain"
   ],
-  "main": "dist/taquito.umd.js",
-  "unpkg": "dist/taquito.min.js",
-  "module": "dist/taquito.es6.js",
+  "main": "dist/lib/subscribe/",
   "typings": "dist/types/taquito.d.ts",
   "files": [
-    "signature.json",
     "dist",
     "patch.js"
   ],
