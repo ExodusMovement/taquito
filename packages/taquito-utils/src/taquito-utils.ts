@@ -12,7 +12,7 @@
 import { Buffer } from 'buffer';
 import { Prefix, prefix, prefixLength } from './constants';
 import { validatePkAndExtractPrefix } from './verify-signature';
-import blake from 'blakejs';
+import blake from '@exodus/blakejs';
 import bs58check from 'bs58check';
 import { ValueConversionError, InvalidHexStringError } from './errors';
 import BigNumber from 'bignumber.js';

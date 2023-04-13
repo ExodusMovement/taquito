@@ -3,7 +3,7 @@
  * @module @exodus/taquito-signer
  */
 import * as nacl from "tweetnacl";
-import blake from 'blakejs';
+import blake from '@exodus/blakejs';
 import { hex2buf, mergebuf, b58cencode, prefix, InvalidKeyError } from '@exodus/taquito-utils';
 import toBuffer from 'typedarray-to-buffer';
 import { Tz1 } from './ed-key';
