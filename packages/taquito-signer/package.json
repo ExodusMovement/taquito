@@ -69,7 +69,7 @@
     "@exodus/taquito-taquito": "^16.1.1-exodus.0",
     "@exodus/taquito-utils": "^16.1.1-exodus.0",
     "@types/bn.js": "^5.1.1",
-    "bip39": "^3.0.4",
+    "bip39": "^3.0.2",
     "@exodus/blakejs": "^1.1.1-exodus.0",
     "create-hmac": "^1.1.7",
     "elliptic": "^6.5.4",
