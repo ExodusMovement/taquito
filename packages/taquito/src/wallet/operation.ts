@@ -11,7 +11,6 @@ import {
   publishReplay,
   refCount,
   switchMap,
-  takeWhile,
   tap,
 } from 'rxjs/operators';
 import { Context } from '../context';
@@ -23,6 +22,28 @@ import { InvalidConfirmationCountError, ConfirmationUndefinedError } from '../er
 export type OperationStatus = 'pending' | 'unknown' | OperationResultStatusEnum;
 
 const MAX_BRANCH_ANCESTORS = 60;
+
+function takeWhileInclusive<T>(predicate: (value: T) => boolean) {
+  return (observable: Observable<T>) => new Observable(observer => {
+    const subscription = observable.subscribe({
+      next(value: T) {
+        observer.next(value)
+	if (!predicate(value)) {
+	  observer.complete()
+	}
+      },
+
+      error(err) {
+        observer.error(err)
+      },
+
+      complete() {
+        observer.complete()
+      }
+    })
+    return () => subscription.unsubscribe()
+  })
+}
 
 /**
  * @description WalletOperation allows to monitor operation inclusion on chains and surface information related to the operation
@@ -170,7 +191,7 @@ export class WalletOperation {
           isInCurrentBranch: () => this.isInCurrentBranch(head.hash as BlockIdentifier),
         };
       }),
-      takeWhile(({ completed }) => !completed, true)
+      takeWhileInclusive(({ completed }) => !completed)
     );
   }
 
