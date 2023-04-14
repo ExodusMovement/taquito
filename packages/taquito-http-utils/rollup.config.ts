@@ -12,7 +12,9 @@ export default {
   output: [
   ],
   // Indicate here external modules you don't wanna include in your bundle (i.e.: 'lodash')
-  external: [],
+  external: [
+    '@exodus/fetch'
+  ],
   watch: {
     include: 'src/**',
   },

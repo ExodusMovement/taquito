@@ -4,22 +4,11 @@
  */
 
 import { STATUS_CODE } from './status_code';
-import axios, { AxiosAdapter } from 'axios';
-
-const isNode =
-  typeof process !== 'undefined' && process.versions != null && process.versions.node != null;
-
-const adapterPromise = isNode
-  ? undefined
-  : import('@taquito/axios-fetch-adapter').then((mod) => mod.default).catch(() => undefined);
+// @ts-ignore
+import { fetch } from '@exodus/fetch';
 
 export * from './status_code';
 export { VERSION } from './version';
-
-enum ResponseType {
-  TEXT = 'text',
-  JSON = 'json',
-}
 
 type ObjectType = Record<string, any>;
 
@@ -106,57 +95,40 @@ export class HttpBackend {
    * @param options contains options to be passed for the HTTP request (url, method and timeout)
    */
   async createRequest<T>(
-    { url, method, timeout = this.timeout, query, headers = {}, json = true }: HttpRequestOptions,
+    { url, method, query, headers = {}, json = true }: HttpRequestOptions,
     data?: object | string
-  ) {
-    let resType: ResponseType;
-    let transformResponse = undefined;
+  ): Promise<T> {
 
     if (!headers['Content-Type']) {
       headers['Content-Type'] = 'application/json';
     }
 
-    if (!json) {
-      resType = ResponseType.TEXT;
-      transformResponse = [<Type>(v: Type) => v];
-    } else {
-      resType = ResponseType.JSON;
-    }
-
     try {
-      const adapter = adapterPromise && ((await adapterPromise) as AxiosAdapter);
-      const response = await axios.request<T>({
-        url: url + this.serialize(query),
+      const res = await fetch(url + this.serialize(query), {
         method: method ?? 'GET',
         headers: headers,
-        responseType: resType,
-        transformResponse,
-        timeout: timeout,
-        data: data,
-        adapter,
+        // timeout: timeout,
+        body: typeof data === 'object' ? JSON.stringify(data) : data,
       });
 
-      return response.data;
-    } catch (err: any) {
-      if ((axios.isAxiosError(err) && err.response) || (!isNode && err.response)) {
-        let errorData;
-
-        if (typeof err.response.data === 'object') {
-          errorData = JSON.stringify(err.response.data);
-        } else {
-          errorData = err.response.data;
-        }
-
+      if (!res.ok) {
         throw new HttpResponseError(
-          `Http error response: (${err.response.status}) ${errorData}`,
-          err.response.status as STATUS_CODE,
-          err.response.statusText,
-          errorData,
+          `Http error while loading ${url + this.serialize(query)}: ${res.status}`,
+          res.status,
+          '',
+          '',
           url + this.serialize(query)
-        );
-      } else {
-        throw new HttpRequestFailed(`${method} ${url + this.serialize(query)} ${String(err)}`);
+        )
       }
+
+      if (json) {
+        const jsonResponse: T = await res.json()
+        return jsonResponse
+      } else {
+        return await res.text()
+      }
+    } catch (err: any) {
+      throw new HttpRequestFailed(`${method} ${url + this.serialize(query)} ${String(err)}`);
     }
   }
 }

@@ -57,8 +57,7 @@
     ]
   },
   "dependencies": {
-    "@taquito/axios-fetch-adapter": "^0.3.1",
-    "axios": "^0.26.0"
+    "@exodus/fetch": "^1.2.1"
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.36",
