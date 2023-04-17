@@ -6,7 +6,7 @@
     "tezos",
     "blockchain"
   ],
-  "main": "dist/lib/subscribe/",
+  "main": "dist/lib/taquito.js",
   "typings": "dist/types/taquito.d.ts",
   "files": [
     "dist",
