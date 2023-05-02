@@ -1,6 +1,6 @@
 {
   "name": "@exodus/taquito-signer",
-  "version": "16.1.1-exodus.0",
+  "version": "16.1.1-exodus.1",
   "description": "Provide signing functionality to be with taquito",
   "keywords": [
     "tezos",
