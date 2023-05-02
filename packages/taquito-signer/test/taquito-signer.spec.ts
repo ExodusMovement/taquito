@@ -102,7 +102,7 @@ describe('inmemory-signer', () => {
       'edskS3DtVSbWbPD1yviMGebjYwWJtruMjDcfAZsH9uba22EzKeYhmQkkraFosFETmEMfFNVcDYQ5QbFerj9ozDKroXZ6mb5oxV'
     );
 
-    expect((await signer.sign('123', new Uint8Array([3]))).sig).toEqual(
+    expect((await signer.sign('12', new Uint8Array([3]))).sig).toEqual(
       'signvMhyzCmfN6JCYnqbtLCHdReCqwQM9viGJm1QPsiTrLGhrMi1eEmAsoXVjfNB1cJwnP9rj6i3cVCZeucqkPcsDuKmT9me'
     );
     done();

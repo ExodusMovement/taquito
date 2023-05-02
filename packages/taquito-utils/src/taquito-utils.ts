@@ -195,6 +195,12 @@ export function encodeKeyHash(value: string) {
  * @param hex Hex string to convert
  */
 export const hex2buf = (hex: string): Uint8Array => {
+  if (hex.startsWith('0x')) {
+    hex = hex.slice(2)
+  }
+  if (!/^([a-f\d]{2})+$/i.test(hex)) {
+    throw new InvalidHexStringError(`invalid hex string: ${hex}`)
+  }
   const match = hex.match(/[\da-f]{2}/gi);
   if (match) {
     return new Uint8Array(match.map((h) => parseInt(h, 16)));
@@ -349,12 +355,7 @@ export function bytes2Char(hex: string): string {
  * @param hex String value to convert to bytes
  */
 export function hex2Bytes(hex: string): Buffer {
-  if (!hex.match(/[\da-f]{2}/gi)) {
-    throw new InvalidHexStringError(
-      `The hex string ${hex} does not have an even number of characters`
-    );
-  }
-  return Buffer.from(hex, 'hex');
+  return Buffer.from(hex2buf(hex))
 }
 
 /**
