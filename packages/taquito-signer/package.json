@@ -54,8 +54,7 @@
       "js"
     ],
     "moduleNameMapper": {
-      "^@exodus/taquito-utils$": "<rootDir>/../taquito-utils/src/taquito-utils.ts",
-      "^@exodus/taquito-taquito$": "<rootDir>/../taquito/src/taquito.ts"
+      "^@exodus/taquito-utils$": "<rootDir>/../taquito-utils/src/taquito-utils.ts"
     },
     "coveragePathIgnorePatterns": [
       "/node_modules/",
@@ -66,8 +65,7 @@
     ]
   },
   "dependencies": {
-    "@exodus/taquito-taquito": "^16.1.1-exodus.0",
-    "@exodus/taquito-utils": "^16.1.1-exodus.0",
+    "@exodus/taquito-utils": "^16.1.1-exodus.1",
     "@types/bn.js": "^5.1.1",
     "bip39": "^3.0.2",
     "@exodus/blakejs": "^1.1.1-exodus.0",

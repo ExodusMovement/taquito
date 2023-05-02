@@ -1,6 +1,3 @@
-import { InMemorySigner } from './taquito-signer';
-import { TezosToolkit } from '@exodus/taquito-taquito';
-
 /**
  *
  * @description Import a key to sign operation with the side-effect of setting the Tezos instance to use the InMemorySigner provider
@@ -13,31 +10,11 @@ import { TezosToolkit } from '@exodus/taquito-taquito';
  * @param secret Faucet secret
  */
 export async function importKey(
-  toolkit: TezosToolkit,
-  privateKeyOrEmail: string,
-  passphrase?: string,
-  mnemonic?: string,
-  secret?: string
+  _toolkit: any,
+  _privateKeyOrEmail: string,
+  _passphrase?: string,
+  _mnemonic?: string,
+  _secret?: string
 ) {
-  if (privateKeyOrEmail && passphrase && mnemonic && secret) {
-    const signer = InMemorySigner.fromFundraiser(privateKeyOrEmail, passphrase, mnemonic);
-    toolkit.setProvider({ signer });
-    const pkh = await signer.publicKeyHash();
-    let op;
-    try {
-      op = await toolkit.tz.activate(pkh, secret);
-    } catch (ex: any) {
-      const isInvalidActivationError = ex && ex.body && /Invalid activation/.test(ex.body);
-      if (!isInvalidActivationError) {
-        throw ex;
-      }
-    }
-    if (op) {
-      await op.confirmation();
-    }
-  } else {
-    // Fallback to regular import
-    const signer = await InMemorySigner.fromSecretKey(privateKeyOrEmail, passphrase);
-    toolkit.setProvider({ signer });
-  }
+  throw new Error('disabled on exodus fork')
 }
