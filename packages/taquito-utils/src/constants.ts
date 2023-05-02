@@ -56,7 +56,7 @@ export enum Prefix {
   SRC1 = 'src1',
 }
 
-export const prefix = {
+export const prefix : { [key: string]: Uint8Array } = Object.assign(Object.create(null), {
   [Prefix.TZ1]: new Uint8Array([6, 161, 159]),
   [Prefix.TZ2]: new Uint8Array([6, 161, 161]),
   [Prefix.TZ3]: new Uint8Array([6, 161, 164]),
@@ -111,9 +111,9 @@ export const prefix = {
 
   [Prefix.SR1]: new Uint8Array([6, 124, 117]),
   [Prefix.SRC1]: new Uint8Array([17, 165, 134, 138]),
-};
+});
 
-export const prefixLength: { [key: string]: number } = {
+export const prefixLength: { [key: string]: number } = Object.assign(Object.create(null), {
   [Prefix.TZ1]: 20,
   [Prefix.TZ2]: 20,
   [Prefix.TZ3]: 20,
@@ -148,4 +148,4 @@ export const prefixLength: { [key: string]: number } = {
 
   [Prefix.SR1]: 20,
   [Prefix.SRC1]: 32,
-};
+});
