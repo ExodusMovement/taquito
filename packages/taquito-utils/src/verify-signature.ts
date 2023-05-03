@@ -85,6 +85,8 @@ export function validatePkAndExtractPrefix(publicKey: string): PkPrefix {
         publicKey,
         `The public key provided has an unsupported prefix: ${pkPrefix}`
       );
+    } else {
+      throw new InvalidPublicKeyError(publicKey, 'unknown public key validation error');
     }
   }
   return pkPrefix as PkPrefix;
@@ -102,6 +104,8 @@ function validateSigAndExtractPrefix(signature: string): SigPrefix {
       throw new InvalidSignatureError(signature, 'invalid length');
     } else if (validation === ValidationResult.NO_PREFIX_MATCHED) {
       throw new InvalidSignatureError(signaturePrefix, 'unsupported prefix');
+    } else {
+      throw new InvalidSignatureError(signature, 'unknown signature validation error');
     }
   }
   return signaturePrefix as SigPrefix;
