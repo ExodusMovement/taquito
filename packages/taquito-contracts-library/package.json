@@ -1,6 +1,6 @@
 {
   "name": "@exodus/taquito-contracts-library",
-  "version": "16.1.1-exodus.1",
+  "version": "16.1.1-exodus.2",
   "description": "Can be used as an extension on the TezosToolkit to provide contracts data",
   "keywords": [
     "tezos"
@@ -68,9 +68,9 @@
     ]
   },
   "dependencies": {
-    "@exodus/taquito-rpc": "^16.1.1-exodus.1",
-    "@exodus/taquito-taquito": "^16.1.1-exodus.1",
-    "@exodus/taquito-utils": "^16.1.1-exodus.1",
+    "@exodus/taquito-rpc": "^16.1.1-exodus.2",
+    "@exodus/taquito-taquito": "^16.1.1-exodus.2",
+    "@exodus/taquito-utils": "^16.1.1-exodus.2",
     "bignumber.js": "^9.1.0"
   },
   "devDependencies": {
