@@ -45,6 +45,9 @@ export class Path extends Array<number> {
         p = p.slice(0, p.length - 1);
       }
       const index = (parseInt(p, 10) | h) >>> 0;
+      if (Number.isNaN(index)) {
+        throw new InvalidDerivationPathError(`invalid number: ${p}`)
+      }
       out.push(index);
     }
     return Path.from(out);
