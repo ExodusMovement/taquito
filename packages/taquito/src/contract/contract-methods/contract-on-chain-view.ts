@@ -108,14 +108,14 @@ export class OnChainView {
     viewCaller: string,
     contractBalance: string
   ) {
-    const instructionsToReplace = {
+    const instructionsToReplace = Object.assign(Object.create(null), {
       BALANCE: [{ prim: 'PUSH', args: [{ prim: 'mutez' }, { int: contractBalance }] }],
       SENDER: [{ prim: 'PUSH', args: [{ prim: 'address' }, { string: viewCaller }] }],
       SELF_ADDRESS: [
         { prim: 'PUSH', args: [{ prim: 'address' }, { string: this._contractAddress }] },
       ],
       AMOUNT: [{ prim: 'PUSH', args: [{ prim: 'mutez' }, { int: '0' }] }],
-    };
+    });
 
     instructions.forEach((inst: any, i: number) => {
       if (inst.prim in instructionsToReplace) {

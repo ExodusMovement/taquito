@@ -119,25 +119,25 @@ export class ContractAbstraction<
    * NB: if the contract contains annotation it will include named properties; if not it will be indexed by a number.
    *
    */
-  public methods: TMethods = {} as TMethods;
+  public methods: TMethods = Object.create(null) as TMethods;
   /**
    * @description Contains methods that are implemented by the target Tezos Smart Contract, and offers the user to call the Smart Contract methods as if they were native TS/JS methods.
    * `methodsObject` serves the exact same purpose as the `methods` member. The difference is that it allows passing the parameter in an object format when calling the smart contract method (instead of the flattened representation)
    * NB: if the contract contains annotation it will include named properties; if not it will be indexed by a number.
    *
    */
-  public methodsObject: TMethodsObject = {} as TMethodsObject;
+  public methodsObject: TMethodsObject = Object.create(null) as TMethodsObject;
   /**
    * @description Contains lamda views (tzip4) that are implemented by the target Tezos Smart Contract, and offers the user to call the lambda views as if they were native TS/JS methods.
    * NB: These are the view defined in the tzip4 standard, not the views introduced by the Hangzhou protocol.
    */
-  public views: TViews = {} as TViews;
+  public views: TViews = Object.create(null) as TViews;
   /**
    * @description Contains on-chain views that are defined by the target Tezos Smart Contract, and offers the user to simulate the views execution as if they were native TS/JS methods.
    * NB: the expected format for the parameter when calling a smart contract view is the object format (same format as for the storage) and not the flattened representation.
    *
    */
-  public contractViews: TContractViews = {} as TContractViews;
+  public contractViews: TContractViews = Object.create(null) as TContractViews;
 
   public readonly schema: Schema;
 

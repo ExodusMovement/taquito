@@ -99,7 +99,7 @@ export class MichelCodecParser implements ParserProvider {
 
   private async findGlobalConstantsHashAndValue(schema: Schema) {
     const globalConstantTokens = schema.findToken('constant');
-    const globalConstantsHashAndValue: GlobalConstantHashAndValue = {};
+    const globalConstantsHashAndValue: GlobalConstantHashAndValue = Object.create(null);
 
     if (globalConstantTokens.length !== 0) {
       for (const token of globalConstantTokens) {

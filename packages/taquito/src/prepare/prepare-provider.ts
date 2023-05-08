@@ -66,7 +66,7 @@ export class PrepareProvider implements PreparationProvider {
   #counters: { [key: string]: number };
 
   constructor(protected context: Context) {
-    this.#counters = {};
+    this.#counters = Object.create(null);
   }
 
   get rpc(): RpcClientInterface {
@@ -259,7 +259,7 @@ export class PrepareProvider implements PreparationProvider {
       const hash = await this.getBlockHash();
       const protocol = await this.getProtocolHash();
 
-      this.#counters = {};
+      this.#counters = Object.create(null);
       const headCounter = parseInt(await this.getHeadCounter(pkh), 10);
 
       const contents = this.constructOpContents(ops, headCounter, pkh);
@@ -306,7 +306,7 @@ export class PrepareProvider implements PreparationProvider {
     const hash = await this.getBlockHash();
     const protocol = await this.getProtocolHash();
 
-    this.#counters = {};
+    this.#counters = Object.create(null);
     const headCounter = parseInt(await this.getHeadCounter(pkh), 10);
 
     const contents = this.constructOpContents(ops, headCounter, pkh, source);
@@ -345,7 +345,7 @@ export class PrepareProvider implements PreparationProvider {
     const hash = await this.getBlockHash();
     const protocol = await this.getProtocolHash();
 
-    this.#counters = {};
+    this.#counters = Object.create(null);
     const headCounter = parseInt(await this.getHeadCounter(pkh), 10);
 
     const contents = this.constructOpContents(ops, headCounter, pkh, source);
@@ -384,7 +384,7 @@ export class PrepareProvider implements PreparationProvider {
     const hash = await this.getBlockHash();
     const protocol = await this.getProtocolHash();
 
-    this.#counters = {};
+    this.#counters = Object.create(null);
     const headCounter = parseInt(await this.getHeadCounter(pkh), 10);
 
     const contents = this.constructOpContents(ops, headCounter, pkh, source);
@@ -426,7 +426,7 @@ export class PrepareProvider implements PreparationProvider {
     const hash = await this.getBlockHash();
     const protocol = await this.getProtocolHash();
 
-    this.#counters = {};
+    this.#counters = Object.create(null);
     const headCounter = parseInt(await this.getHeadCounter(pkh), 10);
 
     const contents = this.constructOpContents(ops, headCounter, pkh, source);
@@ -469,7 +469,7 @@ export class PrepareProvider implements PreparationProvider {
     const hash = await this.getBlockHash();
     const protocol = await this.getProtocolHash();
 
-    this.#counters = {};
+    this.#counters = Object.create(null);
     const headCounter = parseInt(await this.getHeadCounter(pkh), 10);
 
     const contents = this.constructOpContents(ops, headCounter, pkh, source);
@@ -511,7 +511,7 @@ export class PrepareProvider implements PreparationProvider {
     const hash = await this.getBlockHash();
     const protocol = await this.getProtocolHash();
 
-    this.#counters = {};
+    this.#counters = Object.create(null);
     const headCounter = parseInt(await this.getHeadCounter(pkh), 10);
 
     const contents = this.constructOpContents(ops, headCounter, pkh, source);
@@ -553,7 +553,7 @@ export class PrepareProvider implements PreparationProvider {
     const hash = await this.getBlockHash();
     const protocol = await this.getProtocolHash();
 
-    this.#counters = {};
+    this.#counters = Object.create(null);
     const headCounter = parseInt(await this.getHeadCounter(pkh), 10);
 
     const contents = this.constructOpContents(ops, headCounter, pkh, source);
@@ -595,7 +595,7 @@ export class PrepareProvider implements PreparationProvider {
     const hash = await this.getBlockHash();
     const protocol = await this.getProtocolHash();
 
-    this.#counters = {};
+    this.#counters = Object.create(null);
     const headCounter = parseInt(await this.getHeadCounter(pkh), 10);
 
     const contents = this.constructOpContents(ops, headCounter, pkh, source);
@@ -628,7 +628,7 @@ export class PrepareProvider implements PreparationProvider {
     const hash = await this.getBlockHash();
     const protocol = await this.getProtocolHash();
 
-    this.#counters = {};
+    this.#counters = Object.create(null);
     const headCounter = parseInt(await this.getHeadCounter(pkh), 10);
 
     let currentVotingPeriod: VotingPeriodBlockResult;
@@ -675,7 +675,7 @@ export class PrepareProvider implements PreparationProvider {
     const hash = await this.getBlockHash();
     const protocol = await this.getProtocolHash();
 
-    this.#counters = {};
+    this.#counters = Object.create(null);
     const headCounter = parseInt(await this.getHeadCounter(pkh), 10);
 
     let currentVotingPeriod: VotingPeriodBlockResult;
@@ -722,7 +722,7 @@ export class PrepareProvider implements PreparationProvider {
     const hash = await this.getBlockHash();
     const protocol = await this.getProtocolHash();
 
-    this.#counters = {};
+    this.#counters = Object.create(null);
     const headCounter = parseInt(await this.getHeadCounter(pkh), 10);
 
     const contents = this.constructOpContents(ops, headCounter, pkh, source);
@@ -761,7 +761,7 @@ export class PrepareProvider implements PreparationProvider {
     const hash = await this.getBlockHash();
     const protocol = await this.getProtocolHash();
 
-    this.#counters = {};
+    this.#counters = Object.create(null);
     const headCounter = parseInt(await this.getHeadCounter(pkh), 10);
 
     const contents = this.constructOpContents(ops, headCounter, pkh, source);
@@ -803,7 +803,7 @@ export class PrepareProvider implements PreparationProvider {
     const hash = await this.getBlockHash();
     const protocol = await this.getProtocolHash();
 
-    this.#counters = {};
+    this.#counters = Object.create(null);
     const headCounter = parseInt(await this.getHeadCounter(pkh), 10);
     const contents = this.constructOpContents(ops, headCounter, pkh, source);
 
@@ -845,7 +845,7 @@ export class PrepareProvider implements PreparationProvider {
     const hash = await this.getBlockHash();
     const protocol = await this.getProtocolHash();
 
-    this.#counters = {};
+    this.#counters = Object.create(null);
     const headCounter = parseInt(await this.getHeadCounter(pkh), 10);
     const contents = this.constructOpContents(ops, headCounter, pkh);
 
@@ -879,7 +879,7 @@ export class PrepareProvider implements PreparationProvider {
     const hash = await this.getBlockHash();
     const protocol = await this.getProtocolHash();
 
-    this.#counters = {};
+    this.#counters = Object.create(null);
     const headCounter = parseInt(await this.getHeadCounter(pkh), 10);
 
     const contents = this.constructOpContents(ops, headCounter, pkh);
@@ -908,7 +908,7 @@ export class PrepareProvider implements PreparationProvider {
 
     const pkh = await this.signer.publicKeyHash();
 
-    this.#counters = {};
+    this.#counters = Object.create(null);
     const headCounter = parseInt(await this.getHeadCounter(pkh), 10);
 
     const params = contractMethod.toTransferParams();

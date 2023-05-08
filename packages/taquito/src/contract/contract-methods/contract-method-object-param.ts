@@ -26,7 +26,7 @@ export class ContractMethodObject<T extends ContractProvider | Wallet> implement
      */
     getSignature() {
         return this.isAnonymous
-            ? this.parameterSchema.ExtractSchema()[this.name]
+            ? (Object.prototype.hasOwnProperty.call(this, 'name') ? this.parameterSchema.ExtractSchema()[this.name] : undefined)
             : this.parameterSchema.ExtractSchema();
     }
 

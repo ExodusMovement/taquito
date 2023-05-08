@@ -3,7 +3,7 @@ import { GlobalConstantNotFound } from './error';
 import { GlobalConstantHash, GlobalConstantsProvider } from './interface-global-constants-provider';
 
 export class DefaultGlobalConstantsProvider implements GlobalConstantsProvider {
-  private _globalConstantsLibrary: GlobalConstantHashAndValue = {};
+  private _globalConstantsLibrary: GlobalConstantHashAndValue = Object.create(null);
 
   /**
    *
