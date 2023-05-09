@@ -84,7 +84,7 @@ const defaultTtl = 1000;
  * @description RpcClientCache acts as a decorator over the RpcClient instance by caching responses for the period defined by the ttl.
  */
 export class RpcClientCache implements RpcClientInterface {
-  private _cache: CachedDataInterface = {};
+  private _cache: CachedDataInterface = Object.create(null);
   /**
    *
    * @param rpcClient rpcClient responsible of the interaction with Tezos network through an rpc node
