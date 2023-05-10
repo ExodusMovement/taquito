@@ -215,6 +215,9 @@ export const primEncoder: Encoder<PrimValue> = (value) => {
   // Specify the number of args max is 3 without annotation
   const preamble = pad(Math.min(2 * argsCount + hasAnnot + 0x03, 9), 2);
 
+  if (!Object.prototype.hasOwnProperty.call(opMappingReverse, value.prim)) {
+    throw new Error(`invalid prim value: ${value.prim}`)
+  }
   const op = opMappingReverse[value.prim];
 
   let encodedArgs = (value.args || []).map((arg) => valueEncoder(arg)).join('');
@@ -247,7 +250,7 @@ export const primDecoder = (value: Uint8ArrayConsumer, preamble: Uint8Array) => 
     prim: opMapping[op],
   };
 
-  if (opMapping[op] === 'LAMBDA' || opMapping[op] === 'LAMBDA_REC') {
+  if ((opMapping[op] === 'LAMBDA' || opMapping[op] === 'LAMBDA_REC') && argsCount > 0) {
     value.consume(4);
   }
 
@@ -269,7 +272,7 @@ export const primDecoder = (value: Uint8ArrayConsumer, preamble: Uint8Array) => 
 
   const args = new Array(argsCount).fill(0).map(() => valueDecoder(value));
 
-  if (opMapping[op] === 'LAMBDA' || opMapping[op] === 'LAMBDA_REC') {
+  if ((opMapping[op] === 'LAMBDA' || opMapping[op] === 'LAMBDA_REC') && argsCount > 0) {
     value.consume(4);
   }
 

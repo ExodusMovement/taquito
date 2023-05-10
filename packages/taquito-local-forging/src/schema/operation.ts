@@ -194,7 +194,7 @@ export const SmartRollupExecuteOutboxMessageSchema = {
 
 export const operationEncoder =
   (encoders: { [key: string]: (val: object) => string }) => (operation: { kind: string }) => {
-    if (!(operation.kind in encoders) || !(operation.kind in kindMappingReverse)) {
+    if (!Object.prototype.hasOwnProperty.call(encoders, operation.kind) || !Object.prototype.hasOwnProperty.call(kindMappingReverse, operation.kind)) {
       throw new InvalidOperationKindError(operation.kind);
     }
 

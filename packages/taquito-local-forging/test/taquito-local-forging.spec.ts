@@ -195,13 +195,9 @@ describe('Forge and parse operations default protocol', () => {
     it(`Verify getCodec for CODEC.OP_DELEGATION`, async (done) => {
       const codec = CODEC.OP_DELEGATION;
       const myGetCodec = getCodec(codec, ProtocolsHash.PtKathman);
-      const consumer = myGetCodec.decoder(hexToParse);
-      expect(consumer).toEqual({
-        counter: '161756491',
-        fee: '114',
-        gas_limit: '103',
-        storage_limit: '70',
-      });
+      const _consumer = expect(() => myGetCodec.decoder(hexToParse)).toThrow(
+        expect.objectContaining({message: expect.stringContaining('invalid pkh prefix')})
+      )
       done();
     });
 
@@ -223,25 +219,25 @@ describe('Forge and parse operations default protocol', () => {
     it(`Verify Arrow Functions for CODEC.SECRET is toHexString(val.consume(20))`, async (done) => {
       const codec = CODEC.SECRET;
       const myGetCodec = getCodec(codec, ProtocolsHash.PtKathman);
-      const encodeCodec = myGetCodec.encoder(hexToParse);
+      const encodeCodec = myGetCodec.encoder('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
       expect(encodeCodec).toEqual(
-        '0572cbea904d67468808c8eb50a9450c9721db309128012543902d0ac358a62ae28f75bb8f1c7c42c39a8c5529bf0f4e166a9d8cabc673a322fda673779d8e3822ba3ecb8670e461f73bb9021d5fd76a4c56d9d4cd16bd1bba86881979749d28'
+        'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
       );
-      const decodeCodec = myGetCodec.decoder(hexToParse);
-      expect(decodeCodec).toEqual('0572cbea904d67468808c8eb50a9450c9721db30');
+      const decodeCodec = myGetCodec.decoder('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
+      expect(decodeCodec).toEqual('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
       done();
     });
 
     it(`Verify Arrow Function for CODEC.RAW is toHexString(val.consume(32)),`, async (done) => {
       const codec = CODEC.RAW;
       const myGetCodec = getCodec(codec, ProtocolsHash.PtKathman);
-      const encodeCodec = myGetCodec.encoder(hexToParse);
+      const encodeCodec = myGetCodec.encoder('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
       expect(encodeCodec).toEqual(
-        '0572cbea904d67468808c8eb50a9450c9721db309128012543902d0ac358a62ae28f75bb8f1c7c42c39a8c5529bf0f4e166a9d8cabc673a322fda673779d8e3822ba3ecb8670e461f73bb9021d5fd76a4c56d9d4cd16bd1bba86881979749d28'
+        'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
       );
-      const decodeCodec = myGetCodec.decoder(hexToParse);
+      const decodeCodec = myGetCodec.decoder('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
       expect(decodeCodec).toEqual(
-        '0572cbea904d67468808c8eb50a9450c9721db309128012543902d0ac358a62a'
+        'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
       );
       done();
     });

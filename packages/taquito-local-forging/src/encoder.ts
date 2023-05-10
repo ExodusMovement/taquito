@@ -57,9 +57,21 @@ import {
 
 export type Encoder<T> = (val: T) => string;
 
+const passthroughFixedLengthDecoder = (byteLength: number) => {
+  return (val: string) => {
+    if (!/^[\da-f]*$/i.test(val)) {
+      throw new Error(`${val} is not a valid hex string`)
+    }
+    if (val.length !== byteLength * 2) {
+      throw new Error(`${val} isn't of length ${byteLength * 2}`)
+    }
+    return val
+  }
+}
+
 export const encoders: { [key: string]: Encoder<any> } = {
-  [CODEC.SECRET]: (val: string) => val,
-  [CODEC.RAW]: (val: string) => val,
+  [CODEC.SECRET]: passthroughFixedLengthDecoder(20),
+  [CODEC.RAW]: passthroughFixedLengthDecoder(32),
   [CODEC.TZ1]: tz1Encoder,
   [CODEC.BRANCH]: branchEncoder,
   [CODEC.ZARITH]: zarithEncoder,

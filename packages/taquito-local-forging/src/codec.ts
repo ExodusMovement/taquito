@@ -53,6 +53,8 @@ export const pkhDecoder = (val: Uint8ArrayConsumer) => {
     return prefixDecoder(Prefix.TZ2)(val);
   } else if (prefix[0] === 0x02) {
     return prefixDecoder(Prefix.TZ3)(val);
+  } else {
+    throw new Error(`invalid pkh prefix: ${prefix[0]}`)
   }
 };
 

@@ -16,6 +16,9 @@ export class Uint8ArrayConsumer {
 
   public consume(count: number): Uint8Array {
     const subArr = this.arr.subarray(this.offset, this.offset + count);
+    if (subArr.length !== count) {
+      throw new Error(`not enough bytes, expected ${count} but got ${subArr.length} instead`)
+    }
     this.offset += count;
     return subArr;
   }
