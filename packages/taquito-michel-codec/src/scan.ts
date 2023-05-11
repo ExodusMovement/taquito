@@ -34,6 +34,9 @@ export interface Token {
 
 export function* scan(src: string, scanComments = false): Generator<Token, void> {
   let i = 0;
+  if (typeof src !== 'string') {
+    throw new Error(`not a string: ${src}`)
+  }
   while (i < src.length) {
     // Skip space
     while (i < src.length && isSpace.test(src[i])) {

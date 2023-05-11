@@ -135,6 +135,9 @@ export class LongInteger {
 
 export function parseBytes(s: string): number[] | null {
   const ret: number[] = [];
+  if (s.length % 2 !== 0) {
+    throw new Error(`expected ${s} to have even length`)
+  }
   for (let i = 0; i < s.length; i += 2) {
     const x = parseInt(s.slice(i, i + 2), 16);
     if (Number.isNaN(x)) {
