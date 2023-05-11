@@ -246,6 +246,10 @@ export const primDecoder = (value: Uint8ArrayConsumer, preamble: Uint8Array) => 
   let argsCount = Math.floor((preamble[0] - 0x03) / 2);
   const op = value.consume(1)[0].toString(16).padStart(2, '0');
 
+  if (!Object.prototype.hasOwnProperty.call(opMapping, op)) {
+    throw new Error(`unknown op: ${op}`)
+  }
+
   const result: Partial<PrimValue> = {
     prim: opMapping[op],
   };
