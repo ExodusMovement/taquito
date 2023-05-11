@@ -755,8 +755,8 @@ export function assertMichelsonData(ex: Expr): ex is MichelsonData {
 export function assertMichelsonContract(ex: Expr): ex is MichelsonContract {
   /* istanbul ignore else */
   if (assertSeq(ex)) {
-    const toplevelSec: { [sec: string]: boolean } = {};
-    const views: { [name: string]: boolean } = {};
+    const toplevelSec: { [sec: string]: boolean } = Object.create(null);
+    const views: { [name: string]: boolean } = Object.create(null);
     for (const sec of ex) {
       if (assertPrim(sec)) {
         if (sec.prim !== 'view') {

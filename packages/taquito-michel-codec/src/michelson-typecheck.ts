@@ -2075,7 +2075,7 @@ export function contractSection<T extends 'parameter' | 'storage' | 'code'>(
 export function contractViews(contract: MichelsonContract): {
   [name: string]: MichelsonContractView;
 } {
-  const views: { [name: string]: MichelsonContractView } = {};
+  const views: { [name: string]: MichelsonContractView } = Object.create(null);
   for (const s of contract) {
     if (s.prim === 'view') {
       views[s.args[0].string] = s;

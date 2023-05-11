@@ -199,7 +199,7 @@ const primitives: PrimID[] = [
 ];
 
 const primTags: { [key in PrimID]?: number } & { [key: string]: number | undefined } =
-  Object.assign({}, ...primitives.map((v, i) => ({ [v]: i })));
+  Object.assign(Object.create(null), ...primitives.map((v, i) => ({ [v]: i })));
 
 enum Tag {
   Int = 0,
