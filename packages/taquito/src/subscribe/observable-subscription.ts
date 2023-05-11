@@ -1,7 +1,7 @@
 /* eslint-disable no-dupe-class-members */
-import { Observable, Subject, NEVER, OperatorFunction } from 'rxjs';
+import { Observable, Subject, NEVER, OperatorFunction } from '@exodus/rxjs';
 import { Subscription } from './interface';
-import { takeUntil, tap, catchError, retry } from 'rxjs/operators';
+import { takeUntil, tap, catchError, retry } from '@exodus/rxjs/operators';
 
 /**
  *  @category Error

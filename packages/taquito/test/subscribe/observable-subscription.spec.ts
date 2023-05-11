@@ -1,4 +1,4 @@
-import { defer } from 'rxjs';
+import { defer } from '@exodus/rxjs';
 import { rxSandbox } from 'rx-sandbox';
 import { ObservableSubscription } from '../../src/subscribe/observable-subscription';
 

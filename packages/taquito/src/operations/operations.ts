@@ -3,7 +3,7 @@ import {
   OperationContentsAndResult,
   OperationContentsAndResultReveal,
 } from '@exodus/taquito-rpc';
-import { BehaviorSubject, defer, EMPTY, of, range, ReplaySubject, throwError } from 'rxjs';
+import { BehaviorSubject, defer, EMPTY, of, range, ReplaySubject, throwError } from '@exodus/rxjs';
 import {
   catchError,
   concatMap,
@@ -15,7 +15,7 @@ import {
   switchMap,
   tap,
   timeoutWith,
-} from 'rxjs/operators';
+} from '@exodus/rxjs/operators';
 import { Context } from '../context';
 import { ForgedBytes, hasMetadataWithResult } from './types';
 import { validateOperation, ValidationResult, InvalidOperationHashError } from '@exodus/taquito-utils';

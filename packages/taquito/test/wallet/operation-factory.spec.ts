@@ -1,8 +1,8 @@
 import { rxSandbox } from 'rx-sandbox';
-import { defer } from 'rxjs';
+import { defer } from '@exodus/rxjs';
 import { Context } from '../../src/context';
 import { createNewPollingBasedHeadObservable } from '../../src/wallet/operation-factory';
-import { distinctUntilKeyChanged, switchMap } from 'rxjs/operators';
+import { distinctUntilKeyChanged, switchMap } from '@exodus/rxjs/operators';
 describe('createNewPollingBasedHeadObservable', () => {
   const createFakeBlock = (level: number) => ({ hash: `test_${level}` });
 

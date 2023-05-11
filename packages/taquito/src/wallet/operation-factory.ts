@@ -9,7 +9,7 @@ import {
   range,
   SchedulerLike,
   throwError,
-} from 'rxjs';
+} from '@exodus/rxjs';
 import {
   concatMap,
   mergeMap,
@@ -18,7 +18,7 @@ import {
   startWith,
   switchMap,
   timeoutWith,
-} from 'rxjs/operators';
+} from '@exodus/rxjs/operators';
 import { Context } from '../context';
 import { BlockIdentifier } from '../read-provider/interface';
 import { createObservableFromSubscription } from '../subscribe/create-observable-from-subscription';
