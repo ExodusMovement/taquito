@@ -64,6 +64,10 @@
       "src/**/*.{js,ts}"
     ]
   },
+  "dependencies": {
+    "bs58check": "^2.1.2",
+    "base-x": "^4.0.0"
+  },
   "devDependencies": {
     "@types/bluebird": "^3.5.36",
     "@types/jest": "^26.0.23",
