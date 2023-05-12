@@ -6,7 +6,7 @@ export function expandGlobalConstants(ex: Prim, hashAndValue: GlobalConstantHash
     ex.args !== undefined &&
     ex.args.length === 1 &&
     'string' in ex.args[0] &&
-    ex.args[0].string in hashAndValue
+    Object.prototype.hasOwnProperty.call(hashAndValue, ex.args[0].string)
   ) {
     return hashAndValue[ex.args[0].string];
   }
