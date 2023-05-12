@@ -1,6 +1,6 @@
 {
   "name": "@exodus/taquito-utils",
-  "version": "16.1.1-exodus.2",
+  "version": "16.1.1-exodus.3",
   "description": "converts michelson data and types into convenient JS/TS objects",
   "keywords": [
     "tezos",
