@@ -1,8 +1,8 @@
 import { PollingSubscribeProvider, TezosToolkit } from '@taquito/taquito';
-import { delay, retryWhen, tap, scan } from 'rxjs/operators';
+import { delay, retryWhen, tap, scan } from '@exodus/rxjs/operators';
 
 async function example() {
-    // This example will intentionally fail after two attempts as the RPC URL is invalid. 
+    // This example will intentionally fail after two attempts as the RPC URL is invalid.
     const provider = 'https://api.tez.ie/rpc/notValid';
     const tezos = new TezosToolkit(provider);
     tezos.setStreamProvider(tezos.getFactory(PollingSubscribeProvider)({ shouldObservableSubscriptionRetry: true, observableSubscriptionRetryFunction:
