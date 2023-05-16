@@ -74,14 +74,14 @@
     ]
   },
   "dependencies": {
+    "@exodus/rxjs": "^6.6.7-exodus.2",
     "@exodus/taquito-http-utils": "^16.1.1-exodus.2",
     "@exodus/taquito-local-forging": "^16.1.1-exodus.2",
     "@exodus/taquito-michel-codec": "^16.1.1-exodus.2",
     "@exodus/taquito-michelson-encoder": "^16.1.1-exodus.2",
     "@exodus/taquito-rpc": "^16.1.1-exodus.2",
     "@exodus/taquito-utils": "^16.1.1-exodus.2",
-    "bignumber.js": "^9.1.0",
-    "@exodus/rxjs": "^6.6.7-exodus.1"
+    "bignumber.js": "^9.1.0"
   },
   "devDependencies": {
     "@babel/types": "7.16.0",
