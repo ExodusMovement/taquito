@@ -1,5 +1,5 @@
 import { BlockResponse } from '@exodus/taquito-rpc';
-import { rxSandbox } from 'rx-sandbox';
+import { rxSandbox } from '@exodus/rx-sandbox';
 import { Context } from '../../src/context';
 import { BatchWalletOperation } from '../../src/wallet/batch-operation';
 import {

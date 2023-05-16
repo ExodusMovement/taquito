@@ -1,4 +1,4 @@
-import { rxSandbox } from 'rx-sandbox';
+import { rxSandbox } from '@exodus/rx-sandbox';
 import { defer } from '@exodus/rxjs';
 import { Context } from '../../src/context';
 import { createNewPollingBasedHeadObservable } from '../../src/wallet/operation-factory';
