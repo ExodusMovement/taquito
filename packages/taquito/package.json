@@ -81,7 +81,7 @@
     "@exodus/taquito-rpc": "^16.1.1-exodus.2",
     "@exodus/taquito-utils": "^16.1.1-exodus.2",
     "bignumber.js": "^9.1.0",
-    "@exodus/rxjs": "^6.6.7-exodus.0"
+    "@exodus/rxjs": "^6.6.7-exodus.1"
   },
   "devDependencies": {
     "@babel/types": "7.16.0",
