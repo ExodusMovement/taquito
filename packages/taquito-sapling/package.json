@@ -1,6 +1,6 @@
 {
   "name": "@exodus/taquito-sapling",
-  "version": "16.1.1-exodus.3",
+  "version": "16.1.1-exodus.4",
   "description": "Allows reading and preparing sapling transactions",
   "keywords": [
     "tezos",
@@ -72,9 +72,9 @@
     "@airgap/sapling-wasm": "0.0.9",
     "@stablelib/nacl": "^1.0.3",
     "@stablelib/random": "^1.0.1",
-    "@exodus/taquito-rpc": "^16.1.1-exodus.3",
-    "@exodus/taquito-taquito": "^16.1.1-exodus.3",
-    "@exodus/taquito-utils": "^16.1.1-exodus.3",
+    "@exodus/taquito-rpc": "^16.1.1-exodus.4",
+    "@exodus/taquito-taquito": "^16.1.1-exodus.4",
+    "@exodus/taquito-utils": "^16.1.1-exodus.4",
     "bignumber.js": "^9.1.0",
     "bip39": "^3.0.4",
     "blakejs": "^1.2.1",

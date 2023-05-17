@@ -1,6 +1,6 @@
 {
   "name": "@exodus/taquito-taquito",
-  "version": "16.1.1-exodus.3",
+  "version": "16.1.1-exodus.4",
   "description": "High level functionality that builds upon the other packages in the Tezos Typescript Library Suite.",
   "keywords": [
     "tezos",
@@ -75,12 +75,12 @@
   },
   "dependencies": {
     "@exodus/rxjs": "^6.6.7-exodus.2",
-    "@exodus/taquito-http-utils": "^16.1.1-exodus.3",
-    "@exodus/taquito-local-forging": "^16.1.1-exodus.3",
-    "@exodus/taquito-michel-codec": "^16.1.1-exodus.3",
-    "@exodus/taquito-michelson-encoder": "^16.1.1-exodus.3",
-    "@exodus/taquito-rpc": "^16.1.1-exodus.3",
-    "@exodus/taquito-utils": "^16.1.1-exodus.3",
+    "@exodus/taquito-http-utils": "^16.1.1-exodus.4",
+    "@exodus/taquito-local-forging": "^16.1.1-exodus.4",
+    "@exodus/taquito-michel-codec": "^16.1.1-exodus.4",
+    "@exodus/taquito-michelson-encoder": "^16.1.1-exodus.4",
+    "@exodus/taquito-rpc": "^16.1.1-exodus.4",
+    "@exodus/taquito-utils": "^16.1.1-exodus.4",
     "bignumber.js": "^9.1.0"
   },
   "devDependencies": {
