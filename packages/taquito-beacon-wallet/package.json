@@ -1,6 +1,6 @@
 {
   "name": "@exodus/taquito-beacon-wallet",
-  "version": "16.1.1-exodus.2",
+  "version": "16.1.1-exodus.3",
   "description": "Beacon wallet provider",
   "keywords": [
     "tezos",
@@ -68,7 +68,7 @@
   },
   "dependencies": {
     "@airgap/beacon-dapp": "^3.3.1",
-    "@exodus/taquito-taquito": "^16.1.1-exodus.2"
+    "@exodus/taquito-taquito": "^16.1.1-exodus.3"
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.36",
