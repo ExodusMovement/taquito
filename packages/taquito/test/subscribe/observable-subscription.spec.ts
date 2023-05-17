@@ -1,5 +1,5 @@
-import { defer } from 'rxjs';
-import { rxSandbox } from 'rx-sandbox';
+import { defer } from '@exodus/rxjs';
+import { rxSandbox } from '@exodus/rx-sandbox';
 import { ObservableSubscription } from '../../src/subscribe/observable-subscription';
 
 describe('Observable subscription test', () => {

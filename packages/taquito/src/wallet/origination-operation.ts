@@ -4,7 +4,7 @@ import {
   OperationContentsAndResultReveal,
   OpKind,
 } from '@exodus/taquito-rpc';
-import { Observable } from 'rxjs';
+import { Observable } from '@exodus/rxjs';
 import { Context } from '../context';
 import { DefaultWalletType } from '../contract/contract';
 import { findWithKind } from '../operations/types';

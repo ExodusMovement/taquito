@@ -16,7 +16,7 @@ import { ParserProvider } from './parser/interface';
 import { MichelCodecParser } from './parser/michel-codec-parser';
 import { Packer } from './packer/interface';
 import { RpcPacker } from './packer/rpc-packer';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject } from '@exodus/rxjs';
 import { GlobalConstantsProvider } from './global-constants/interface-global-constants-provider';
 import { NoopGlobalConstantsProvider } from './global-constants/noop-global-constants-provider';
 import { TzReadProvider } from './read-provider/interface';

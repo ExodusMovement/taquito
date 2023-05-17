@@ -3,7 +3,7 @@ import {
   InternalOperationResult,
   OperationContentsAndResultTransaction,
 } from '@exodus/taquito-rpc';
-import { BehaviorSubject, from, Observable, ObservableInput, OperatorFunction, timer } from 'rxjs';
+import { BehaviorSubject, from, Observable, ObservableInput, OperatorFunction, timer } from '@exodus/rxjs';
 import {
   concatMap,
   distinctUntilKeyChanged,
@@ -13,7 +13,7 @@ import {
   refCount,
   retry,
   switchMap,
-} from 'rxjs/operators';
+} from '@exodus/rxjs/operators';
 import { Context } from '../context';
 import { evaluateFilter, eventFilter } from './filters';
 import {

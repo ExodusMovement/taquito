@@ -4,7 +4,7 @@ import {
   OperationContentsAndResultReveal,
   OpKind,
 } from '@exodus/taquito-rpc';
-import { Observable } from 'rxjs';
+import { Observable } from '@exodus/rxjs';
 import { Context } from '../context';
 import { WalletOperation, OperationStatus } from './operation';
 

@@ -1,5 +1,5 @@
 import { BlockResponse, OperationContentsAndResult, OperationResultStatusEnum } from '@exodus/taquito-rpc';
-import { combineLatest, from, Observable, of, range, ReplaySubject } from 'rxjs';
+import { combineLatest, from, Observable, of, range, ReplaySubject } from '@exodus/rxjs';
 import {
   catchError,
   concatMap,
@@ -13,7 +13,7 @@ import {
   switchMap,
   takeWhile,
   tap,
-} from 'rxjs/operators';
+} from '@exodus/rxjs/operators';
 import { Context } from '../context';
 import { Receipt, receiptFromOperation } from './receipt';
 import { validateOperation, ValidationResult, InvalidOperationHashError } from '@exodus/taquito-utils';

@@ -4,7 +4,7 @@ import {
   OperationContentsAndResultReveal,
   OpKind,
 } from '@exodus/taquito-rpc';
-import { Observable } from 'rxjs';
+import { Observable } from '@exodus/rxjs';
 import { BATCH_KINDS } from '../batch/rpc-batch-provider';
 import { Context } from '../context';
 import { hasMetadataWithResult } from '../operations/types';
