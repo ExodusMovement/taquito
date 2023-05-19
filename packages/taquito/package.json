@@ -74,7 +74,7 @@
     ]
   },
   "dependencies": {
-    "@exodus/rxjs": "^6.6.7-exodus.2",
+    "@exodus/rxjs": "^6.6.7-exodus.4",
     "@exodus/taquito-http-utils": "^16.1.1-exodus.4",
     "@exodus/taquito-local-forging": "^16.1.1-exodus.4",
     "@exodus/taquito-michel-codec": "^16.1.1-exodus.4",
@@ -85,7 +85,7 @@
   },
   "devDependencies": {
     "@babel/types": "7.16.0",
-    "@exodus/rx-sandbox": "^1.0.4-exodus.2",
+    "@exodus/rx-sandbox": "^1.0.4-exodus.3",
     "@types/bluebird": "^3.5.36",
     "@types/estree": "^0.0.50",
     "@types/jest": "^26.0.23",
