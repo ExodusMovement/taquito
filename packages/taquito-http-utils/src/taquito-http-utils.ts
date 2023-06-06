@@ -108,7 +108,7 @@ export class HttpBackend {
         method: method ?? 'GET',
         headers: headers,
         // timeout: timeout,
-        body: typeof data === 'object' ? JSON.stringify(data) : data,
+        body: headers['Content-Type'] === 'application/json' ? JSON.stringify(data) : data,
       });
 
       if (!res.ok) {
