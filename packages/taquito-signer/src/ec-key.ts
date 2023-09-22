@@ -59,7 +59,7 @@ export class ECKey {
    * @param bytes Bytes to sign
    * @param bytesHash Blake2b hash of the bytes to sign
    */
-  async sign(bytes: string, bytesHash: Uint8Array) {
+  sign(bytes: string, bytesHash: Uint8Array) {
     const key = new elliptic.ec(this.curve).keyFromPrivate(this._key);
     const sig = key.sign(bytesHash, { canonical: true });
     const signature = sig.r.toString('hex', 64) + sig.s.toString('hex', 64);
@@ -76,21 +76,21 @@ export class ECKey {
   /**
    * @returns Encoded public key
    */
-  async publicKey(): Promise<string> {
+  publicKey(): string {
     return b58cencode(this._publicKey, pref[this.curve].pk);
   }
 
   /**
    * @returns Encoded public key hash
    */
-  async publicKeyHash(): Promise<string> {
+  publicKeyHash(): string {
     return b58cencode(blake.blake2b(new Uint8Array(this._publicKey), undefined, 20), pref[this.curve].pkh);
   }
 
   /**
    * @returns Encoded private key
    */
-  async secretKey(): Promise<string> {
+  secretKey(): string {
     const key = this._key;
 
     return b58cencode(key, pref[this.curve].sk);
