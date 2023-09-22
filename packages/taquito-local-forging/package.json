@@ -1,6 +1,6 @@
 {
   "name": "@exodus/taquito-local-forging",
-  "version": "16.1.1-exodus.7",
+  "version": "16.1.1-exodus.8",
   "description": "Provide local forging functionality to be with taquito",
   "keywords": [
     "tezos",
@@ -66,11 +66,11 @@
     ]
   },
   "dependencies": {
-    "@exodus/taquito-utils": "^16.1.1-exodus.7",
+    "@exodus/taquito-utils": "^16.1.1-exodus.8",
     "bignumber.js": "^9.1.0"
   },
   "devDependencies": {
-    "@exodus/taquito-rpc": "^16.1.1-exodus.7",
+    "@exodus/taquito-rpc": "^16.1.1-exodus.8",
     "@types/bluebird": "^3.5.36",
     "@types/estree": "^1.0.0",
     "@types/jest": "^26.0.23",
