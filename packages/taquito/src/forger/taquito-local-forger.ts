@@ -1,6 +1,6 @@
 import {
   LocalForger,
-  Forger,
+  AsyncForger,
   ForgeParams,
   ForgeResponse,
   ProtocolsHash,
@@ -8,7 +8,7 @@ import {
 import { Protocols } from '../constants';
 import { Context } from '../context';
 
-export class TaquitoLocalForger implements Forger {
+export class TaquitoLocalForger implements AsyncForger {
   constructor(private context: Context) {}
 
   private async getNextProto(): Promise<ProtocolsHash> {

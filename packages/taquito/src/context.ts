@@ -1,6 +1,6 @@
 import { RpcClient, RpcClientInterface } from '@exodus/taquito-rpc';
 import { Protocols } from './constants';
-import { Forger } from '@exodus/taquito-local-forging';
+import { AsyncForger } from '@exodus/taquito-local-forging';
 import { Injector } from './injector/interface';
 import { RpcInjector } from './injector/rpc-injector';
 import { Signer } from './signer/interface';
@@ -45,7 +45,7 @@ export const defaultConfigConfirmation: ConfigConfirmation = {
  */
 export class Context {
   private _rpcClient: RpcClientInterface;
-  private _forger: Forger;
+  private _forger: AsyncForger;
   private _parser: ParserProvider;
   private _injector: Injector;
   private _walletProvider: WalletProvider;
@@ -69,7 +69,7 @@ export class Context {
     public readonly _config = new BehaviorSubject({
       ...defaultConfigConfirmation,
     }),
-    forger?: Forger,
+    forger?: AsyncForger,
     injector?: Injector,
     packer?: Packer,
     wallet?: WalletProvider,
@@ -133,7 +133,7 @@ export class Context {
     return this._forger;
   }
 
-  set forger(value: Forger) {
+  set forger(value: AsyncForger) {
     this._forger = value;
   }
 

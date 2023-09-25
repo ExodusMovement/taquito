@@ -1,7 +1,7 @@
-import { Forger, ForgeParams, ForgeResponse } from '@exodus/taquito-local-forging';
+import { AsyncForger, ForgeParams, ForgeResponse } from '@exodus/taquito-local-forging';
 import { Context } from '../context';
 
-export class RpcForger implements Forger {
+export class RpcForger implements AsyncForger {
   constructor(private context: Context) {}
 
   forge({ branch, contents }: ForgeParams): Promise<ForgeResponse> {

@@ -4,7 +4,7 @@
  */
 
 import { RpcClient, RpcClientInterface } from '@exodus/taquito-rpc';
-import { Forger } from '@exodus/taquito-local-forging';
+import { AsyncForger } from '@exodus/taquito-local-forging';
 import { RPCBatchProvider } from './batch/rpc-batch-provider';
 import { Protocols } from './constants';
 import { ConfigConfirmation, Context, TaquitoProvider } from './context';
@@ -32,7 +32,7 @@ import { ParserProvider } from './parser/interface';
 import { MichelCodecParser } from './parser/michel-codec-parser';
 
 export { MichelsonMap, UnitValue } from '@exodus/taquito-michelson-encoder';
-export { Forger, ForgeParams, ForgeResponse } from '@exodus/taquito-local-forging';
+export { AsyncForger, ForgeParams, ForgeResponse } from '@exodus/taquito-local-forging';
 export * from './constants';
 export * from './context';
 export { TaquitoProvider } from './context';
@@ -71,7 +71,7 @@ export { TaquitoLocalForger } from './forger/taquito-local-forger';
 export * from './prepare';
 
 export interface SetProviderOptions {
-  forger?: Forger;
+  forger?: AsyncForger;
   wallet?: WalletProvider;
   rpc?: string | RpcClientInterface;
   readProvider?: TzReadProvider;

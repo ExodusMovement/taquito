@@ -38,7 +38,7 @@ export class LocalForger implements Forger {
 
   private codec = getCodec(CODEC.MANAGER, this.protocolHash);
 
-  forge(params: ForgeParams): Promise<string> {
+  forge(params: ForgeParams): string {
     if (validateBlock(params.branch) !== ValidationResult.VALID) {
       throw new InvalidBlockHashError(`The block hash ${params.branch} is invalid`);
     }
@@ -73,11 +73,11 @@ export class LocalForger implements Forger {
       }
     }
     const forged = this.codec.encoder(params).toLowerCase();
-    return Promise.resolve(forged);
+    return forged;
   }
 
-  parse(hex: string): Promise<ForgeParams> {
-    return Promise.resolve(this.codec.decoder(hex) as ForgeParams);
+  parse(hex: string): ForgeParams {
+    return this.codec.decoder(hex) as ForgeParams;
   }
 }
 
