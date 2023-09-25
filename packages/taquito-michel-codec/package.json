@@ -1,6 +1,6 @@
 {
   "name": "@exodus/taquito-michel-codec",
-  "version": "16.1.1-exodus.8",
+  "version": "16.1.1-exodus.9",
   "description": "Michelson parser/validator/formatter",
   "keywords": [
     "tezos",
