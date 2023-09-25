@@ -1,4 +1,4 @@
-import { Forger, ForgeParams, ForgeResponse } from '@exodus/taquito-local-forging';
+import { AsyncForger, ForgeParams, ForgeResponse } from '@exodus/taquito-local-forging';
 
 /**
  *  @category Error
@@ -22,8 +22,8 @@ export class UnspecifiedForgerError extends Error {
   }
 }
 
-export class CompositeForger implements Forger {
-  constructor(private forgers: Forger[]) {
+export class CompositeForger implements AsyncForger {
+  constructor(private forgers: AsyncForger[]) {
     if (forgers.length === 0) {
       throw new UnspecifiedForgerError();
     }
