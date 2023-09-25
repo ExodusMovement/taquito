@@ -8,5 +8,5 @@ export interface ForgeParams {
 export type ForgeResponse = string; // hex string
 
 export interface Forger {
-  forge(params: ForgeParams): Promise<ForgeResponse>;
+  forge(params: ForgeParams): ForgeResponse;
 }

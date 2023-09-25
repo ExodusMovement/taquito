@@ -20,9 +20,9 @@ import { ProtoInferiorTo } from '../src/protocols';
 describe('Forge and parse operations default protocol', () => {
   const localForger = new LocalForger();
   commonCases.forEach(({ name, operation, expected }) => {
-    it(`Common test: ${name}`, async (done) => {
-      const result = await localForger.forge(operation);
-      expect(await localForger.parse(result)).toEqual(expected || operation);
+    it(`Common test: ${name}`, (done) => {
+      const result = localForger.forge(operation);
+      expect(localForger.parse(result)).toEqual(expected || operation);
       done();
     });
   });
@@ -32,7 +32,7 @@ describe('Forge and parse operations default protocol', () => {
 
     const localForger = new LocalForger();
 
-    it('Should throw an error when operation kind is invalid', async () => {
+    it('Should throw an error when operation kind is invalid', () => {
       const operation: any = {
         branch: 'BLzyjjHKEKMULtvkpSHxuZxx6ei6fpntH2BTkYZiLgs8zLVstvX',
         contents: [
@@ -66,7 +66,7 @@ describe('Forge and parse operations default protocol', () => {
       );
     });
 
-    it('Should throw error when parameters are missing', async () => {
+    it('Should throw error when parameters are missing', () => {
       const operation: any = {
         branch: 'BLzyjjHKEKMULtvkpSHxuZxx6ei6fpntH2BTkYZiLgs8zLVstvX',
         contents: [
@@ -99,7 +99,7 @@ describe('Forge and parse operations default protocol', () => {
       );
     });
 
-    it('Should throw error when branch parameter has invalid block hash', async () => {
+    it('Should throw error when branch parameter has invalid block hash', () => {
       const operation: any = {
         branch: 'Invalid_Block_Hash',
         contents: [
@@ -133,7 +133,7 @@ describe('Forge and parse operations default protocol', () => {
       );
     });
 
-    it('Should not throw error when transaction operation does not have a "parameters" property', async () => {
+    it('Should not throw error when transaction operation does not have a "parameters" property', () => {
       const operation: any = {
         branch: 'BLzyjjHKEKMULtvkpSHxuZxx6ei6fpntH2BTkYZiLgs8zLVstvX',
         contents: [
@@ -152,7 +152,7 @@ describe('Forge and parse operations default protocol', () => {
       expect(localForger.forge(operation)).toBeDefined();
     });
 
-    it('Should throw an error when parsing a forged byte with an invalid operation kind', async () => {
+    it('Should throw an error when parsing a forged byte with an invalid operation kind', () => {
       const invalidForged =
         'a99b946c97ada0f42c1bdeae0383db7893351232a832d00d0cd716eb6f66e5614c0035e993d8c7aaa42b5e3ccd86a33390ececc73abd904e010a0ae807000035e993d8c7aaa42b5e3ccd86a33390ececc73abd00';
       expect(() => {
@@ -174,7 +174,7 @@ describe('Forge and parse operations default protocol', () => {
       );
     });
 
-    it(`Verify getCodec for CODEC.SECRET`, async (done) => {
+    it(`Verify getCodec for CODEC.SECRET`, (done) => {
       const codec = CODEC.SECRET;
       const myGetCodec = getCodec(codec, ProtocolsHash.PtKathman);
       const consumer = myGetCodec.decoder(hexToParse);
@@ -183,7 +183,7 @@ describe('Forge and parse operations default protocol', () => {
       done();
     });
 
-    it(`Verify getCodec for CODEC.RAW`, async (done) => {
+    it(`Verify getCodec for CODEC.RAW`, (done) => {
       const codec = CODEC.RAW;
       const myGetCodec = getCodec(codec, ProtocolsHash.PtKathman);
       const consumer = myGetCodec.decoder(hexToParse);
@@ -192,7 +192,7 @@ describe('Forge and parse operations default protocol', () => {
       done();
     });
 
-    it(`Verify getCodec for CODEC.OP_DELEGATION`, async (done) => {
+    it(`Verify getCodec for CODEC.OP_DELEGATION`, (done) => {
       const codec = CODEC.OP_DELEGATION;
       const myGetCodec = getCodec(codec, ProtocolsHash.PtKathman);
       const _consumer = expect(() => myGetCodec.decoder(hexToParse)).toThrow(
@@ -201,7 +201,7 @@ describe('Forge and parse operations default protocol', () => {
       done();
     });
 
-    it(`Verify Arrow Function for CODEC.OP_SEED_NONCE_REVELATION`, async (done) => {
+    it(`Verify Arrow Function for CODEC.OP_SEED_NONCE_REVELATION`, (done) => {
       const codec = CODEC.OP_SEED_NONCE_REVELATION;
       const myGetCodec = getCodec(codec, ProtocolsHash.PtKathman);
       const gotCodec = myGetCodec.decoder(hexToParse);
@@ -216,7 +216,7 @@ describe('Forge and parse operations default protocol', () => {
       done();
     });
 
-    it(`Verify Arrow Functions for CODEC.SECRET is toHexString(val.consume(20))`, async (done) => {
+    it(`Verify Arrow Functions for CODEC.SECRET is toHexString(val.consume(20))`, (done) => {
       const codec = CODEC.SECRET;
       const myGetCodec = getCodec(codec, ProtocolsHash.PtKathman);
       const encodeCodec = myGetCodec.encoder('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
@@ -228,7 +228,7 @@ describe('Forge and parse operations default protocol', () => {
       done();
     });
 
-    it(`Verify Arrow Function for CODEC.RAW is toHexString(val.consume(32)),`, async (done) => {
+    it(`Verify Arrow Function for CODEC.RAW is toHexString(val.consume(32)),`, (done) => {
       const codec = CODEC.RAW;
       const myGetCodec = getCodec(codec, ProtocolsHash.PtKathman);
       const encodeCodec = myGetCodec.encoder('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
@@ -242,7 +242,7 @@ describe('Forge and parse operations default protocol', () => {
       done();
     });
 
-    it(`Verify Arrow Function for CODEC.OP_ACTIVATE_ACCOUNT`, async (done) => {
+    it(`Verify Arrow Function for CODEC.OP_ACTIVATE_ACCOUNT`, (done) => {
       const codec = CODEC.OP_ACTIVATE_ACCOUNT;
       const myGetCodec = getCodec(codec, ProtocolsHash.PtKathman);
       const gotCodec = myGetCodec.decoder(hexToParse);
@@ -259,7 +259,7 @@ describe('Forge and parse operations default protocol', () => {
       done();
     });
 
-    it(`Test getCodec to verify codec Manager sent to decoders is defined`, async (done) => {
+    it(`Test getCodec to verify codec Manager sent to decoders is defined`, (done) => {
       const myGetCodec = getCodec(CODEC.MANAGER, ProtocolsHash.PtKathman).decoder(
         '7c842c15c8b0c8fd228e6cb5302a50201f41642dd36b699003fb3c857920bc9d'
       );
@@ -286,8 +286,8 @@ describe('Forge and parse operations default protocol', () => {
     });
 
     describe('Verify forged bytes of Smart Rollup operations', () => {
-      it('forged bytes smart_rollup_originate should match', async () => {
-        const forged = await localForger.forge({
+      it('forged bytes smart_rollup_originate should match', () => {
+        const forged = localForger.forge({
           branch: 'BLxGBu48ybnWvZoaVLyXV4XVnhdeDc9V2NcB9wsegQniza6mxvX',
           contents: [
             {
@@ -318,8 +318,8 @@ describe('Forge and parse operations default protocol', () => {
         expect(forged).toContain('000000020369');
       });
 
-      it('forged bytes smart_rollup_add_messages should match', async () => {
-        const forged = await localForger.forge({
+      it('forged bytes smart_rollup_add_messages should match', () => {
+        const forged = localForger.forge({
           branch: 'BLxGBu48ybnWvZoaVLyXV4XVnhdeDc9V2NcB9wsegQniza6mxvX',
           contents: [
             {
@@ -347,8 +347,8 @@ describe('Forge and parse operations default protocol', () => {
         );
       });
 
-      it('forged bytes smart_rollup_execute_outbox_message should match', async () => {
-        const forged = await localForger.forge({
+      it('forged bytes smart_rollup_execute_outbox_message should match', () => {
+        const forged = localForger.forge({
           branch: 'BLxGBu48ybnWvZoaVLyXV4XVnhdeDc9V2NcB9wsegQniza6mxvX',
           contents: [
             {
