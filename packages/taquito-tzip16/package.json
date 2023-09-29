@@ -71,13 +71,13 @@
     "@exodus/taquito-taquito": "^16.1.1-exodus.9",
     "@exodus/taquito-utils": "^16.1.1-exodus.9",
     "bignumber.js": "^9.1.0",
-    "crypto-js": "^4.1.1"
+    "sha.js": "^2.4.11"
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.36",
-    "@types/crypto-js": "^4.1.1",
     "@types/jest": "^26.0.23",
     "@types/node": "^16",
+    "@types/sha.js": "^2.4.2",
     "@types/ws": "^8.2.2",
     "@typescript-eslint/eslint-plugin": "^5.28.0",
     "@typescript-eslint/parser": "^5.28.0",

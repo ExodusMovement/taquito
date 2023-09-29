@@ -400,11 +400,9 @@
             "@exodus/taquito-rpc": "^8.0.4-beta.0",
             "@exodus/taquito-taquito": "^8.0.4-beta.0",
             "@exodus/taquito-utils": "^8.0.4-beta.0",
-            "bignumber.js": "^9.0.1",
-            "crypto-js": "^4.0.0"
+            "bignumber.js": "^9.0.1"
           },
           "devDependencies": {
-            "@types/crypto-js": "^4.0.1",
             "@types/jest": "^26.0.14",
             "@types/node": "^16",
             "@types/ws": "^7.2.7",

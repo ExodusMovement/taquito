@@ -1,5 +1,5 @@
-import CryptoJS from "crypto-js";
+import { sha256 } from 'sha.js'
 
 export function calculateSHA256Hash(preimage: string): string {
-    return CryptoJS.SHA256(preimage).toString(CryptoJS.enc.Hex);
+    return new sha256().update(preimage, 'utf8').digest('hex');
 }
