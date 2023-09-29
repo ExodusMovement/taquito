@@ -1,7 +1,7 @@
-import { CompositeForger, Forger } from '../../src/taquito';
+import { CompositeForger, AsyncForger } from '../../src/taquito';
 
 describe('Composite forger', () => {
-  const mockForgerThatReturn = (val: string): Forger => ({ forge: () => Promise.resolve(val) });
+  const mockForgerThatReturn = (val: string): AsyncForger => ({ forge: () => Promise.resolve(val) });
 
   it('Should throw if forgers give different result', async done => {
     const composite = new CompositeForger([mockForgerThatReturn('a'), mockForgerThatReturn('b')]);
