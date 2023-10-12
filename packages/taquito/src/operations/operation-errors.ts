@@ -94,11 +94,15 @@ export const flattenOperationResult = (response: PreapplyResponse | PreapplyResp
       const content = results[i].contents[j];
       if (hasMetadataWithResult(content)) {
         returnedResults.push({
+          // @ts-ignore
           fee: content.fee,
+          // @ts-ignore
           ...content.metadata.operation_result,
         });
 
+          // @ts-ignore
         if (Array.isArray(content.metadata.internal_operation_results)) {
+          // @ts-ignore
           content.metadata.internal_operation_results.forEach((x) =>
             returnedResults.push(x.result)
           );
@@ -125,7 +129,9 @@ export const flattenErrors = (
     for (let j = 0; j < results[i].contents.length; j++) {
       const content = results[i].contents[j];
       if (hasMetadata(content)) {
-        if (hasMetadataWithResult(content) && content.metadata.operation_result.status === status) {
+              // @ts-ignore
+    if (hasMetadataWithResult(content) && content.metadata.operation_result.status === status) {
+          // @ts-ignore
           errors = errors.concat(content.metadata.operation_result.errors || []);
         }
         if (

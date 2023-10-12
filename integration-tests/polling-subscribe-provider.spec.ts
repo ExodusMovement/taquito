@@ -6,7 +6,8 @@ CONFIGS().forEach(({ lib, rpc, setup }) => {
   let eventContractAddress: string;
 
   describe(`Polling Subscribe Provider using ${rpc}`, () => {
-    beforeEach(async (done) => {
+    beforeEach(
+async () => {
       await setup();
 
       Tezos.setStreamProvider(Tezos.getFactory(PollingSubscribeProvider)({ shouldObservableSubscriptionRetry: true, pollingIntervalMilliseconds: 1000 }));
@@ -37,10 +38,11 @@ CONFIGS().forEach(({ lib, rpc, setup }) => {
       } catch(e) {
         console.log(e);
       }
-      done();
+  
     });
 
-    it('should be able to subscribe to events with tag and address params given', async (done) => {
+    it('should be able to subscribe to events with tag and address params given', 
+async () => {
       const data: any = [];
 
       const eventSub = Tezos.stream.subscribeEvent({
@@ -72,7 +74,7 @@ CONFIGS().forEach(({ lib, rpc, setup }) => {
       expect(data[0].payload).toBeDefined();
       expect(data[0].result).toBeDefined();
 
-      done();
+  
     });
   })
 })

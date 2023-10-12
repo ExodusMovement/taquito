@@ -19,7 +19,7 @@ describe('DefaultGlobalConstantsProvider tests', () => {
         expect(new DefaultGlobalConstantsProvider()).toBeInstanceOf(DefaultGlobalConstantsProvider);
     });
 
-    it('register a global constant and retrieve the value by its hash', async (done) => {
+    it('register a global constant and retrieve the value by its hash', async () => {
         const hash = 'expru5X5fvCer8tbRkSAtwyVCs9FUCq46JQG7QCAkhZSumjbZBUGzb';
         const defaultGlobalConstantsProvider = new DefaultGlobalConstantsProvider();
 
@@ -28,10 +28,10 @@ describe('DefaultGlobalConstantsProvider tests', () => {
         });
 
         expect(michelineExpr).toEqual(await defaultGlobalConstantsProvider.getGlobalConstantByHash(hash));
-        done()
+  
     });
 
-    it('register two global constants at the same time and retrieve their value by their hash', async (done) => {
+    it('register two global constants at the same time and retrieve their value by their hash', async () => {
         const hash = 'expru5X5fvCer8tbRkSAtwyVCs9FUCq46JQG7QCAkhZSumjbZBUGzb';
         const hash2 = "expruu5BTdW7ajqJ9XPTF3kgcV78pRiaBW3Gq31mgp3WSYjjUBYxre";
         const michelineExpr2 = { prim: "int" };
@@ -45,10 +45,10 @@ describe('DefaultGlobalConstantsProvider tests', () => {
 
         expect(michelineExpr).toEqual(await defaultGlobalConstantsProvider.getGlobalConstantByHash(hash));
         expect(michelineExpr2).toEqual(await defaultGlobalConstantsProvider.getGlobalConstantByHash(hash2));
-        done()
+  
     });
 
-    it('register two global constants not at the same time and retrieve their value by their hash', async (done) => {
+    it('register two global constants not at the same time and retrieve their value by their hash', async () => {
         const defaultGlobalConstantsProvider = new DefaultGlobalConstantsProvider();
         const hash = 'expru5X5fvCer8tbRkSAtwyVCs9FUCq46JQG7QCAkhZSumjbZBUGzb';
 
@@ -65,10 +65,10 @@ describe('DefaultGlobalConstantsProvider tests', () => {
 
         expect(michelineExpr).toEqual(await defaultGlobalConstantsProvider.getGlobalConstantByHash(hash));
         expect(michelineExpr2).toEqual(await defaultGlobalConstantsProvider.getGlobalConstantByHash(hash2));
-        done()
+  
     });
 
-    it('throws an error when querying a global constant that is not registered', async (done) => {
+    it('throws an error when querying a global constant that is not registered', async () => {
         const defaultGlobalConstantsProvider = new DefaultGlobalConstantsProvider();
         const hash = 'expru5X5fvCer8tbRkSAtwyVCs9FUCq46JQG7QCAkhZSumjbZBUGzb';
 
@@ -77,7 +77,7 @@ describe('DefaultGlobalConstantsProvider tests', () => {
         } catch(err: any) {
             expect(err.message).toEqual("Please load the value associated with the constant expru5X5fvCer8tbRkSAtwyVCs9FUCq46JQG7QCAkhZSumjbZBUGzb using the loadGlobalConstant method of the DefaultGlobalConstantsProvider.")
         }
-        done()
+  
     });
 
 });

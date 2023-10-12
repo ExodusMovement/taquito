@@ -3,10 +3,10 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "importHelpers": true,
-    "target": "es2020",
-    "module": "es2020",
+    "target": "ES2021",
+    "module": "ESNext",
     "lib": [
-      "es2020",
+      "ES2021",
       "dom"
     ],
     "strict": true,
@@ -19,6 +19,7 @@
     "downlevelIteration": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+    "useUnknownInCatchVariables": false,
     "jsx": "react"
   }
 }

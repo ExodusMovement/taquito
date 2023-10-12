@@ -29,7 +29,7 @@
             "sha512": "4c874b398d21a6749634fd547070b74b46f1413610c1d04966c96812acb0d0d7c0d69c7551924d7348c668b190cf8c1b745c4ec8c2651fc6216d5e19fbe323d8"
           },
           {
-            "path": "dist/taquito-local-forging.es5.js",
+            "path": "dist/taquito-local-forging.js",
             "sha512": "4ca98a63f73870d9292b579734efa4901d9058c4ee53e887ac3b421dc167d6c242777651823a7b6a0ffb4772c0e9eda101a9b65fe13de567978539adf39d8ca3"
           },
           {
@@ -37,7 +37,7 @@
             "sha512": "3c83096d11d493f7c27ee09035bbd7b3e9d9f409058f57f98d678e3bd724d5203f34674a1d4a6868329dad2801b083538f5f51922d754d918b4653e40b4ae180"
           },
           {
-            "path": "dist/taquito-local-forging.umd.js",
+            "path": "dist/taquito-local-forging.js",
             "sha512": "710b9e20ec1e8f4052774babb79fe230d96bea3fc3c1844db1120c8debb4aa26ae036c5243bfb91f82f241e00af42f72a9c5e6be4de144ab07eff363dbb66d26"
           },
           {
@@ -73,7 +73,7 @@
             "sha512": "0bb0ac22a7299a3d24ab6520d5548921fbd1e274bc30411422e17826943f96d61ab1d4de1829129f7fac097a9cc2c2d44bb79a62dced1a7838dd80af575c38dc"
           },
           {
-            "path": "dist/taquito-local-forging.es5.js.map",
+            "path": "dist/taquito-local-forging.js.map",
             "sha512": "02087319fb8242d616d3b774f85340b0643902d0495cc3aa3c073e9d78bedb12ac8466ad93bd48d241e13514daa2401a6110fb175110facb433dfea8be5d54e6"
           },
           {
@@ -81,7 +81,7 @@
             "sha512": "13ff8ee728c794af90a190244444871a05df2dabc0caef2ef2c3bd1aca022f5e5d69e7f049651abdb4eb12ca2378c9568ee3b26ed2acce9b0b74ccfe26b04065"
           },
           {
-            "path": "dist/taquito-local-forging.umd.js.map",
+            "path": "dist/taquito-local-forging.js.map",
             "sha512": "fae453af2e9dd23f07e48d11777c7f48f5603343b3c286bc954942b9123ee79f1debd803702bbe978b2e23b52c8ae9a95d8c544d31f80f0d162796ec9c9bda71"
           },
           {
@@ -182,8 +182,8 @@
             "blockchain",
             "signer"
           ],
-          "main": "dist/taquito-local-forging.umd.js",
-          "module": "dist/taquito-local-forging.es5.js",
+          "main": "dist/taquito-local-forging.js",
+          "module": "dist/taquito-local-forging.js",
           "typings": "dist/types/taquito-local-forging.d.ts",
           "files": [
             "dist",
@@ -208,7 +208,7 @@
             "lint": "tslint  --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
             "precommit": "lint-staged",
             "prebuild": "rimraf dist",
-            "build": "tsc --project ./tsconfig.prod.json --module commonjs && rollup -c rollup.config.ts",
+            "build": "tsc --project ./tsconfig.prod.json",
             "start": "rollup -c rollup.config.ts -w"
           },
           "lint-staged": {
@@ -252,7 +252,7 @@
             "coveralls": "^3.1.0",
             "cross-env": "^7.0.2",
             "jest": "^26.6.3",
-            "jest-config": "^26.6.3",
+            "jest-config": "^29.7.0",
             "lint-staged": "^10.4.0",
             "lodash.camelcase": "^4.3.0",
             "prettier": "^2.1.2",
@@ -270,7 +270,7 @@
             "tslint-config-prettier": "^1.18.0",
             "tslint-config-standard": "^9.0.0",
             "typedoc": "^0.20.23",
-            "typescript": "~4.1.5"
+            "typescript": "~4.9.5"
           },
           "gitHead": "551e35aeff7d6dcde1c72284238c0ed3c3aae77e"
         }

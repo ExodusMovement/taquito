@@ -24,7 +24,7 @@ describe('WalletOperation', () => {
   };
 
   describe('confirmationObservable', () => {
-    it('Should emit confirmation after seeing operation in block', async (done) => {
+    it('Should emit confirmation after seeing operation in block', async () => {
       const { cold, flush, getMessages, e, s } = rxSandbox.create();
       const blockObs = cold<BlockResponse>('--a', {
         a: createFakeBlock(1, 'ood2Y1FLHH9izvYghVcDGGAkvJFo1CgSEjPfWvGsaz3qypCmeUj'),
@@ -52,10 +52,10 @@ describe('WalletOperation', () => {
       expect(messages).toEqual(expected);
       expect(blockObs.subscriptions).toEqual([s('^-!')]);
 
-      done();
+  
     });
 
-    it('given 2 confirmation it should emit confirmation with complete false after seeing operation in a block', async (done) => {
+    it('given 2 confirmation it should emit confirmation with complete false after seeing operation in a block', async () => {
       const { cold, flush, getMessages, e, s } = rxSandbox.create();
       const blockObs = cold<BlockResponse>('--a', {
         a: createFakeBlock(1, 'ood2Y1FLHH9izvYghVcDGGAkvJFo1CgSEjPfWvGsaz3qypCmeUj'),
@@ -83,10 +83,10 @@ describe('WalletOperation', () => {
       expect(messages).toEqual(expected);
       expect(blockObs.subscriptions).toEqual([s('^--')]);
 
-      done();
+  
     });
 
-    it('Should emit 2 confirmation given the operation is included in the first block and a new head is applied on top', async (done) => {
+    it('Should emit 2 confirmation given the operation is included in the first block and a new head is applied on top', async () => {
       const { cold, flush, getMessages, e, s } = rxSandbox.create();
       const blockObs = cold<BlockResponse>('--a--b', {
         a: createFakeBlock(1, 'ood2Y1FLHH9izvYghVcDGGAkvJFo1CgSEjPfWvGsaz3qypCmeUj'),
@@ -121,7 +121,7 @@ describe('WalletOperation', () => {
       expect(messages).toEqual(expected);
       expect(blockObs.subscriptions).toEqual([s('^----!')]);
 
-      done();
+  
     });
   });
 
@@ -136,7 +136,7 @@ describe('WalletOperation', () => {
       };
     });
 
-    it('Should find operation in the missed block when 1 block was skipped', async (done) => {
+    it('Should find operation in the missed block when 1 block was skipped', async () => {
       mockRpcClient.getBlock.mockResolvedValue(
         createFakeBlock(2, 'ood2Y1FLHH9izvYghVcDGGAkvJFo1CgSEjPfWvGsaz3qypCmeUj')
       );
@@ -167,10 +167,10 @@ describe('WalletOperation', () => {
       expect(mockRpcClient.getBlock).toHaveBeenCalledTimes(1);
       expect(mockRpcClient.getBlock).toHaveBeenCalledWith({ block: '2' });
 
-      done();
+  
     });
 
-    it('Should find operation in the first missed block when 2 blocks were skipped', async (done) => {
+    it('Should find operation in the first missed block when 2 blocks were skipped', async () => {
       mockRpcClient.getBlock.mockResolvedValueOnce(
         createFakeBlock(2, 'ood2Y1FLHH9izvYghVcDGGAkvJFo1CgSEjPfWvGsaz3qypCmeUj')
       );
@@ -201,10 +201,10 @@ describe('WalletOperation', () => {
       expect(mockRpcClient.getBlock).toHaveBeenCalledTimes(1);
       expect(mockRpcClient.getBlock).toHaveBeenCalledWith({ block: '2' });
 
-      done();
+  
     });
 
-    it('Should find operation in the second missed block when 2 blocks were skipped', async (done) => {
+    it('Should find operation in the second missed block when 2 blocks were skipped', async () => {
       mockRpcClient.getBlock.mockResolvedValueOnce(createFakeBlock(2));
       mockRpcClient.getBlock.mockResolvedValueOnce(
         createFakeBlock(3, 'ood2Y1FLHH9izvYghVcDGGAkvJFo1CgSEjPfWvGsaz3qypCmeUj')
@@ -237,12 +237,12 @@ describe('WalletOperation', () => {
       expect(mockRpcClient.getBlock).toHaveBeenCalledWith({ block: '2' });
       expect(mockRpcClient.getBlock).toHaveBeenLastCalledWith({ block: '3' });
 
-      done();
+  
     });
   });
 
   describe('receipt', () => {
-    it('should return a receipt after the operation is included in a block', async (done) => {
+    it('should return a receipt after the operation is included in a block', async () => {
       const { cold, flush } = rxSandbox.create();
       const blockObs = cold<BlockResponse>('--a', {
         a: createFakeBlock(1, 'ood2Y1FLHH9izvYghVcDGGAkvJFo1CgSEjPfWvGsaz3qypCmeUj'),
@@ -268,10 +268,10 @@ describe('WalletOperation', () => {
         totalStorageBurn: '0',
       });
 
-      done();
+  
     });
 
-    it('should return a receipt from actual case values ​​after including the operation in a block', async (done) => {
+    it('should return a receipt from actual case values ​​after including the operation in a block', async () => {
       const { cold, flush } = rxSandbox.create();
       const blockObs = cold<BlockResponse>('--a', {
         a: blockResponse as unknown as BlockResponse,
@@ -297,12 +297,12 @@ describe('WalletOperation', () => {
         totalAllocationBurn: '0',
       });
 
-      done();
+  
     });
   });
 
   describe('operationResults', () => {
-    it('should return operation result after the operation is included in a block', async (done) => {
+    it('should return operation result after the operation is included in a block', async () => {
       const { cold, flush } = rxSandbox.create();
       const blockObs = cold<BlockResponse>('--a', {
         a: createFakeBlock(1, 'ood2Y1FLHH9izvYghVcDGGAkvJFo1CgSEjPfWvGsaz3qypCmeUj'),
@@ -319,12 +319,12 @@ describe('WalletOperation', () => {
 
       expect(result).toEqual([]);
 
-      done();
+  
     });
   });
 
   describe('getCurrentConfirmation', () => {
-    it('should return 0 when operation is not included', async (done) => {
+    it('should return 0 when operation is not included', async () => {
       const { cold, flush } = rxSandbox.create();
       const blockObs = cold<BlockResponse>('--a', {
         a: createFakeBlock(1),
@@ -340,10 +340,10 @@ describe('WalletOperation', () => {
 
       expect(await op.getCurrentConfirmation()).toEqual(0);
 
-      done();
+  
     });
 
-    it('should return 1 when there is 1 confirmation', async (done) => {
+    it('should return 1 when there is 1 confirmation', async () => {
       const { cold, flush, s } = rxSandbox.create();
       const blockObs = cold<BlockResponse>('--a', {
         a: createFakeBlock(1, 'ood2Y1FLHH9izvYghVcDGGAkvJFo1CgSEjPfWvGsaz3qypCmeUj'),
@@ -364,10 +364,10 @@ describe('WalletOperation', () => {
       expect(blockObs.subscriptions).toEqual([s('^-!')]);
       expect(await op.getCurrentConfirmation()).toEqual(1);
 
-      done();
+  
     });
 
-    it('should return 2 when there is 2 confirmation', async (done) => {
+    it('should return 2 when there is 2 confirmation', async () => {
       const { cold, flush, s } = rxSandbox.create();
       const blockObs = cold<BlockResponse>('--a-b', {
         a: createFakeBlock(1, 'ood2Y1FLHH9izvYghVcDGGAkvJFo1CgSEjPfWvGsaz3qypCmeUj'),
@@ -389,7 +389,7 @@ describe('WalletOperation', () => {
       expect(blockObs.subscriptions).toEqual([s('^-!')]);
       expect(await op.getCurrentConfirmation()).toEqual(2);
 
-      done();
+  
     });
   });
 });

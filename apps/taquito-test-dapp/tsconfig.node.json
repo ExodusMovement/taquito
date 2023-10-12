@@ -2,6 +2,7 @@
   "compilerOptions": {
     "composite": true,
     "module": "esnext",
+    "useUnknownInCatchVariables": false,
     "moduleResolution": "node"
   },
   "include": ["vite.config.ts"]

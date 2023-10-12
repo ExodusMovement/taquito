@@ -113,7 +113,7 @@
             "sha512": "724e24749b68c0b5212ad88e6468bfdb7ae3f2df5cd7e2daa71229443c6d5229d2765dca3356339c6db15e7bd5987790a3151b4f9b6f545b43ff2c91f98f94e3"
           },
           {
-            "path": "dist/taquito-michelson-encoder.es5.js",
+            "path": "dist/taquito-michelson-encoder.js",
             "sha512": "bdc9fff9701133a40094ec8195f38a19001f1881ab509c2e92224c9a984d2975efcb59665a833ce7848b0d3f8e2e01f59bd35d51c3aafe974bf0ba3e3e109768"
           },
           {
@@ -121,7 +121,7 @@
             "sha512": "c74e7a5cf8b8827b0415b4602acfcab21a958fa6a04d8de7ff70800547ff051031fc6586402c9f9f0ca08a837f91966a937e99958a6cbc41ae068a608e8110a7"
           },
           {
-            "path": "dist/taquito-michelson-encoder.umd.js",
+            "path": "dist/taquito-michelson-encoder.js",
             "sha512": "cb86b091175a3cf766bf4164f103906f2a77d8a44751221ac28a0c4357e9d65d849057707901ada403ed645b13f9b0a54cd7de6bd06211bff97fdf9c7562f5dd"
           },
           {
@@ -257,7 +257,7 @@
             "sha512": "9d859dbbd7961f8ac178db51bd8d982e0900a9c0cb85378c65a519d17725451cf80f5fcea1fcfbfde220685fa2db5c031d7bcc75dc050691d35c272d6e6a7bbe"
           },
           {
-            "path": "dist/taquito-michelson-encoder.es5.js.map",
+            "path": "dist/taquito-michelson-encoder.js.map",
             "sha512": "da3df8fd96008c7541e99b269a6bf15b8711d5d693a9f6f70376bc6c9eee6653928c7f88911fa421ebd27e584ad06abb993956963505f8c7d9c77c4cfed9aef1"
           },
           {
@@ -265,7 +265,7 @@
             "sha512": "109738f22305cb323547a1f82f6cd1f3d63c4cf3bcbdbd0fad29df1606c64b6971707c6bc798162f4aae5d2f03a0ab6c1ada9e8f43c3f82dfbee81bc4251af13"
           },
           {
-            "path": "dist/taquito-michelson-encoder.umd.js.map",
+            "path": "dist/taquito-michelson-encoder.js.map",
             "sha512": "983e67420003a377d4c9e27cbabca10b7e0950e2fc343aaa2cecdbc3483699c575a8468164181c0310259bda1654c51863e92dbc8eb8410d204d7844f2d3c0e1"
           },
           {
@@ -483,8 +483,8 @@
             "michelson",
             "smart-contract"
           ],
-          "main": "dist/taquito-michelson-encoder.umd.js",
-          "module": "dist/taquito-michelson-encoder.es5.js",
+          "main": "dist/taquito-michelson-encoder.js",
+          "module": "dist/taquito-michelson-encoder.js",
           "typings": "dist/types/taquito-michelson-encoder.d.ts",
           "files": [
             "signature.json",
@@ -509,7 +509,7 @@
             "lint": "tslint  --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
             "precommit": "lint-staged",
             "prebuild": "rimraf dist",
-            "build": "tsc --project ./tsconfig.prod.json --module commonjs && rollup -c rollup.config.ts",
+            "build": "tsc --project ./tsconfig.prod.json",
             "start": "rollup -c rollup.config.ts -w"
           },
           "lint-staged": {
@@ -555,7 +555,7 @@
             "coveralls": "^3.1.0",
             "cross-env": "^7.0.2",
             "jest": "^26.6.3",
-            "jest-config": "^26.6.3",
+            "jest-config": "^29.7.0",
             "lint-staged": "^10.4.0",
             "lodash.camelcase": "^4.3.0",
             "prettier": "^2.1.2",
@@ -573,7 +573,7 @@
             "tslint-config-prettier": "^1.18.0",
             "tslint-config-standard": "^9.0.0",
             "typedoc": "^0.20.23",
-            "typescript": "~4.1.5"
+            "typescript": "~4.9.5"
           },
           "gitHead": "551e35aeff7d6dcde1c72284238c0ed3c3aae77e"
         }

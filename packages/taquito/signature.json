@@ -205,7 +205,7 @@
             "sha512": "a86fb625f714446ea0fe67fe56502fd4c4be31dd4395ab4874a9b28cfbebf47ba6b826a4883ab17ce34dc2211f5035dab9e3f6ba5387bc6fbe535a59384410a1"
           },
           {
-            "path": "dist/taquito.es5.js",
+            "path": "dist/taquito.js",
             "sha512": "bcdef8b980776deb2d779b5e56926a6b0917a4c8dcf959857f283fa50f7ecbb8b5cea9574d3965910e6163830f1d00d5f5e9c705597147e98610e69089ba2e35"
           },
           {
@@ -217,7 +217,7 @@
             "sha512": "14f8ca832bd05d6392983ccb488a075adc94e13c94d61c32ebf3adb9d8584be5ee82c21a4f9aa1f396cd5f6e1d7fa3d12503d041a0037e85182c778ce506d469"
           },
           {
-            "path": "dist/taquito.umd.js",
+            "path": "dist/taquito.js",
             "sha512": "0cd6d65acf04ca7c03e96f20888cdec47f471a25a02737d909999aac1d021cdb986dc1a8087b515b38623d0d8fbe5c8db98473e712c407934c260fcb8303856c"
           },
           {
@@ -437,7 +437,7 @@
             "sha512": "5063f2ed25bbd1efc79be634ed1039158304a0d8b6667d408789beccb17af82fbcdd6b15d67f78989fa5c148661efd01fa7d2a46e48ab0d517d46f5b6c7d810d"
           },
           {
-            "path": "dist/taquito.es5.js.map",
+            "path": "dist/taquito.js.map",
             "sha512": "26c9147c3c870b0219e1d4d984ffb90373e7f41a5525f08d0b0fa039bd4c65eab77a47e206c926aa55518c51d3acdc6b9a8630c76d084915488e6555b9b5003a"
           },
           {
@@ -445,7 +445,7 @@
             "sha512": "04acfc19635eabefb2b203970caa188874194fae9b8a29fa376bb61f5b109b659210a5a88c155fb2f2dac75759ace0fe15e7efe1d886d7f44955c4c895fb8a52"
           },
           {
-            "path": "dist/taquito.umd.js.map",
+            "path": "dist/taquito.js.map",
             "sha512": "545c7cf7d4ab80e4bfc970a6750fa538fdf54347f54ddcf746027d0772d7c158d3f40bb4cafb57997a623e2b6999eb115b33f906726e5a1b97eaaa596654df3c"
           },
           {
@@ -747,9 +747,9 @@
             "tezos",
             "blockchain"
           ],
-          "main": "dist/taquito.umd.js",
+          "main": "dist/taquito.js",
           "unpkg": "dist/taquito.min.js",
-          "module": "dist/taquito.es5.js",
+          "module": "dist/taquito.js",
           "typings": "dist/types/taquito.d.ts",
           "files": [
             "signature.json",
@@ -778,8 +778,8 @@
             "lint": "tslint  --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
             "precommit": "lint-staged",
             "prebuild": "rimraf dist",
-            "build": "tsc --project ./tsconfig.prod.json --module commonjs && rollup -c rollup.config.ts",
-            "build:release": "tsc --project ./tsconfig.prod.json --module commonjs && rollup -c rollup.config.ts && npm run build:web",
+            "build": "tsc --project ./tsconfig.prod.json",
+            "build:release": "tsc --project ./tsconfig.prod.json && npm run build:web",
             "build:web": "webpack && node update-readme.js",
             "start": "rollup -c rollup.config.ts -w",
             "postinstall": "node patch.js"
@@ -835,7 +835,7 @@
             "coveralls": "^3.1.0",
             "cross-env": "^7.0.2",
             "jest": "^26.6.3",
-            "jest-config": "^26.6.3",
+            "jest-config": "^29.7.0",
             "lint-staged": "^10.4.0",
             "lodash.camelcase": "^4.3.0",
             "prettier": "^2.1.2",
@@ -853,7 +853,7 @@
             "tslint": "^6.1.3",
             "tslint-config-prettier": "^1.18.0",
             "tslint-config-standard": "^9.0.0",
-            "typescript": "~4.1.5",
+            "typescript": "~4.9.5",
             "webpack": "^4.44.2",
             "webpack-assets-manifest": "^3.1.1",
             "webpack-cli": "^3.3.12",

@@ -9,7 +9,7 @@
             "sha512": "f90631a1855f27c26b2d3e9d2e7077b4e4bb3cbcb5c942f1c62b5410e26e9594e50493b958e29dd9a9993efc26b0313e51e82e0ab848042bbd376ef1242d85ac"
           },
           {
-            "path": "dist/taquito-utils.es5.js",
+            "path": "dist/taquito-utils.js",
             "sha512": "4ad7437ac7d14119dea9c80189d04bb6a48b8b15ab26ae50530c72054b8793ad8e15557c1755b4fc508bd7f7ccb25df0cb0b03336171319ff3eab143e2924676"
           },
           {
@@ -17,7 +17,7 @@
             "sha512": "6bcc206db868d3a158e2a4476b3edb621ccf1fb41f5a75cc509704248afe378d3cc431390986c6af802f709699457aa74e5b40c84bbfccaeff5d902ce36123c0"
           },
           {
-            "path": "dist/taquito-utils.umd.js",
+            "path": "dist/taquito-utils.js",
             "sha512": "8a1fc6095d4c88d0370818248f0389b5b44929e8022d9e067c7adee1dbe35eef695ae09025567c0e3004229d4026d2e27d5d986b6ef6641901c414743c379502"
           },
           {
@@ -29,7 +29,7 @@
             "sha512": "60386bfe60bb0dd477fda291b40cbaf2528fabc0b7d94e87f724715c9e22f202537c675069658e610a928cb450843f40fc4dc18660388d22a1dd34c9c4bc4aab"
           },
           {
-            "path": "dist/taquito-utils.es5.js.map",
+            "path": "dist/taquito-utils.js.map",
             "sha512": "2767129ef4568323876b48c51dbf2738e4dab9ed1771774a7cf85a5a720c952d971f11b69ae6ff6d3e4b20b24f889c4e791f0e8393e41e07385c0d9c91dd28c3"
           },
           {
@@ -37,7 +37,7 @@
             "sha512": "8bb851fdc72dd7f1eb6b923af598b7f9a0fe799429a055855cac638f85a874507a7a879eb82b50680db5228e828fdc48274413848269c5a286bc5c22dcb76e43"
           },
           {
-            "path": "dist/taquito-utils.umd.js.map",
+            "path": "dist/taquito-utils.js.map",
             "sha512": "37844b6c0f2436ce7612727b5a033da4e4bea4274df1e916147313804e17553230b2726e030506aec335520cd87b69e936a0c6ffbe9c62be980d7ce257d84bc5"
           },
           {
@@ -111,8 +111,8 @@
             "michelson",
             "smart-contract"
           ],
-          "main": "dist/taquito-utils.umd.js",
-          "module": "dist/taquito-utils.es5.js",
+          "main": "dist/taquito-utils.js",
+          "module": "dist/taquito-utils.js",
           "typings": "dist/types/taquito-utils.d.ts",
           "files": [
             "dist",
@@ -134,7 +134,7 @@
             "lint": "tslint  --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
             "precommit": "lint-staged",
             "prebuild": "rimraf dist",
-            "build": "tsc --project ./tsconfig.prod.json --module commonjs && rollup -c rollup.config.ts",
+            "build": "tsc --project ./tsconfig.prod.json",
             "start": "rollup -c rollup.config.ts -w"
           },
           "lint-staged": {
@@ -175,7 +175,7 @@
             "coveralls": "^3.1.0",
             "cross-env": "^7.0.2",
             "jest": "^26.6.3",
-            "jest-config": "^26.6.3",
+            "jest-config": "^29.7.0",
             "lint-staged": "^10.4.0",
             "lodash.camelcase": "^4.3.0",
             "prettier": "^2.1.2",
@@ -193,7 +193,7 @@
             "tslint-config-prettier": "^1.18.0",
             "tslint-config-standard": "^9.0.0",
             "typedoc": "^0.20.23",
-            "typescript": "~4.1.5"
+            "typescript": "~4.9.5"
           },
           "gitHead": "551e35aeff7d6dcde1c72284238c0ed3c3aae77e"
         }

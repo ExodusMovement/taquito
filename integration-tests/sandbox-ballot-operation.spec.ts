@@ -4,7 +4,8 @@ CONFIGS().forEach(async ({ lib, protocol, setup }) => {
   const Tezos = lib;
 
   describe(`Ballot operation test (${protocol})`, () => {
-    beforeAll(async (done) => {
+    beforeAll(
+async () => {
       await setup();
 
       try {
@@ -19,11 +20,12 @@ CONFIGS().forEach(async ({ lib, protocol, setup }) => {
       } catch(e) {
         console.log(e);
       }
-      done();
+  
     });
 
     // TODO: Fix timing issues in regards to different block times in different sandboxes
-    it.skip('Submit a proposal and inject ballot vote', async (done) => {
+    it.skip('Submit a proposal and inject ballot vote', 
+async () => {
       const period = await Tezos.rpc.getCurrentPeriod();
 
       if (period.voting_period.kind === 'proposal') {
@@ -42,7 +44,7 @@ CONFIGS().forEach(async ({ lib, protocol, setup }) => {
       expect(op.includedInBlock).toBeDefined();
       expect(op.hash).toBeDefined();
   
-      done();
+  
     });
   })
 })

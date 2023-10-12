@@ -17,7 +17,7 @@
             "sha512": "4e1fad91017a63adf08343b4bc12b4916bcad9d6ae5fc4dc4df8ae5c6cd1a1d88340b2e1e17171e8a86cc2295e82d897ef53b5f296ed6cb3e44186d0e6de5228"
           },
           {
-            "path": "dist/taquito-signer.es5.js",
+            "path": "dist/taquito-signer.js",
             "sha512": "a18843a908e102443c1a359b0500d02f322c2b17e69804d1d06c7a7117f1a3adfcf886f8607c63cee4717a9b28107e05eb3a803e057af544b9ee3283fdfae4ea"
           },
           {
@@ -25,7 +25,7 @@
             "sha512": "71777e543602dbb3ef170f337513fdf9ffe9624b452979a72e0dc0896ea40d6a5953cbe876617df576de78902aa8d3f583346ab0ab78b0651c92206a16a51651"
           },
           {
-            "path": "dist/taquito-signer.umd.js",
+            "path": "dist/taquito-signer.js",
             "sha512": "cb78a93ca519f8e1a05f573326fd7cf966db4eb5a5366dc48403ddd0c7480a7a5527debbbd72d14e32923df620354e03164b7357dba5acc9003cc35c939f07b9"
           },
           {
@@ -41,7 +41,7 @@
             "sha512": "b47c65b6d699ee44f223dc49d24703282ff8d68dedc9a4cead222fd84b52812e82f4a4f265b98ab8653370ce8b6f7ad71c9b68bbe9d62ca91da7694895667b02"
           },
           {
-            "path": "dist/taquito-signer.es5.js.map",
+            "path": "dist/taquito-signer.js.map",
             "sha512": "caafc5f73db0325b8ccc403c5ddb6d258b1ef5b399d9e6c44107e12400ef5f328bc6e6c10c2a1cb0612e5e768ec222ef471f3c59561ab25744fe8587b1b017fb"
           },
           {
@@ -49,7 +49,7 @@
             "sha512": "fcb802926ae055cab052b1111a28398ccf3986fd04654c18cc48490a2a0ff057e5cc09aa324f63b78caf4cdae43bb4c81b1408d1704ed0ff389c9e94487aa3db"
           },
           {
-            "path": "dist/taquito-signer.umd.js.map",
+            "path": "dist/taquito-signer.js.map",
             "sha512": "8cadd1bb56f1401f294ceca9f46e08a225a857e2de4c97aa8f67ea94e8d3231424e91be4aa14f1929ca309ff32dafcb62c932350a85ba1b28cb0dfa241a8c159"
           },
           {
@@ -118,8 +118,8 @@
             "blockchain",
             "signer"
           ],
-          "main": "dist/taquito-signer.umd.js",
-          "module": "dist/taquito-signer.es5.js",
+          "main": "dist/taquito-signer.js",
+          "module": "dist/taquito-signer.js",
           "typings": "dist/types/taquito-signer.d.ts",
           "files": [
             "dist",
@@ -144,7 +144,7 @@
             "lint": "tslint  --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
             "precommit": "lint-staged",
             "prebuild": "rimraf dist",
-            "build": "tsc --project ./tsconfig.prod.json --module commonjs && rollup -c rollup.config.ts",
+            "build": "tsc --project ./tsconfig.prod.json",
             "start": "rollup -c rollup.config.ts -w"
           },
           "lint-staged": {
@@ -196,7 +196,7 @@
             "coveralls": "^3.1.0",
             "cross-env": "^7.0.2",
             "jest": "^26.6.3",
-            "jest-config": "^26.6.3",
+            "jest-config": "^29.7.0",
             "lint-staged": "^10.4.0",
             "lodash.camelcase": "^4.3.0",
             "prettier": "^2.1.2",
@@ -214,7 +214,7 @@
             "tslint-config-prettier": "^1.18.0",
             "tslint-config-standard": "^9.0.0",
             "typedoc": "^0.20.23",
-            "typescript": "~4.1.5"
+            "typescript": "~4.9.5"
           },
           "gitHead": "551e35aeff7d6dcde1c72284238c0ed3c3aae77e"
         }

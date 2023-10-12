@@ -49,7 +49,7 @@
             "sha512": "0688fa100679dd93e764a8068e22ab6b58225602ad77328d728e44257db5bda57b7864f0f8420b7e84b9a4c8965a722b501eaec01c45ae8502ddde7ed402874e"
           },
           {
-            "path": "dist/taquito-michel-codec.es5.js",
+            "path": "dist/taquito-michel-codec.js",
             "sha512": "6689785cdcef2f78f3e8aaf99a9c4a76551ce7917e53ae8f7c4c9a8b6104bbe83a132ed5ab44d0f0857ad2e91ada5ec4f1862a9c89debaaefd6a53d3533760de"
           },
           {
@@ -57,7 +57,7 @@
             "sha512": "d315e8ab3ae18ad9e101634b5ecfdffaedf785f91d2669005c2bf70835f4937512cba0ab4537e443ce5f8ff4f16c800ec3117bc92fc626f8cc6327c119905b86"
           },
           {
-            "path": "dist/taquito-michel-codec.umd.js",
+            "path": "dist/taquito-michel-codec.js",
             "sha512": "709d3c09dafc98a44c26adfa0728e570d7204e161c14042be4144f456eb9c4bef44c97e3050c8e961b77eba5b77724ca4f4ad35e603454bd694d70fae6769b5f"
           },
           {
@@ -109,7 +109,7 @@
             "sha512": "c2cc3bf2b9bcd7a8bb6f0f10caf1e6c8915bbf8dc03cab9ce589e28297764818ca018a208c3acadbcba06b5bfb3e49be858a3672da708cec33cc27ffbbb50e5f"
           },
           {
-            "path": "dist/taquito-michel-codec.es5.js.map",
+            "path": "dist/taquito-michel-codec.js.map",
             "sha512": "15280ecfd8e4d49dec00a83cbb7bb7d8d24772e34783fef3f13821f7e1ffe2acb02747a9efeba5b01a1dd43472afbdda4a2cdb2052a4234c7aa5576d1a986f40"
           },
           {
@@ -117,7 +117,7 @@
             "sha512": "7ee20e23970b80ce0e99254eee2c216744834536380278c84b773a51de8ca08460f03554c3481527c245f2f888cddf2db04b1a6e3d4d02abc9e1edee94721c37"
           },
           {
-            "path": "dist/taquito-michel-codec.umd.js.map",
+            "path": "dist/taquito-michel-codec.js.map",
             "sha512": "eab133427520ab9f063d09cfca2a10455b8f11a51c9ae5be303d1bc08de9458d911dc3cf75a1998a80f523d19dbdad76276feae1a47104e5fcacbb5defe34322"
           },
           {
@@ -225,8 +225,8 @@
           "version": "8.0.4-beta.0",
           "description": "Michelson parser/validator/formatter",
           "keywords": ["tezos", "blockchain", "signer"],
-          "main": "./dist/taquito-michel-codec.umd.js",
-          "module": "./dist/taquito-michel-codec.es5.js",
+          "main": "./dist/taquito-michel-codec.js",
+          "module": "./dist/taquito-michel-codec.js",
           "typings": "./dist/types/taquito-michel-codec.d.ts",
           "files": ["dist", "signature.json"],
           "publishConfig": {
@@ -248,7 +248,7 @@
             "lint": "tslint  --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
             "precommit": "lint-staged",
             "prebuild": "rimraf dist",
-            "build": "tsc --project ./tsconfig.prod.json --module commonjs && rollup -c rollup.config.ts",
+            "build": "tsc --project ./tsconfig.prod.json",
             "start": "rollup -c rollup.config.ts -w"
           },
           "lint-staged": {
@@ -286,7 +286,7 @@
             "tslint-config-prettier": "^1.18.0",
             "tslint-config-standard": "^9.0.0",
             "typedoc": "^0.20.23",
-            "typescript": "~4.1.5"
+            "typescript": "~4.9.5"
           },
           "gitHead": "551e35aeff7d6dcde1c72284238c0ed3c3aae77e"
         }

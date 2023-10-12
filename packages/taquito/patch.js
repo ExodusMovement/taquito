@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const fs = require("fs")
+import fs from 'fs'
 const angularWebpackConfig =
   '../../@angular-devkit/build-angular/src/angular-cli-files/models/webpack-configs/browser.js';
 

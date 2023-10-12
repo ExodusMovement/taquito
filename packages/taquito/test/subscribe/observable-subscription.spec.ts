@@ -3,7 +3,7 @@ import { rxSandbox } from '@exodus/rx-sandbox';
 import { ObservableSubscription } from '../../src/subscribe/observable-subscription';
 
 describe('Observable subscription test', () => {
-  it('the observable emits 3 data', async (done) => {
+  it('the observable emits 3 data', async () => {
     const { cold, flush } = rxSandbox.create();
     const stub = jest.fn();
     const observable$ = cold('a-b-c');
@@ -13,10 +13,10 @@ describe('Observable subscription test', () => {
     flush();
 
     expect(stub).toBeCalledTimes(3);
-    done();
+
   });
 
-  it('the observable retries on error when the property "shouldRetry" is set to true', async (done) => {
+  it('the observable retries on error when the property "shouldRetry" is set to true', async () => {
     const { cold, flush } = rxSandbox.create();
     const stub = jest.fn();
     const errStub = jest.fn();
@@ -34,10 +34,10 @@ describe('Observable subscription test', () => {
     expect(stub).toBeCalledTimes(3);
     expect(errStub).toBeCalledTimes(2);
 
-    done();
+
   });
 
-  it('the observable does not retry on error when the property "shouldRetry" is set to false', async (done) => {
+  it('the observable does not retry on error when the property "shouldRetry" is set to false', async () => {
     const { cold, flush } = rxSandbox.create();
     const stub = jest.fn();
     const errStub = jest.fn();
@@ -55,6 +55,6 @@ describe('Observable subscription test', () => {
     expect(stub).toBeCalledTimes(1);
     expect(errStub).toBeCalledTimes(1);
 
-    done();
+
   });
 });

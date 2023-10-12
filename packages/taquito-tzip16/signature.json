@@ -33,7 +33,7 @@
             "sha512": "88186ade149bbc845e1dab71ef2a95bee2bb6af329dbcd923d816d419bed56c6e0cfca8403b8c38455dc4a5738ae7a77fbb198d7fa4701bc747d3224a4d549ee"
           },
           {
-            "path": "dist/taquito-tzip16.es5.js",
+            "path": "dist/taquito-tzip16.js",
             "sha512": "860d1152d68b71a94fa8e0b64caef07b328eded1e5f2667618255b574083089f945ae628e0177718e3a439c0b7781c57d0062a6ae7d307ca0c1a41a3926a1781"
           },
           {
@@ -41,7 +41,7 @@
             "sha512": "f57316b8b241c5b8e7933f6f0202e752999017ce927bee04130239b26078e9308d3a0ce6d9bd21d4e9e78f55942471bfe4f4e54d72d2c1cd231c20703f0534e2"
           },
           {
-            "path": "dist/taquito-tzip16.umd.js",
+            "path": "dist/taquito-tzip16.js",
             "sha512": "ef833745ad2b44ea14b32f728ab12e695bfbc71cf87129e94c73c454a8a45b9a372dbad002db05979a1536fe36e3fe1bcf541c010a403045d0b046744ad809dd"
           },
           {
@@ -109,7 +109,7 @@
             "sha512": "6f05e5f85bda02d6c491f0b275318eca41262e37e926514b85b78ea773043c8cc5c9d1eca831d907aeaac7d791ed9c4e557d95dba4221b3818650f84759386a2"
           },
           {
-            "path": "dist/taquito-tzip16.es5.js.map",
+            "path": "dist/taquito-tzip16.js.map",
             "sha512": "1c77ed20c6e2620ea6f153e62f7d35003786e175ff00a2aa6e051160c2fdbe91d5d4823d4f202850f9de8cd22b779eaba6e7eb9f23ab63bd0bddd137c590aaa6"
           },
           {
@@ -117,7 +117,7 @@
             "sha512": "e4c16c1baa5f1d1a6b03ec6f4dfd34288007d128b3b797bcd5bb1d25e1907212f511555aa37faa4a1e6d3e6847e5d3a013100bd72a8dc025b95c8d91a30f8f53"
           },
           {
-            "path": "dist/taquito-tzip16.umd.js.map",
+            "path": "dist/taquito-tzip16.js.map",
             "sha512": "3b47d08593b427c8aab343dbb9f1b17206471139b65ae9294f42a706b48dbec0cc6d2a1454101726d8686ab932f79caeaf0aa4cefb5817a7cf6daf20e1cab00b"
           },
           {
@@ -345,8 +345,8 @@
             "blockchain",
             "tzip16"
           ],
-          "main": "dist/taquito-tzip16.umd.js",
-          "module": "dist/taquito-tzip16.es5.js",
+          "main": "dist/taquito-tzip16.js",
+          "module": "dist/taquito-tzip16.js",
           "typings": "dist/types/taquito-tzip16.d.ts",
           "publishConfig": {
             "access": "public"
@@ -365,7 +365,7 @@
             "precommit": "lint-staged",
             "prebuild": "rimraf dist",
             "test": "jest --collectCoverage",
-            "build": "tsc --project ./tsconfig.prod.json --module commonjs && rollup -c rollup.config.ts ",
+            "build": "tsc --project ./tsconfig.prod.json ",
             "start": "rollup -c rollup.config.ts -w"
           },
           "lint-staged": {
@@ -410,7 +410,7 @@
             "coveralls": "^3.1.0",
             "cross-env": "^7.0.2",
             "jest": "^26.5.2",
-            "jest-config": "^26.5.2",
+            "jest-config": "^29.7.0",
             "lint-staged": "^10.4.0",
             "lodash.camelcase": "^4.3.0",
             "prettier": "^2.1.2",
@@ -422,13 +422,13 @@
             "rollup-plugin-sourcemaps": "^0.6.3",
             "rollup-plugin-typescript2": "^0.27.3",
             "shelljs": "^0.8.4",
-            "ts-jest": "^26.4.1",
+            "ts-jest": "^29.1.1",
             "ts-node": "^9.0.0",
             "tslint": "^6.1.2",
             "tslint-config-prettier": "^1.18.0",
             "tslint-config-standard": "^9.0.0",
             "typedoc": "^0.20.23",
-            "typescript": "~4.1.5"
+            "typescript": "~4.9.5"
           },
           "gitHead": "551e35aeff7d6dcde1c72284238c0ed3c3aae77e"
         }

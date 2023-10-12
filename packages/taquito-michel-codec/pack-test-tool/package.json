@@ -10,5 +10,6 @@
   "dependencies": {
     "@exodus/taquito-rpc": "^16.1.1-exodus.10",
     "yargs": "^16.2.0"
-  }
+  },
+  "type": "module"
 }

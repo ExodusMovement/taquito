@@ -95,7 +95,7 @@ describe('RpcClient test', () => {
   });
 
   describe('Concat url properly', () => {
-    it('Should prevent double slashes given multiple trailing slashes', async (done) => {
+    it('Should prevent double slashes given multiple trailing slashes', async () => {
       const client = new RpcClient('root.com/test///', 'test', httpBackend as any);
       httpBackend.createRequest.mockReturnValue(Promise.resolve('10000'));
       await client.getBalance(contractAddress);
@@ -103,10 +103,10 @@ describe('RpcClient test', () => {
         method: 'GET',
         url: `root.com/test/chains/test/blocks/head/context/contracts/${contractAddress}/balance`,
       });
-      done();
+  
     });
 
-    it('Should prevent double slashes given one trailing slash', async (done) => {
+    it('Should prevent double slashes given one trailing slash', async () => {
       const client = new RpcClient('root.com/test/', 'test', httpBackend as any);
       httpBackend.createRequest.mockReturnValue(Promise.resolve('10000'));
       await client.getBalance(contractAddress);
@@ -114,10 +114,10 @@ describe('RpcClient test', () => {
         method: 'GET',
         url: `root.com/test/chains/test/blocks/head/context/contracts/${contractAddress}/balance`,
       });
-      done();
+  
     });
 
-    it('Should prevent double slashes given no trailing slash', async (done) => {
+    it('Should prevent double slashes given no trailing slash', async () => {
       const client = new RpcClient('root.com/test', 'test', httpBackend as any);
       httpBackend.createRequest.mockReturnValue(Promise.resolve('10000'));
       await client.getBalance(contractAddress);
@@ -125,12 +125,12 @@ describe('RpcClient test', () => {
         method: 'GET',
         url: `root.com/test/chains/test/blocks/head/context/contracts/${contractAddress}/balance`,
       });
-      done();
+  
     });
   });
 
   describe('getBalance', () => {
-    it('should query the right url and return a string', async (done) => {
+    it('should query the right url and return a string', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve('10000'));
       const balance = await client.getBalance(contractAddress);
 
@@ -141,12 +141,12 @@ describe('RpcClient test', () => {
       expect(balance).toBeInstanceOf(BigNumber);
       expect(balance.toString()).toEqual('10000');
 
-      done();
+  
     });
   });
 
   describe('getStorage', () => {
-    it('should query the right url', async (done) => {
+    it('should query the right url', async () => {
       await client.getStorage(contractAddress);
 
       expect(httpBackend.createRequest.mock.calls[0][0]).toEqual({
@@ -154,10 +154,10 @@ describe('RpcClient test', () => {
         url: `root/chains/test/blocks/head/context/contracts/${contractAddress}/storage`,
       });
 
-      done();
+  
     });
 
-    it('should query used_space url correctly', async (done) => {
+    it('should query used_space url correctly', async () => {
       await client.getStorageUsedSpace(contractAddress);
 
       expect(httpBackend.createRequest.mock.calls[0][0]).toEqual({
@@ -165,10 +165,10 @@ describe('RpcClient test', () => {
         url: `root/chains/test/blocks/head/context/contracts/${contractAddress}/storage/used_space`,
       });
 
-      done();
+  
     });
 
-    it('should query used_paid url correctly', async (done) => {
+    it('should query used_paid url correctly', async () => {
       await client.getStoragePaidSpace(contractAddress);
 
       expect(httpBackend.createRequest.mock.calls[0][0]).toEqual({
@@ -176,12 +176,12 @@ describe('RpcClient test', () => {
         url: `root/chains/test/blocks/head/context/contracts/${contractAddress}/storage/paid_space`,
       });
 
-      done();
+  
     });
   });
 
   describe('getScript', () => {
-    it('should query the right url', async (done) => {
+    it('should query the right url', async () => {
       await client.getScript(contractAddress);
 
       expect(httpBackend.createRequest.mock.calls[0][0]).toEqual({
@@ -189,12 +189,12 @@ describe('RpcClient test', () => {
         url: `root/chains/test/blocks/head/context/contracts/${contractAddress}/script`,
       });
 
-      done();
+  
     });
   });
 
   describe('getNormalizedScript', () => {
-    it('should query the right url', async (done) => {
+    it('should query the right url', async () => {
       await client.getNormalizedScript(contractAddress);
 
       expect(httpBackend.createRequest.mock.calls[0][0]).toEqual({
@@ -203,12 +203,12 @@ describe('RpcClient test', () => {
       });
       expect(httpBackend.createRequest.mock.calls[0][1]).toEqual({ unparsing_mode: 'Readable' });
 
-      done();
+  
     });
   });
 
   describe('getContract', () => {
-    it('should query the right url', async (done) => {
+    it('should query the right url', async () => {
       httpBackend.createRequest.mockResolvedValue({ balance: '10000' });
       const response = await client.getContract(contractAddress);
 
@@ -220,12 +220,12 @@ describe('RpcClient test', () => {
       expect(response.balance).toBeInstanceOf(BigNumber);
       expect(response.balance.toString()).toEqual('10000');
 
-      done();
+  
     });
   });
 
   describe('getManagerKey', () => {
-    it('should query the right url', async (done) => {
+    it('should query the right url', async () => {
       await client.getManagerKey(contractAddress);
 
       expect(httpBackend.createRequest.mock.calls[0][0]).toEqual({
@@ -233,12 +233,12 @@ describe('RpcClient test', () => {
         url: `root/chains/test/blocks/head/context/contracts/${contractAddress}/manager_key`,
       });
 
-      done();
+  
     });
   });
 
   describe('getDelegate', () => {
-    it('should query the right url', async (done) => {
+    it('should query the right url', async () => {
       await client.getDelegate(contractAddress);
 
       expect(httpBackend.createRequest.mock.calls[0][0]).toEqual({
@@ -246,12 +246,12 @@ describe('RpcClient test', () => {
         url: `root/chains/test/blocks/head/context/contracts/${contractAddress}/delegate`,
       });
 
-      done();
+  
     });
   });
 
   describe('getBlockHash', () => {
-    it('should query the right url', async (done) => {
+    it('should query the right url', async () => {
       await client.getBlockHash();
 
       expect(httpBackend.createRequest.mock.calls[0][0]).toEqual({
@@ -259,7 +259,7 @@ describe('RpcClient test', () => {
         url: 'root/chains/test/blocks/head/hash',
       });
 
-      done();
+  
     });
   });
 
@@ -281,7 +281,7 @@ describe('RpcClient test', () => {
       grace_period: 146,
     };
 
-    it('should query the right url', async (done) => {
+    it('should query the right url', async () => {
       httpBackend.createRequest.mockResolvedValue(sampleResponse);
       await client.getDelegates(contractAddress);
 
@@ -290,10 +290,10 @@ describe('RpcClient test', () => {
         url: `root/chains/test/blocks/head/context/delegates/${contractAddress}`,
       });
 
-      done();
+  
     });
 
-    it('should parse the response properly', async (done) => {
+    it('should parse the response properly', async () => {
       httpBackend.createRequest.mockResolvedValue(sampleResponse);
       const response = await client.getDelegates(contractAddress);
 
@@ -324,10 +324,10 @@ describe('RpcClient test', () => {
         grace_period: 146,
       });
 
-      done();
+  
     });
 
-    it('should parse the response properly, proto10', async (done) => {
+    it('should parse the response properly, proto10', async () => {
       // deposit replaced by deposits
       httpBackend.createRequest.mockResolvedValue({
         balance: '5976016544884',
@@ -370,10 +370,10 @@ describe('RpcClient test', () => {
         voting_power: new BigNumber(729),
       });
 
-      done();
+  
     });
 
-    it('should parse the response properly, proto12', async (done) => {
+    it('should parse the response properly, proto12', async () => {
       httpBackend.createRequest.mockResolvedValue(delegatesIthacanetResponse);
       const response = await client.getDelegates(contractAddress);
 
@@ -389,10 +389,10 @@ describe('RpcClient test', () => {
         voting_power: new BigNumber(199),
       });
 
-      done();
+  
     });
 
-    it('should parse the response properly, proto14', async (done) => {
+    it('should parse the response properly, proto14', async () => {
       httpBackend.createRequest.mockResolvedValue(delegatesKathmandunetResponse);
       const response = await client.getDelegates(contractAddress);
 
@@ -409,12 +409,12 @@ describe('RpcClient test', () => {
         remaining_proposals: 20,
       });
 
-      done();
+  
     });
   });
 
   describe('getVotingInfo', () => {
-    it('should query the right url', async (done) => {
+    it('should query the right url', async () => {
       httpBackend.createRequest.mockResolvedValue(votingInfoKathmandunetResponse);
       await client.getVotingInfo(contractAddress);
 
@@ -423,10 +423,10 @@ describe('RpcClient test', () => {
         url: `root/chains/test/blocks/head/context/delegates/${contractAddress}/voting_info`,
       });
 
-      done();
+  
     });
 
-    it('should parse the response properly', async (done) => {
+    it('should parse the response properly', async () => {
       httpBackend.createRequest.mockResolvedValue(votingInfoKathmandunetResponse);
       const response = await client.getVotingInfo(contractAddress);
 
@@ -435,12 +435,12 @@ describe('RpcClient test', () => {
         remaining_proposals: 20,
       });
 
-      done();
+  
     });
   });
 
   describe('getBigMapKey', () => {
-    it('should query the right url', async (done) => {
+    it('should query the right url', async () => {
       await client.getBigMapKey(contractAddress, { key: 'test', type: 'string' } as any);
       expect(httpBackend.createRequest.mock.calls[0][0]).toEqual({
         method: 'POST',
@@ -449,12 +449,12 @@ describe('RpcClient test', () => {
 
       expect(httpBackend.createRequest.mock.calls[0][1]).toEqual({ key: 'test', type: 'string' });
 
-      done();
+  
     });
   });
 
   describe('forgeOperation', () => {
-    it('should query the right url', async (done) => {
+    it('should query the right url', async () => {
       await client.forgeOperations({} as any);
       expect(httpBackend.createRequest.mock.calls[0][0]).toEqual({
         method: 'POST',
@@ -463,12 +463,12 @@ describe('RpcClient test', () => {
 
       expect(httpBackend.createRequest.mock.calls[0][1]).toEqual({});
 
-      done();
+  
     });
   });
 
   describe('injectOperations', () => {
-    it('should query the right url', async (done) => {
+    it('should query the right url', async () => {
       await client.injectOperation({} as any);
       expect(httpBackend.createRequest.mock.calls[0][0]).toEqual({
         method: 'POST',
@@ -477,12 +477,12 @@ describe('RpcClient test', () => {
 
       expect(httpBackend.createRequest.mock.calls[0][1]).toEqual({});
 
-      done();
+  
     });
   });
 
   describe('preapplyOperations', () => {
-    it('should query the right url', async (done) => {
+    it('should query the right url', async () => {
       httpBackend.createRequest.mockResolvedValue({});
       await client.preapplyOperations({} as any);
       expect(httpBackend.createRequest.mock.calls[0][0]).toEqual({
@@ -492,12 +492,12 @@ describe('RpcClient test', () => {
 
       expect(httpBackend.createRequest.mock.calls[0][1]).toEqual({});
 
-      done();
+  
     });
   });
 
   describe('getBlockHeader', () => {
-    it('should query the right url', async (done) => {
+    it('should query the right url', async () => {
       const sampleResponse = {
         protocol: 'Pt24m4xiPbLDhVgVfABUjirbmda3yohdN82Sp9FeuAXJ4eV9otd',
         chain_id: 'NetXdQprcVkpaWU',
@@ -541,12 +541,12 @@ describe('RpcClient test', () => {
           'siguGHqTYQjaDMjZgDQjAXG9Fc8HnqCJceVJMUCHRbSFoJJCx3Lz9VpBy53nat4W4T1CvbzPJKKgq2YfFAGXeaXcQLbN4CFz',
       });
 
-      done();
+  
     });
   });
 
   describe('getBlockMetadata', () => {
-    it('should query the right url', async (done) => {
+    it('should query the right url', async () => {
       const sampleResponse = {
         protocol: 'Pt24m4xiPbLDhVgVfABUjirbmda3yohdN82Sp9FeuAXJ4eV9otd',
         next_protocol: 'Pt24m4xiPbLDhVgVfABUjirbmda3yohdN82Sp9FeuAXJ4eV9otd',
@@ -670,12 +670,12 @@ describe('RpcClient test', () => {
         ],
       });
 
-      done();
+  
     });
   });
 
   describe('getConstants Proto015', () => {
-    it('should query the right url and casts relevant properties to BigNumber', async (done) => {
+    it('should query the right url and casts relevant properties to BigNumber', async () => {
       httpBackend.createRequest.mockResolvedValue({
         proof_of_work_nonce_size: 8,
         nonce_length: 32,
@@ -877,11 +877,11 @@ describe('RpcClient test', () => {
         zk_rollup_origination_size: 4000,
         zk_rollup_min_pending_to_process: 10,
       });
-      done();
+  
     });
   });
   describe('getConstants Proto014', () => {
-    it('should query the right url and casts relevant properties to BigNumber', async (done) => {
+    it('should query the right url and casts relevant properties to BigNumber', async () => {
       httpBackend.createRequest.mockResolvedValue({
         proof_of_work_nonce_size: 8,
         nonce_length: 32,
@@ -1063,12 +1063,12 @@ describe('RpcClient test', () => {
         sc_rollup_max_active_outbox_levels: 20160,
         sc_rollup_max_outbox_messages_per_level: 100,
       });
-      done();
+  
     });
   });
 
   describe('getConstants Proto012', () => {
-    it('should query the right url and casts property to BigNumber', async (done) => {
+    it('should query the right url and casts property to BigNumber', async () => {
       httpBackend.createRequest.mockReturnValue(
         Promise.resolve({
           proof_of_work_nonce_size: 8,
@@ -1171,12 +1171,12 @@ describe('RpcClient test', () => {
           numerator: 1,
         },
       });
-      done();
+  
     });
   });
 
   describe('getConstants Proto007', () => {
-    it('should query the right url and casts property to BigNumber', async (done) => {
+    it('should query the right url and casts property to BigNumber', async () => {
       httpBackend.createRequest.mockReturnValue(
         Promise.resolve({
           proof_of_work_nonce_size: 8,
@@ -1246,12 +1246,12 @@ describe('RpcClient test', () => {
       expect(response.block_reward).toBeUndefined();
       expect(response.origination_burn).toBeUndefined();
 
-      done();
+  
     });
   });
 
   describe('getConstants Proto006', () => {
-    it('should properties return by the RPC are accessible and the ones that do not belong to proto6 are undefined', async (done) => {
+    it('should properties return by the RPC are accessible and the ones that do not belong to proto6 are undefined', async () => {
       httpBackend.createRequest.mockReturnValue(
         Promise.resolve({
           proof_of_work_nonce_size: 8,
@@ -1302,12 +1302,12 @@ describe('RpcClient test', () => {
       expect(response.block_reward).toBeUndefined();
       expect(response.origination_burn).toBeUndefined();
 
-      done();
+  
     });
   });
 
   describe('getConstants Proto005', () => {
-    it('should properties return by the RPC are accessible and the ones that do not belong to proto5 are undefined', async (done) => {
+    it('should properties return by the RPC are accessible and the ones that do not belong to proto5 are undefined', async () => {
       httpBackend.createRequest.mockReturnValue(
         Promise.resolve({
           proof_of_work_nonce_size: 8,
@@ -1368,12 +1368,12 @@ describe('RpcClient test', () => {
       expect(response.max_anon_ops_per_block).toBeUndefined();
       expect(response.origination_burn).toBeUndefined();
 
-      done();
+  
     });
   });
 
   describe('getBlock', () => {
-    it('should query the right url and property for endorsement', async (done) => {
+    it('should query the right url and property for endorsement', async () => {
       httpBackend.createRequest.mockReturnValue(
         Promise.resolve({
           protocol: 'Pt24m4xiPbLDhVgVfABUjirbmda3yohdN82Sp9FeuAXJ4eV9otd',
@@ -1509,12 +1509,12 @@ describe('RpcClient test', () => {
         .contents[0] as OperationContentsAndResultEndorsement;
       expect(endorsement.metadata.balance_updates![0].kind).toEqual('contract');
 
-      done();
+  
     });
   });
 
   describe('getBlock', () => {
-    it('should query the right url and property for operation', async (done) => {
+    it('should query the right url and property for operation', async () => {
       httpBackend.createRequest.mockReturnValue(
         Promise.resolve({
           protocol: 'PtEdo2ZkT9oKpimTah6x2embF25oss54njMuPzkJTEi5RqfdZFA',
@@ -1754,10 +1754,10 @@ describe('RpcClient test', () => {
       expect(transaction.metadata.balance_updates![0].change).toEqual('-2820');
       expect(transaction.metadata.operation_result.status).toEqual('applied');
       expect(transaction.metadata.operation_result.consumed_gas).toEqual('24660');
-      done();
+  
     });
 
-    it('should query the right url and property for operation, proto 9, endorsement_with_slot', async (done) => {
+    it('should query the right url and property for operation, proto 9, endorsement_with_slot', async () => {
       httpBackend.createRequest.mockReturnValue(
         Promise.resolve({
           protocol: 'PsFLorenaUUuikDWvMDr6fGBRG8kt3e3D3fHoXK1j1BFRxeSH4i',
@@ -1842,10 +1842,10 @@ describe('RpcClient test', () => {
       expect(endorsementWithSlot.kind).toEqual('endorsement_with_slot');
       expect(endorsementWithSlot.metadata.slots).toEqual([4, 11, 18, 21, 24]);
       expect(endorsementWithSlot.slot).toEqual(4);
-      done();
+  
     });
 
-    it('should query the right url and properties (big_map_diff and lazy_storage_diff) in transaction operation result, proto 9', async (done) => {
+    it('should query the right url and properties (big_map_diff and lazy_storage_diff) in transaction operation result, proto 9', async () => {
       httpBackend.createRequest.mockReturnValue(
         Promise.resolve({
           protocol: 'PsFLorenaUUuikDWvMDr6fGBRG8kt3e3D3fHoXK1j1BFRxeSH4i',
@@ -2444,10 +2444,10 @@ describe('RpcClient test', () => {
       expect(result.lazy_storage_diff).toBeDefined();
       expect(result.lazy_storage_diff![0].kind).toEqual('big_map');
       expect(result.lazy_storage_diff![0].id).toEqual('514');
-      done();
+  
     });
 
-    it('should query the right url and properties (lazy_storage_diff of kind sapling_state) in transaction operation result, proto 8', async (done) => {
+    it('should query the right url and properties (lazy_storage_diff of kind sapling_state) in transaction operation result, proto 8', async () => {
       httpBackend.createRequest.mockReturnValue(
         Promise.resolve({
           protocol: 'PtEdo2ZkT9oKpimTah6x2embF25oss54njMuPzkJTEi5RqfdZFA',
@@ -2556,10 +2556,10 @@ describe('RpcClient test', () => {
       expect(lazy_storage_diff_0.diff.updates!.nullifiers).toBeInstanceOf(Array);
       expect(lazy_storage_diff_0.diff.memo_size).toBeDefined();
       expect(lazy_storage_diff_0.diff.memo_size).toEqual(8);
-      done();
+  
     });
 
-    it('should access new properties "liquidity_baking_escape_ema", "implicit_operations_results" and "subsidy" in block metadata, proto 10', async (done) => {
+    it('should access new properties "liquidity_baking_escape_ema", "implicit_operations_results" and "subsidy" in block metadata, proto 10', async () => {
       httpBackend.createRequest.mockReturnValue(
         Promise.resolve({
           protocol: 'PtGRANADsDU8R9daYKAgWnQYAJ64omN1o3KMGVCykShA97vQbvV',
@@ -2681,10 +2681,10 @@ describe('RpcClient test', () => {
       ).toBeUndefined();
       expect(response.metadata.implicit_operations_results![0].lazy_storage_diff).toBeUndefined();
 
-      done();
+  
     });
 
-    it('should fetch a block having a RegisterGlobalConstant operation and it validates its properties, proto 11', async (done) => {
+    it('should fetch a block having a RegisterGlobalConstant operation and it validates its properties, proto 11', async () => {
       httpBackend.createRequest.mockReturnValue(
         Promise.resolve({
           protocol: 'PtHangzHogokSuiMHemCuowEavgYTP8J5qQ9fQS793MHYFpCY3r',
@@ -2809,10 +2809,10 @@ describe('RpcClient test', () => {
 
       expect(content.metadata.internal_operation_results).toBeUndefined();
 
-      done();
+  
     });
 
-    it('should use enum to represent property category in balance_updates, proto 12', async (done) => {
+    it('should use enum to represent property category in balance_updates, proto 12', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(blockIthacanetResponse));
 
       const response = await client.getBlock();
@@ -2831,10 +2831,10 @@ describe('RpcClient test', () => {
         METADATA_BALANCE_UPDATES_CATEGORY.BAKING_BONUSES
       );
 
-      done();
+  
     });
 
-    it('should fetch a block and access new properties in header, proto 12', async (done) => {
+    it('should fetch a block and access new properties in header, proto 12', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(blockIthacanetResponse));
 
       const response = await client.getBlock();
@@ -2848,10 +2848,10 @@ describe('RpcClient test', () => {
       expect(response.header.liquidity_baking_escape_vote).toBeDefined();
       expect(response.header.liquidity_baking_escape_vote).toBeFalsy();
 
-      done();
+  
     });
 
-    it('should fetch a block and access new properties in metadata, proto 12', async (done) => {
+    it('should fetch a block and access new properties in metadata, proto 12', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(blockIthacanetResponse));
 
       const response = await client.getBlock();
@@ -2860,10 +2860,10 @@ describe('RpcClient test', () => {
       expect(response.metadata.proposer).toEqual('tz1aWXP237BLwNHJcCD4b3DutCevhqq2T1Z9');
       expect(response.metadata.balance_updates![0].category).toBeDefined();
 
-      done();
+  
     });
 
-    it('should access new properties of the operation type endorsement, proto 12', async (done) => {
+    it('should access new properties of the operation type endorsement, proto 12', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(blockIthacanetResponse));
 
       const response = await client.getBlock();
@@ -2884,10 +2884,10 @@ describe('RpcClient test', () => {
       expect(contentEndorsement.metadata.endorsement_power).toBeDefined();
       expect(contentEndorsement.metadata.endorsement_power).toEqual(206);
 
-      done();
+  
     });
 
-    it('should access new properties of the operation type set_deposits_limit, proto 12', async (done) => {
+    it('should access new properties of the operation type set_deposits_limit, proto 12', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(blockIthacanetResponse));
 
       const response = await client.getBlock();
@@ -2921,10 +2921,10 @@ describe('RpcClient test', () => {
       expect(content.metadata.operation_result.consumed_milligas).toBeDefined();
       expect(content.metadata.operation_result.consumed_milligas).toEqual('1000000');
 
-      done();
+  
     });
 
-    it('should access the properties of the operation type tx_rollup_origination, proto 13', async (done) => {
+    it('should access the properties of the operation type tx_rollup_origination, proto 13', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(blockJakartanetResponse));
 
       const response = await client.getBlock();
@@ -2974,10 +2974,10 @@ describe('RpcClient test', () => {
       );
       expect(content.metadata.operation_result.balance_updates![1].change).toEqual('1000000');
       expect(content.metadata.operation_result.balance_updates![1].origin).toEqual('block');
-      done();
+  
     });
 
-    it('should access the properties of the operation type tx_rollup_submit_batch, proto13', async (done) => {
+    it('should access the properties of the operation type tx_rollup_submit_batch, proto13', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(blockJakartanetResponse));
 
       const response = await client.getBlock();
@@ -3010,10 +3010,10 @@ describe('RpcClient test', () => {
       expect(content.metadata.operation_result.consumed_gas).toEqual('2109');
       expect(content.metadata.operation_result.consumed_milligas).toEqual('2108268');
       expect(content.metadata.operation_result.paid_storage_size_diff).toEqual('0');
-      done();
+  
     });
 
-    it('should access the properties of the operation type tx_rollup_commit, proto13', async (done) => {
+    it('should access the properties of the operation type tx_rollup_commit, proto13', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(blockJakartanetResponse));
 
       const response = await client.getBlock();
@@ -3058,10 +3058,10 @@ describe('RpcClient test', () => {
       expect(content.metadata.operation_result.balance_updates).toBeDefined();
       expect(content.metadata.operation_result.consumed_gas).toEqual('3738');
       expect(content.metadata.operation_result.consumed_milligas).toEqual('3737532');
-      done();
+  
     });
 
-    it('should access the properties of the operation type tx_rollup_finalize_commitment, proto13', async (done) => {
+    it('should access the properties of the operation type tx_rollup_finalize_commitment, proto13', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(blockJakartanetResponse));
 
       const response = await client.getBlock();
@@ -3095,10 +3095,10 @@ describe('RpcClient test', () => {
       expect(content.metadata.operation_result.consumed_gas).toEqual('2502');
       expect(content.metadata.operation_result.consumed_milligas).toEqual('2501420');
       expect(content.metadata.operation_result.level).toEqual(0);
-      done();
+  
     });
 
-    it('should access the properties of the operation type tx_rollup_dispatch_tickets, proto13', async (done) => {
+    it('should access the properties of the operation type tx_rollup_dispatch_tickets, proto13', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(blockJakartanetResponse));
 
       const response = await client.getBlock();
@@ -3130,10 +3130,10 @@ describe('RpcClient test', () => {
       expect(content.tickets_info[0].amount).toEqual('2');
       expect(content.tickets_info[0].claimer).toEqual('tz1inuxjXxKhd9e4b97N1Wgz7DwmZSxFcDpM');
 
-      done();
+  
     });
 
-    it('should access the properties of the operation type tx_rollup_remove_commitment, proto13', async (done) => {
+    it('should access the properties of the operation type tx_rollup_remove_commitment, proto13', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(blockJakartanetResponse));
 
       const response = await client.getBlock();
@@ -3165,10 +3165,10 @@ describe('RpcClient test', () => {
       expect(content.metadata.operation_result.consumed_gas).toEqual('3172');
       expect(content.metadata.operation_result.consumed_milligas).toEqual('3171088');
       expect(content.metadata.operation_result.level).toEqual(0);
-      done();
+  
     });
 
-    it('should access the properties of the operation type tx_rollup_rejection, proto13', async (done) => {
+    it('should access the properties of the operation type tx_rollup_rejection, proto13', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(blockJakartanetResponse));
 
       const response = await client.getBlock();
@@ -3306,10 +3306,10 @@ describe('RpcClient test', () => {
       expect(content.metadata.operation_result.consumed_gas).toEqual('11533');
       expect(content.metadata.operation_result.consumed_milligas).toEqual('11532006');
 
-      done();
+  
     });
 
-    it('should access the properties of operation type tx_rollup_return_bond, proto13', async (done) => {
+    it('should access the properties of operation type tx_rollup_return_bond, proto13', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(blockJakartanetResponse));
 
       const response = await client.getBlock();
@@ -3350,10 +3350,10 @@ describe('RpcClient test', () => {
       expect(content.metadata.operation_result.balance_updates![0].origin).toEqual('block');
       expect(content.metadata.operation_result.consumed_milligas).toEqual('2575028');
 
-      done();
+  
     });
 
-    it('should be able to access the properties of operation type transfer_ticket, proto14', async (done) => {
+    it('should be able to access the properties of operation type transfer_ticket, proto14', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(blockMondaynetResponse));
       const response = await client.getBlock();
       const content = response.operations[3][0]
@@ -3389,10 +3389,10 @@ describe('RpcClient test', () => {
       expect(content.metadata.operation_result.balance_updates).toBeDefined();
       expect(content.metadata.operation_result.consumed_milligas).toEqual('2122881');
       expect(content.metadata.operation_result.paid_storage_size_diff).toEqual('66');
-      done();
+  
     });
 
-    it('should be able to access the properties of operation type increase_paid_storage, proto14', async (done) => {
+    it('should be able to access the properties of operation type increase_paid_storage, proto14', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(blockKathmandunetResponse));
 
       const response = await client.getBlock();
@@ -3425,10 +3425,10 @@ describe('RpcClient test', () => {
       expect(content.metadata.operation_result.status).toEqual('applied');
       expect(content.metadata.operation_result.balance_updates).toBeDefined();
       expect(content.metadata.operation_result.consumed_milligas).toEqual('1000000');
-      done();
+  
     });
 
-    it('should be able to access the properties of internal operation type event, proto14', async (done) => {
+    it('should be able to access the properties of internal operation type event, proto14', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(blockKathmandunetResponse));
 
       const response = await client.getBlock();
@@ -3473,10 +3473,10 @@ describe('RpcClient test', () => {
       expect(internalResult.consumed_milligas).toEqual('1000000');
       expect(internalResult.errors).toBeUndefined();
 
-      done();
+  
     });
 
-    it('should be able to access the properties of operation type drain_delegate, proto15', async (done) => {
+    it('should be able to access the properties of operation type drain_delegate, proto15', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(blockLimanetResponse));
 
       const response = await client.getBlock();
@@ -3518,10 +3518,10 @@ describe('RpcClient test', () => {
       expect(content.metadata.balance_updates![3].change).toEqual('156825984');
       expect(content.metadata.balance_updates![3].origin).toEqual('block');
 
-      done();
+  
     });
 
-    it('should be able to access the properties of operation type update_consensus_key, proto15', async (done) => {
+    it('should be able to access the properties of operation type update_consensus_key, proto15', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(blockLimanetResponse));
 
       const response = await client.getBlock();
@@ -3552,9 +3552,9 @@ describe('RpcClient test', () => {
 
       expect(content.metadata.operation_result.status).toEqual('applied');
       expect(content.metadata.operation_result.consumed_milligas).toEqual('1000000');
-      done();
+  
     });
-    it('should contain ticket_updates for transactions updating ticket storage', async (done) => {
+    it('should contain ticket_updates for transactions updating ticket storage', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(ticketUpdatesResponse));
 
       const response = await client.getBlock();
@@ -3568,10 +3568,10 @@ describe('RpcClient test', () => {
       expect(ticketUpdates?.ticket_token.ticketer).toEqual('KT1JGcC8DuWHcShu6XvtfgKVnV2zcYsZ4TVH');
       expect(ticketUpdates?.updates[0].account).toEqual('KT1JoRgUcR6NApwMLnBZ2pehCzp8tR4HtkHj');
       expect(ticketUpdates?.updates[0].amount).toEqual('-2');
-      done();
+  
     });
     // may be removed
-    it('should contain ticket_receipt for transactions updating ticket storage', async (done) => {
+    it('should contain ticket_receipt for transactions updating ticket storage', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(ticketUpdatesResponse));
 
       const response = await client.getBlock();
@@ -3586,12 +3586,12 @@ describe('RpcClient test', () => {
       expect(ticketReceipt?.ticket_token.ticketer).toEqual('KT1JGcC8DuWHcShu6XvtfgKVnV2zcYsZ4TVH');
       expect(ticketReceipt?.updates[0].account).toEqual('KT1JoRgUcR6NApwMLnBZ2pehCzp8tR4HtkHj');
       expect(ticketReceipt?.updates[0].amount).toEqual('1');
-      done();
+  
     });
   });
 
   describe('getBakingRights', () => {
-    it('query the right url and data', async (done) => {
+    it('query the right url and data', async () => {
       httpBackend.createRequest.mockResolvedValue([
         {
           level: 547387,
@@ -3626,12 +3626,12 @@ describe('RpcClient test', () => {
       expect(result[0].delegate).toEqual('tz3VEZ4k6a4Wx42iyev6i2aVAptTRLEAivNN');
       expect(result[0].estimated_time).toEqual('2019-08-02T09:48:56Z');
       expect(result[0].consensus_key).toEqual('tz1asyQFDgjv2muoaiZ5x5U5RPpaNz33Z2F6');
-      done();
+  
     });
   });
 
   describe('getEndorsingRights', () => {
-    it('query the right url and data', async (done) => {
+    it('query the right url and data', async () => {
       httpBackend.createRequest.mockResolvedValue([
         {
           level: 547386,
@@ -3669,10 +3669,10 @@ describe('RpcClient test', () => {
       expect(result[1].delegate).toEqual('tz3VEZ4k6a4Wx42iyev6i2aVAptTRLEAivNN');
       expect(result[1].estimated_time).toEqual('2019-08-02T09:42:56Z');
       expect(result[1].slots!.length).toEqual(3);
-      done();
+  
     });
 
-    it('query the right url and data (with consensus key in delegates)', async (done) => {
+    it('query the right url and data (with consensus key in delegates)', async () => {
       httpBackend.createRequest.mockResolvedValue([
         {
           level: 547386,
@@ -3703,12 +3703,12 @@ describe('RpcClient test', () => {
       expect(result[0].delegates![0].consensus_key).toEqual('tz1asyQFDgjv2muoaiZ5x5U5RPpaNz33Z2F6');
       expect(result[0].estimated_time).toEqual('2019-08-02T09:42:56Z');
       expect(result[0].slots!.length).toEqual(1);
-      done();
+  
     });
   });
 
   describe('getBallotList', () => {
-    it('should query the right url and data', async (done) => {
+    it('should query the right url and data', async () => {
       httpBackend.createRequest.mockReturnValue(
         Promise.resolve([
           {
@@ -3745,12 +3745,12 @@ describe('RpcClient test', () => {
       });
       expect(response[2].pkh).toEqual('tz1hx8hMmmeyDBi6WJgpKwK4n5S2qAEpavx2');
 
-      done();
+  
     });
   });
 
   describe('getBallots', () => {
-    it('should query the right url and data', async (done) => {
+    it('should query the right url and data', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve({ yay: 5943, nay: 0, pass: 0 }));
       const response = await client.getBallots();
 
@@ -3760,12 +3760,12 @@ describe('RpcClient test', () => {
       });
       expect(response.yay).toEqual(new BigNumber(5943));
 
-      done();
+  
     });
   });
 
   describe('getCurrentProposal', () => {
-    it('should query the right url and data', async (done) => {
+    it('should query the right url and data', async () => {
       httpBackend.createRequest.mockReturnValue(
         Promise.resolve('PsBABY5HQTSkA4297zNHfsZNKtxULfL18y95qb3m53QJiXGmrbU')
       );
@@ -3777,12 +3777,12 @@ describe('RpcClient test', () => {
       });
       expect(response).toEqual('PsBABY5HQTSkA4297zNHfsZNKtxULfL18y95qb3m53QJiXGmrbU');
 
-      done();
+  
     });
   });
 
   describe('getCurrentQuorum', () => {
-    it('should query the right url and data', async (done) => {
+    it('should query the right url and data', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(7291));
       const response = await client.getCurrentQuorum();
 
@@ -3792,12 +3792,12 @@ describe('RpcClient test', () => {
       });
       expect(response).toEqual(7291);
 
-      done();
+  
     });
   });
 
   describe('getVotesListings', () => {
-    it('should query the right url and data', async (done) => {
+    it('should query the right url and data', async () => {
       httpBackend.createRequest.mockReturnValue(
         Promise.resolve([
           {
@@ -3853,12 +3853,12 @@ describe('RpcClient test', () => {
       expect(response[4].pkh).toEqual('tz2JMPu9yVKuX2Au8UUbp7YrKBZJSdYhgwwu');
       expect(response[4].voting_power).toBeUndefined();
 
-      done();
+  
     });
   });
 
   describe('getProposals', () => {
-    it('should query the right url and data', async (done) => {
+    it('should query the right url and data', async () => {
       httpBackend.createRequest.mockReturnValue(
         Promise.resolve([
           ['PsBABY5HQTSkA4297zNHfsZNKtxULfL18y95qb3m53QJiXGmrbU', 2832],
@@ -3873,12 +3873,12 @@ describe('RpcClient test', () => {
       });
       expect(response[0][1]).toEqual(new BigNumber(2832));
 
-      done();
+  
     });
   });
 
   describe('getEntrypoints', () => {
-    it('should query the right url and data', async (done) => {
+    it('should query the right url and data', async () => {
       httpBackend.createRequest.mockReturnValue({ entrypoints: {} });
       const response = await client.getEntrypoints(contractAddress);
 
@@ -3887,12 +3887,12 @@ describe('RpcClient test', () => {
         url: `root/chains/test/blocks/head/context/contracts/${contractAddress}/entrypoints`,
       });
       expect(response).toEqual({ entrypoints: {} });
-      done();
+  
     });
   });
 
   describe('runOperation', () => {
-    it('should query the right url and data', async (done) => {
+    it('should query the right url and data', async () => {
       const testData = {};
 
       httpBackend.createRequest.mockResolvedValue({ content: {} });
@@ -3905,10 +3905,10 @@ describe('RpcClient test', () => {
 
       expect(httpBackend.createRequest.mock.calls[0][1]).toEqual(testData);
 
-      done();
+  
     });
 
-    it('should use enum for property category to avoid space in name', async (done) => {
+    it('should use enum for property category to avoid space in name', async () => {
       const testData = {};
 
       httpBackend.createRequest.mockResolvedValue({
@@ -3949,12 +3949,12 @@ describe('RpcClient test', () => {
         METADATA_BALANCE_UPDATES_CATEGORY.LEGACY_REWARDS
       );
 
-      done();
+  
     });
   });
 
   describe('runScriptView', () => {
-    it('query the right url and data', async (done) => {
+    it('query the right url and data', async () => {
       const testData: RPCRunScriptViewParam = {
         contract: 'test',
         view: 'test',
@@ -3974,10 +3974,10 @@ describe('RpcClient test', () => {
         ...testData,
         unparsing_mode: 'Readable',
       });
-      done();
+  
     });
 
-    it('query the right url and data with unparsing_mode overriden', async (done) => {
+    it('query the right url and data with unparsing_mode overriden', async () => {
       const testData: RPCRunScriptViewParam = {
         contract: 'test',
         view: 'test',
@@ -3995,12 +3995,12 @@ describe('RpcClient test', () => {
         url: 'root/chains/test/blocks/head/helpers/scripts/run_script_view',
       });
       expect(httpBackend.createRequest.mock.calls[0][1]).toEqual(testData);
-      done();
+  
     });
   });
 
   describe('runView', () => {
-    it('should query the right url and data', async (done) => {
+    it('should query the right url and data', async () => {
       const testData: RPCRunViewParam = {
         contract: 'test',
         entrypoint: 'test',
@@ -4025,10 +4025,10 @@ describe('RpcClient test', () => {
         },
         unparsing_mode: 'Readable',
       });
-      done();
+  
     });
 
-    it('should query the right url and data with unparsing_mode overriden', async (done) => {
+    it('should query the right url and data with unparsing_mode overriden', async () => {
       const testData: RPCRunViewParam = {
         contract: 'test',
         entrypoint: 'test',
@@ -4046,12 +4046,12 @@ describe('RpcClient test', () => {
         url: 'root/chains/test/blocks/head/helpers/scripts/run_view',
       });
       expect(httpBackend.createRequest.mock.calls[0][1]).toEqual(testData);
-      done();
+  
     });
   });
 
   describe('packData', () => {
-    it('should query the right url and data', async (done) => {
+    it('should query the right url and data', async () => {
       httpBackend.createRequest.mockResolvedValue({ packed: 'cafe', gas: 'unaccounted' });
       const response = await client.packData({
         data: { string: 'test' },
@@ -4064,10 +4064,10 @@ describe('RpcClient test', () => {
       });
       expect(response).toEqual({ packed: 'cafe', gas: 'unaccounted' });
 
-      done();
+  
     });
 
-    it('should return a big number for gas when it is a big number', async (done) => {
+    it('should return a big number for gas when it is a big number', async () => {
       httpBackend.createRequest.mockResolvedValue({ packed: 'cafe', gas: '2' });
       const response = await client.packData({
         data: { string: 'test' },
@@ -4076,10 +4076,10 @@ describe('RpcClient test', () => {
       expect(response).toEqual({ packed: 'cafe', gas: new BigNumber(2) });
       expect(response.gas).toBeInstanceOf(BigNumber);
 
-      done();
+  
     });
 
-    it('should return undefined for gas when it is missing', async (done) => {
+    it('should return undefined for gas when it is missing', async () => {
       httpBackend.createRequest.mockResolvedValue({ packed: 'cafe' });
       const response = await client.packData({
         data: { string: 'test' },
@@ -4087,19 +4087,19 @@ describe('RpcClient test', () => {
       });
       expect(response).toEqual({ packed: 'cafe' });
       expect(response.gas).toBeUndefined();
-      done();
+  
     });
   });
 
   describe('getBigMapExpr', () => {
-    it('should query the right url and data', async (done) => {
+    it('should query the right url and data', async () => {
       await client.getBigMapExpr('1', '2');
 
       expect(httpBackend.createRequest.mock.calls[0][0]).toEqual({
         method: 'GET',
         url: 'root/chains/test/blocks/head/context/big_maps/1/2',
       });
-      done();
+  
     });
   });
 
@@ -4114,7 +4114,7 @@ describe('RpcClient test', () => {
   });
 
   describe('getCurrentPeriod', () => {
-    it('should query the right url and data', async (done) => {
+    it('should query the right url and data', async () => {
       const mockedResponse = {
         voting_period: {
           index: 87,
@@ -4133,12 +4133,12 @@ describe('RpcClient test', () => {
       });
       expect(response).toEqual(mockedResponse);
 
-      done();
+  
     });
   });
 
   describe('getSuccessorPeriod', () => {
-    it('should query the right url and data', async (done) => {
+    it('should query the right url and data', async () => {
       const mockedResponse = {
         voting_period: {
           index: 87,
@@ -4157,12 +4157,12 @@ describe('RpcClient test', () => {
       });
       expect(response).toEqual(mockedResponse);
 
-      done();
+  
     });
   });
 
   describe('getSaplingDiffById', () => {
-    it('should query the right url', async (done) => {
+    it('should query the right url', async () => {
       httpBackend.createRequest.mockResolvedValue({
         root: 'fbc2f4300c01f0b7820d00e3347c8da4ee614674376cbc45359daa54f9b5493e',
         commitments_and_ciphertexts: [],
@@ -4181,12 +4181,12 @@ describe('RpcClient test', () => {
       expect(response.commitments_and_ciphertexts).toEqual([]);
       expect(response.nullifiers).toEqual([]);
 
-      done();
+  
     });
   });
 
   describe('getSaplingDiffByContract', () => {
-    it('should query the right url', async (done) => {
+    it('should query the right url', async () => {
       httpBackend.createRequest.mockResolvedValue({
         root: 'fbc2f4300c01f0b7820d00e3347c8da4ee614674376cbc45359daa54f9b5493e',
         commitments_and_ciphertexts: [],
@@ -4207,12 +4207,12 @@ describe('RpcClient test', () => {
       expect(response.commitments_and_ciphertexts).toEqual([]);
       expect(response.nullifiers).toEqual([]);
 
-      done();
+  
     });
   });
 
   describe('getProtocols', () => {
-    it('should query the right url and return a ProtocolsResponse', async (done) => {
+    it('should query the right url and return a ProtocolsResponse', async () => {
       httpBackend.createRequest.mockReturnValue(
         Promise.resolve({
           protocol: 'PtHangz2aRngywmSRGGvrcTyMbbdpWdpFKuS4uMWxg2RaH9i1qx',
@@ -4230,12 +4230,12 @@ describe('RpcClient test', () => {
       );
       expect(protocols.protocol).toEqual('PtHangz2aRngywmSRGGvrcTyMbbdpWdpFKuS4uMWxg2RaH9i1qx');
 
-      done();
+  
     });
   });
 
   describe('getTxRollupState', () => {
-    it('should query the correct url and return a rollup state response', async (done) => {
+    it('should query the correct url and return a rollup state response', async () => {
       const mockResponse = {
         last_removed_commitment_hashes: null,
         finalized_commitments: {
@@ -4269,12 +4269,12 @@ describe('RpcClient test', () => {
       expect(txRollupState).toBeDefined();
       expect(txRollupState).toEqual(mockResponse);
 
-      done();
+  
     });
   });
 
   describe('getTxRollupInbox', () => {
-    it('should query the correct url and return a rollup inbox response', async (done) => {
+    it('should query the correct url and return a rollup inbox response', async () => {
       httpBackend.createRequest.mockReturnValue(
         Promise.resolve({
           inbox_length: 1,
@@ -4297,12 +4297,12 @@ describe('RpcClient test', () => {
         'txi3Ef5CSsBWRaqQhWj2zg51J3tUqHFD47na6ex7zcboTG5oXEFrm'
       );
 
-      done();
+  
     });
   });
 
   describe('smartRollupOriginate', () => {
-    it('should have correct types to access smart_rollup_originate results', async (done) => {
+    it('should have correct types to access smart_rollup_originate results', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(smartRollupOriginateResponse));
       const response = await client.getBlock();
       const content = response.operations[1][0]
@@ -4332,12 +4332,12 @@ describe('RpcClient test', () => {
       );
       expect(soruResult.consumed_milligas).toEqual('2748269');
       expect(soruResult.size).toEqual('6552');
-      done();
+  
     });
   });
 
   describe('smartRollupAddMessages', () => {
-    it('should have correct types to access smart_rollup_add_messages results', async (done) => {
+    it('should have correct types to access smart_rollup_add_messages results', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(smartRollupAddMessagesResponse));
       const response = await client.getBlock();
       const content = response.operations[1][0]
@@ -4357,12 +4357,12 @@ describe('RpcClient test', () => {
 
       expect(soruResult.status).toEqual('applied');
       expect(soruResult.consumed_milligas).toEqual('1002777');
-      done();
+  
     });
   });
 
   describe('smartRollupOutboxMessages', () => {
-    it('should have correct types to access smart_rollup_execute_outbox_message results', async (done) => {
+    it('should have correct types to access smart_rollup_execute_outbox_message results', async () => {
       httpBackend.createRequest.mockReturnValue(
         Promise.resolve(smartRollupExecuteOutboxMessageResponse)
       );
@@ -4390,12 +4390,12 @@ describe('RpcClient test', () => {
       expect(soruResult.consumed_milligas).toEqual('4731015');
       expect(soruResult.ticket_updates).toEqual([]);
       expect(soruResult.paid_storage_size_diff).toEqual('5');
-      done();
+  
     });
   });
 
   describe('smartRollupPublish', () => {
-    it('should have correct types to access smart_rollup_publish results', async (done) => {
+    it('should have correct types to access smart_rollup_publish results', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(smartRollupPublishResponse));
       const response = await client.getBlock();
       const content = response.operations[0][0]
@@ -4428,10 +4428,10 @@ describe('RpcClient test', () => {
       expect(soruResult.published_at_level).toEqual(197154);
       expect(soruResult.balance_updates).toEqual([]);
 
-      done();
+  
     });
 
-    it('should have correct access to metadata.operation_result.balanceUpdate in smart_rollup_publish', async (done) => {
+    it('should have correct access to metadata.operation_result.balanceUpdate in smart_rollup_publish', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(smartRollupPublishResponse));
       const response = await client.getBlock();
       const contentWithDiffBalanceUpdate = response.operations[0][1]
@@ -4444,12 +4444,12 @@ describe('RpcClient test', () => {
       expect(diffBalanceUpdate.bond_id?.smart_rollup).toEqual(
         'sr1LhGA2zC9VcYALSifpRBCgDiQfDSQ6bb4x'
       );
-      done();
+  
     });
   });
 
   describe('smartRollupCement', () => {
-    it('shoud have correct types to access smart_rollup_cement results', async (done) => {
+    it('shoud have correct types to access smart_rollup_cement results', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(smartRollupCementResponse));
       const response = await client.getBlock();
       const content = response.operations[0][0]
@@ -4469,12 +4469,12 @@ describe('RpcClient test', () => {
       expect(soruResult.status).toEqual('applied');
       expect(soruResult.consumed_milligas).toEqual('6331052');
       expect(soruResult.inbox_level).toEqual(197111);
-      done();
+  
     });
   });
 
   describe('smartRollupRefute', () => {
-    it('should have correct types to access smart_rollup_refute results move with pvm_step', async (done) => {
+    it('should have correct types to access smart_rollup_refute results move with pvm_step', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(smartRollupRefuteResponse));
       const response = await client.getBlock();
       const content = response.operations[0][0]
@@ -4505,10 +4505,10 @@ describe('RpcClient test', () => {
       expect(step.pvm_step).toEqual(
         '03000298e4e3d5c88da366e885edf675ffd7a5087c8e0a2fcd508e7951113fe4c1491810067c06a78b88cb7c3e60c56b47ba9e14c922dbdbd4811ac6fee80a309620630005820764757261626c6582066b65726e656cd07d20c53bdd5b536a6be9c4cdad16e69a9af40b93a6564655fffd88bba050519008726561646f6e6c7982066b65726e656cd0a645771d9d5228a31312b282119c596699ccb6b60b93d759c2072a493ddbb5740c7761736d5f76657273696f6e8101408208636f6e74656e7473810130c10200322e302e30000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000066c656e677468c008000000000000000503746167c00800000004536f6d650003810370766d00050004000381166f7574626f785f76616c69646974795f706572696f64c00400013b0082136c6173745f746f705f6c6576656c5f63616c6cc00680c0abd38f05196d6178696d756d5f7265626f6f74735f7065725f696e707574c002e80781146f7574626f785f6d6573736167655f6c696d6974c002a401810c6d61785f6e625f7469636b73c00580dc9afd28820576616c7565810370766d8107627566666572738205696e7075740003810468656164c001008208636f6e74656e7473d06e2c0a5b371a53e76a9b7f221a5baa67170b3f9f43205fb06c0649123cec2358066c656e677468c00103066f75747075740004820132810a6c6173745f6c6576656cc0040000a33f0133810f76616c69646974795f706572696f64c00400013b0082013181086f7574626f786573d0ccbff4c181451166adb153f7a1631e9f036832f8e5c82acd8e8c12876eeeda870134810d6d6573736167655f6c696d6974c002a401047761736d00048205696e707574c0050000a33f0203746167c00b0000000770616464696e67820c63757272656e745f7469636bc00683c0abd38f050e7265626f6f745f636f756e746572c002e907'
       );
-      done();
+  
     });
 
-    it('should have correct types to access smart_rollup_refute results start', async (done) => {
+    it('should have correct types to access smart_rollup_refute results start', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(smartRollupRefuteResponse));
       const response = await client.getBlock();
       const content = response.operations[0][1]
@@ -4532,9 +4532,9 @@ describe('RpcClient test', () => {
       expect(refutation.opponent_commitment_hash).toEqual(
         'src12q2zZyxuK5UeYPQYSutA6RPMv7sZDtJ7oAWxAytuJC3rjvWct6'
       );
-      done();
+  
     });
-    it('should have correct types to access smart_rollup_refute results move with dissection', async (done) => {
+    it('should have correct types to access smart_rollup_refute results move with dissection', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(smartRollupRefuteResponse));
       const response = await client.getBlock();
       const content = response.operations[0][2]
@@ -4569,12 +4569,12 @@ describe('RpcClient test', () => {
         state: 'srs12ti4nRqiqahBZedqjgnFx9ZK88KkSgpYD8ns5Q41UMEXGg9w3b',
         tick: '22000000000',
       });
-      done();
+  
     });
   });
 
   describe('smartRollupRecoverBond', () => {
-    it('should have correct types to access smart_rollup_recover_bond results', async (done) => {
+    it('should have correct types to access smart_rollup_recover_bond results', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(smartRollupRecoverBondResponse));
       const response = await client.getBlock();
       const content = response.operations[0][0]
@@ -4588,12 +4588,12 @@ describe('RpcClient test', () => {
       expect(content.storage_limit).toEqual('0');
       expect(content.rollup).toEqual('sr1EYxm4fQjr15TASs2Q7PgZ1LqS6unkZhHL');
       expect(content.staker).toEqual('tz1bTS4QDBnpQPmMPNM3rn7jN1hevkWDHSKw');
-      done();
+  
     });
   });
 
   describe('smartRollupTimeout', () => {
-    it('should have correct types to access smart_rollup_timeout', async (done) => {
+    it('should have correct types to access smart_rollup_timeout', async () => {
       httpBackend.createRequest.mockResolvedValue(Promise.resolve(smartRollupTimeoutResponse));
       const response = await client.getBlock();
       const content = response.operations[0][0]
@@ -4611,12 +4611,12 @@ describe('RpcClient test', () => {
 
       expect(stakers.alice).toEqual('tz1TecRhYLVV9bTKRKU9g1Hhpb1Ymw3ynzWS');
       expect(stakers.bob).toEqual('tz1iFnSQ6V2d8piVMPMjtDNdkYNMaUfKwsoy');
-      done();
+  
     });
   });
 
   describe('ticketBalance', () => {
-    it('should query the right url and data', async (done) => {
+    it('should query the right url and data', async () => {
       httpBackend.createRequest.mockResolvedValue('3');
       const response = await client.getTicketBalance(contractAddress, {
         ticketer: contractAddress,
@@ -4630,12 +4630,12 @@ describe('RpcClient test', () => {
       });
 
       expect(response).toEqual('3');
-      done();
+  
     });
   });
 
   describe('ticketAllBalance', () => {
-    it('should query the right url and data', async (done) => {
+    it('should query the right url and data', async () => {
       httpBackend.createRequest.mockResolvedValue(ticketBalancesResponse);
       const response = await client.getAllTicketBalances('KT1X6mCNdfQZSpyU9zZw9sWckPVJyz2X8vwD');
 
@@ -4645,12 +4645,12 @@ describe('RpcClient test', () => {
       });
 
       expect(response).toEqual(ticketBalancesResponse);
-      done();
+  
     });
   });
 
   describe('getPendingOperations', () => {
-    it('should query the correct url and retrun pending operations in mempool', async (done) => {
+    it('should query the correct url and retrun pending operations in mempool', async () => {
       httpBackend.createRequest.mockReturnValue(Promise.resolve(pendingOperationsResponse));
       const response: PendingOperations = await client.getPendingOperations();
 
@@ -4661,7 +4661,7 @@ describe('RpcClient test', () => {
       });
 
       expect(response).toEqual(pendingOperationsResponse);
-      done();
+  
     });
   });
 });

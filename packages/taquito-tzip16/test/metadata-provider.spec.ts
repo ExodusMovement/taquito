@@ -35,7 +35,7 @@ describe('Metadata provider test', () => {
     metadataProvider = new MetadataProvider(handlers);
   });
 
-  it('Should succesfully fetch metadata on https', async (done) => {
+  it('Should succesfully fetch metadata on https', async () => {
     mockHttpHandler.getMetadata.mockResolvedValue(
       `{"name":"test","description":"A metadata test","version":"0.1","license":"MIT","authors":["Taquito <https://tezostaquito.io/>"],"homepage":"https://tezostaquito.io/"}`
     );
@@ -59,10 +59,10 @@ describe('Metadata provider test', () => {
       integrityCheckResult: undefined,
       sha256Hash: undefined,
     });
-    done();
+
   });
 
-  it('Should succesfully fetch metadata on http', async (done) => {
+  it('Should succesfully fetch metadata on http', async () => {
     mockHttpHandler.getMetadata.mockResolvedValue(`{"name":"test"}`);
 
     const metadata = await metadataProvider.provideMetadata(
@@ -77,10 +77,10 @@ describe('Metadata provider test', () => {
       integrityCheckResult: undefined,
       sha256Hash: undefined,
     });
-    done();
+
   });
 
-  it('Should succesfully fetch metadata for tezos-storage', async (done) => {
+  it('Should succesfully fetch metadata for tezos-storage', async () => {
     mockTezosStorageHandler.getMetadata.mockResolvedValue(
       `{"name":"test","description":"A metadata test","version":"0.1","license":"MIT","authors":["Taquito <https://tezostaquito.io/>"],"homepage":"https://tezostaquito.io/"}`
     );
@@ -104,10 +104,10 @@ describe('Metadata provider test', () => {
       integrityCheckResult: undefined,
       sha256Hash: undefined,
     });
-    done();
+
   });
 
-  it('Should succesfully fetch metadata for IPFS', async (done) => {
+  it('Should succesfully fetch metadata for IPFS', async () => {
     mockIpfsHttpHandler.getMetadata.mockResolvedValue(
       `{"name":"test","description":"A metadata test","version":"0.1","license":"MIT","authors":["Taquito <https://tezostaquito.io/>"],"homepage":"https://tezostaquito.io/"}`
     );
@@ -131,10 +131,10 @@ describe('Metadata provider test', () => {
       integrityCheckResult: undefined,
       sha256Hash: undefined,
     });
-    done();
+
   });
 
-  it('Should fail with InvalidUri', async (done) => {
+  it('Should fail with InvalidUri', async () => {
     try {
       await metadataProvider.provideMetadata(
         mockContractAbstraction,
@@ -144,10 +144,10 @@ describe('Metadata provider test', () => {
     } catch (ex) {
       expect(ex).toBeInstanceOf(InvalidUri);
     }
-    done();
+
   });
 
-  it('Should fail with InvalidMetadata when metadata are not a JSON object', async (done) => {
+  it('Should fail with InvalidMetadata when metadata are not a JSON object', async () => {
     mockHttpHandler.getMetadata.mockResolvedValue(
       `"description": "Invalid metadata, not in JSON format"`
     );
@@ -156,7 +156,7 @@ describe('Metadata provider test', () => {
     } catch (ex) {
       expect(ex).toBeInstanceOf(InvalidMetadata);
     }
-    done();
+
   });
 
   it('Should extract protocol info properly', () => {

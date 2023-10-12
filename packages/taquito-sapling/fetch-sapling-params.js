@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const fs = require("fs")
-const axios = require("axios")
+import fs from 'fs'
+import axios from 'axios'
 
 const ZCASH_DOWNLOAD_URL = 'https://download.z.cash/downloads';
 const ZCASH_SPEND_PARAMS_FILE_NAME = 'sapling-spend.params';
