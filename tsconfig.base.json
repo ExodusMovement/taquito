@@ -1,26 +1,27 @@
 {
   "compilerOptions": {
-    "moduleResolution": "node",
-    "target": "ES2021",
-    "module": "ESNext",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "packages",
+    "declaration": true,
+    "downlevelIteration": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "jsx": "react",
     "lib": [
       "ES2021",
       "dom"
     ],
-    "strict": true,
-    "sourceMap": true,
-    "esModuleInterop": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
     "noImplicitAny": true,
-    "declaration": true,
-    "allowSyntheticDefaultImports": true,
     "noUnusedParameters": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "jsx": "react",
-    "baseUrl": "packages",
-    "downlevelIteration": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "ES2021",
     "useUnknownInCatchVariables": false,
-    "allowJs": true,
     "paths": {
       "@taquito/rpc": [
         "taquito-rpc/src/taquito-rpc.ts"

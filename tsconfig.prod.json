@@ -1,25 +1,26 @@
 {
   "compilerOptions": {
-    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "downlevelIteration": true,
+    "emitDecoratorMetadata": true,
     "esModuleInterop": true,
+    "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "ES2021",
-    "module": "ESNext",
+    "jsx": "react",
     "lib": [
       "ES2021",
       "dom"
     ],
-    "strict": true,
-    "sourceMap": false,
-    "declaration": true,
-    "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true,
-    "noUnusedParameters": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
     "noImplicitAny": true,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "useUnknownInCatchVariables": false,
-    "jsx": "react"
+    "noUnusedParameters": true,
+    "removeComments": true,
+    "skipLibCheck": true,
+    "sourceMap": false,
+    "strict": true,
+    "target": "ES2021",
+    "useUnknownInCatchVariables": false
   }
 }
