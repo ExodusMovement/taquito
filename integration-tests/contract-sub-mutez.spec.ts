@@ -4,9 +4,10 @@ CONFIGS().forEach(({ lib, rpc, setup }) => {
   const Tezos = lib;
 
   describe(`Test contract call with amount using: ${rpc}`, () => {
-    beforeEach(async (done) => {
+    beforeEach(
+async () => {
       await setup();
-      done();
+  
     });
 
      it(

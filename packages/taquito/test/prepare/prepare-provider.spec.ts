@@ -833,7 +833,7 @@ describe('PrepareProvider test', () => {
     });
   });
 
-  describe('txRollupSubmitBatch', async () => {
+  describe('txRollupSubmitBatch', () => {
     it('should be able to prepare a txRollupSubmitBatch op with reveal op', async () => {
       jest.spyOn(context.estimate, 'reveal').mockResolvedValue(estimate);
 
@@ -1119,7 +1119,7 @@ describe('PrepareProvider test', () => {
   });
 
   describe('SmartRollupOriginate', () => {
-    it('Should prepare smartRollupOriginate without reveal', async (done) => {
+    it('Should prepare smartRollupOriginate without reveal', async () => {
       mockReadProvider.isAccountRevealed.mockResolvedValue(true);
       mockRpcClient.getOriginationProof.mockResolvedValue('987654321');
 
@@ -1155,10 +1155,10 @@ describe('PrepareProvider test', () => {
         },
         counter: 0,
       });
-      done();
+  
     });
 
-    it('Should prepare smartRollupOriginate with reveal', async (done) => {
+    it('Should prepare smartRollupOriginate with reveal', async () => {
       mockRpcClient.getOriginationProof.mockResolvedValue('987654321');
 
       jest.spyOn(context.estimate, 'reveal').mockResolvedValue(estimate);
@@ -1203,7 +1203,7 @@ describe('PrepareProvider test', () => {
         },
         counter: 0,
       });
-      done();
+  
     });
   });
 });

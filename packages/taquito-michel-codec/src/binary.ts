@@ -794,7 +794,7 @@ const getWriteTransformFunc = (t: MichelsonType): WriteTransformFunc => {
           d,
           (function* () {
             const dd = d;
-            if (dd.prim === 'Some') {
+            if ((dd.prim as string) === 'Some') {
               yield getWriteTransformFunc(t.args[0]);
             }
           })(),
@@ -1126,7 +1126,7 @@ const getReadTransformFuncs = (t: MichelsonType): ReadTransformFuncs => {
             throw new MichelsonTypeError(t, d, `option expected: ${JSON.stringify(d)}`);
           }
           return (function* () {
-            if (d.prim === 'Some') {
+            if ((d.prim as string) === 'Some') {
               yield getReadTransformFuncs(t.args[0]);
             }
           })();

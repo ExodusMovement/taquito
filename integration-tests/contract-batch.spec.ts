@@ -7,11 +7,13 @@ CONFIGS().forEach(({ lib, rpc, setup, knownBaker, knownContract, createAddress }
   const Tezos = lib;
 
   describe(`Test contract.batch through contract api using: ${rpc}`, () => {
-    beforeEach(async (done) => {
+    beforeEach(
+async () => {
       await setup();
-      done();
+  
     });
-    test('Verify contract.batch simple transfers with origination code in JSON Michelson format', async (done) => {
+    test('Verify contract.batch simple transfers with origination code in JSON Michelson format', 
+async () => {
       const batch = Tezos.contract
         .batch()
         .withTransfer({ to: 'tz1ZfrERcALBwmAqwonRXYVQBDT9BjNjBHJu', amount: 0.02 })
@@ -27,10 +29,11 @@ CONFIGS().forEach(({ lib, rpc, setup, knownBaker, knownContract, createAddress }
       await op.confirmation();
       expect(op.status).toEqual('applied');
       expect(Number(op.consumedGas)).toBeGreaterThan(0);
-      done();
+  
     });
 
-    test('Verify contract.batch simple transfers with origination code in Michelson format', async (done) => {
+    test('Verify contract.batch simple transfers with origination code in Michelson format', 
+async () => {
       const batch = Tezos.contract
         .batch()
         .withTransfer({ to: 'tz1ZfrERcALBwmAqwonRXYVQBDT9BjNjBHJu', amount: 0.02 })
@@ -45,10 +48,11 @@ CONFIGS().forEach(({ lib, rpc, setup, knownBaker, knownContract, createAddress }
       const op = await batch.send();
       await op.confirmation();
       expect(op.status).toEqual('applied');
-      done();
+  
     });
 
-    test('Verify batch of transfers and origination operation using a combination of the two notations (array of operation with kind mixed with withTransfer method)', async (done) => {
+    test('Verify batch of transfers and origination operation using a combination of the two notations (array of operation with kind mixed with withTransfer method)', 
+async () => {
       const op = await Tezos.contract.batch([
         {
           kind: OpKind.TRANSACTION,
@@ -67,10 +71,11 @@ CONFIGS().forEach(({ lib, rpc, setup, knownBaker, knownContract, createAddress }
         .send();
       await op.confirmation();
       expect(op.status).toEqual('applied')
-      done();
+  
     })
 
-    test('Verify handling of contract.batch simple transfers with bad origination', async (done) => {
+    test('Verify handling of contract.batch simple transfers with bad origination', 
+async () => {
       expect.assertions(1);
       try {
         await Tezos.contract
@@ -92,10 +97,11 @@ CONFIGS().forEach(({ lib, rpc, setup, knownBaker, knownContract, createAddress }
           })
         );
       }
-      done();
+  
     });
 
-    test('Verify transfer and origination for contract.batch simple transfers from an account with low balance', async (done) => {
+    test('Verify transfer and origination for contract.batch simple transfers from an account with low balance', 
+async () => {
       const LocalTez = await createAddress();
       const op = await Tezos.contract.transfer({ to: await LocalTez.signer.publicKeyHash(), amount: 2 });
       await op.confirmation();
@@ -119,10 +125,11 @@ CONFIGS().forEach(({ lib, rpc, setup, knownBaker, knownContract, createAddress }
         .send();
       await batchOp.confirmation();
       expect(op.status).toEqual('applied');
-      done();
+  
     });
 
-    test('Verify contract.batch simple transfers with chained contract calls', async (done) => {
+    test('Verify contract.batch simple transfers with chained contract calls', 
+async () => {
       const op = await Tezos.contract.originate({
         balance: '1',
         code: managerCode,
@@ -146,10 +153,11 @@ CONFIGS().forEach(({ lib, rpc, setup, knownBaker, knownContract, createAddress }
       await batchOp.confirmation();
 
       expect(batchOp.status).toEqual('applied');
-      done();
+  
     });
 
-    test('Verify contract.batch of simple transfers and a contract entrypoint call using the array notation with kind', async (done) => {
+    test('Verify contract.batch of simple transfers and a contract entrypoint call using the array notation with kind', 
+async () => {
       const contract = await Tezos.contract.at(knownContract);
       const batchOp = await Tezos.contract
         .batch([
@@ -162,10 +170,11 @@ CONFIGS().forEach(({ lib, rpc, setup, knownBaker, knownContract, createAddress }
       await batchOp.confirmation();
 
       expect(batchOp.status).toEqual('applied');
-      done();
+  
     });
 
-    test('Verify that with a batch of multiple originations contract address info can be got from the getOriginatedContractAddresses member function', async (done) => {
+    test('Verify that with a batch of multiple originations contract address info can be got from the getOriginatedContractAddresses member function', 
+async () => {
       const batch = Tezos.contract
         .batch()
         .withOrigination({
@@ -185,10 +194,11 @@ CONFIGS().forEach(({ lib, rpc, setup, knownBaker, knownContract, createAddress }
       const addresses = op.getOriginatedContractAddresses();
       expect(op.status).toEqual('applied');
       expect(addresses.length).toEqual(2);
-      done();
+  
     })
 
-    test('Verify batch contract calls can specify amount, fee, gasLimit and storageLimit', async (done) => {
+    test('Verify batch contract calls can specify amount, fee, gasLimit and storageLimit', 
+async () => {
       const op = await Tezos.contract.originate({
         balance: "1",
         code: managerCode,
@@ -212,7 +222,7 @@ CONFIGS().forEach(({ lib, rpc, setup, knownBaker, knownContract, createAddress }
       expect(batchOp.fee).toEqual(estimateOp[0].suggestedFeeMutez + estimateOp[1].suggestedFeeMutez + estimateOp[2].suggestedFeeMutez)
       expect(batchOp.gasLimit).toEqual(estimateOp[0].gasLimit + estimateOp[1].gasLimit + estimateOp[2].gasLimit)
       expect(batchOp.storageLimit).toEqual(estimateOp[0].storageLimit + estimateOp[1].storageLimit + estimateOp[2].storageLimit)
-      done()
+
     })
   });
 });

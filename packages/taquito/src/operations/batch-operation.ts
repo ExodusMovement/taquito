@@ -55,6 +55,7 @@ export class BatchOperation
         .filter((result) => BATCH_KINDS.indexOf(result.kind) !== -1)
         .map((result) => {
           if (hasMetadataWithResult(result)) {
+            // @ts-ignore
             return result.metadata.operation_result.status;
           } else {
             return 'unknown';

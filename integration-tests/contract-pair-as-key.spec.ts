@@ -8,11 +8,13 @@ CONFIGS().forEach(({ lib, rpc, setup }) => {
 
   describe(`Test contract origination with pair as key in storage through contract api using: ${rpc}`, () => {
 
-    beforeEach(async (done) => {
+    beforeEach(
+async () => {
       await setup()
-      done()
+
     })
-      test('Verify contract.originate for a contract with pair as a key', async (done) => {
+      test('Verify contract.originate for a contract with pair as a key', 
+async () => {
         const storageMap = new MichelsonMap();
         // The contract schema in this example has a key with 8 nested pairs
         // (int(nat(string(bytes(mutez(bool(key_hash(timestamp(address)))))))))
@@ -72,10 +74,11 @@ CONFIGS().forEach(({ lib, rpc, setup }) => {
         await op.contract()
         expect(op.hash).toBeDefined();
         expect(op.includedInBlock).toBeLessThan(Number.POSITIVE_INFINITY)
-        done();
+    
       })
 
-    test('Verify contract.originate for a contract with pair as a key in map ', async (done) => {
+    test('Verify contract.originate for a contract with pair as a key in map ', 
+async () => {
       /** The init property is used in this test instead of the storage property as in the previous test. */
         const op = await Tezos.contract.originate({
           balance: "0",
@@ -86,7 +89,7 @@ CONFIGS().forEach(({ lib, rpc, setup }) => {
         const storage2: BigMapAbstraction = await contract.storage();
         const value = await storage2.get({ 'test': 'test2', 'test2': 'test3' })
         expect(value).toEqual('test')
-        done();
+    
       });
   });
 })

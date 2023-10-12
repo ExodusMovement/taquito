@@ -91,7 +91,7 @@ describe('SaplingStateAbstraction test', () => {
     });
 
     describe('SaplingStateAbstraction getSaplingDiff method', () => {
-        it('returns the sapling state diff', async (done) => {
+        it('returns the sapling state diff', async () => {
             const saplingState = new SaplingStateAbstraction(
                 new BigNumber('1'),
                 rpcContractProvider as any
@@ -110,10 +110,10 @@ describe('SaplingStateAbstraction test', () => {
             expect(result.commitments_and_ciphertexts[4][1].nonce_out).toEqual('28a2f90e987c4b0f5ab3f07f6e730210513939a19c82d798');
             expect(result.nullifiers.length).toEqual(2);
             expect(result.nullifiers[0]).toEqual('10ffea87a7e59fb4d239fab9c7d2b8682d1f752db6ddbefc383452e7de0f8526');
-            done();
+        
         });
 
-        it('returns the sapling state diff when call with a specified block', async (done) => {
+        it('returns the sapling state diff when call with a specified block', async () => {
             const saplingState = new SaplingStateAbstraction(
                 new BigNumber('1'),
                 rpcContractProvider as any
@@ -124,10 +124,10 @@ describe('SaplingStateAbstraction test', () => {
             expect(result.root).toEqual('84d1adee98ebdff44b9c034c341e4c18674d88930dbaa10999462c22190c5a4c');
             expect(result.commitments_and_ciphertexts.length).toEqual(5);
             expect(result.nullifiers.length).toEqual(2);
-            done();
+        
         });
 
-        it('returns the sapling state id', async (done) => {
+        it('returns the sapling state id', async () => {
             const saplingState = new SaplingStateAbstraction(
                 new BigNumber('12'),
                 rpcContractProvider as any
@@ -135,7 +135,7 @@ describe('SaplingStateAbstraction test', () => {
             const id = saplingState.getId();
 
             expect(id).toEqual('12');
-            done();
+        
         });
 
     });

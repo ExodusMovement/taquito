@@ -2,12 +2,10 @@
   "exclude": ["website", "integration-tests", "apps"],
   "compilerOptions": {
     "moduleResolution": "node",
-    "target": "es6",
-    "module": "es2020",
+    "target": "ES2021",
+    "module": "ESNext",
     "lib": [
-      "es2015",
-      "es2016",
-      "es2017",
+      "ESNext",
       "dom"
     ],
     "strict": true,
@@ -21,5 +19,6 @@
     "emitDecoratorMetadata": true,
     "jsx": "react",
     "skipLibCheck": true,
+    "useUnknownInCatchVariables": false
   }
 }

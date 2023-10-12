@@ -9,7 +9,7 @@
             "sha512": "9c830a8d9198e64f7a8901ef49577b0f7ec348d0824b885ea9990805f76cd78a05dec09f85ad114e89bc816f0db82ce305a8b7b6e359026009802a467deb1b00"
           },
           {
-            "path": "dist/taquito-tzip12.es5.js",
+            "path": "dist/taquito-tzip12.js",
             "sha512": "1771aa6ffdd026aebd09a158118cf9199035e9a9afe2b6896dcbd53ef359f2b21cc664fced1238eb92c65f91d2a6ae164f317f57d1ef9099c76b04f55e48a20d"
           },
           {
@@ -17,7 +17,7 @@
             "sha512": "1929027338bcba33f52d24c105c02c637311234c9d87cc0c4dc9172e04d6b8d9df659a853029f14ed951eec05d545dc7fc847dbfa83b4a36f811f057072f7a5c"
           },
           {
-            "path": "dist/taquito-tzip12.umd.js",
+            "path": "dist/taquito-tzip12.js",
             "sha512": "723eaa723f86295f0c759da6400e728228f83e0df825c1bf935365f9a0692895abff8eb6adb82476aef94e3fa16199bf83b30517fca22ae5bf6849cf0d8f00f4"
           },
           {
@@ -49,7 +49,7 @@
             "sha512": "6b195b7752b53e442a688a6955830fb70902d237b47a50a8239a9a2684168de2adf3c025a8909c78467f6ef04564806cc1598cccfd3c8f153bc4a3fac5e00492"
           },
           {
-            "path": "dist/taquito-tzip12.es5.js.map",
+            "path": "dist/taquito-tzip12.js.map",
             "sha512": "e4f3c867d304b5102289d06c304d25135df22151d4bea25dea335b6cae284f9b9e78c1fe7790f4cc7c51dc4ef2c7f56406a632930349f4b8d246de1e79b21ae9"
           },
           {
@@ -57,7 +57,7 @@
             "sha512": "fd100e16ac56d4dba602246c83e91e647afe690641b9905d607d2857cf4e8b8775c6095320d00de220f9661605e660015ac9876e46ece33d9fc6ddf996ba1907"
           },
           {
-            "path": "dist/taquito-tzip12.umd.js.map",
+            "path": "dist/taquito-tzip12.js.map",
             "sha512": "ba459295768877d27faedeb49c675f49a19e27e60d8f57ab232ebcde96efbea9a5894646aeb854be5f8e24d32bf3890489dfbc8fc9de4c2d7945c4f6118ae1ac"
           },
           {
@@ -169,8 +169,8 @@
             "blockchain",
             "tzip12"
           ],
-          "main": "dist/taquito-tzip12.umd.js",
-          "module": "dist/taquito-tzip12.es5.js",
+          "main": "dist/taquito-tzip12.js",
+          "module": "dist/taquito-tzip12.js",
           "typings": "dist/types/taquito-tzip12.d.ts",
           "publishConfig": {
             "access": "public"
@@ -189,7 +189,7 @@
             "precommit": "lint-staged",
             "prebuild": "rimraf dist",
             "test": "jest --collectCoverage",
-            "build": "tsc --project ./tsconfig.prod.json --module commonjs && rollup -c rollup.config.ts ",
+            "build": "tsc --project ./tsconfig.prod.json ",
             "start": "rollup -c rollup.config.ts -w"
           },
           "lint-staged": {
@@ -220,9 +220,9 @@
             ]
           },
           "dependencies": {
-            "@exodus/taquito-michelson-encoder": "^8.0.4-beta.0",
-            "@exodus/taquito-taquito": "^8.0.4-beta.0",
-            "@exodus/taquito-tzip16": "^8.0.4-beta.0",
+            "@exodus/taquito-michelson-encoder": "^16.1.1-exodus.11",
+            "@exodus/taquito-taquito": "^16.1.1-exodus.11",
+            "@exodus/taquito-tzip16": "^16.1.1-exodus.11",
             "bignumber.js": "^9.0.1"
           },
           "devDependencies": {
@@ -233,7 +233,7 @@
             "coveralls": "^3.1.0",
             "cross-env": "^7.0.2",
             "jest": "^26.5.2",
-            "jest-config": "^26.5.2",
+            "jest-config": "^29.7.0",
             "lint-staged": "^10.4.0",
             "lodash.camelcase": "^4.3.0",
             "prettier": "^2.1.2",
@@ -245,13 +245,13 @@
             "rollup-plugin-sourcemaps": "^0.6.3",
             "rollup-plugin-typescript2": "^0.27.3",
             "shelljs": "^0.8.4",
-            "ts-jest": "^26.4.1",
+            "ts-jest": "^29.1.1",
             "ts-node": "^9.0.0",
             "tslint": "^6.1.2",
             "tslint-config-prettier": "^1.18.0",
             "tslint-config-standard": "^9.0.0",
             "typedoc": "^0.20.23",
-            "typescript": "~4.1.5"
+            "typescript": "~4.9.5"
           },
           "gitHead": "551e35aeff7d6dcde1c72284238c0ed3c3aae77e"
         }

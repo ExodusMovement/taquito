@@ -27,7 +27,7 @@ describe('ContractAbstraction test', () => {
   });
 
   describe('Calling the `toTansferParams` method on a `ContractMethod` and a `ContractMethodObject` should return the same value', () => {
-    it('calls the main method of a contract having annotations (genericMultisig where action is change_keys)', async (done) => {
+    it('calls the main method of a contract having annotations (genericMultisig where action is change_keys)', async () => {
       const contratcAbs = new ContractAbstraction(
         'contractAddress',
         {
@@ -154,10 +154,10 @@ describe('ContractAbstraction test', () => {
           },
         },
       });
-      done();
+  
     });
 
-    it('calls the main method of a contract having annotations (genericMultisig where action is operation)', async (done) => {
+    it('calls the main method of a contract having annotations (genericMultisig where action is operation)', async () => {
       const contratcAbs = new ContractAbstraction(
         'contractAddress',
         {
@@ -286,10 +286,10 @@ describe('ContractAbstraction test', () => {
           },
         },
       });
-      done();
+  
     });
 
-    it('calls the first entry point (0) of a contract having no annotation', async (done) => {
+    it('calls the first entry point (0) of a contract having no annotation', async () => {
       const contratcAbs = new ContractAbstraction(
         'contractAddress',
         {
@@ -362,10 +362,10 @@ describe('ContractAbstraction test', () => {
           },
         },
       });
-      done();
+  
     });
 
-    it('calls the third entry point (2) of a contract having no annotation', async (done) => {
+    it('calls the third entry point (2) of a contract having no annotation', async () => {
       const contratcAbs = new ContractAbstraction(
         'contractAddress',
         {
@@ -428,7 +428,7 @@ describe('ContractAbstraction test', () => {
           },
         },
       });
-      done();
+  
     });
   });
 
@@ -460,7 +460,7 @@ describe('ContractAbstraction test', () => {
       storage: [{ int: '2' }],
     };
 
-    it('populate the contractViews member with a function matching each view name from the script', async (done) => {
+    it('populate the contractViews member with a function matching each view name from the script', async () => {
       const contratcAbs = new ContractAbstraction(
         'contractAddress',
         fakeScriptWithViews,
@@ -479,7 +479,7 @@ describe('ContractAbstraction test', () => {
       const viewId = contratcAbs.contractViews.id();
       expect(viewId).toBeInstanceOf(OnChainView);
 
-      done();
+  
     });
   });
 });

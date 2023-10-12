@@ -7,7 +7,7 @@ describe('RpcPacker test', () => {
     });
 
     describe('packData', () => {
-        it('calls packData from the rpc client', async done => {
+        it('calls packData from the rpc client', async () => {
             const mockRpcClient = {
                 packData: jest.fn(),
             };
@@ -27,7 +27,7 @@ describe('RpcPacker test', () => {
             expect(mockRpcClient.packData).toHaveBeenCalledTimes(1);
             expect(result).toEqual({ packed: "0500a7e8e4d80b" });
 
-            done();
+        
         });
     });
 });

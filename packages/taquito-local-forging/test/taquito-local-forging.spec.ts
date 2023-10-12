@@ -20,10 +20,10 @@ import { ProtoInferiorTo } from '../src/protocols';
 describe('Forge and parse operations default protocol', () => {
   const localForger = new LocalForger();
   commonCases.forEach(({ name, operation, expected }) => {
-    it(`Common test: ${name}`, (done) => {
+    it(`Common test: ${name}`, async () => {
       const result = localForger.forge(operation);
       expect(localForger.parse(result)).toEqual(expected || operation);
-      done();
+  
     });
   });
 
@@ -174,34 +174,34 @@ describe('Forge and parse operations default protocol', () => {
       );
     });
 
-    it(`Verify getCodec for CODEC.SECRET`, (done) => {
+    it(`Verify getCodec for CODEC.SECRET`, async () => {
       const codec = CODEC.SECRET;
       const myGetCodec = getCodec(codec, ProtocolsHash.PtKathman);
       const consumer = myGetCodec.decoder(hexToParse);
       expect(consumer).toBeDefined();
       expect(consumer).toEqual('0572cbea904d67468808c8eb50a9450c9721db30');
-      done();
+  
     });
 
-    it(`Verify getCodec for CODEC.RAW`, (done) => {
+    it(`Verify getCodec for CODEC.RAW`, async () => {
       const codec = CODEC.RAW;
       const myGetCodec = getCodec(codec, ProtocolsHash.PtKathman);
       const consumer = myGetCodec.decoder(hexToParse);
       expect(consumer).toBeDefined();
       expect(consumer).toEqual('0572cbea904d67468808c8eb50a9450c9721db309128012543902d0ac358a62a');
-      done();
+  
     });
 
-    it(`Verify getCodec for CODEC.OP_DELEGATION`, (done) => {
+    it(`Verify getCodec for CODEC.OP_DELEGATION`, async () => {
       const codec = CODEC.OP_DELEGATION;
       const myGetCodec = getCodec(codec, ProtocolsHash.PtKathman);
       const _consumer = expect(() => myGetCodec.decoder(hexToParse)).toThrow(
         expect.objectContaining({message: expect.stringContaining('invalid pkh prefix')})
       )
-      done();
+  
     });
 
-    it(`Verify Arrow Function for CODEC.OP_SEED_NONCE_REVELATION`, (done) => {
+    it(`Verify Arrow Function for CODEC.OP_SEED_NONCE_REVELATION`, async () => {
       const codec = CODEC.OP_SEED_NONCE_REVELATION;
       const myGetCodec = getCodec(codec, ProtocolsHash.PtKathman);
       const gotCodec = myGetCodec.decoder(hexToParse);
@@ -213,10 +213,10 @@ describe('Forge and parse operations default protocol', () => {
       const consumer = Uint8ArrayConsumer.fromHexString(hexToParse);
       expect(decoders[codec](consumer)).toStrictEqual(gotCodec);
       expect(schemaDecoder(decoders)(SeedNonceRevelationSchema)(consumer)).toBeDefined();
-      done();
+  
     });
 
-    it(`Verify Arrow Functions for CODEC.SECRET is toHexString(val.consume(20))`, (done) => {
+    it(`Verify Arrow Functions for CODEC.SECRET is toHexString(val.consume(20))`, async () => {
       const codec = CODEC.SECRET;
       const myGetCodec = getCodec(codec, ProtocolsHash.PtKathman);
       const encodeCodec = myGetCodec.encoder('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
@@ -225,10 +225,10 @@ describe('Forge and parse operations default protocol', () => {
       );
       const decodeCodec = myGetCodec.decoder('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
       expect(decodeCodec).toEqual('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
-      done();
+  
     });
 
-    it(`Verify Arrow Function for CODEC.RAW is toHexString(val.consume(32)),`, (done) => {
+    it(`Verify Arrow Function for CODEC.RAW is toHexString(val.consume(32)),`, async () => {
       const codec = CODEC.RAW;
       const myGetCodec = getCodec(codec, ProtocolsHash.PtKathman);
       const encodeCodec = myGetCodec.encoder('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
@@ -239,10 +239,10 @@ describe('Forge and parse operations default protocol', () => {
       expect(decodeCodec).toEqual(
         'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
       );
-      done();
+  
     });
 
-    it(`Verify Arrow Function for CODEC.OP_ACTIVATE_ACCOUNT`, (done) => {
+    it(`Verify Arrow Function for CODEC.OP_ACTIVATE_ACCOUNT`, async () => {
       const codec = CODEC.OP_ACTIVATE_ACCOUNT;
       const myGetCodec = getCodec(codec, ProtocolsHash.PtKathman);
       const gotCodec = myGetCodec.decoder(hexToParse);
@@ -256,10 +256,10 @@ describe('Forge and parse operations default protocol', () => {
         pkh: 'tz1L8qbHKzqFmLiZqxaJdMEWrCwmmrSw2wj4',
         secret: '9128012543902d0ac358a62ae28f75bb8f1c7c42',
       });
-      done();
+  
     });
 
-    it(`Test getCodec to verify codec Manager sent to decoders is defined`, (done) => {
+    it(`Test getCodec to verify codec Manager sent to decoders is defined`, async () => {
       const myGetCodec = getCodec(CODEC.MANAGER, ProtocolsHash.PtKathman).decoder(
         '7c842c15c8b0c8fd228e6cb5302a50201f41642dd36b699003fb3c857920bc9d'
       );
@@ -267,7 +267,7 @@ describe('Forge and parse operations default protocol', () => {
         branch: 'BLf7wKNryZRXibjzM4TjNBSMgNN4qJVhxRRuxo3uu3SegsFqkUd',
         contents: [],
       });
-      done();
+  
     });
 
     describe('Verify the ProtoInferiorTo function in protocols.ts', () => {

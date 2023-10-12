@@ -128,6 +128,7 @@ export class Operation {
     return (
       this.results.map((result) => {
         if (hasMetadataWithResult(result)) {
+          // @ts-ignore
           return result.metadata.operation_result.status;
         } else {
           return 'unknown';

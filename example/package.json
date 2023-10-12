@@ -1,7 +1,7 @@
 {
   "name": "@taquito/example",
   "private": true,
-  "version": "16.1.1-exodus.10",
+  "version": "16.1.1-exodus.11",
   "scripts": {
     "example": "node -r ts-node/register --preserve-symlinks example-node.ts",
     "example:activation": "node -r ts-node/register --preserve-symlinks example-activate.ts",
@@ -41,20 +41,21 @@
   },
   "dependencies": {
     "@ledgerhq/hw-transport-node-hid": "^6.27.3",
-    "@taquito/ledger-signer": "^16.1.1-exodus.10",
-    "@taquito/local-forging": "^16.1.1-exodus.10",
-    "@taquito/michel-codec": "^16.1.1-exodus.10",
-    "@taquito/michelson-encoder": "^16.1.1-exodus.10",
-    "@taquito/rpc": "^16.1.1-exodus.10",
-    "@taquito/sapling": "^16.1.1-exodus.10",
-    "@taquito/signer": "^16.1.1-exodus.10",
-    "@taquito/taquito": "^16.1.1-exodus.10",
-    "@taquito/tzip16": "^16.1.1-exodus.10",
-    "@taquito/utils": "^16.1.1-exodus.10",
+    "@taquito/ledger-signer": "^16.1.1-exodus.11",
+    "@taquito/local-forging": "^16.1.1-exodus.11",
+    "@taquito/michel-codec": "^16.1.1-exodus.11",
+    "@taquito/michelson-encoder": "^16.1.1-exodus.11",
+    "@taquito/rpc": "^16.1.1-exodus.11",
+    "@taquito/sapling": "^16.1.1-exodus.11",
+    "@taquito/signer": "^16.1.1-exodus.11",
+    "@taquito/taquito": "^16.1.1-exodus.11",
+    "@taquito/tzip16": "^16.1.1-exodus.11",
+    "@taquito/utils": "^16.1.1-exodus.11",
     "bignumber.js": "^9.1.0"
   },
   "devDependencies": {
     "@types/node-hid": "^1.3.1",
     "ts-node": "^10.9.1"
-  }
+  },
+  "type": "module"
 }

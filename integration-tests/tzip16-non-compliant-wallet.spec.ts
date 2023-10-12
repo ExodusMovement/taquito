@@ -7,11 +7,13 @@ CONFIGS().forEach(({ lib, rpc, setup }) => {
 
     describe(`Test contract origination of a Tzip16 non-complaint contract through wallet api using: ${rpc}`, () => {
 
-        beforeEach(async (done) => {
+        beforeEach(
+async () => {
             await setup()
-            done()
+      
         })
-        it('Verify contract.originate for a simple contract having no metadata and then try to fetch metadata', async (done) => {
+        it('Verify contract.originate for a simple contract having no metadata and then try to fetch metadata', 
+async () => {
 
             const value = '1234';
             const code =
@@ -39,7 +41,7 @@ CONFIGS().forEach(({ lib, rpc, setup }) => {
             } catch (ex) {
                 expect(ex).toBeInstanceOf(BigMapMetadataNotFound);
             }
-            done();
+        
         });
     });
 })

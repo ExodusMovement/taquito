@@ -4,11 +4,13 @@ CONFIGS().forEach(({ lib, rpc, setup }) => {
   const Tezos = lib;
   describe(`Test contract origination with invalid data through wallet api using: ${rpc}`, () => {
 
-    beforeEach(async (done) => {
+    beforeEach(
+async () => {
       await setup()
-      done()
+
     })
-    it('Verify that wallet.originate for a contract with non-ascii (invalid string) in the init data will fail', async (done) => {
+    it('Verify that wallet.originate for a contract with non-ascii (invalid string) in the init data will fail', 
+async () => {
       expect.assertions(1);
       try {
         await Tezos.wallet.originate({
@@ -25,7 +27,7 @@ CONFIGS().forEach(({ lib, rpc, setup }) => {
       } catch (ex) {
           expect(ex).toEqual(expect.objectContaining({ message: expect.stringContaining('non_printable_character') }))
       }
-      done();
+  
     });
   });
 })

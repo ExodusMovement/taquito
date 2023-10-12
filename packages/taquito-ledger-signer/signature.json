@@ -5,7 +5,7 @@
       "value": {
         "files": [
           {
-            "path": "dist/taquito-ledger-signer.es5.js",
+            "path": "dist/taquito-ledger-signer.js",
             "sha512": "f61454fb9e5885d98469c79c0ad023d9b277058cce9a5890527f0eec513e2fcd6c905ec317ddd3e1a763070f65f956d2d25393afae3516a10f1272871ce7347d"
           },
           {
@@ -13,7 +13,7 @@
             "sha512": "7b78244062ba32732c26d58a24d2750f1167608f667f827a4f2309012760673afc579c9e615a1177d2fc61849e8fa16d65c46f2b4e64f5e6adec18f0bb1f50c8"
           },
           {
-            "path": "dist/taquito-ledger-signer.umd.js",
+            "path": "dist/taquito-ledger-signer.js",
             "sha512": "e0f9e3e0424eaff78b9087440dc0f1963bd6bbe8fd3313773b0b9cf37dc5e344ee7ed3327e5193c2b22d6e2cfca3693210248505edc925f1a91ef3a75b91496c"
           },
           {
@@ -33,7 +33,7 @@
             "sha512": "f33eefc26af1bc19e47a6cd1ac52f8a65bebfa55b1113330b66871c40c9ce7675720f20018799b394a34a6aaccafe9644ffa94306988f0a8e3f242d7f0b864ba"
           },
           {
-            "path": "dist/taquito-ledger-signer.es5.js.map",
+            "path": "dist/taquito-ledger-signer.js.map",
             "sha512": "4dcdbd4541ef2bdd79a12df530e5dbafb3cbe7da1d496f4873bd9f42dec75898c511eb68be05f6b04ae0fbb7cbe0b50b5b2456834d25e0c705855bcfef7cd325"
           },
           {
@@ -41,7 +41,7 @@
             "sha512": "c63458d6e9b211dbbf12ff5fa9a04382cff211c1ba778c4a88379510846c00c8a90671e4b8fcbbd10e35e9bfa8954edb91ed7b577748775165642c136fde3a8c"
           },
           {
-            "path": "dist/taquito-ledger-signer.umd.js.map",
+            "path": "dist/taquito-ledger-signer.js.map",
             "sha512": "d3299b1b2ebe2fbb6130f31d71b059290f4aed89164356c33cc3af86a5f658d63f7e7917042b196c6c9859c56e909ec91dc76e73847d007791a31782d27b3610"
           },
           {
@@ -129,8 +129,8 @@
             "blockchain",
             "ledger"
           ],
-          "main": "dist/taquito-ledger-signer.umd.js",
-          "module": "dist/taquito-ledger-signer.es5.js",
+          "main": "dist/taquito-ledger-signer.js",
+          "module": "dist/taquito-ledger-signer.js",
           "typings": "dist/types/taquito-ledger-signer.d.ts",
           "publishConfig": {
             "access": "public"
@@ -148,7 +148,7 @@
             "lint": "tslint  --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
             "precommit": "lint-staged",
             "prebuild": "rimraf dist",
-            "build": "tsc --project ./tsconfig.prod.json --module commonjs && rollup -c rollup.config.ts ",
+            "build": "tsc --project ./tsconfig.prod.json ",
             "start": "rollup -c rollup.config.ts -w"
           },
           "lint-staged": {
@@ -195,7 +195,7 @@
             "coveralls": "^3.1.0",
             "cross-env": "^7.0.2",
             "jest": "^26.6.3",
-            "jest-config": "^26.6.3",
+            "jest-config": "^29.7.0",
             "lint-staged": "^10.4.0",
             "lodash.camelcase": "^4.3.0",
             "prettier": "^2.1.2",
@@ -212,7 +212,7 @@
             "tslint": "^6.1.2",
             "tslint-config-prettier": "^1.18.0",
             "tslint-config-standard": "^9.0.0",
-            "typescript": "~4.1.5"
+            "typescript": "~4.9.5"
           },
           "gitHead": "551e35aeff7d6dcde1c72284238c0ed3c3aae77e"
         }

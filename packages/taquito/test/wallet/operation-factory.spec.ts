@@ -6,7 +6,7 @@ import { distinctUntilKeyChanged, switchMap } from '@exodus/rxjs/operators';
 describe('createNewPollingBasedHeadObservable', () => {
   const createFakeBlock = (level: number) => ({ hash: `test_${level}` });
 
-  it('Should give a new head each time it polls', async (done) => {
+  it('Should give a new head each time it polls', async () => {
     const { cold, flush, scheduler, getMessages, e, advanceTo, s } = rxSandbox.create();
     const timer = cold<number>('a-b');
 
@@ -42,10 +42,10 @@ describe('createNewPollingBasedHeadObservable', () => {
     expect(blocks[0].subscriptions).toEqual([s('(^!)--')]);
     expect(blocks[1].subscriptions).toEqual([s('--(^!)')]);
 
-    done();
+
   });
 
-  it('Should not emit new head if the hash did not changed', async (done) => {
+  it('Should not emit new head if the hash did not changed', async () => {
     const { cold, flush, scheduler, getMessages, e, advanceTo, s } = rxSandbox.create();
     const timer = cold<number>('a-b');
 
@@ -80,6 +80,6 @@ describe('createNewPollingBasedHeadObservable', () => {
     expect(messages).toEqual(e('a', { a: createFakeBlock(0) }));
     expect(blocks[1].subscriptions).toEqual([s('--(^!)')]);
 
-    done();
+
   });
 });
