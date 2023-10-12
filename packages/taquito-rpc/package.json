@@ -69,7 +69,6 @@
     "bignumber.js": "^9.1.0"
   },
   "devDependencies": {
-    "@types/bluebird": "^3.5.40",
     "@types/jest": "^29.5.5",
     "@types/node": "^20",
     "@typescript-eslint/eslint-plugin": "^5.28.0",

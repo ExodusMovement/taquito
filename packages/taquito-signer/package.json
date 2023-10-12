@@ -76,7 +76,6 @@
     "typedarray-to-buffer": "^4.0.0"
   },
   "devDependencies": {
-    "@types/bluebird": "^3.5.40",
     "@types/create-hmac": "^1.1.1",
     "@types/elliptic": "^6.4.15",
     "@types/jest": "^29.5.5",
