@@ -1,6 +1,6 @@
 {
   "name": "@exodus/taquito-rpc",
-  "version": "16.1.1-exodus.10",
+  "version": "16.1.1-exodus.11",
   "description": "Provides low level methods, and types to invoke RPC calls from a Nomadic Tezos RPC node",
   "keywords": [
     "tezos",
@@ -64,8 +64,8 @@
     ]
   },
   "dependencies": {
-    "@exodus/taquito-http-utils": "^16.1.1-exodus.10",
-    "@exodus/taquito-utils": "^16.1.1-exodus.10",
+    "@exodus/taquito-http-utils": "^16.1.1-exodus.11",
+    "@exodus/taquito-utils": "^16.1.1-exodus.11",
     "bignumber.js": "^9.1.0"
   },
   "devDependencies": {

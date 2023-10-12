@@ -1,6 +1,6 @@
 {
   "name": "@exodus/taquito-tzip16",
-  "version": "16.1.1-exodus.10",
+  "version": "16.1.1-exodus.11",
   "description": "Tzip16",
   "keywords": [
     "tezos",
@@ -63,11 +63,11 @@
     ]
   },
   "dependencies": {
-    "@exodus/taquito-http-utils": "^16.1.1-exodus.10",
-    "@exodus/taquito-michelson-encoder": "^16.1.1-exodus.10",
-    "@exodus/taquito-rpc": "^16.1.1-exodus.10",
-    "@exodus/taquito-taquito": "^16.1.1-exodus.10",
-    "@exodus/taquito-utils": "^16.1.1-exodus.10",
+    "@exodus/taquito-http-utils": "^16.1.1-exodus.11",
+    "@exodus/taquito-michelson-encoder": "^16.1.1-exodus.11",
+    "@exodus/taquito-rpc": "^16.1.1-exodus.11",
+    "@exodus/taquito-taquito": "^16.1.1-exodus.11",
+    "@exodus/taquito-utils": "^16.1.1-exodus.11",
     "bignumber.js": "^9.1.0",
     "sha.js": "^2.4.11"
   },

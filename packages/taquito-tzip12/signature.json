@@ -220,9 +220,9 @@
             ]
           },
           "dependencies": {
-            "@exodus/taquito-michelson-encoder": "^16.1.1-exodus.10",
-            "@exodus/taquito-taquito": "^16.1.1-exodus.10",
-            "@exodus/taquito-tzip16": "^16.1.1-exodus.10",
+            "@exodus/taquito-michelson-encoder": "^16.1.1-exodus.11",
+            "@exodus/taquito-taquito": "^16.1.1-exodus.11",
+            "@exodus/taquito-tzip16": "^16.1.1-exodus.11",
             "bignumber.js": "^9.0.1"
           },
           "devDependencies": {

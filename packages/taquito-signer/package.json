@@ -1,6 +1,6 @@
 {
   "name": "@exodus/taquito-signer",
-  "version": "16.1.1-exodus.10",
+  "version": "16.1.1-exodus.11",
   "description": "Provide signing functionality to be with taquito",
   "keywords": [
     "tezos",
@@ -65,7 +65,7 @@
   },
   "dependencies": {
     "@exodus/blakejs": "^1.1.1-exodus.0",
-    "@exodus/taquito-utils": "^16.1.1-exodus.10",
+    "@exodus/taquito-utils": "^16.1.1-exodus.11",
     "@types/bn.js": "^5.1.2",
     "bip39": "^3.0.2",
     "create-hmac": "^1.1.7",
