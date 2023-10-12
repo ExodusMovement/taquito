@@ -34,7 +34,6 @@
     "prebuild": "rimraf dist",
     "version-stamp": "node ../taquito/version-stamping.js",
     "build": "tsc --project ./tsconfig.prod.json ",
-    "start": "rollup -c rollup.config.ts -w",
     "postinstall": "node fetch-sapling-params.js"
   },
   "lint-staged": {
@@ -69,11 +68,11 @@
   },
   "dependencies": {
     "@airgap/sapling-wasm": "0.0.9",
-    "@stablelib/nacl": "^1.0.3",
-    "@stablelib/random": "^1.0.1",
     "@exodus/taquito-rpc": "^16.1.1-exodus.10",
     "@exodus/taquito-taquito": "^16.1.1-exodus.10",
     "@exodus/taquito-utils": "^16.1.1-exodus.10",
+    "@stablelib/nacl": "^1.0.3",
+    "@stablelib/random": "^1.0.1",
     "bignumber.js": "^9.1.0",
     "bip39": "^3.0.4",
     "blakejs": "^1.2.1",
@@ -81,7 +80,6 @@
     "typedarray-to-buffer": "^4.0.0"
   },
   "devDependencies": {
-    "@rollup/plugin-json": "^4.1.0",
     "@types/jest": "^29.5.5",
     "@types/node": "^20",
     "@types/pbkdf2": "^3.1.0",
@@ -101,9 +99,6 @@
     "prompt": "^1.2.0",
     "replace-in-file": "^6.3.2",
     "rimraf": "^3.0.2",
-    "rollup": "^2.61.1",
-    "rollup-plugin-sourcemaps": "^0.6.3",
-    "rollup-plugin-typescript2": "^0.31.1",
     "shelljs": "^0.8.4",
     "ts-jest": "^29.1.1",
     "ts-node": "^10.4.0",
