@@ -1,4 +1,4 @@
-import { Path, Hard } from "../src/derivation-tools";
+import { Path, Hard } from '../src/derivation-tools/index.js';
 
 
 interface PathTestCase {

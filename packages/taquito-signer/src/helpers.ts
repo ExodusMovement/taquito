@@ -1,8 +1,8 @@
 import { b58cencode, prefix } from "@exodus/taquito-utils";
-import { PrivateKey as PrivateKeyEd } from "./derivation-tools/ed25519";
-import { PrivateKey as PrivateKeyEc } from "./derivation-tools/ecdsa";
-import { Path } from "./derivation-tools";
-import { InvalidCurveError, ToBeImplemented } from "./errors";
+import { PrivateKey as PrivateKeyEd } from './derivation-tools/ed25519.js';
+import { PrivateKey as PrivateKeyEc } from './derivation-tools/ecdsa.js';
+import { Path } from './derivation-tools/index.js';
+import { InvalidCurveError, ToBeImplemented } from './errors.js';
 
 export type Curves = 'ed25519' | 'secp256k1' | 'p256' | 'bip25519';
 

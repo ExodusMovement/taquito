@@ -1,7 +1,7 @@
-import { InvalidDerivationPathError } from '../errors';
+import { InvalidDerivationPathError } from '../errors.js';
 
-export * as ECDSA from './ecdsa';
-export * as Ed25519 from './ed25519';
+export * as ECDSA from './ecdsa.js';
+export * as Ed25519 from './ed25519.js';
 
 export const Hard = 0x80000000;
 

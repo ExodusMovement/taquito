@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-this-alias */
 import { ec, curve } from 'elliptic';
-import { Hard, ExtendedPrivateKey } from './index';
+import { Hard, ExtendedPrivateKey } from './index.js';
 import createHmac from "create-hmac"
 import BN from 'bn.js';
-import { parseHex } from './utils';
-import { InvalidBitSize, InvalidCurveError, InvalidSeedLengthError, PrivateKeyError } from '../errors';
+import { parseHex } from './utils.js';
+import { InvalidBitSize, InvalidCurveError, InvalidSeedLengthError, PrivateKeyError } from '../errors.js';
 
 export type CurveName = 'p256' | 'secp256k1';
 
