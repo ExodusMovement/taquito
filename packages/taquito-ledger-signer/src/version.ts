@@ -1,5 +1,0 @@
-// IMPORTANT: THIS FILE IS AUTO GENERATED! DO NOT MANUALLY EDIT OR CHECKIN!
-export const VERSION = {
-  commitHash: 'c2f07ba0135cffe7f59befd3d51f550f39383974',
-  version: '16.1.1',
-};
