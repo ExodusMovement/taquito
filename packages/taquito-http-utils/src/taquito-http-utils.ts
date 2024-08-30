@@ -3,12 +3,12 @@
  * @module @exodus/taquito-http-utils
  */
 
-import { STATUS_CODE } from './status_code';
+import { STATUS_CODE } from './status_code.js';
 // @ts-ignore
 import { fetch } from '@exodus/fetch';
 
-export * from './status_code';
-export { VERSION } from './version';
+export * from './status_code.js';
+export { VERSION } from './version.js';
 
 type ObjectType = Record<string, any>;
 
