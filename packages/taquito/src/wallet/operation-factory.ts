@@ -18,7 +18,7 @@ import {
   startWith,
   switchMap,
   timeoutWith,
-} from '@exodus/rxjs/operators';
+} from '@exodus/rxjs/operators/index.js';
 import { Context } from '../context.js';
 import { BlockIdentifier } from '../read-provider/interface.js';
 import { createObservableFromSubscription } from '../subscribe/create-observable-from-subscription.js';

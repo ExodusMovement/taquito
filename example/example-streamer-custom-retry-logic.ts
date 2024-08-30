@@ -1,5 +1,5 @@
 import { PollingSubscribeProvider, TezosToolkit } from '@taquito/taquito';
-import { delay, retryWhen, tap, scan } from '@exodus/rxjs/operators';
+import { delay, retryWhen, tap, scan } from '@exodus/rxjs/operators/index.js';
 
 async function example() {
     // This example will intentionally fail after two attempts as the RPC URL is invalid.

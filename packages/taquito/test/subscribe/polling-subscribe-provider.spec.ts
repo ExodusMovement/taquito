@@ -1,4 +1,4 @@
-import { retry } from '@exodus/rxjs/operators';
+import { retry } from '@exodus/rxjs/operators/index.js';
 import { PollingSubscribeProvider } from '../../src/subscribe/polling-subcribe-provider.js';
 import BigNumber from 'bignumber.js';
 

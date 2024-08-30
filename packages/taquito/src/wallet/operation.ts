@@ -13,7 +13,7 @@ import {
   switchMap,
   takeWhile,
   tap,
-} from '@exodus/rxjs/operators';
+} from '@exodus/rxjs/operators/index.js';
 import { Context } from '../context.js';
 import { Receipt, receiptFromOperation } from './receipt.js';
 import { validateOperation, ValidationResult, InvalidOperationHashError } from '@exodus/taquito-utils';

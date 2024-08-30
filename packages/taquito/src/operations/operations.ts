@@ -15,7 +15,7 @@ import {
   switchMap,
   tap,
   timeoutWith,
-} from '@exodus/rxjs/operators';
+} from '@exodus/rxjs/operators/index.js';
 import { Context } from '../context.js';
 import { ForgedBytes, hasMetadataWithResult } from './types.js';
 import { validateOperation, ValidationResult, InvalidOperationHashError } from '@exodus/taquito-utils';

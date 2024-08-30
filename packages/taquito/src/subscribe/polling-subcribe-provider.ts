@@ -13,7 +13,7 @@ import {
   refCount,
   retry,
   switchMap,
-} from '@exodus/rxjs/operators';
+} from '@exodus/rxjs/operators/index.js';
 import { Context } from '../context.js';
 import { evaluateFilter, eventFilter } from './filters.js';
 import {
