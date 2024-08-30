@@ -1,4 +1,4 @@
-import * as nacl from "tweetnacl";
+import nacl from "tweetnacl";
 import blake from '@exodus/blakejs';
 import {
   b58cdecode,
