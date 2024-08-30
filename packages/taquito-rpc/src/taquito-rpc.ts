@@ -74,11 +74,14 @@ import {
 export { castToBigNumber } from './utils/utils.js';
 
 export {
-  RPCOptions,
   defaultChain,
   defaultRPCOptions,
-  RpcClientInterface,
 } from './rpc-client-interface.js';
+
+export type {
+  RPCOptions,
+  RpcClientInterface,
+}
 
 export { RpcClientCache } from './rpc-client-modules/rpc-cache.js';
 
