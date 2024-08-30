@@ -1,9 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 import { inspect } from 'util';
-import { Contract, ContractOptions } from '../src/michelson-contract';
-import { Protocol } from '../src/michelson-types';
-import { MichelsonError } from '../src/utils';
+import { Contract, ContractOptions } from '../src/michelson-contract.js';
+import { Protocol } from '../src/michelson-types.js';
+import { MichelsonError } from '../src/utils.js';
 
 const contracts: {
   [group: string]: string[];

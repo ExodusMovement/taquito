@@ -1,5 +1,5 @@
-import { Prim, Expr } from './micheline';
-import { GlobalConstantHashAndValue } from './micheline-parser';
+import { Prim, Expr } from './micheline.js';
+import { GlobalConstantHashAndValue } from './micheline-parser.js';
 
 export function expandGlobalConstants(ex: Prim, hashAndValue: GlobalConstantHashAndValue): Expr {
   if (

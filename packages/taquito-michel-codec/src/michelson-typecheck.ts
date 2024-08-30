@@ -1,4 +1,4 @@
-import { Prim, Expr } from './micheline';
+import { Prim, Expr } from './micheline.js';
 import {
   MichelsonType,
   MichelsonData,
@@ -18,7 +18,7 @@ import {
   MichelsonTypeAddress,
   MichelsonContractView,
   ProtoInferiorTo,
-} from './michelson-types';
+} from './michelson-types.js';
 import {
   unpackAnnotations,
   MichelsonError,
@@ -36,9 +36,9 @@ import {
   isPairType,
   isPairData,
   parseDate,
-} from './utils';
-import { decodeBase58Check } from './base58';
-import { decodeAddressBytes, decodePublicKeyBytes, decodePublicKeyHashBytes } from './binary';
+} from './utils.js';
+import { decodeBase58Check } from './base58.js';
+import { decodeAddressBytes, decodePublicKeyBytes, decodePublicKeyHashBytes } from './binary.js';
 import {
   assertMichelsonComparableType,
   assertMichelsonPackableType,
@@ -47,8 +47,8 @@ import {
   assertMichelsonPushableType,
   isInstruction,
   assertDataListIfAny,
-} from './michelson-validator';
-import { ParserOptions } from './micheline-parser';
+} from './michelson-validator.js';
+import { ParserOptions } from './micheline-parser.js';
 
 export interface Context extends ParserOptions {
   contract?: MichelsonContract;

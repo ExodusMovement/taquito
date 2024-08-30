@@ -1,12 +1,12 @@
-import { Prim, Expr, StringLiteral, IntLiteral } from './micheline';
-import { decodeBase58Check, encodeBase58Check } from './base58';
+import { Prim, Expr, StringLiteral, IntLiteral } from './micheline.js';
+import { decodeBase58Check, encodeBase58Check } from './base58.js';
 import {
   MichelsonData,
   MichelsonDataPair,
   MichelsonType,
   MichelsonTypePair,
-} from './michelson-types';
-import { HexParseError, LongIntegerError, TezosIdEncodeError } from './error';
+} from './michelson-types.js';
+import { HexParseError, LongIntegerError, TezosIdEncodeError } from './error.js';
 
 export type Tuple<N extends number, T> = N extends 1
   ? [T]

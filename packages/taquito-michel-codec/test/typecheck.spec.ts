@@ -1,5 +1,5 @@
-import { MichelsonType, MichelsonData } from '../src/michelson-types';
-import { assertDataValid, assertTypesEqual, contractEntryPoint } from '../src/michelson-typecheck';
+import { MichelsonType, MichelsonData } from '../src/michelson-types.js';
+import { assertDataValid, assertTypesEqual, contractEntryPoint } from '../src/michelson-typecheck.js';
 
 describe('Typecheck', () => {
   it('assertDataValid: string', () => {

@@ -1,11 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import { inspect } from 'util';
-import { InvalidDataExpressionError, InvalidTypeExpressionError } from '../src/error';
-import { Contract, ContractOptions } from '../src/michelson-contract';
-import { Protocol } from '../src/michelson-types';
-import { MichelsonValidationError } from '../src/michelson-validator';
-import { MichelsonError } from '../src/utils';
+import { InvalidDataExpressionError, InvalidTypeExpressionError } from '../src/error.js';
+import { Contract, ContractOptions } from '../src/michelson-contract.js';
+import { Protocol } from '../src/michelson-types.js';
+import { MichelsonValidationError } from '../src/michelson-validator.js';
+import { MichelsonError } from '../src/utils.js';
 
 const contracts: {
   [group: string]: string[];

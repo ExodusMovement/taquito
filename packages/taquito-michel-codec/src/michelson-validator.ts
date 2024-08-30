@@ -1,5 +1,5 @@
-import { Prim, Expr, IntLiteral, StringLiteral } from './micheline';
-import { Tuple, NoArgs, ReqArgs, MichelsonError } from './utils';
+import { Prim, Expr, IntLiteral, StringLiteral } from './micheline.js';
+import { Tuple, NoArgs, ReqArgs, MichelsonError } from './utils.js';
 import {
   MichelsonCode,
   MichelsonType,
@@ -10,7 +10,7 @@ import {
   InstructionList,
   MichelsonTypeID,
   MichelsonSimpleComparableTypeID,
-} from './michelson-types';
+} from './michelson-types.js';
 
 // Michelson validator
 

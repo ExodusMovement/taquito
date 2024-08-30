@@ -1,10 +1,10 @@
-import { Parser, ParserOptions } from '../src/micheline-parser';
+import { Parser, ParserOptions } from '../src/micheline-parser.js';
 import {
   globalConstant,
   globalConstantJSON,
   script,
   scriptJSON,
-} from './helpers/global-constants-helper';
+} from './helpers/global-constants-helper.js';
 
 describe('Expand global constants', () => {
   const registeredIntExprJSON = { prim: 'int' };

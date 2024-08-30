@@ -1,4 +1,4 @@
-import { BytesLiteral, Expr, IntLiteral, Prim } from './micheline';
+import { BytesLiteral, Expr, IntLiteral, Prim } from './micheline.js';
 import {
   MichelsonTypeID,
   MichelsonDataID,
@@ -9,12 +9,12 @@ import {
   MichelsonDataOr,
   MichelsonDataOption,
   MichelsonInstruction,
-} from './michelson-types';
+} from './michelson-types.js';
 import {
   assertDataListIfAny,
   assertMichelsonData,
   assertMichelsonInstruction,
-} from './michelson-validator';
+} from './michelson-validator.js';
 import {
   checkDecodeTezosID,
   encodeTezosID,
@@ -26,7 +26,7 @@ import {
   parseDate,
   parseHex,
   unpackComb,
-} from './utils';
+} from './utils.js';
 
 type PrimID =
   | MichelsonTypeID

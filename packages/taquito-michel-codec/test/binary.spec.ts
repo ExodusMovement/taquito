@@ -1,9 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 
-import { MichelsonData, MichelsonType, ProtocolID } from '../src/michelson-types';
-import { packData, unpackData } from '../src/binary';
-import { parseHex } from '../src/utils';
+import { MichelsonData, MichelsonType, ProtocolID } from '../src/michelson-types.js';
+import { packData, unpackData } from '../src/binary.js';
+import { parseHex } from '../src/utils.js';
 
 interface TypedTestData {
   type?: MichelsonType;

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-empty-interface */
-import { Prim, Expr, IntLiteral, StringLiteral, BytesLiteral, List, Node } from './micheline';
+import { Prim, Expr, IntLiteral, StringLiteral, BytesLiteral, List, Node } from './micheline.js';
 
 interface Prim0<PT extends string = string> extends Prim<PT> {
   args?: never;
