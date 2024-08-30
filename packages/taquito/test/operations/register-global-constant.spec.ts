@@ -1,8 +1,8 @@
-import { ForgedBytes } from '../../src/operations/types';
+import { ForgedBytes } from '../../src/operations/types.js';
 import { OperationContentsAndResult } from '@exodus/taquito-rpc';
-import { defaultConfigConfirmation } from '../../src/context';
-import { RegisterGlobalConstantOperation } from '../../src/operations/register-global-constant-operation';
-import { RegisterGlobalConstantOperationBuilder, RevealOperationBuilder } from '../helpers';
+import { defaultConfigConfirmation } from '../../src/context.js';
+import { RegisterGlobalConstantOperation } from '../../src/operations/register-global-constant-operation.js';
+import { RegisterGlobalConstantOperationBuilder, RevealOperationBuilder } from '../helpers.js';
 
 describe('RegisterGlobalConstant operation', () => {
   let fakeContext: any;

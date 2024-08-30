@@ -1,6 +1,6 @@
 import { GlobalConstantHashAndValue } from '@exodus/taquito-michel-codec';
-import { GlobalConstantNotFound } from './error';
-import { GlobalConstantHash, GlobalConstantsProvider } from './interface-global-constants-provider';
+import { GlobalConstantNotFound } from './error.js';
+import { GlobalConstantHash, GlobalConstantsProvider } from './interface-global-constants-provider.js';
 
 export class DefaultGlobalConstantsProvider implements GlobalConstantsProvider {
   private _globalConstantsLibrary: GlobalConstantHashAndValue = Object.create(null);

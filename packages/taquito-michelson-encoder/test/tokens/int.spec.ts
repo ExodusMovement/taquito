@@ -1,4 +1,4 @@
-import { IntToken, IntValidationError } from '../../src/tokens/comparable/int';
+import { IntToken, IntValidationError } from '../../src/tokens/comparable/int.js';
 
 describe('Int token', () => {
   let token: IntToken;

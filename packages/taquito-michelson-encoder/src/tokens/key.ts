@@ -4,7 +4,7 @@ import {
   Token,
   TokenFactory,
   TokenValidationError,
-} from './token';
+} from './token.js';
 import {
   encodeKey,
   validatePublicKey,
@@ -13,7 +13,7 @@ import {
   b58cdecode,
   prefix,
 } from '@exodus/taquito-utils';
-import { BaseTokenSchema } from '../schema/types';
+import { BaseTokenSchema } from '../schema/types.js';
 
 const publicKeyPrefixLength = 4;
 

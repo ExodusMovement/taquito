@@ -1,11 +1,11 @@
-import { Context } from '../context';
-import { ParserProvider } from './interface';
+import { Context } from '../context.js';
+import { ParserProvider } from './interface.js';
 import { Expr, GlobalConstantHashAndValue, Parser, Prim, ProtocolID } from '@exodus/taquito-michel-codec';
-import { OriginateParams } from '../operations/types';
-import { InvalidInitParameter, InvalidCodeParameter } from '../contract/errors';
+import { OriginateParams } from '../operations/types.js';
+import { InvalidInitParameter, InvalidCodeParameter } from '../contract/errors.js';
 import { Schema } from '@exodus/taquito-michelson-encoder';
 import { MichelsonV1Expression, MichelsonV1ExpressionBase } from '@exodus/taquito-rpc';
-import { Protocols } from '../constants';
+import { Protocols } from '../constants.js';
 
 export class MichelCodecParser implements ParserProvider {
   constructor(private context: Context) {}

@@ -1,5 +1,5 @@
 import { b58decode } from '@exodus/taquito-utils';
-import { ContractToken, ContractValidationError } from './../../src/tokens/contract';
+import { ContractToken, ContractValidationError } from './../../src/tokens/contract.js';
 
 describe('Contract Token Tests', () => {
   let token: ContractToken;

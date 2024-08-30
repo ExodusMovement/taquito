@@ -1,5 +1,5 @@
-import { decodeBase58, decodeBase58Check, encodeBase58, encodeBase58Check } from '../src/base58';
-import { parseHex } from '../src/utils';
+import { decodeBase58, decodeBase58Check, encodeBase58, encodeBase58Check } from '../src/base58.js';
+import { parseHex } from '../src/utils.js';
 
 const test: {
   vec: string;

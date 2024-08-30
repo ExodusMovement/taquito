@@ -1,4 +1,4 @@
-import * as nacl from "tweetnacl";
+import nacl from "tweetnacl";
 import blake from '@exodus/blakejs';
 import {
   b58cdecode,
@@ -9,10 +9,10 @@ import {
   validatePublicKey,
   validateSignature,
   ValidationResult,
-} from './taquito-utils';
+} from './taquito-utils.js';
 import elliptic from 'elliptic';
 import toBuffer from 'typedarray-to-buffer';
-import { InvalidMessageError, InvalidPublicKeyError, InvalidSignatureError } from './errors';
+import { InvalidMessageError, InvalidPublicKeyError, InvalidSignatureError } from './errors.js';
 
 type PkPrefix = Prefix.EDPK | Prefix.SPPK | Prefix.P2PK | Prefix.BLPK;
 type SigPrefix = Prefix.EDSIG | Prefix.SPSIG | Prefix.P2SIG | Prefix.SIG;

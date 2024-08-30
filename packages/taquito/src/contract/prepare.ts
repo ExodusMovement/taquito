@@ -33,15 +33,15 @@ import {
   RPCSmartRollupAddMessagesOperation,
   RPCSmartRollupOriginateOperation,
   SmartRollupOriginateParamsWithProof,
-} from '../operations/types';
-import { DEFAULT_FEE, DEFAULT_GAS_LIMIT, DEFAULT_STORAGE_LIMIT } from '../constants';
+} from '../operations/types.js';
+import { DEFAULT_FEE, DEFAULT_GAS_LIMIT, DEFAULT_STORAGE_LIMIT } from '../constants.js';
 import { format } from '@exodus/taquito-utils';
 import {
   InvalidCodeParameter,
   InvalidInitParameter,
   OriginationParameterError,
   IntegerError,
-} from './errors';
+} from './errors.js';
 
 export const createOriginationOperation = async ({
   code,

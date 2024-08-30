@@ -1,4 +1,4 @@
-import { scan, Token, Literal } from './scan';
+import { scan, Token, Literal } from './scan.js';
 import {
   Expr,
   Prim,
@@ -8,10 +8,10 @@ import {
   sourceReference,
   List,
   SourceReference,
-} from './micheline';
-import { expandMacros } from './macros';
-import { ProtocolOptions } from './michelson-types';
-import { expandGlobalConstants } from './global-constants';
+} from './micheline.js';
+import { expandMacros } from './macros.js';
+import { ProtocolOptions } from './michelson-types.js';
+import { expandGlobalConstants } from './global-constants.js';
 
 /**
  *  @category Error

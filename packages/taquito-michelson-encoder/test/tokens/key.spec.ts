@@ -1,4 +1,4 @@
-import { KeyToken, KeyValidationError } from '../../src/tokens/key';
+import { KeyToken, KeyValidationError } from '../../src/tokens/key.js';
 
 describe('Key token', () => {
   let token: KeyToken;

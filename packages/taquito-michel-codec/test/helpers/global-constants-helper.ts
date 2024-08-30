@@ -1,4 +1,4 @@
-import { Expr } from '../../src/micheline';
+import { Expr } from '../../src/micheline.js';
 
 export const script = (constant1: string, constant2: string) => {
   return `{ parameter (or (or (${constant1}) (${constant1})) (unit %reset)) ;

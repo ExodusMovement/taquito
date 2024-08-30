@@ -1,8 +1,8 @@
-import { ForgedBytes } from '../../src/operations/types';
+import { ForgedBytes } from '../../src/operations/types.js';
 import { OperationContentsAndResult } from '@exodus/taquito-rpc';
-import { IncreasePaidStorageOperation } from '../../src/operations/increase-paid-storage-operation';
-import { defaultConfigConfirmation } from '../../src/context';
-import { IncreasePaidStorageOperationBuilder } from '../helpers';
+import { IncreasePaidStorageOperation } from '../../src/operations/increase-paid-storage-operation.js';
+import { defaultConfigConfirmation } from '../../src/context.js';
+import { IncreasePaidStorageOperationBuilder } from '../helpers.js';
 
 describe('IncreasePaidStorage operation', () => {
   let fakeContext: any;

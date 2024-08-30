@@ -1,12 +1,12 @@
-import { Decoder } from '../decoder';
-import { Uint8ArrayConsumer } from '../uint8array-consumer';
-import { CODEC, kindMapping, kindMappingReverse } from '../constants';
+import { Decoder } from '../decoder.js';
+import { Uint8ArrayConsumer } from '../uint8array-consumer.js';
+import { CODEC, kindMapping, kindMappingReverse } from '../constants.js';
 import { InvalidOperationKindError } from '@exodus/taquito-utils';
 import {
   OperationDecodingError,
   OperationEncodingError,
   UnsupportedOperationError,
-} from '../error';
+} from '../error.js';
 
 export const ManagerOperationSchema = {
   branch: CODEC.BRANCH,

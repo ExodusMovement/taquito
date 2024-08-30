@@ -1,5 +1,5 @@
-import { storage, complex_storage } from '../data/sample_complex_bigmap';
-import { Schema } from '../src/schema/storage';
+import { storage, complex_storage } from '../data/sample_complex_bigmap.js';
+import { Schema } from '../src/schema/storage.js';
 
 describe('Complex big_map storage', () => {
     it('Should extract correct bigmap schema', () => {

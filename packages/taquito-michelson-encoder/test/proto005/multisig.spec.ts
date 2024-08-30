@@ -1,5 +1,5 @@
-import { genericMultisig } from '../../data/multisig';
-import { ParameterSchema } from '../../src/schema/parameter';
+import { genericMultisig } from '../../data/multisig.js';
+import { ParameterSchema } from '../../src/schema/parameter.js';
 
 const removeDelegate = () => {
   return [

@@ -5,7 +5,7 @@ import {
   MichelsonData,
   MichelsonCode,
   MichelsonReturnType,
-} from './michelson-types';
+} from './michelson-types.js';
 import {
   assertContractValid,
   contractSection,
@@ -17,19 +17,19 @@ import {
   functionType,
   isDataValid,
   contractEntryPoints,
-} from './michelson-typecheck';
-import { Parser, ParserOptions } from './micheline-parser';
+} from './michelson-typecheck.js';
+import { Parser, ParserOptions } from './micheline-parser.js';
 import {
   assertMichelsonContract,
   assertMichelsonType,
   assertMichelsonData,
-} from './michelson-validator';
+} from './michelson-validator.js';
 import {
   InvalidDataExpressionError,
   InvalidEntrypointError,
   InvalidContractError,
   InvalidTypeExpressionError,
-} from './error';
+} from './error.js';
 
 export interface ContractOptions extends ParserOptions {
   traceCallback?: (t: InstructionTrace) => void;

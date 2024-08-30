@@ -1,6 +1,6 @@
-import { rpcContractResponse, storage } from '../data/sample13_map_contract';
-import { Schema } from '../src/schema/storage';
-import { expectMichelsonMap } from './utils';
+import { rpcContractResponse, storage } from '../data/sample13_map_contract.js';
+import { Schema } from '../src/schema/storage.js';
+import { expectMichelsonMap } from './utils.js';
 
 describe('Schema with a map as root storage', () => {
   it('Should decode storage properly and do not remove top level annotation', () => {

@@ -1,4 +1,4 @@
-import { SetTokenSchema } from '../schema/types';
+import { SetTokenSchema } from '../schema/types.js';
 import {
   Token,
   TokenFactory,
@@ -6,7 +6,7 @@ import {
   TokenValidationError,
   ComparableToken,
   SemanticEncoding,
-} from './token';
+} from './token.js';
 
 export class SetValidationError extends TokenValidationError {
   name = 'SetValidationError';

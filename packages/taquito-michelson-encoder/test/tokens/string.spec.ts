@@ -1,4 +1,4 @@
-import { StringToken } from '../../src/tokens/comparable/string';
+import { StringToken } from '../../src/tokens/comparable/string.js';
 
 describe('String token', () => {
   let token: StringToken;

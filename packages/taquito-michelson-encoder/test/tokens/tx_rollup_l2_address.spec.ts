@@ -2,7 +2,7 @@ import { b58decodeL2Address } from '@exodus/taquito-utils';
 import {
   TxRollupL2AddressToken,
   TxRollupL2AddressValidationError,
-} from './../../src/tokens/comparable/tx_rollup_l2_address';
+} from './../../src/tokens/comparable/tx_rollup_l2_address.js';
 
 describe('TxRollupL2Address Token', () => {
   let token: TxRollupL2AddressToken;

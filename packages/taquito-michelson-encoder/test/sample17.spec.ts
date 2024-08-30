@@ -1,5 +1,5 @@
-import { script17, storage17 } from '../data/sample17';
-import { Schema } from '../src/schema/storage';
+import { script17, storage17 } from '../data/sample17.js';
+import { Schema } from '../src/schema/storage.js';
 
 describe('Schema.FindFirstInTopLevelPair test', () => {
     it(`Should find the first occurrence of a specified type in top-level pairs of the storage`, () => {

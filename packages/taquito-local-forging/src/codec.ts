@@ -18,18 +18,18 @@ import {
   DecodePvmKindError,
   InvalidSmartRollupContractAddressError,
   InvalidSmartRollupAddressError,
-} from './error';
+} from './error.js';
 import BigNumber from 'bignumber.js';
-import { entrypointMapping, entrypointMappingReverse, ENTRYPOINT_MAX_LENGTH } from './constants';
+import { entrypointMapping, entrypointMappingReverse, ENTRYPOINT_MAX_LENGTH } from './constants.js';
 import {
   extractRequiredLen,
   valueDecoder,
   valueEncoder,
   MichelsonValue,
   stripLengthPrefixFromBytes,
-} from './michelson/codec';
-import { Uint8ArrayConsumer } from './uint8array-consumer';
-import { pad } from './utils';
+} from './michelson/codec.js';
+import { Uint8ArrayConsumer } from './uint8array-consumer.js';
+import { pad } from './utils.js';
 
 // https://tezos.gitlab.io/shell/p2p_api.html specifies data types and structure for forging
 

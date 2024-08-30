@@ -2,14 +2,14 @@ import { HttpResponseError, STATUS_CODE } from '@exodus/taquito-http-utils';
 import { BigMapKeyType, MichelsonMap, MichelsonMapKey, Schema } from '@exodus/taquito-michelson-encoder';
 import { OpKind, ScriptResponse } from '@exodus/taquito-rpc';
 import { encodeExpr } from '@exodus/taquito-utils';
-import { OperationBatch } from '../batch/rpc-batch-provider';
-import { Context } from '../context';
-import { DelegateOperation } from '../operations/delegate-operation';
-import { OperationEmitter } from '../operations/operation-emitter';
-import { OriginationOperation } from '../operations/origination-operation';
-import { RegisterGlobalConstantOperation } from '../operations/register-global-constant-operation';
-import { RevealOperation } from '../operations/reveal-operation';
-import { TransactionOperation } from '../operations/transaction-operation';
+import { OperationBatch } from '../batch/rpc-batch-provider.js';
+import { Context } from '../context.js';
+import { DelegateOperation } from '../operations/delegate-operation.js';
+import { OperationEmitter } from '../operations/operation-emitter.js';
+import { OriginationOperation } from '../operations/origination-operation.js';
+import { RegisterGlobalConstantOperation } from '../operations/register-global-constant-operation.js';
+import { RevealOperation } from '../operations/reveal-operation.js';
+import { TransactionOperation } from '../operations/transaction-operation.js';
 import {
   DelegateParams,
   isOpRequireReveal,
@@ -31,10 +31,10 @@ import {
   UpdateConsensusKeyParams,
   SmartRollupAddMessagesParams,
   SmartRollupOriginateParams,
-} from '../operations/types';
-import { DefaultContractType, ContractStorageType, ContractAbstraction } from './contract';
-import { InvalidDelegationSource, RevealOperationError } from './errors';
-import { ContractProvider, ContractSchema, StorageProvider } from './interface';
+} from '../operations/types.js';
+import { DefaultContractType, ContractStorageType, ContractAbstraction } from './contract.js';
+import { InvalidDelegationSource, RevealOperationError } from './errors.js';
+import { ContractProvider, ContractSchema, StorageProvider } from './interface.js';
 import {
   createOriginationOperation,
   createRegisterDelegateOperation,
@@ -52,8 +52,8 @@ import {
   createUpdateConsensusKeyOperation,
   createSmartRollupAddMessagesOperation,
   createSmartRollupOriginateOperation,
-} from './prepare';
-import { smartContractAbstractionSemantic } from './semantic';
+} from './prepare.js';
+import { smartContractAbstractionSemantic } from './semantic.js';
 import {
   validateAddress,
   validateContractAddress,
@@ -61,17 +61,17 @@ import {
   InvalidAddressError,
   ValidationResult,
 } from '@exodus/taquito-utils';
-import { EstimationProvider } from '../estimate/estimate-provider-interface';
-import { TxRollupOriginationOperation } from '../operations/tx-rollup-origination-operation';
-import { TxRollupBatchOperation } from '../operations/tx-rollup-batch-operation';
-import { TransferTicketOperation } from '../operations/transfer-ticket-operation';
-import { IncreasePaidStorageOperation } from '../operations/increase-paid-storage-operation';
-import { BallotOperation } from '../operations/ballot-operation';
-import { DrainDelegateOperation } from '../operations/drain-delegate-operation';
-import { ProposalsOperation } from '../operations/proposals-operation';
-import { UpdateConsensusKeyOperation } from '../operations/update-consensus-key-operation';
-import { SmartRollupAddMessagesOperation } from '../operations/smart-rollup-add-messages-operation';
-import { SmartRollupOriginateOperation } from '../operations/smart-rollup-originate-operation';
+import { EstimationProvider } from '../estimate/estimate-provider-interface.js';
+import { TxRollupOriginationOperation } from '../operations/tx-rollup-origination-operation.js';
+import { TxRollupBatchOperation } from '../operations/tx-rollup-batch-operation.js';
+import { TransferTicketOperation } from '../operations/transfer-ticket-operation.js';
+import { IncreasePaidStorageOperation } from '../operations/increase-paid-storage-operation.js';
+import { BallotOperation } from '../operations/ballot-operation.js';
+import { DrainDelegateOperation } from '../operations/drain-delegate-operation.js';
+import { ProposalsOperation } from '../operations/proposals-operation.js';
+import { UpdateConsensusKeyOperation } from '../operations/update-consensus-key-operation.js';
+import { SmartRollupAddMessagesOperation } from '../operations/smart-rollup-add-messages-operation.js';
+import { SmartRollupOriginateOperation } from '../operations/smart-rollup-originate-operation.js';
 
 export class RpcContractProvider
   extends OperationEmitter

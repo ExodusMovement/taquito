@@ -1,6 +1,6 @@
-import { Token, TokenFactory, Semantic, ComparableToken, SemanticEncoding } from './token';
-import { OrToken } from './or';
-import { PairTokenSchema } from '../schema/types';
+import { Token, TokenFactory, Semantic, ComparableToken, SemanticEncoding } from './token.js';
+import { OrToken } from './or.js';
+import { PairTokenSchema } from '../schema/types.js';
 import { MichelsonV1Expression, MichelsonV1ExpressionExtended } from '@exodus/taquito-rpc';
 
 /**

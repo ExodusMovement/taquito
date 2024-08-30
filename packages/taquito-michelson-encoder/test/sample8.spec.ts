@@ -1,6 +1,6 @@
-import { params as params8, storage as storage8 } from '../data/sample8';
-import { ParameterSchema } from '../src/schema/parameter';
-import { Schema } from '../src/schema/storage';
+import { params as params8, storage as storage8 } from '../data/sample8.js';
+import { ParameterSchema } from '../src/schema/parameter.js';
+import { Schema } from '../src/schema/storage.js';
 
 describe('Schema test', () => {
   it('Should parse storage properly', () => {

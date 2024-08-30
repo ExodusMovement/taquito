@@ -1,13 +1,13 @@
-import { Context } from '../context';
-import { attachKind, OpKind } from '../operations/types';
+import { Context } from '../context.js';
+import { attachKind, OpKind } from '../operations/types.js';
 import {
   WalletDelegateParams,
   WalletIncreasePaidStorageParams,
   WalletOriginateParams,
   WalletProvider,
   WalletTransferParams,
-} from './interface';
-import { WalletParamsWithKind } from './wallet';
+} from './interface.js';
+import { WalletParamsWithKind } from './wallet.js';
 
 export class LegacyWalletProvider implements WalletProvider {
   constructor(private context: Context) {}

@@ -7,7 +7,7 @@ import {
   ScriptedContracts,
 } from '@exodus/taquito-rpc';
 import BigNumber from 'bignumber.js';
-import { BigMapQuery, BlockIdentifier, SaplingStateQuery, TzReadProvider } from './interface';
+import { BigMapQuery, BlockIdentifier, SaplingStateQuery, TzReadProvider } from './interface.js';
 
 /**
  * @description Converts calls from TzReadProvider into calls to the wrapped RpcClient in a format it can understand.

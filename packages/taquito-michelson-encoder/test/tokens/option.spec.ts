@@ -1,6 +1,6 @@
-import { OptionToken } from '../../src/tokens/option';
-import { createToken } from '../../src/tokens/createToken';
-import { UnitValue } from '../../src/taquito-michelson-encoder';
+import { OptionToken } from '../../src/tokens/option.js';
+import { createToken } from '../../src/tokens/createToken.js';
+import { UnitValue } from '../../src/taquito-michelson-encoder.js';
 
 describe('Option token', () => {
   let token: OptionToken;

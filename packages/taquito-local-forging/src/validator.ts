@@ -21,7 +21,7 @@ import {
   SmartRollupOriginateSchema,
   SmartRollupAddMessagesSchema,
   SmartRollupExecuteOutboxMessageSchema,
-} from './schema/operation';
+} from './schema/operation.js';
 
 type OperationKind =
   | OpKind.ACTIVATION

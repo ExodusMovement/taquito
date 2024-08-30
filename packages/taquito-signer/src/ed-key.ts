@@ -1,5 +1,5 @@
 import blake from '@exodus/blakejs';
-import * as nacl from "tweetnacl";
+import nacl from "tweetnacl";
 import {
   b58cencode,
   b58cdecode,

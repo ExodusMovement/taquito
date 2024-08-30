@@ -1,14 +1,14 @@
-import { Schema } from '../src/schema/storage';
-import { storage as storageDexter, params, rpcContractResponse } from '../data/sample11_dexter';
+import { Schema } from '../src/schema/storage.js';
+import { storage as storageDexter, params, rpcContractResponse } from '../data/sample11_dexter.js';
 import {
   storage as storageToken,
   params as paramsToken,
   rpcContractResponse as rpcToken,
-} from '../data/sample11_token';
+} from '../data/sample11_token.js';
 import BigNumber from 'bignumber.js';
-import { ParameterSchema } from '../src/schema/parameter';
-import { MichelsonMap } from '../src/michelson-map';
-import { expectMichelsonMap } from './utils';
+import { ParameterSchema } from '../src/schema/parameter.js';
+import { MichelsonMap } from '../src/michelson-map.js';
+import { expectMichelsonMap } from './utils.js';
 describe('Exchange contract test', () => {
   it('Test storage schema', () => {
     const schema = new Schema(storageDexter);

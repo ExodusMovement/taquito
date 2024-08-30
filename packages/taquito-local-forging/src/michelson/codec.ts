@@ -1,10 +1,10 @@
 import { BigNumber } from 'bignumber.js';
-import { Decoder } from '../decoder';
-import { Uint8ArrayConsumer } from '../uint8array-consumer';
-import { Encoder } from '../taquito-local-forging';
-import { opMappingReverse, opMapping } from '../constants';
-import { pad } from '../utils';
-import { InvalidHexStringError, UnexpectedMichelsonValueError } from '../error';
+import { Decoder } from '../decoder.js';
+import { Uint8ArrayConsumer } from '../uint8array-consumer.js';
+import { Encoder } from '../taquito-local-forging.js';
+import { opMappingReverse, opMapping } from '../constants.js';
+import { pad } from '../utils.js';
+import { InvalidHexStringError, UnexpectedMichelsonValueError } from '../error.js';
 
 export type PrimValue = { prim: string; args?: MichelsonValue[]; annots?: string[] };
 export type BytesValue = { bytes: string };

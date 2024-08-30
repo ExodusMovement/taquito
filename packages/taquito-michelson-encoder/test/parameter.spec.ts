@@ -1,6 +1,6 @@
-import { params } from '../data/sample1';
-import { ParameterSchema } from '../src/schema/parameter';
-import { TokenValidationError } from '../src/tokens/token';
+import { params } from '../data/sample1.js';
+import { ParameterSchema } from '../src/schema/parameter.js';
+import { TokenValidationError } from '../src/tokens/token.js';
 
 describe('Schema test errors', () => {
   it('Should throw a TokenValidationError when an incorrect type is passed as a param to Encode', () => {

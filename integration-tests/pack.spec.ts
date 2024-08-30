@@ -21,7 +21,7 @@ CONFIGS().forEach(({ rpc, protocol }) => {
             'binary-data1.json',
             'binary-data3.json'
         ];
-        const paths = files.map((f) => path.resolve(__dirname, `../packages/taquito-michel-codec/test/${f}`));
+        const paths = files.map((f) => path.resolve(import.meta.dirname, `../packages/taquito-michel-codec/test/${f}`));
         const src: TypedTestData[] = [].concat(
             ...paths.map((p) => JSON.parse(fs.readFileSync(p).toString()))
         );

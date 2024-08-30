@@ -3,8 +3,8 @@ import {
   InvalidDerivationPathError,
   InvalidMnemonicError,
   ToBeImplemented,
-} from '../src/errors';
-import { InMemorySigner } from '../src/taquito-signer';
+} from '../src/errors.js';
+import { InMemorySigner } from '../src/taquito-signer.js';
 
 describe('inmemory-signer', () => {
   const mnemonic = 'prefer wait flock brown volume recycle scrub elder rate pair twenty giant';

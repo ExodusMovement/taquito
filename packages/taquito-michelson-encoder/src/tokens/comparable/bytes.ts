@@ -1,11 +1,11 @@
-import { BaseTokenSchema } from '../../schema/types';
+import { BaseTokenSchema } from '../../schema/types.js';
 import {
   TokenFactory,
   ComparableToken,
   TokenValidationError,
   Token,
   SemanticEncoding,
-} from '../token';
+} from '../token.js';
 import { stripHexPrefix } from '@exodus/taquito-utils';
 
 export class BytesValidationError extends TokenValidationError {

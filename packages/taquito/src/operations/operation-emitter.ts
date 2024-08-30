@@ -6,16 +6,16 @@ import {
   RPCRunOperationParam,
   VotingPeriodBlockResult,
 } from '@exodus/taquito-rpc';
-import { Protocols } from '../constants';
-import { Context } from '../context';
-import { Estimate } from '../estimate/estimate';
-import { RPCResponseError } from '../error';
+import { Protocols } from '../constants.js';
+import { Context } from '../context.js';
+import { Estimate } from '../estimate/estimate.js';
+import { RPCResponseError } from '../error.js';
 import {
   flattenErrors,
   TezosOperationError,
   TezosPreapplyFailureError,
   InvalidEstimateValueError,
-} from './operation-errors';
+} from './operation-errors.js';
 import { InvalidOperationKindError, DeprecationError } from '@exodus/taquito-utils';
 import {
   ForgedBytes,
@@ -25,7 +25,7 @@ import {
   RPCOperation,
   RPCOpWithFee,
   RPCOpWithSource,
-} from './types';
+} from './types.js';
 
 export interface PreparedOperation {
   opOb: {

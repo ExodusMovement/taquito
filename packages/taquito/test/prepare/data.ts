@@ -1,4 +1,4 @@
-import { PreparedOperation } from '../../src/prepare';
+import { PreparedOperation } from '../../src/prepare/index.js';
 
 export const preparedOriginationOpWithReveal = {
   opOb: {

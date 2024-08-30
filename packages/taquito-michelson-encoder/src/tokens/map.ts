@@ -1,5 +1,5 @@
-import { MichelsonMap } from '../michelson-map';
-import { MapTokenSchema } from '../schema/types';
+import { MichelsonMap } from '../michelson-map.js';
+import { MapTokenSchema } from '../schema/types.js';
 import {
   ComparableToken,
   Semantic,
@@ -7,7 +7,7 @@ import {
   Token,
   TokenFactory,
   TokenValidationError,
-} from './token';
+} from './token.js';
 
 export class MapValidationError extends TokenValidationError {
   name = 'MapValidationError';

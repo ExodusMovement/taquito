@@ -1,8 +1,8 @@
 import BigNumber from 'bignumber.js';
-import { script } from '../data/contract_with_views';
-import { rpcContractResponse } from '../data/sample20';
-import { InvalidScriptError, ViewEncodingError } from '../src/schema/error';
-import { ViewSchema } from '../src/schema/view-schema';
+import { script } from '../data/contract_with_views.js';
+import { rpcContractResponse } from '../data/sample20.js';
+import { InvalidScriptError, ViewEncodingError } from '../src/schema/error.js';
+import { ViewSchema } from '../src/schema/view-schema.js';
 
 describe('ViewSchema test', () => {
   const viewIsTwenty = [

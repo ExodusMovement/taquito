@@ -1,4 +1,4 @@
-import { TimestampToken } from '../../src/tokens/comparable/timestamp';
+import { TimestampToken } from '../../src/tokens/comparable/timestamp.js';
 
 describe('Timestamp token', () => {
   let token: TimestampToken;

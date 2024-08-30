@@ -5,17 +5,17 @@ import {
   LocalForger,
   ProtocolsHash,
   Uint8ArrayConsumer,
-} from '../src/taquito-local-forging';
-import { commonCases } from '../../../integration-tests/data/allTestsCases';
+} from '../src/taquito-local-forging.js';
+import { commonCases } from '../../../integration-tests/data/allTestsCases.js';
 import {
   InvalidOperationSchemaError,
   InvalidBlockHashError,
   UnsupportedOperationError,
-} from '../src/error';
+} from '../src/error.js';
 
 import { InvalidOperationKindError } from '@exodus/taquito-utils';
-import { schemaDecoder, SeedNonceRevelationSchema } from '../src/schema/operation';
-import { ProtoInferiorTo } from '../src/protocols';
+import { schemaDecoder, SeedNonceRevelationSchema } from '../src/schema/operation.js';
+import { ProtoInferiorTo } from '../src/protocols.js';
 
 describe('Forge and parse operations default protocol', () => {
   const localForger = new LocalForger();

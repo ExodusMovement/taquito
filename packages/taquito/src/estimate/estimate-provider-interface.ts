@@ -4,7 +4,7 @@ import {
   DelegateParams,
   RegisterDelegateParams,
   ParamsWithKind,
-} from '../operations';
+} from '../operations/index.js';
 import {
   RevealParams,
   RegisterGlobalConstantParams,
@@ -15,9 +15,9 @@ import {
   UpdateConsensusKeyParams,
   SmartRollupAddMessagesParams,
   SmartRollupOriginateParams,
-} from '../operations/types';
-import { Estimate } from './estimate';
-import { ContractMethod, ContractMethodObject, ContractProvider } from '../contract';
+} from '../operations/types.js';
+import { Estimate } from './estimate.js';
+import { ContractMethod, ContractMethodObject, ContractProvider } from '../contract/index.js';
 
 export interface EstimationProvider {
   /**

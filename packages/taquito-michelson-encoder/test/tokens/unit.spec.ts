@@ -1,5 +1,5 @@
-import { UnitValue } from '../../src/taquito-michelson-encoder';
-import { UnitToken } from '../../src/tokens/unit';
+import { UnitValue } from '../../src/taquito-michelson-encoder.js';
+import { UnitToken } from '../../src/tokens/unit.js';
 
 describe('Unit token', () => {
   let token: UnitToken;

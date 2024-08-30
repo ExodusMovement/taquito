@@ -1,4 +1,4 @@
-import { Schema } from '../src/schema/storage';
+import { Schema } from '../src/schema/storage.js';
 
 describe('List token type structure', () => {
   it('Should extract correct schema for token type list', () => {

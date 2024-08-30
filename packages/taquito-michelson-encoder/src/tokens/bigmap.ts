@@ -1,5 +1,5 @@
-import { MichelsonMap } from '../michelson-map';
-import { BigMapTokenSchema } from '../schema/types';
+import { MichelsonMap } from '../michelson-map.js';
+import { BigMapTokenSchema } from '../schema/types.js';
 import {
   ComparableToken,
   Semantic,
@@ -7,7 +7,7 @@ import {
   Token,
   TokenFactory,
   TokenValidationError,
-} from './token';
+} from './token.js';
 
 /**
  *  @category Error

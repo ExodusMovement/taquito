@@ -10,22 +10,22 @@
  */
 
 import { Buffer } from 'buffer';
-import { Prefix, prefix, prefixLength } from './constants';
-import { validatePkAndExtractPrefix } from './verify-signature';
+import { Prefix, prefix, prefixLength } from './constants.js';
+import { validatePkAndExtractPrefix } from './verify-signature.js';
 import blake from '@exodus/blakejs';
 import bs58check from 'bs58check';
-import { ValueConversionError, InvalidHexStringError } from './errors';
+import { ValueConversionError, InvalidHexStringError } from './errors.js';
 import BigNumber from 'bignumber.js';
 
-export * from './validators';
-export { VERSION } from './version';
+export * from './validators.js';
+export { VERSION } from './version.js';
 
-export { prefix, Prefix, prefixLength } from './constants';
+export { prefix, Prefix, prefixLength } from './constants.js';
 
-export { verifySignature, validatePkAndExtractPrefix } from './verify-signature';
-export * from './errors';
+export { verifySignature, validatePkAndExtractPrefix } from './verify-signature.js';
+export * from './errors.js';
 
-export { format } from './format';
+export { format } from './format.js';
 
 /**
  *

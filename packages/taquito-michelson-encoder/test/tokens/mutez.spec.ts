@@ -1,4 +1,4 @@
-import { MutezToken, MutezValidationError } from '../../src/tokens/comparable/mutez';
+import { MutezToken, MutezValidationError } from '../../src/tokens/comparable/mutez.js';
 
 describe('Mutez token', () => {
   let token: MutezToken;

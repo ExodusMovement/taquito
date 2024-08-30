@@ -1,7 +1,7 @@
-import { Wallet } from '../wallet/wallet';
-import { Context } from '../context';
-import { ContractAbstraction } from './contract';
-import { ContractProvider } from './interface';
+import { Wallet } from '../wallet/wallet.js';
+import { Context } from '../context.js';
+import { ContractAbstraction } from './contract.js';
+import { ContractProvider } from './interface.js';
 
 export function compose<
     ContractAbsComposer1 extends ContractAbstraction<ContractProvider | Wallet>,

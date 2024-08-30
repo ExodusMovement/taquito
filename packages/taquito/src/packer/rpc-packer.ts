@@ -1,5 +1,5 @@
-import { Packer } from './interface';
-import { Context } from '../context';
+import { Packer } from './interface.js';
+import { Context } from '../context.js';
 import { PackDataParams, PackDataResponse } from '@exodus/taquito-rpc';
 
 export class RpcPacker implements Packer {

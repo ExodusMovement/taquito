@@ -1,6 +1,6 @@
-import { TransactionOperation } from '../../operations/transaction-operation';
-import { TransferParams } from '../../operations/types';
-import { TransactionWalletOperation } from '../../wallet';
+import { TransactionOperation } from '../../operations/transaction-operation.js';
+import { TransferParams } from '../../operations/types.js';
+import { TransactionWalletOperation } from '../../wallet/index.js';
 
 export interface SendParams {
     fee?: number;

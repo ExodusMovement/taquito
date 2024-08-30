@@ -1,5 +1,5 @@
 import { MichelsonV1Expression, MichelsonV1ExpressionExtended } from '@exodus/taquito-rpc';
-import { TokenSchema } from '../schema/types';
+import { TokenSchema } from '../schema/types.js';
 
 /**
  *  @category Error

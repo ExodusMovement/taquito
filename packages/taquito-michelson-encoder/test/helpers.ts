@@ -1,7 +1,7 @@
 import { MichelsonV1Expression, MichelsonV1ExpressionExtended } from '@exodus/taquito-rpc';
 import { b58decode } from '@exodus/taquito-utils';
-import { Schema } from '../src/schema/storage';
-import { SemanticEncoding } from '../src/tokens/token';
+import { Schema } from '../src/schema/storage.js';
+import { SemanticEncoding } from '../src/tokens/token.js';
 
 // example of semantic encoding
 export const optimizedEncoding: SemanticEncoding = {

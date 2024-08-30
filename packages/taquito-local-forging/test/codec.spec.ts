@@ -7,10 +7,10 @@ import {
   pvmKindDecoder,
   paddedBytesEncoder,
   paddedBytesDecoder,
-} from '../src/codec';
-import { Uint8ArrayConsumer } from '../src/uint8array-consumer';
+} from '../src/codec.js';
+import { Uint8ArrayConsumer } from '../src/uint8array-consumer.js';
 import { InvalidKeyHashError, InvalidPublicKeyError } from '@exodus/taquito-utils';
-import { pkhEncoder, publicKeyDecoder, publicKeyEncoder } from '../src/codec';
+import { pkhEncoder, publicKeyDecoder, publicKeyEncoder } from '../src/codec.js';
 import {
   DecodeBallotValueError,
   DecodePvmKindError,
@@ -18,8 +18,8 @@ import {
   InvalidHexStringError,
   // OversizedEntryPointError,
   UnsupportedPvmKindError,
-} from '../src/error';
-import { bytesEncoder } from '../src/michelson/codec';
+} from '../src/error.js';
+import { bytesEncoder } from '../src/michelson/codec.js';
 
 describe('Tests for Entrypoint functions and for encode and decoder error messages', () => {
   test('Entrypoint encoder', () => {

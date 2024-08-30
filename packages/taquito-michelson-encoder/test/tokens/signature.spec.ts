@@ -1,4 +1,4 @@
-import { SignatureToken } from '../../src/tokens/signature';
+import { SignatureToken } from '../../src/tokens/signature.js';
 
 describe('Signature token', () => {
   let token: SignatureToken;

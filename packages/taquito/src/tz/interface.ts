@@ -1,5 +1,5 @@
 import BigNumber from 'bignumber.js';
-import { Operation } from '../operations/operations';
+import { Operation } from '../operations/operations.js';
 
 export interface TzProvider {
   /**

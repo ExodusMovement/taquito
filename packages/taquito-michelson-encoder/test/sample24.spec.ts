@@ -1,7 +1,7 @@
 import { BigNumber } from 'bignumber.js';
-import { script24, storage24 } from '../data/sample24';
-import { Schema } from '../src/schema/storage';
-import { expectMichelsonMap } from './utils';
+import { script24, storage24 } from '../data/sample24.js';
+import { Schema } from '../src/schema/storage.js';
+import { expectMichelsonMap } from './utils.js';
 
 describe('Schema test', () => {
   it('Should parse storage properly simpler case', () => {

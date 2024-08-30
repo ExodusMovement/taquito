@@ -1,20 +1,20 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { ForgedBytes } from '../../src/operations/types';
-import { BatchOperation } from '../../src/operations/batch-operation';
-import { defaultConfigConfirmation } from '../../src/context';
+import { ForgedBytes } from '../../src/operations/types.js';
+import { BatchOperation } from '../../src/operations/batch-operation.js';
+import { defaultConfigConfirmation } from '../../src/context.js';
 import {
   RevealOperationBuilder,
   TransferOperationBuilder,
   OriginationOperationBuilder,
   DelegationOperationBuilder,
-} from '../helpers';
+} from '../helpers.js';
 
 import {
   resultOriginations,
   successfulResult,
   resultWithoutOrigination,
   resultSingleOrigination,
-} from '../data/batch-results';
+} from '../data/batch-results.js';
 
 describe('Batch operation', () => {
   let fakeContext: any;

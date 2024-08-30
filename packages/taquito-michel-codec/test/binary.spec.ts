@@ -1,9 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 
-import { MichelsonData, MichelsonType, ProtocolID } from '../src/michelson-types';
-import { packData, unpackData } from '../src/binary';
-import { parseHex } from '../src/utils';
+import { MichelsonData, MichelsonType, ProtocolID } from '../src/michelson-types.js';
+import { packData, unpackData } from '../src/binary.js';
+import { parseHex } from '../src/utils.js';
 
 interface TypedTestData {
   type?: MichelsonType;
@@ -15,7 +15,7 @@ interface TypedTestData {
 
 describe('Binary', () => {
   const files = ['binary-data1.json', 'binary-data2.json', 'binary-data3.json'];
-  const paths = files.map((f) => path.resolve(__dirname, f));
+  const paths = files.map((f) => path.resolve(import.meta.dirname, f));
   const src: TypedTestData[] = [].concat(
     ...paths.map((p) => JSON.parse(fs.readFileSync(p).toString()))
   );

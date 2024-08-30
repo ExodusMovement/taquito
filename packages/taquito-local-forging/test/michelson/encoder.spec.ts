@@ -1,4 +1,4 @@
-import { valueEncoder } from '../../src/michelson/codec';
+import { valueEncoder } from '../../src/michelson/codec.js';
 
 describe('valueEncoder', () => {
   test('Should produce value encoding for bytes', () => {

@@ -1,5 +1,5 @@
-import { rpcContractResponse as rpcContractResponse7, storage as storage7 } from '../data/sample7';
-import { Schema } from '../src/schema/storage';
+import { rpcContractResponse as rpcContractResponse7, storage as storage7 } from '../data/sample7.js';
+import { Schema } from '../src/schema/storage.js';
 
 describe('Schema test', () => {
   it('Should parse storage properly', () => {

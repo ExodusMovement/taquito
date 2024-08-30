@@ -1,15 +1,15 @@
 import { OperationContentsAndResult, OperationContentsAndResultTransaction } from '@exodus/taquito-rpc';
 import BigNumber from 'bignumber.js';
-import { Context } from '../context';
-import { flattenErrors, flattenOperationResult, MergedOperationResult } from './operation-errors';
-import { Operation } from './operations';
+import { Context } from '../context.js';
+import { flattenErrors, flattenOperationResult, MergedOperationResult } from './operation-errors.js';
+import { Operation } from './operations.js';
 import {
   FeeConsumingOperation,
   ForgedBytes,
   GasConsumingOperation,
   RPCTransferOperation,
   StorageConsumingOperation,
-} from './types';
+} from './types.js';
 
 /**
  * @description Transaction operation provides utility functions to fetch a newly issued transaction

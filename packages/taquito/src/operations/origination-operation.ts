@@ -1,10 +1,10 @@
 import { OperationContentsAndResult, OperationContentsAndResultOrigination } from '@exodus/taquito-rpc';
 import { BigNumber } from 'bignumber.js';
-import { Context } from '../context';
-import { DefaultContractType } from '../contract/contract';
-import { RpcContractProvider } from '../contract/rpc-contract-provider';
-import { OriginationOperationError } from './operation-errors';
-import { Operation } from './operations';
+import { Context } from '../context.js';
+import { DefaultContractType } from '../contract/contract.js';
+import { RpcContractProvider } from '../contract/rpc-contract-provider.js';
+import { OriginationOperationError } from './operation-errors.js';
+import { Operation } from './operations.js';
 import {
   FeeConsumingOperation,
   ForgedBytes,
@@ -12,7 +12,7 @@ import {
   hasMetadataWithResult,
   RPCOriginationOperation,
   StorageConsumingOperation,
-} from './types';
+} from './types.js';
 
 /**
  * @description Origination operation provide utility function to fetch newly originated contract

@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { defaultConfigConfirmation } from '../../src/context';
-import { DelegateOperation } from '../../src/operations/delegate-operation';
-import { ForgedBytes } from '../../src/operations/types';
-import { RevealOperationBuilder, DelegationOperationBuilder } from '../helpers';
+import { defaultConfigConfirmation } from '../../src/context.js';
+import { DelegateOperation } from '../../src/operations/delegate-operation.js';
+import { ForgedBytes } from '../../src/operations/types.js';
+import { RevealOperationBuilder, DelegationOperationBuilder } from '../helpers.js';
 
 describe('Delegation operation', () => {
   let fakeContext: any;

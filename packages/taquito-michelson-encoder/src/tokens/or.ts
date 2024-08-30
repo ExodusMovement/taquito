@@ -1,5 +1,5 @@
-import { OrTokenSchema } from '../schema/types';
-import { Token, TokenFactory, Semantic, ComparableToken, SemanticEncoding } from './token';
+import { OrTokenSchema } from '../schema/types.js';
+import { Token, TokenFactory, Semantic, ComparableToken, SemanticEncoding } from './token.js';
 
 /**
  *  @category Error

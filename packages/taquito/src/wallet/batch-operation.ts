@@ -5,10 +5,10 @@ import {
   OpKind,
 } from '@exodus/taquito-rpc';
 import { Observable } from '@exodus/rxjs';
-import { BATCH_KINDS } from '../batch/rpc-batch-provider';
-import { Context } from '../context';
-import { hasMetadataWithResult } from '../operations/types';
-import { WalletOperation, OperationStatus } from './operation';
+import { BATCH_KINDS } from '../batch/rpc-batch-provider.js';
+import { Context } from '../context.js';
+import { hasMetadataWithResult } from '../operations/types.js';
+import { WalletOperation, OperationStatus } from './operation.js';
 
 export class BatchWalletOperation extends WalletOperation {
   constructor(

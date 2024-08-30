@@ -5,8 +5,8 @@ import {
   ForgeResponse,
   ProtocolsHash,
 } from '@exodus/taquito-local-forging';
-import { Protocols } from '../constants';
-import { Context } from '../context';
+import { Protocols } from '../constants.js';
+import { Context } from '../context.js';
 
 export class TaquitoLocalForger implements AsyncForger {
   constructor(private context: Context) {}

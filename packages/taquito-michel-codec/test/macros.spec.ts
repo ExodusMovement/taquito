@@ -1,6 +1,6 @@
-import { Parser, ParserOptions } from '../src/micheline-parser';
-import { emitMicheline } from '../src/micheline-emitter';
-import { Protocol } from '../src/michelson-types';
+import { Parser, ParserOptions } from '../src/micheline-parser.js';
+import { emitMicheline } from '../src/micheline-emitter.js';
+import { Protocol } from '../src/michelson-types.js';
 
 const parserOptions: ParserOptions = {
   expandMacros: true,

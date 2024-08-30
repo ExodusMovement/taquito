@@ -1,5 +1,5 @@
-import { ConstantTokenSchema } from '../schema/types';
-import { Semantic, SemanticEncoding, Token, TokenFactory, TokenValidationError } from './token';
+import { ConstantTokenSchema } from '../schema/types.js';
+import { Semantic, SemanticEncoding, Token, TokenFactory, TokenValidationError } from './token.js';
 
 export class GlobalConstantEncodingError extends TokenValidationError {
   name = 'GlobalConstantEncodingError';

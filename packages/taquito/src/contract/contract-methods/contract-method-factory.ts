@@ -1,11 +1,11 @@
-import { Wallet } from '../../wallet';
-import { ContractProvider } from '../../contract';
-import { ContractMethodObject } from './contract-method-object-param';
-import { ContractMethod } from './contract-method-flat-param';
+import { Wallet } from '../../wallet/index.js';
+import { ContractProvider } from '../../contract/index.js';
+import { ContractMethodObject } from './contract-method-object-param.js';
+import { ContractMethod } from './contract-method-flat-param.js';
 import { ParameterSchema, ViewSchema } from '@exodus/taquito-michelson-encoder';
 import { RpcClientInterface, MichelsonV1Expression } from '@exodus/taquito-rpc';
-import { OnChainView } from './contract-on-chain-view';
-import { TzReadProvider } from '../../read-provider/interface';
+import { OnChainView } from './contract-on-chain-view.js';
+import { TzReadProvider } from '../../read-provider/interface.js';
 
 export class ContractMethodFactory<T extends ContractProvider | Wallet> {
   constructor(private provider: T, private contractAddress: string) {}

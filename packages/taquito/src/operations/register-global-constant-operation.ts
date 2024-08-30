@@ -3,15 +3,15 @@ import {
   OperationContentsAndResultRegisterGlobalConstant,
 } from '@exodus/taquito-rpc';
 import { BigNumber } from 'bignumber.js';
-import { Context } from '../context';
-import { Operation } from './operations';
+import { Context } from '../context.js';
+import { Operation } from './operations.js';
 import {
   FeeConsumingOperation,
   ForgedBytes,
   GasConsumingOperation,
   RPCRegisterGlobalConstantOperation,
   StorageConsumingOperation,
-} from './types';
+} from './types.js';
 
 /**
  * @description RegisterGlobalConstantOperation provides utility functions to fetch a newly issued operation of kind register_global_constant

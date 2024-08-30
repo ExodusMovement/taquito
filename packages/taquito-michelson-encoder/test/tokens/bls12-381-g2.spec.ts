@@ -1,4 +1,4 @@
-import { Bls12381g2ValidationError, Bls12381g2Token } from '../../src/tokens/bls12-381-g2';
+import { Bls12381g2ValidationError, Bls12381g2Token } from '../../src/tokens/bls12-381-g2.js';
 
 describe('Bls12-381-g2 token', () => {
   let token: Bls12381g2Token;

@@ -1,5 +1,5 @@
-import { createToken } from '../../src/tokens/createToken';
-import { PairToken } from '../../src/tokens/pair';
+import { createToken } from '../../src/tokens/createToken.js';
+import { PairToken } from '../../src/tokens/pair.js';
 
 describe('Pair token', () => {
   const token = createToken(

@@ -1,4 +1,4 @@
-import { ECDSA, Hard } from "../src/derivation-tools";
+import { ECDSA, Hard } from '../src/derivation-tools/index.js';
 import * as Bip39 from 'bip39'
 
 interface TestKeyData {

@@ -1,6 +1,6 @@
 import { defer } from '@exodus/rxjs';
 import { rxSandbox } from '@exodus/rx-sandbox';
-import { ObservableSubscription } from '../../src/subscribe/observable-subscription';
+import { ObservableSubscription } from '../../src/subscribe/observable-subscription.js';
 
 describe('Observable subscription test', () => {
   it('the observable emits 3 data', async () => {

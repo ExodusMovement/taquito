@@ -1,6 +1,6 @@
-import { params } from '../../data/proto005/unit_contract';
-import { ParameterSchema } from '../../src/schema/parameter';
-import { UnitValue } from '../../src/taquito-michelson-encoder';
+import { params } from '../../data/proto005/unit_contract.js';
+import { ParameterSchema } from '../../src/schema/parameter.js';
+import { UnitValue } from '../../src/taquito-michelson-encoder.js';
 
 describe('Contract with unit encoding', () => {
   it('Should encode parameter properly', () => {

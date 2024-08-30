@@ -9,7 +9,7 @@ import {
   validateOperation,
   validateProtocol,
   validateBlock,
-} from '../src/validators';
+} from '../src/validators.js';
 
 describe('validateAddress', () => {
   it('Validate address properly', () => {

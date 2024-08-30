@@ -9,7 +9,7 @@ import {
   defaultRPCOptions,
   RpcClientInterface,
   RPCOptions,
-} from './rpc-client-interface';
+} from './rpc-client-interface.js';
 import {
   BakingRightsQueryArguments,
   BakingRightsResponse,
@@ -62,8 +62,8 @@ import {
   PendingOperationsQueryArguments,
   PendingOperations,
   OriginationProofParams,
-} from './types';
-import { castToBigNumber } from './utils/utils';
+} from './types.js';
+import { castToBigNumber } from './utils/utils.js';
 import {
   InvalidAddressError,
   validateAddress,
@@ -71,22 +71,25 @@ import {
   ValidationResult,
 } from '@exodus/taquito-utils';
 
-export { castToBigNumber } from './utils/utils';
+export { castToBigNumber } from './utils/utils.js';
 
 export {
-  RPCOptions,
   defaultChain,
   defaultRPCOptions,
+} from './rpc-client-interface.js';
+
+export type {
+  RPCOptions,
   RpcClientInterface,
-} from './rpc-client-interface';
+}
 
-export { RpcClientCache } from './rpc-client-modules/rpc-cache';
+export { RpcClientCache } from './rpc-client-modules/rpc-cache.js';
 
-export * from './types';
+export * from './types.js';
 
-export { OpKind } from './opkind';
+export { OpKind } from './opkind.js';
 
-export { VERSION } from './version';
+export { VERSION } from './version.js';
 
 /***
  * @description RpcClient allows interaction with Tezos network through an rpc node

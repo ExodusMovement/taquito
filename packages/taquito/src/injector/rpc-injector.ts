@@ -1,6 +1,6 @@
-import { Injector } from './interface';
-import { Context } from '../context';
-import { formatErrorMessage } from './helper';
+import { Injector } from './interface.js';
+import { Context } from '../context.js';
+import { formatErrorMessage } from './helper.js';
 import { HttpResponseError } from '@exodus/taquito-http-utils';
 
 export class RpcInjector implements Injector {

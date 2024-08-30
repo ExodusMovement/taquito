@@ -1,7 +1,7 @@
 // KT1R3uoZ6W1ZxEwzqtv75Ro7DhVY6UAcxuK2 on mainnet
 
-import { params as params9 } from '../data/sample9';
-import { ParameterSchema } from '../src/schema/parameter';
+import { params as params9 } from '../data/sample9.js';
+import { ParameterSchema } from '../src/schema/parameter.js';
 
 describe('Schema test', () => {
   it('Should parse storage properly', () => {

@@ -1,8 +1,8 @@
-import { ForgedBytes } from '../../src/operations/types';
+import { ForgedBytes } from '../../src/operations/types.js';
 import { OperationContentsAndResult } from '@exodus/taquito-rpc';
-import { defaultConfigConfirmation } from '../../src/context';
-import { RevealOperationBuilder, TxRollupOriginationOperationBuilder } from '../helpers';
-import { TxRollupOriginationOperation } from '../../src/operations/tx-rollup-origination-operation';
+import { defaultConfigConfirmation } from '../../src/context.js';
+import { RevealOperationBuilder, TxRollupOriginationOperationBuilder } from '../helpers.js';
+import { TxRollupOriginationOperation } from '../../src/operations/tx-rollup-origination-operation.js';
 
 describe('TxRollupOriginationOperation', () => {
   let fakeContext: any;

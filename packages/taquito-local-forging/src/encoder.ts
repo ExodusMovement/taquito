@@ -26,9 +26,9 @@ import {
   tz1Encoder,
   valueParameterEncoder,
   zarithEncoder,
-} from './codec';
-import { CODEC } from './constants';
-import { scriptEncoder } from './michelson/codec';
+} from './codec.js';
+import { CODEC } from './constants.js';
+import { scriptEncoder } from './michelson/codec.js';
 import {
   ActivationSchema,
   BallotSchema,
@@ -53,7 +53,7 @@ import {
   SmartRollupOriginateSchema,
   SmartRollupExecuteOutboxMessageSchema,
   SmartRollupAddMessagesSchema,
-} from './schema/operation';
+} from './schema/operation.js';
 
 export type Encoder<T> = (val: T) => string;
 

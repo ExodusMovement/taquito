@@ -1,9 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 import { inspect } from 'util';
-import { Contract, ContractOptions } from '../src/michelson-contract';
-import { Protocol } from '../src/michelson-types';
-import { MichelsonError } from '../src/utils';
+import { Contract, ContractOptions } from '../src/michelson-contract.js';
+import { Protocol } from '../src/michelson-types.js';
+import { MichelsonError } from '../src/utils.js';
 
 const contracts: {
   [group: string]: string[];
@@ -430,7 +430,7 @@ describe('PtLimaPtL', () => {
             protocol: Protocol.PtLimaPtL,
           };
 
-          const filename = path.resolve(__dirname, 'contracts_015', group, contract);
+          const filename = path.resolve(import.meta.dirname, 'contracts_015', group, contract);
           const src = fs.readFileSync(filename).toString();
           if (group === 'ill_typed') {
             expect(() => Contract.parse(src, options)).toThrow();

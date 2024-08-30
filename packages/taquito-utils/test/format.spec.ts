@@ -1,6 +1,6 @@
-import { format } from '../src/format';
+import { format } from '../src/format.js';
 import BigNumber from 'bignumber.js';
-import { bytes2Char, char2Bytes } from '../src/taquito-utils';
+import { bytes2Char, char2Bytes } from '../src/taquito-utils.js';
 
 describe('Format', () => {
   it('Should convert mutez to tz', () => {

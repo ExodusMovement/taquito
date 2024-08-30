@@ -1,5 +1,5 @@
-import { SaplingTransactionDeprecatedTokenSchema } from '../schema/types';
-import { SemanticEncoding, Token, TokenFactory, TokenValidationError } from './token';
+import { SaplingTransactionDeprecatedTokenSchema } from '../schema/types.js';
+import { SemanticEncoding, Token, TokenFactory, TokenValidationError } from './token.js';
 
 export class SaplingTransactionDeprecatedValidationError extends TokenValidationError {
   name = 'SaplingTransactionDeprecatedValidationError';

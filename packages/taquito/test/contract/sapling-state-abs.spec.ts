@@ -1,5 +1,5 @@
 import BigNumber from 'bignumber.js';
-import { SaplingStateAbstraction } from '../../src/contract/sapling-state-abstraction';
+import { SaplingStateAbstraction } from '../../src/contract/sapling-state-abstraction.js';
 
 /**
  * SaplingStateAbstraction test

@@ -4,9 +4,9 @@ import {
   Token,
   TokenFactory,
   TokenValidationError,
-} from './token';
+} from './token.js';
 import { validateSignature, ValidationResult } from '@exodus/taquito-utils';
-import { BaseTokenSchema } from '../schema/types';
+import { BaseTokenSchema } from '../schema/types.js';
 
 export class SignatureValidationError extends TokenValidationError {
   name = 'SignatureValidationError';

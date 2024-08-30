@@ -1,9 +1,9 @@
 import { Schema, Semantic } from '@exodus/taquito-michelson-encoder';
-import { BigMapAbstraction } from './big-map';
-import { ContractProvider } from './interface';
+import { BigMapAbstraction } from './big-map.js';
+import { ContractProvider } from './interface.js';
 import BigNumber from 'bignumber.js';
 import { MichelsonV1Expression } from '@exodus/taquito-rpc';
-import { SaplingStateAbstraction } from './sapling-state-abstraction';
+import { SaplingStateAbstraction } from './sapling-state-abstraction.js';
 
 // Override the default michelson encoder semantic to provide richer abstraction over storage properties
 export const smartContractAbstractionSemantic: (p: ContractProvider) => Semantic = (

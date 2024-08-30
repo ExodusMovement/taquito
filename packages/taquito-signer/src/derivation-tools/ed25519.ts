@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-this-alias */
 import createHmac from "create-hmac"
-import * as nacl from "tweetnacl";
-import { ExtendedPrivateKey, Hard } from './index';
-import { parseHex } from './utils';
-import { InvalidDerivationPathError, InvalidSeedLengthError } from '../errors';
+import nacl from "tweetnacl";
+import { ExtendedPrivateKey, Hard } from './index.js';
+import { parseHex } from './utils.js';
+import { InvalidDerivationPathError, InvalidSeedLengthError } from '../errors.js';
 
 // MinSeedSize is the minimal allowed seed byte length
 const minSeedSize = 16;

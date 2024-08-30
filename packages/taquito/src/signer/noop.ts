@@ -1,4 +1,4 @@
-import { Signer } from './interface';
+import { Signer } from './interface.js';
 
 /**
  *  @category Error

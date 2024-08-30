@@ -1,5 +1,5 @@
-import { Schema } from '../src/schema/storage';
-import { optimizedEncoding } from './helpers';
+import { Schema } from '../src/schema/storage.js';
+import { optimizedEncoding } from './helpers.js';
 
 describe('Exact reverse for Schema.Execute', () => {
   describe('Schema.Encode should have a flag to convert strings to binary', () => {

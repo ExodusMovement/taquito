@@ -1,5 +1,5 @@
-import { InvalidMessageError, InvalidPublicKeyError, InvalidSignatureError } from '../src/errors';
-import { verifySignature } from '../src/verify-signature';
+import { InvalidMessageError, InvalidPublicKeyError, InvalidSignatureError } from '../src/errors.js';
+import { verifySignature } from '../src/verify-signature.js';
 
 describe('utils signature validation tests', () => {
   describe('SECP256K1 curve', () => {

@@ -2,21 +2,21 @@
  * @packageDocumentation
  * @module @exodus/taquito-signer
  */
-import * as nacl from "tweetnacl";
+import nacl from "tweetnacl";
 import blake from '@exodus/blakejs';
 import { hex2buf, mergebuf, b58cencode, prefix, InvalidKeyError } from '@exodus/taquito-utils';
 import toBuffer from 'typedarray-to-buffer';
-import { Tz1 } from './ed-key';
-import { Tz2, ECKey, Tz3 } from './ec-key';
+import { Tz1 } from './ed-key.js';
+import { Tz2, ECKey, Tz3 } from './ec-key.js';
 import pbkdf2 from 'pbkdf2';
 import * as Bip39 from 'bip39';
-import { Curves, generateSecretKey } from './helpers';
-import { InvalidMnemonicError } from './errors';
+import { Curves, generateSecretKey } from './helpers.js';
+import { InvalidMnemonicError } from './errors.js';
 
-export * from './import-key';
-export { VERSION } from './version';
-export * from './derivation-tools';
-export * from './helpers';
+export * from './import-key.js';
+export { VERSION } from './version.js';
+export * from './derivation-tools/index.js';
+export * from './helpers.js';
 
 /**
  *  @category Error

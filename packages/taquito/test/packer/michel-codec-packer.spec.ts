@@ -1,4 +1,4 @@
-import { MichelCodecPacker } from '../../src/packer/michel-codec-packer';
+import { MichelCodecPacker } from '../../src/packer/michel-codec-packer.js';
 
 describe('MichelCodecPacker test', () => {
   it('is instantiable', () => {

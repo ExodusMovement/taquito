@@ -1,4 +1,4 @@
-import { Estimate } from '../../src/estimate/estimate';
+import { Estimate } from '../../src/estimate/estimate.js';
 
 describe('Estimate', () => {
   it('Calculate fees in mutez properly for Carthagenet', () => {

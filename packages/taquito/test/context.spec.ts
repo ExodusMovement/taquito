@@ -1,6 +1,6 @@
 import { RpcClient } from '@exodus/taquito-rpc';
-import { Protocols } from '../src/constants';
-import { Context } from '../src/context';
+import { Protocols } from '../src/constants.js';
+import { Context } from '../src/context.js';
 
 describe('Configurations for the confirmation methods and streamer', () => {
   let mockRpcClient: any;

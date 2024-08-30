@@ -1,4 +1,4 @@
-import { AddressToken, AddressValidationError } from '../../src/tokens/comparable/address';
+import { AddressToken, AddressValidationError } from '../../src/tokens/comparable/address.js';
 
 describe('Address token', () => {
   let token: AddressToken;

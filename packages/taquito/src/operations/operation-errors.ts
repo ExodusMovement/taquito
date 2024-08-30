@@ -16,7 +16,7 @@ import {
   hasMetadata,
   hasMetadataWithInternalOperationResult,
   hasMetadataWithResult,
-} from './types';
+} from './types.js';
 
 export interface TezosOperationErrorWithMessage extends TezosGenericOperationError {
   with: MichelsonV1ExpressionBase;

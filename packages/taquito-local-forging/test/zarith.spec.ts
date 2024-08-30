@@ -1,7 +1,7 @@
-import { zarithDecoder, zarithEncoder } from '../src/codec';
-import { fromHexString } from './utils';
-import { Uint8ArrayConsumer } from '../src/uint8array-consumer';
-import { concat } from '../src/utils';
+import { zarithDecoder, zarithEncoder } from '../src/codec.js';
+import { fromHexString } from './utils.js';
+import { Uint8ArrayConsumer } from '../src/uint8array-consumer.js';
+import { concat } from '../src/utils.js';
 
 describe('Zarith', () => {
   it('Encode/Decode properly', () => {

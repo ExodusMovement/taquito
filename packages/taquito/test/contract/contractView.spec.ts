@@ -1,9 +1,9 @@
-import { RpcContractProvider } from '../../src/contract/rpc-contract-provider';
-import { tokenInit, tokenCode } from './data';
-import { Context } from '../../src/context';
-import { ContractView } from '../../src/contract/contract';
-import { InvalidParameterError } from '../../src/contract/errors';
-import { ChainIds } from '../../src/constants';
+import { RpcContractProvider } from '../../src/contract/rpc-contract-provider.js';
+import { tokenInit, tokenCode } from './data.js';
+import { Context } from '../../src/context.js';
+import { ContractView } from '../../src/contract/contract.js';
+import { InvalidParameterError } from '../../src/contract/errors.js';
+import { ChainIds } from '../../src/constants.js';
 
 describe('ContractView test', () => {
   let rpcContractProvider: RpcContractProvider;

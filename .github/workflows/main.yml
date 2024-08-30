@@ -13,17 +13,13 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix:
-        node:
-          - 'lts/gallium'
-          - 'lts/hydrogen'
     steps:
     - uses: actions/checkout@v3
     - name: Authenticate with private NPM package
       run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
     - uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node }}
+        node-version-file: '.nvmrc'
     - run: npm ci
     - run: npm run build
     - run: npm run lint

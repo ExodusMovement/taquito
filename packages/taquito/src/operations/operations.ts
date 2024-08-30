@@ -15,12 +15,12 @@ import {
   switchMap,
   tap,
   timeoutWith,
-} from '@exodus/rxjs/operators';
-import { Context } from '../context';
-import { ForgedBytes, hasMetadataWithResult } from './types';
+} from '@exodus/rxjs/operators/index.js';
+import { Context } from '../context.js';
+import { ForgedBytes, hasMetadataWithResult } from './types.js';
 import { validateOperation, ValidationResult, InvalidOperationHashError } from '@exodus/taquito-utils';
-import { createObservableFromSubscription } from '../subscribe/create-observable-from-subscription';
-import { InvalidConfirmationCountError } from '../error';
+import { createObservableFromSubscription } from '../subscribe/create-observable-from-subscription.js';
+import { InvalidConfirmationCountError } from '../error.js';
 
 interface PollingConfig {
   timeout: number;

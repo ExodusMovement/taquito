@@ -1,5 +1,5 @@
-import { BaseTokenSchema } from '../schema/types';
-import { SemanticEncoding, Token, TokenFactory, TokenValidationError } from './token';
+import { BaseTokenSchema } from '../schema/types.js';
+import { SemanticEncoding, Token, TokenFactory, TokenValidationError } from './token.js';
 
 export class ChestKeyValidationError extends TokenValidationError {
   name = 'ChestKeyValidationError';

@@ -1,9 +1,9 @@
-import { defaultConfigConfirmation } from '../../src/context';
-import { OriginationOperation } from '../../src/operations/origination-operation';
-import { ForgedBytes } from '../../src/operations/types';
+import { defaultConfigConfirmation } from '../../src/context.js';
+import { OriginationOperation } from '../../src/operations/origination-operation.js';
+import { ForgedBytes } from '../../src/operations/types.js';
 import { OperationContentsAndResult } from '@exodus/taquito-rpc';
-import { OriginationOperationBuilder, RevealOperationBuilder } from '../helpers';
-import { PollingSubscribeProvider } from '../../src/subscribe/polling-subcribe-provider';
+import { OriginationOperationBuilder, RevealOperationBuilder } from '../helpers.js';
+import { PollingSubscribeProvider } from '../../src/subscribe/polling-subcribe-provider.js';
 
 describe('Origination operation', () => {
   let fakeContext: any;

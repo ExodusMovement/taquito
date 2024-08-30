@@ -1,5 +1,5 @@
-import { getAllowance, getBalance, getTotalSupply } from '../data/sample16';
-import { ParameterSchema } from '../src/schema/parameter';
+import { getAllowance, getBalance, getTotalSupply } from '../data/sample16.js';
+import { ParameterSchema } from '../src/schema/parameter.js';
 
 describe('Schema test when calling contract with complex object as param and null value', () => {
   it('Should encode parameter schema properly', () => {

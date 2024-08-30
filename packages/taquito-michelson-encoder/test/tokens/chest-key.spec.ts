@@ -1,4 +1,4 @@
-import { ChestKeyValidationError, ChestKeyToken } from '../../src/tokens/chest-key';
+import { ChestKeyValidationError, ChestKeyToken } from '../../src/tokens/chest-key.js';
 
 describe('ChestKey token', () => {
     let token: ChestKeyToken;

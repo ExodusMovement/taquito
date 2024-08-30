@@ -1,6 +1,6 @@
-import { Ed25519, Hard } from "../src/derivation-tools";
+import { Ed25519, Hard } from '../src/derivation-tools/index.js';
 import * as Bip39 from 'bip39'
-import { InvalidSeedLengthError } from "../src/errors";
+import { InvalidSeedLengthError } from '../src/errors.js';
 
 interface TestKeyData {
     path: number[];

@@ -1,8 +1,8 @@
-import { Schema } from '../src/schema/storage';
-import { storage, rpcContractResponse } from '../data/sample20';
+import { Schema } from '../src/schema/storage.js';
+import { storage, rpcContractResponse } from '../data/sample20.js';
 import BigNumber from 'bignumber.js';
-import { MichelsonMap } from '../src/michelson-map';
-import { expectMichelsonMap } from './utils';
+import { MichelsonMap } from '../src/michelson-map.js';
+import { expectMichelsonMap } from './utils.js';
 
 describe('Contract test where the value of the map "selling" is a big_map', () => {
   it('Test storage schema', () => {

@@ -1,5 +1,5 @@
-import { OrToken } from '../../src/tokens/or';
-import { createToken } from '../../src/tokens/createToken';
+import { OrToken } from '../../src/tokens/or.js';
+import { createToken } from '../../src/tokens/createToken.js';
 import BigNumber from 'bignumber.js';
 
 describe('Or token', () => {

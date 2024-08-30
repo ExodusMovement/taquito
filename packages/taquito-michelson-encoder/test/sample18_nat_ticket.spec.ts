@@ -1,6 +1,6 @@
 import BigNumber from 'bignumber.js';
-import { bigMapValue, rpcContractResponse, storage } from '../data/sample18_ticket';
-import { Schema } from '../src/schema/storage';
+import { bigMapValue, rpcContractResponse, storage } from '../data/sample18_ticket.js';
+import { Schema } from '../src/schema/storage.js';
 
 describe('Schema with a ticket of type nat inside a big map %tickets in storage', () => {
     // key of the big map is nat and value is ticket of type nat

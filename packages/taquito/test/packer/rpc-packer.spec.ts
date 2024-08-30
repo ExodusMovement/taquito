@@ -1,5 +1,5 @@
-import { RpcPacker } from '../../src/packer/rpc-packer';
-import { Context } from '../../src/context';
+import { RpcPacker } from '../../src/packer/rpc-packer.js';
+import { Context } from '../../src/context.js';
 
 describe('RpcPacker test', () => {
     it('is instantiable', () => {

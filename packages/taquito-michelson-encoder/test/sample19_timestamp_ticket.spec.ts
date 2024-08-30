@@ -1,7 +1,7 @@
 import BigNumber from 'bignumber.js';
-import { bigMapValue, rpcContractResponse, storage } from '../data/sample19_timestamp_ticket';
-import { Schema } from '../src/schema/storage';
-import { expectMichelsonMap } from './utils';
+import { bigMapValue, rpcContractResponse, storage } from '../data/sample19_timestamp_ticket.js';
+import { Schema } from '../src/schema/storage.js';
+import { expectMichelsonMap } from './utils.js';
 
 describe('Schema with a ticket of type timestamp inside a big map %tickets in storage', () => {
     // key of the big map is address and value is ticket of type timestamp

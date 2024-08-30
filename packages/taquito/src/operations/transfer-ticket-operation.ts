@@ -4,15 +4,15 @@ import {
   OpKind,
 } from '@exodus/taquito-rpc';
 import { BigNumber } from 'bignumber.js';
-import { Context } from '../context';
-import { Operation } from '../operations';
+import { Context } from '../context.js';
+import { Operation } from '../operations/index.js';
 import {
   GasConsumingOperation,
   StorageConsumingOperation,
   FeeConsumingOperation,
   ForgedBytes,
   RPCTransferTicketOperation,
-} from './types';
+} from './types.js';
 
 /**
  *

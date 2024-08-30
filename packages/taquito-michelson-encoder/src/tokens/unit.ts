@@ -1,6 +1,6 @@
-import { ComparableToken, SemanticEncoding, Token, TokenFactory } from './token';
-import { BaseTokenSchema } from '../schema/types';
-import { UnitValue } from '../taquito-michelson-encoder';
+import { ComparableToken, SemanticEncoding, Token, TokenFactory } from './token.js';
+import { BaseTokenSchema } from '../schema/types.js';
+import { UnitValue } from '../taquito-michelson-encoder.js';
 
 export class UnitToken extends ComparableToken {
   static prim: 'unit' = 'unit' as const;

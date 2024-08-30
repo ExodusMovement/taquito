@@ -1,12 +1,12 @@
 import { PreapplyResponse, RPCRunOperationParam, OpKind, ConstantsResponse } from '@exodus/taquito-rpc';
 import BigNumber from 'bignumber.js';
-import { DEFAULT_FEE, DEFAULT_GAS_LIMIT, DEFAULT_STORAGE_LIMIT } from '../constants';
-import { OperationEmitter } from '../operations/operation-emitter';
+import { DEFAULT_FEE, DEFAULT_GAS_LIMIT, DEFAULT_STORAGE_LIMIT } from '../constants.js';
+import { OperationEmitter } from '../operations/operation-emitter.js';
 import {
   flattenErrors,
   flattenOperationResult,
   TezosOperationError,
-} from '../operations/operation-errors';
+} from '../operations/operation-errors.js';
 import {
   DelegateParams,
   isOpWithFee,
@@ -25,9 +25,9 @@ import {
   UpdateConsensusKeyParams,
   SmartRollupAddMessagesParams,
   SmartRollupOriginateParams,
-} from '../operations/types';
-import { Estimate, EstimateProperties } from './estimate';
-import { EstimationProvider } from '../estimate/estimate-provider-interface';
+} from '../operations/types.js';
+import { Estimate, EstimateProperties } from './estimate.js';
+import { EstimationProvider } from '../estimate/estimate-provider-interface.js';
 import {
   createOriginationOperation,
   createRegisterDelegateOperation,
@@ -42,15 +42,15 @@ import {
   createUpdateConsensusKeyOperation,
   createSmartRollupAddMessagesOperation,
   createSmartRollupOriginateOperation,
-} from '../contract/prepare';
+} from '../contract/prepare.js';
 import {
   validateAddress,
   InvalidAddressError,
   ValidationResult,
   InvalidOperationKindError,
 } from '@exodus/taquito-utils';
-import { RevealEstimateError } from './error';
-import { ContractMethod, ContractMethodObject, ContractProvider } from '../contract';
+import { RevealEstimateError } from './error.js';
+import { ContractMethod, ContractMethodObject, ContractProvider } from '../contract/index.js';
 
 interface Limits {
   fee?: number;

@@ -1,4 +1,4 @@
-import { Schema } from '../src/schema/storage';
+import { Schema } from '../src/schema/storage.js';
 
 describe(`Schema.findToken('constant') test`, () => {
 

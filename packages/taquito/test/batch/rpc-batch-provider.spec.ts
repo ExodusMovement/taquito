@@ -1,8 +1,8 @@
 import { PvmKind } from '@exodus/taquito-rpc';
-import { OperationBatch } from '../../src/batch/rpc-batch-provider';
-import { Context } from '../../src/context';
-import { Estimate } from '../../src/estimate/estimate';
-import { OpKind, ParamsWithKind } from '../../src/operations/types';
+import { OperationBatch } from '../../src/batch/rpc-batch-provider.js';
+import { Context } from '../../src/context.js';
+import { Estimate } from '../../src/estimate/estimate.js';
+import { OpKind, ParamsWithKind } from '../../src/operations/types.js';
 
 /**
  * OperationBatch test

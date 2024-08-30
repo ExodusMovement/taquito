@@ -1,14 +1,14 @@
-import { TezosToolkit, SetProviderOptions, Wallet, RpcPacker } from '../src/taquito';
-import { RpcTzProvider } from '../src/tz/rpc-tz-provider';
-import { RpcContractProvider } from '../src/contract/rpc-contract-provider';
-import { PrepareProvider } from '../src/prepare/prepare-provider';
-import { PollingSubscribeProvider } from '../src/subscribe/polling-subcribe-provider';
-import { NoopSigner } from '../src/signer/noop';
+import { TezosToolkit, SetProviderOptions, Wallet, RpcPacker } from '../src/taquito.js';
+import { RpcTzProvider } from '../src/tz/rpc-tz-provider.js';
+import { RpcContractProvider } from '../src/contract/rpc-contract-provider.js';
+import { PrepareProvider } from '../src/prepare/prepare-provider.js';
+import { PollingSubscribeProvider } from '../src/subscribe/polling-subcribe-provider.js';
+import { NoopSigner } from '../src/signer/noop.js';
 import { RpcClient } from '@exodus/taquito-rpc';
-import { RPCEstimateProvider } from '../src/estimate/rpc-estimate-provider';
-import { OperationFactory } from '../src/wallet/operation-factory';
-import { NoopGlobalConstantsProvider } from '../src/global-constants/noop-global-constants-provider';
-import { TaquitoLocalForger } from '../src/forger/taquito-local-forger';
+import { RPCEstimateProvider } from '../src/estimate/rpc-estimate-provider.js';
+import { OperationFactory } from '../src/wallet/operation-factory.js';
+import { NoopGlobalConstantsProvider } from '../src/global-constants/noop-global-constants-provider.js';
+import { TaquitoLocalForger } from '../src/forger/taquito-local-forger.js';
 
 describe('TezosToolkit test', () => {
   let mockRpcClient: any;

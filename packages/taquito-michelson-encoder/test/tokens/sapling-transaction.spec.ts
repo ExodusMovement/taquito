@@ -1,7 +1,7 @@
 import {
   SaplingTransactionToken,
   SaplingTransactionValidationError,
-} from '../../src/tokens/sapling-transaction';
+} from '../../src/tokens/sapling-transaction.js';
 
 describe('Sapling Transaction token', () => {
   let token: SaplingTransactionToken;

@@ -1,5 +1,5 @@
-import { OriginateParams } from '../../src/operations/types';
-import { Context, MichelCodecParser, Protocols, InvalidCodeParameter } from '../../src/taquito';
+import { OriginateParams } from '../../src/operations/types.js';
+import { Context, MichelCodecParser, Protocols, InvalidCodeParameter } from '../../src/taquito.js';
 
 describe('MichelCodec parser', () => {
   const mockRpcClient = {

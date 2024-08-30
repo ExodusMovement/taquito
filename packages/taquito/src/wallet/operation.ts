@@ -13,12 +13,12 @@ import {
   switchMap,
   takeWhile,
   tap,
-} from '@exodus/rxjs/operators';
-import { Context } from '../context';
-import { Receipt, receiptFromOperation } from './receipt';
+} from '@exodus/rxjs/operators/index.js';
+import { Context } from '../context.js';
+import { Receipt, receiptFromOperation } from './receipt.js';
 import { validateOperation, ValidationResult, InvalidOperationHashError } from '@exodus/taquito-utils';
-import { BlockIdentifier } from '../read-provider/interface';
-import { InvalidConfirmationCountError, ConfirmationUndefinedError } from '../error';
+import { BlockIdentifier } from '../read-provider/interface.js';
+import { InvalidConfirmationCountError, ConfirmationUndefinedError } from '../error.js';
 
 export type OperationStatus = 'pending' | 'unknown' | OperationResultStatusEnum;
 

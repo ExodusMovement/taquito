@@ -1,4 +1,4 @@
-import { HttpBackend } from '../src/taquito-http-utils';
+import { HttpBackend } from '../src/taquito-http-utils.js';
 
 beforeAll(() => jest.setTimeout(20000))
 

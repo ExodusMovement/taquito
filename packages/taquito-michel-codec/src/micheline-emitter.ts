@@ -1,4 +1,4 @@
-import { Expr, Prim, sourceReference } from './micheline';
+import { Expr, Prim, sourceReference } from './micheline.js';
 
 export interface FormatOptions {
   /**

@@ -1,6 +1,6 @@
-import { Prim, Expr, IntLiteral } from './micheline';
-import { DefaultProtocol, Protocol, ProtocolOptions, ProtoInferiorTo } from './michelson-types';
-import { Tuple, NoArgs, ReqArgs, NoAnnots } from './utils';
+import { Prim, Expr, IntLiteral } from './micheline.js';
+import { DefaultProtocol, Protocol, ProtocolOptions, ProtoInferiorTo } from './michelson-types.js';
+import { Tuple, NoArgs, ReqArgs, NoAnnots } from './utils.js';
 
 /**
  *  @category Error

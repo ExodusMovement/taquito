@@ -1,4 +1,4 @@
-import { prefix, prefixLength, Prefix } from './constants';
+import { prefix, prefixLength, Prefix } from './constants.js';
 
 import bs58check from 'bs58check';
 

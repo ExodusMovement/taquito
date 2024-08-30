@@ -1,7 +1,7 @@
 import { BigNumber } from 'bignumber.js';
-import { ParameterSchema, UnitValue } from '../../src/taquito-michelson-encoder';
-import { createToken } from '../../src/tokens/createToken';
-import { TicketToken, EncodeTicketError } from '../../src/tokens/ticket';
+import { ParameterSchema, UnitValue } from '../../src/taquito-michelson-encoder.js';
+import { createToken } from '../../src/tokens/createToken.js';
+import { TicketToken, EncodeTicketError } from '../../src/tokens/ticket.js';
 
 describe('Ticket token', () => {
   // A ticket used to authenticate information of type comparable (cty)

@@ -1,5 +1,5 @@
 import BigNumber from 'bignumber.js';
-import { Schema } from '../src/schema/storage';
+import { Schema } from '../src/schema/storage.js';
 
 describe('Ticket token type structure', () => {
   it('Should extract correct schema for token type ticket', () => {

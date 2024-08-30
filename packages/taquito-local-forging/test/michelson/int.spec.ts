@@ -1,8 +1,8 @@
-import { intEncoder, intDecoder } from '../../src/michelson/codec';
+import { intEncoder, intDecoder } from '../../src/michelson/codec.js';
 
-import { Uint8ArrayConsumer } from '../../src/uint8array-consumer';
+import { Uint8ArrayConsumer } from '../../src/uint8array-consumer.js';
 
-import { fromHexString } from '../utils';
+import { fromHexString } from '../utils.js';
 import BigNumber from 'bignumber.js';
 
 describe('Int', () => {

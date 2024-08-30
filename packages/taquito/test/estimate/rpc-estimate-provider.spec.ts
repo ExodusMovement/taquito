@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Context } from '../../src/context';
-import { RPCEstimateProvider } from '../../src/estimate/rpc-estimate-provider';
-import { miStr, ligoSample, entrypointsGenericMultisig } from '../contract/data';
+import { Context } from '../../src/context.js';
+import { RPCEstimateProvider } from '../../src/estimate/rpc-estimate-provider.js';
+import { miStr, ligoSample, entrypointsGenericMultisig } from '../contract/data.js';
 import BigNumber from 'bignumber.js';
 import {
   preapplyResultFrom,
@@ -25,14 +25,14 @@ import {
   updateConsensusKeyNoReveal,
   smartRollupAddMessagesNoReveal,
   smartRollupOriginateWithReveal,
-} from '../contract/helper';
+} from '../contract/helper.js';
 import { OpKind, PvmKind } from '@exodus/taquito-rpc';
-import { TransferTicketParams } from '../../src/operations/types';
+import { TransferTicketParams } from '../../src/operations/types.js';
 import { InvalidAddressError } from '@exodus/taquito-utils';
-import { ContractAbstraction } from '../../src/contract';
-import { genericMultisig } from '../../../../integration-tests/data/multisig';
-import { RpcContractProvider } from '../../src/contract/rpc-contract-provider';
-import { Estimate } from '../../src/estimate';
+import { ContractAbstraction } from '../../src/contract/index.js';
+import { genericMultisig } from '../../../../integration-tests/data/multisig.js';
+import { RpcContractProvider } from '../../src/contract/rpc-contract-provider.js';
+import { Estimate } from '../../src/estimate/index.js';
 
 /**
  * RPCEstimateProvider test

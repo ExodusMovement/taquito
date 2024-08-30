@@ -1,5 +1,5 @@
-import { SaplingStateToken, SaplingStateValidationError } from '../../src/tokens/sapling-state';
-import { SaplingStateValue } from '../../src/taquito-michelson-encoder';
+import { SaplingStateToken, SaplingStateValidationError } from '../../src/tokens/sapling-state.js';
+import { SaplingStateValue } from '../../src/taquito-michelson-encoder.js';
 
 describe('Sapling Transaction token', () => {
   let token: SaplingStateToken;

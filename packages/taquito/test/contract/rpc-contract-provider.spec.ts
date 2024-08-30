@@ -1,4 +1,4 @@
-import { RpcContractProvider } from '../../src/contract/rpc-contract-provider';
+import { RpcContractProvider } from '../../src/contract/rpc-contract-provider.js';
 import { HttpResponseError, STATUS_CODE } from '@exodus/taquito-http-utils';
 import {
   sample,
@@ -12,30 +12,30 @@ import {
   sampleBigMapAbstractionValue,
   miInit,
   miStorage,
-} from './data';
+} from './data.js';
 import BigNumber from 'bignumber.js';
-import { Context } from '../../src/context';
-import { ContractMethod } from '../../src/contract/contract-methods/contract-method-flat-param';
-import { Estimate } from '../../src/estimate/estimate';
+import { Context } from '../../src/context.js';
+import { ContractMethod } from '../../src/contract/contract-methods/contract-method-flat-param.js';
+import { Estimate } from '../../src/estimate/estimate.js';
 import {
   Protocols,
   DEFAULT_STORAGE_LIMIT,
   DEFAULT_FEE,
   DEFAULT_GAS_LIMIT,
-} from '../../src/constants';
+} from '../../src/constants.js';
 import {
   InvalidCodeParameter,
   InvalidDelegationSource,
   InvalidInitParameter,
-} from '../../src/contract/errors';
-import { preapplyResultFrom } from './helper';
+} from '../../src/contract/errors.js';
+import { preapplyResultFrom } from './helper.js';
 import { MichelsonMap, Schema } from '@exodus/taquito-michelson-encoder';
-import { BigMapAbstraction } from '../../src/contract/big-map';
-import { OpKind, ParamsWithKind, TransferTicketParams } from '../../src/operations/types';
-import { NoopParser } from '../../src/taquito';
-import { OperationBatch } from '../../src/batch/rpc-batch-provider';
-import { ContractMethodObject } from '../../src/contract/contract-methods/contract-method-object-param';
-import { smallNestedMapTypecheck, ticketTokenTestMock } from '../helpers';
+import { BigMapAbstraction } from '../../src/contract/big-map.js';
+import { OpKind, ParamsWithKind, TransferTicketParams } from '../../src/operations/types.js';
+import { NoopParser } from '../../src/taquito.js';
+import { OperationBatch } from '../../src/batch/rpc-batch-provider.js';
+import { ContractMethodObject } from '../../src/contract/contract-methods/contract-method-object-param.js';
+import { smallNestedMapTypecheck, ticketTokenTestMock } from '../helpers.js';
 import { PvmKind } from '@exodus/taquito-rpc';
 
 /**

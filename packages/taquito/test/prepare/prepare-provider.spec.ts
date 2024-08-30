@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Context } from '../../src/context';
-import { PrepareProvider } from '../../src/prepare/prepare-provider';
+import { Context } from '../../src/context.js';
+import { PrepareProvider } from '../../src/prepare/prepare-provider.js';
 import BigNumber from 'bignumber.js';
-import { preparedOriginationOpWithReveal, preparedOriginationOpNoReveal } from './data';
-import { Estimate } from '../../src/estimate';
+import { preparedOriginationOpWithReveal, preparedOriginationOpNoReveal } from './data.js';
+import { Estimate } from '../../src/estimate/index.js';
 
-import { TransferTicketParams, OpKind } from '../../src/operations/types';
+import { TransferTicketParams, OpKind } from '../../src/operations/types.js';
 import { PvmKind } from '@exodus/taquito-rpc';
-import { preparedTransactionMock } from '../helpers';
-import { PreparedOperation } from '../../src/prepare';
+import { preparedTransactionMock } from '../helpers.js';
+import { PreparedOperation } from '../../src/prepare/index.js';
 
 
 describe('PrepareProvider test', () => {

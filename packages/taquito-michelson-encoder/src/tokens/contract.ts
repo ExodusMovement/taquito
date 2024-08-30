@@ -1,7 +1,7 @@
-import { TokenSchema } from './../schema/types';
+import { TokenSchema } from './../schema/types.js';
 import { encodePubKey, validateAddress, ValidationResult } from '@exodus/taquito-utils';
-import { ContractTokenSchema } from '../schema/types';
-import { SemanticEncoding, Token, TokenFactory, TokenValidationError } from './token';
+import { ContractTokenSchema } from '../schema/types.js';
+import { SemanticEncoding, Token, TokenFactory, TokenValidationError } from './token.js';
 
 export class ContractValidationError extends TokenValidationError {
   name = 'ContractValidationError';

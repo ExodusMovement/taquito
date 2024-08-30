@@ -1,10 +1,10 @@
 import { BigNumber } from 'bignumber.js';
-import { ParameterSchema, UnitValue } from '../../src/taquito-michelson-encoder';
-import { createToken } from '../../src/tokens/createToken';
+import { ParameterSchema, UnitValue } from '../../src/taquito-michelson-encoder.js';
+import { createToken } from '../../src/tokens/createToken.js';
 import {
   TicketDeprecatedToken,
   EncodeTicketDeprecatedError,
-} from '../../src/tokens/ticket-deprecated';
+} from '../../src/tokens/ticket-deprecated.js';
 
 describe('Ticket_deprecated token', () => {
   // A ticket used to authenticate information of type comparable (cty)

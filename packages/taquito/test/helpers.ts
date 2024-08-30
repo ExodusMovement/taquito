@@ -12,7 +12,7 @@ import {
   OperationContentsAndResultIncreasePaidStorage,
   OperationContentsAndResultUpdateConsensusKey,
 } from '@exodus/taquito-rpc';
-import { PreparedOperation } from '../src/prepare';
+import { PreparedOperation } from '../src/prepare/index.js';
 
 const defaultTransferData = {
   kind: OpKind.TRANSACTION as OpKind.TRANSACTION,

@@ -1,5 +1,5 @@
-import { retry } from '@exodus/rxjs/operators';
-import { PollingSubscribeProvider } from '../../src/subscribe/polling-subcribe-provider';
+import { retry } from '@exodus/rxjs/operators/index.js';
+import { PollingSubscribeProvider } from '../../src/subscribe/polling-subcribe-provider.js';
 import BigNumber from 'bignumber.js';
 
 describe('Configurations for the PollingSubscribeProvider', () => {

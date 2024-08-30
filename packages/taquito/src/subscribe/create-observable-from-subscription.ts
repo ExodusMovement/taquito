@@ -1,6 +1,6 @@
 import { BlockResponse } from '@exodus/taquito-rpc';
 import { Observable } from '@exodus/rxjs';
-import { OperationContent, Subscription } from './interface';
+import { OperationContent, Subscription } from './interface.js';
 
 export function createObservableFromSubscription<
   T extends BlockResponse | string | OperationContent

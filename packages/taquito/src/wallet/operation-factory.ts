@@ -18,16 +18,16 @@ import {
   startWith,
   switchMap,
   timeoutWith,
-} from '@exodus/rxjs/operators';
-import { Context } from '../context';
-import { BlockIdentifier } from '../read-provider/interface';
-import { createObservableFromSubscription } from '../subscribe/create-observable-from-subscription';
-import { BatchWalletOperation } from './batch-operation';
-import { DelegationWalletOperation } from './delegation-operation';
-import { IncreasePaidStorageWalletOperation } from './increase-paid-storage-operation';
-import { WalletOperation } from './operation';
-import { OriginationWalletOperation } from './origination-operation';
-import { TransactionWalletOperation } from './transaction-operation';
+} from '@exodus/rxjs/operators/index.js';
+import { Context } from '../context.js';
+import { BlockIdentifier } from '../read-provider/interface.js';
+import { createObservableFromSubscription } from '../subscribe/create-observable-from-subscription.js';
+import { BatchWalletOperation } from './batch-operation.js';
+import { DelegationWalletOperation } from './delegation-operation.js';
+import { IncreasePaidStorageWalletOperation } from './increase-paid-storage-operation.js';
+import { WalletOperation } from './operation.js';
+import { OriginationWalletOperation } from './origination-operation.js';
+import { TransactionWalletOperation } from './transaction-operation.js';
 
 export function timeoutAfter<T>(timeoutMillisec: number): (source: Observable<T>) => Observable<T> {
   return function inner(source: Observable<T>): Observable<T> {
