@@ -3,6 +3,9 @@ import { defer } from '@exodus/rxjs';
 import { Context } from '../../src/context.js';
 import { createNewPollingBasedHeadObservable } from '../../src/wallet/operation-factory.js';
 import { distinctUntilKeyChanged, switchMap } from '@exodus/rxjs/operators/index.js';
+
+jest.useFakeTimers()
+
 describe('createNewPollingBasedHeadObservable', () => {
   const createFakeBlock = (level: number) => ({ hash: `test_${level}` });
 
