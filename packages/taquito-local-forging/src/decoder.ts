@@ -26,9 +26,9 @@ import {
   tz1Decoder,
   valueParameterDecoder,
   zarithDecoder,
-} from './codec';
-import { CODEC } from './constants';
-import { scriptDecoder } from './michelson/codec';
+} from './codec.js';
+import { CODEC } from './constants.js';
+import { scriptDecoder } from './michelson/codec.js';
 import {
   ActivationSchema,
   BallotSchema,
@@ -53,9 +53,9 @@ import {
   SmartRollupOriginateSchema,
   SmartRollupAddMessagesSchema,
   SmartRollupExecuteOutboxMessageSchema,
-} from './schema/operation';
-import { Uint8ArrayConsumer } from './uint8array-consumer';
-import { toHexString } from './utils';
+} from './schema/operation.js';
+import { Uint8ArrayConsumer } from './uint8array-consumer.js';
+import { toHexString } from './utils.js';
 
 export type Decoder = (val: Uint8ArrayConsumer) => string | number | object | undefined;
 

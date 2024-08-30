@@ -1,4 +1,4 @@
-import { ENTRYPOINT_MAX_LENGTH } from './constants';
+import { ENTRYPOINT_MAX_LENGTH } from './constants.js';
 
 /**
  *  @category Error

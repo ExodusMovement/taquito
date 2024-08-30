@@ -1,5 +1,5 @@
-import { extractRequiredLen, stripLengthPrefixFromBytes } from '../../src/michelson/codec';
-import { Uint8ArrayConsumer } from '../../src/uint8array-consumer';
+import { extractRequiredLen, stripLengthPrefixFromBytes } from '../../src/michelson/codec.js';
+import { Uint8ArrayConsumer } from '../../src/uint8array-consumer.js';
 
 describe('unint8arrayconsumer', () => {
   it('should not stall ', () => {

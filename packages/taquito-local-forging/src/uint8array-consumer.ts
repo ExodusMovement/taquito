@@ -1,4 +1,4 @@
-import { InvalidHexStringError } from './error';
+import { InvalidHexStringError } from './error.js';
 export class Uint8ArrayConsumer {
   static fromHexString(hex: string) {
     const lowHex = hex.toLowerCase();

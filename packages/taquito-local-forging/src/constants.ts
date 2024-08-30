@@ -3,7 +3,7 @@
  * Copyright (c) 2018 Andrew Kishino
  */
 
-import { pad } from './utils';
+import { pad } from './utils.js';
 
 // See: https://tezos.gitlab.io/protocols/005_babylon.html#transactions-now-have-an-entrypoint
 export const ENTRYPOINT_MAX_LENGTH = 31;

@@ -3,23 +3,23 @@
  * @module @exodus/taquito-local-forging
  */
 
-import { ForgeParams, Forger } from './interface';
-import { CODEC } from './constants';
-import { decoders } from './decoder';
-import { encoders } from './encoder';
-import { Uint8ArrayConsumer } from './uint8array-consumer';
+import { ForgeParams, Forger } from './interface.js';
+import { CODEC } from './constants.js';
+import { decoders } from './decoder.js';
+import { encoders } from './encoder.js';
+import { Uint8ArrayConsumer } from './uint8array-consumer.js';
 import { validateBlock, ValidationResult, InvalidOperationKindError } from '@exodus/taquito-utils';
-import { InvalidBlockHashError, InvalidOperationSchemaError } from './error';
-import { validateMissingProperty, validateOperationKind } from './validator';
-import { ProtocolsHash } from './protocols';
+import { InvalidBlockHashError, InvalidOperationSchemaError } from './error.js';
+import { validateMissingProperty, validateOperationKind } from './validator.js';
+import { ProtocolsHash } from './protocols.js';
 
-export { CODEC, opMapping, opMappingReverse } from './constants';
-export * from './decoder';
-export * from './encoder';
-export * from './uint8array-consumer';
-export * from './interface';
-export { VERSION } from './version';
-export { ProtocolsHash } from './protocols';
+export { CODEC, opMapping, opMappingReverse } from './constants.js';
+export * from './decoder.js';
+export * from './encoder.js';
+export * from './uint8array-consumer.js';
+export * from './interface.js';
+export { VERSION } from './version.js';
+export { ProtocolsHash } from './protocols.js';
 
 const PROTOCOL_CURRENT = ProtocolsHash.PtMumbai2;
 
