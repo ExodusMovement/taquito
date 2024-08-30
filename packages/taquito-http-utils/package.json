@@ -24,6 +24,7 @@
   },
   "scripts": {
     "lint": "eslint --ext .js,.ts .",
+    "test": "exodus-test --esbuild --jest",
     "precommit": "lint-staged",
     "prebuild": "rimraf dist",
     "version-stamp": "node ../taquito/version-stamping.js",
