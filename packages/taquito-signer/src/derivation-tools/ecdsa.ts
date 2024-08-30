@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-this-alias */
-import { ec, curve } from 'elliptic';
+import elliptic from 'elliptic';
 import { Hard, ExtendedPrivateKey } from './index.js';
 import createHmac from "create-hmac"
 import BN from 'bn.js';
@@ -8,14 +8,16 @@ import { InvalidBitSize, InvalidCurveError, InvalidSeedLengthError, PrivateKeyEr
 
 export type CurveName = 'p256' | 'secp256k1';
 
+const { ec } = elliptic;
+
 const seedKey: Record<CurveName, string> = {
   p256: 'Nist256p1 seed',
   secp256k1: 'Bitcoin seed',
 };
 
-interface KeyPair extends ec.KeyPair {
+interface KeyPair extends elliptic.ec.KeyPair {
   priv: BN | null;
-  pub: curve.base.BasePoint | null;
+  pub: elliptic.curve.base.BasePoint | null;
 }
 
 // MinSeedSize is the minimal allowed seed byte length
@@ -30,7 +32,7 @@ export class PrivateKey implements ExtendedPrivateKey {
    * @param priv key pair priv (BN) pub (curve.base.BasePint) if applicable
    * @param chainCode slice 32->n HMAC hash key and seedkey (first instance curve default seedKey. after hmac value slice 32->n)
    */
-  constructor(priv: ec.KeyPair, public readonly chainCode: Uint8Array) {
+  constructor(priv: elliptic.ec.KeyPair, public readonly chainCode: Uint8Array) {
     this.keyPair = <KeyPair>priv;
   }
   /**
