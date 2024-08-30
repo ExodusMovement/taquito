@@ -15,7 +15,7 @@ interface TypedTestData {
 
 describe('Binary', () => {
   const files = ['binary-data1.json', 'binary-data2.json', 'binary-data3.json'];
-  const paths = files.map((f) => path.resolve(__dirname, f));
+  const paths = files.map((f) => path.resolve(import.meta.dirname, f));
   const src: TypedTestData[] = [].concat(
     ...paths.map((p) => JSON.parse(fs.readFileSync(p).toString()))
   );

@@ -29,7 +29,7 @@ describe('PtKathmandu', () => {
             protocol: Protocol.PtKathman,
           };
 
-          const filename = path.resolve(__dirname, 'contracts_014', group, contract);
+          const filename = path.resolve(import.meta.dirname, 'contracts_014', group, contract);
           const src = fs.readFileSync(filename).toString();
           if (group === 'ill_typed') {
             expect(() => Contract.parse(src, options)).toThrow();
