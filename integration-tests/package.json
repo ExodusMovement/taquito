@@ -10,7 +10,7 @@
     "originate-known-contracts-and-run-test": "node -r ts-node/register originate-known-contracts.ts && jest",
     "test:mondaynet": "MONDAYNET=true jest",
     "test:mondaynet-secret-key": "RUN_MONDAYNET_WITH_SECRET_KEY=true jest --runInBand",
-    "test": "jest"
+    "test": "exodus-test --jest --esbuild"
   },
   "version": "16.1.1-exodus.11",
   "dependencies": {
