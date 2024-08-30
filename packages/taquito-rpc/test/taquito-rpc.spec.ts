@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import { OpKind, RpcClient } from '../src/taquito-rpc';
+import { OpKind, RpcClient } from '../src/taquito-rpc.js';
 import BigNumber from 'bignumber.js';
 import {
   LazyStorageDiffBigMap,
@@ -48,7 +48,7 @@ import {
   OperationContentsAndResultSmartRollupTimeout,
   SmartRollupRefutationStart,
   SmartRollupRefutationOptions,
-} from '../src/types';
+} from '../src/types.js';
 import {
   blockIthacanetResponse,
   blockJakartanetResponse,
@@ -69,7 +69,7 @@ import {
   smartRollupRefuteResponse,
   smartRollupRecoverBondResponse,
   smartRollupTimeoutResponse,
-} from './data/rpc-responses';
+} from './data/rpc-responses.js';
 
 /**
  * RpcClient test

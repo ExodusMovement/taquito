@@ -1,6 +1,6 @@
-import { RPCMethodName } from './../rpc-client-interface';
+import { RPCMethodName } from './../rpc-client-interface.js';
 import BigNumber from 'bignumber.js';
-import { defaultRPCOptions, RpcClientInterface, RPCOptions } from '../rpc-client-interface';
+import { defaultRPCOptions, RpcClientInterface, RPCOptions } from '../rpc-client-interface.js';
 import {
   BakingRightsQueryArguments,
   BakingRightsResponse,
@@ -51,7 +51,7 @@ import {
   PendingOperationsQueryArguments,
   PendingOperations,
   OriginationProofParams,
-} from '../types';
+} from '../types.js';
 
 import {
   InvalidAddressError,

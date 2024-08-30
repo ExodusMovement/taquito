@@ -1,5 +1,5 @@
 import BigNumber from 'bignumber.js';
-import { OpKind } from './opkind';
+import { OpKind } from './opkind.js';
 
 export type BalanceResponse = BigNumber;
 export type StorageResponse = ScriptedContracts['storage'];

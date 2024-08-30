@@ -49,7 +49,7 @@ import {
   PendingOperations,
   PendingOperationsQueryArguments,
   OriginationProofParams,
-} from './types';
+} from './types.js';
 
 export interface RPCOptions {
   block: string;

@@ -1,4 +1,4 @@
-import { RpcClientCache } from '../src/rpc-client-modules/rpc-cache';
+import { RpcClientCache } from '../src/rpc-client-modules/rpc-cache.js';
 import {
   rpcUrl,
   blockHash,
@@ -34,7 +34,7 @@ import {
   txRollupState,
   ticketBalancesResponse,
   pendingOperationsResponse,
-} from './data/rpc-responses';
+} from './data/rpc-responses.js';
 
 /**
  * RpcClientCache test
