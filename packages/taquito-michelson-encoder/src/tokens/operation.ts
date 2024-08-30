@@ -1,5 +1,5 @@
-import { BaseTokenSchema } from '../schema/types';
-import { SemanticEncoding, Token, TokenFactory } from './token';
+import { BaseTokenSchema } from '../schema/types.js';
+import { SemanticEncoding, Token, TokenFactory } from './token.js';
 
 export class OperationToken extends Token {
   static prim: 'operation' = 'operation' as const;

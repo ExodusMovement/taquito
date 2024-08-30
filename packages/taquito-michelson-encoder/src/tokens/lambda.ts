@@ -1,5 +1,5 @@
-import { LambdaTokenSchema } from '../schema/types';
-import { SemanticEncoding, Token, TokenFactory } from './token';
+import { LambdaTokenSchema } from '../schema/types.js';
+import { SemanticEncoding, Token, TokenFactory } from './token.js';
 
 export class LambdaToken extends Token {
   static prim: 'lambda' = 'lambda' as const;

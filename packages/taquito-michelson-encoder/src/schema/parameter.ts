@@ -1,10 +1,10 @@
-import { createToken } from '../tokens/createToken';
-import { Token, Semantic, TokenValidationError, SemanticEncoding } from '../tokens/token';
-import { OrToken } from '../tokens/or';
-import { OptionToken } from '../tokens/option';
+import { createToken } from '../tokens/createToken.js';
+import { Token, Semantic, TokenValidationError, SemanticEncoding } from '../tokens/token.js';
+import { OrToken } from '../tokens/or.js';
+import { OptionToken } from '../tokens/option.js';
 import { ScriptResponse, MichelsonV1ExpressionExtended, MichelsonV1Expression } from '@exodus/taquito-rpc';
-import { Falsy, TokenSchema } from './types';
-import { InvalidRpcResponseError, ParameterEncodingError } from './error';
+import { Falsy, TokenSchema } from './types.js';
+import { InvalidRpcResponseError, ParameterEncodingError } from './error.js';
 
 /**
  * @warn Our current smart contract abstraction feature is currently in preview. It's API is not final, and it may not cover every use case (yet). We will greatly appreciate any feedback on this feature.

@@ -1,5 +1,5 @@
-import { rpcContractResponse, storage } from '../data/vote_contract';
-import { Schema } from '../src/schema/storage';
+import { rpcContractResponse, storage } from '../data/vote_contract.js';
+import { Schema } from '../src/schema/storage.js';
 
 describe('Schema test', () => {
   it('Should parse storage schema properly', () => {

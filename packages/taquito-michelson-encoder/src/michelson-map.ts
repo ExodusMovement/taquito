@@ -1,5 +1,5 @@
 import { MichelsonV1Expression } from '@exodus/taquito-rpc';
-import { Schema } from './schema/storage';
+import { Schema } from './schema/storage.js';
 import stringify from 'fast-json-stable-stringify';
 
 /**

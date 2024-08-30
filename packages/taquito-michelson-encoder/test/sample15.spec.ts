@@ -1,6 +1,6 @@
-import { setChildRecordParam, updateDetailsParam } from '../data/sample15';
-import { ParameterSchema } from '../src/schema/parameter';
-import { MichelsonMap } from '../src/michelson-map';
+import { setChildRecordParam, updateDetailsParam } from '../data/sample15.js';
+import { ParameterSchema } from '../src/schema/parameter.js';
+import { MichelsonMap } from '../src/michelson-map.js';
 
 describe('Schema test when calling contract with complex object as param and null value', () => {
 

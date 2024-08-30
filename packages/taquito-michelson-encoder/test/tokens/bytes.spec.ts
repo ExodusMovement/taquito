@@ -1,4 +1,4 @@
-import { BytesToken, BytesValidationError } from '../../src/tokens/comparable/bytes';
+import { BytesToken, BytesValidationError } from '../../src/tokens/comparable/bytes.js';
 
 describe('Bytes token', () => {
   let token: BytesToken;

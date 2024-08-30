@@ -4,9 +4,9 @@ import {
   ComparableToken,
   TokenValidationError,
   SemanticEncoding,
-} from '../token';
+} from '../token.js';
 import { b58decode, encodePubKey, validateAddress, ValidationResult } from '@exodus/taquito-utils';
-import { BaseTokenSchema } from '../../schema/types';
+import { BaseTokenSchema } from '../../schema/types.js';
 
 export class AddressValidationError extends TokenValidationError {
   name = 'AddressValidationError';

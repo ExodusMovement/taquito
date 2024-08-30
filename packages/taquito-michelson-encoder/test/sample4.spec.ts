@@ -2,10 +2,10 @@ import {
   bigMapValue,
   rpcContractResponse as rpcContractResponse4,
   storage as storage4,
-} from '../data/sample4';
-import { Schema } from '../src/schema/storage';
-import { MichelsonMap } from '../src/michelson-map';
-import { expectMichelsonMap } from './utils';
+} from '../data/sample4.js';
+import { Schema } from '../src/schema/storage.js';
+import { MichelsonMap } from '../src/michelson-map.js';
+import { expectMichelsonMap } from './utils.js';
 
 describe('Schema test', () => {
   it('Should encode key properly', () => {

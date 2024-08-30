@@ -1,4 +1,4 @@
-import { ChainIDToken, ChainIDValidationError } from '../../src/tokens/chain-id';
+import { ChainIDToken, ChainIDValidationError } from '../../src/tokens/chain-id.js';
 
 describe('Chain ID token', () => {
   let token: ChainIDToken;

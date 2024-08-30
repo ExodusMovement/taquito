@@ -1,6 +1,6 @@
-import { code } from '../../data/proto005/big_map_encoding';
-import { Schema } from '../../src/schema/storage';
-import { MichelsonMap } from '../../src/michelson-map';
+import { code } from '../../data/proto005/big_map_encoding.js';
+import { Schema } from '../../src/schema/storage.js';
+import { MichelsonMap } from '../../src/michelson-map.js';
 
 describe('Contract with unit encoding', () => {
   it('Should encode storage properly when using empty big map', () => {

@@ -1,7 +1,7 @@
-import { TicketTokenSchema } from '../schema/types';
-import { IntToken } from './comparable/int';
-import { ContractToken } from './contract';
-import { Token, TokenFactory, Semantic, SemanticEncoding } from './token';
+import { TicketTokenSchema } from '../schema/types.js';
+import { IntToken } from './comparable/int.js';
+import { ContractToken } from './contract.js';
+import { Token, TokenFactory, Semantic, SemanticEncoding } from './token.js';
 
 /**
  *  @category Error

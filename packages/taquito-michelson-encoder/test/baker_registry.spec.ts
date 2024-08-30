@@ -1,8 +1,8 @@
-import { Schema } from '../src/schema/storage';
-import { ParameterSchema } from '../src/schema/parameter';
-import { storage, params, rpcContractResponse, bigMapValue } from '../data/baker_registry';
+import { Schema } from '../src/schema/storage.js';
+import { ParameterSchema } from '../src/schema/parameter.js';
+import { storage, params, rpcContractResponse, bigMapValue } from '../data/baker_registry.js';
 import BigNumber from 'bignumber.js';
-import { MichelsonMap } from '../src/michelson-map';
+import { MichelsonMap } from '../src/michelson-map.js';
 describe('Baker Registry contract test', () => {
   it('Test storage schema', () => {
     const schema = new Schema(storage);

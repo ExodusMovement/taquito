@@ -3,9 +3,9 @@ import {
   rpcContractResponse as rpcContractResponse6,
   storage as storage6,
   params as params6,
-} from '../data/sample6';
-import { Schema } from '../src/schema/storage';
-import { ParameterSchema } from '../src/schema/parameter';
+} from '../data/sample6.js';
+import { Schema } from '../src/schema/storage.js';
+import { ParameterSchema } from '../src/schema/parameter.js';
 
 describe('Schema test', () => {
   it('Should extract schema properly', () => {

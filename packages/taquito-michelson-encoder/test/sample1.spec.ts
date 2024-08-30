@@ -1,9 +1,9 @@
 import BigNumber from 'bignumber.js';
-import { bigMapDiff, params, rpcContractResponse, storage, txParams } from '../data/sample1';
-import { ParameterSchema } from '../src/schema/parameter';
-import { Schema } from '../src/schema/storage';
-import { MichelsonMap } from '../src/michelson-map';
-import { expectMichelsonMap } from './utils';
+import { bigMapDiff, params, rpcContractResponse, storage, txParams } from '../data/sample1.js';
+import { ParameterSchema } from '../src/schema/parameter.js';
+import { Schema } from '../src/schema/storage.js';
+import { MichelsonMap } from '../src/michelson-map.js';
+import { expectMichelsonMap } from './utils.js';
 
 describe('Schema test', () => {
   it('Should extract schema properly', () => {

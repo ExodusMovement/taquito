@@ -2,11 +2,11 @@ import {
   rpcContractResponse,
   bigMapDiff,
   bigMapValue,
-} from '../../data/proto005/token_contract_with_bigmap';
-import { Schema } from '../../src/schema/storage';
+} from '../../data/proto005/token_contract_with_bigmap.js';
+import { Schema } from '../../src/schema/storage.js';
 import BigNumber from 'bignumber.js';
-import { MichelsonMap } from '../../src/michelson-map';
-import { expectMichelsonMap } from '../utils';
+import { MichelsonMap } from '../../src/michelson-map.js';
+import { expectMichelsonMap } from '../utils.js';
 
 describe('Token contract with big map', () => {
   it('should extract schema properly', () => {

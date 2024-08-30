@@ -1,5 +1,5 @@
-import { BaseTokenSchema } from '../../schema/types';
-import { Token, TokenFactory, ComparableToken, SemanticEncoding } from '../token';
+import { BaseTokenSchema } from '../../schema/types.js';
+import { Token, TokenFactory, ComparableToken, SemanticEncoding } from '../token.js';
 
 export class TimestampToken extends ComparableToken {
   static prim: 'timestamp' = 'timestamp' as const;

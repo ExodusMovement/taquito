@@ -1,6 +1,6 @@
-import { ParameterSchema } from '../../src/taquito-michelson-encoder';
-import { createToken } from '../../src/tokens/createToken';
-import { LambdaToken } from '../../src/tokens/lambda';
+import { ParameterSchema } from '../../src/taquito-michelson-encoder.js';
+import { createToken } from '../../src/tokens/createToken.js';
+import { LambdaToken } from '../../src/tokens/lambda.js';
 
 describe('Lambda token', () => {
     let token1: LambdaToken;

@@ -1,6 +1,6 @@
-import { Schema } from '../src/schema/storage';
-import { storage, parameter } from '../data/sample12_vote_delegation';
-import { ParameterSchema } from '../src/schema/parameter';
+import { Schema } from '../src/schema/storage.js';
+import { storage, parameter } from '../data/sample12_vote_delegation.js';
+import { ParameterSchema } from '../src/schema/parameter.js';
 
 const testStorage = {
   prim: 'Pair',

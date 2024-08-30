@@ -1,7 +1,7 @@
-import { storage } from '../data/sample20';
-import { InvalidBigMapSchema, InvalidRpcResponseError } from '../src/schema/error';
+import { storage } from '../data/sample20.js';
+import { InvalidBigMapSchema, InvalidRpcResponseError } from '../src/schema/error.js';
 
-import { Schema } from '../src/taquito-michelson-encoder';
+import { Schema } from '../src/taquito-michelson-encoder.js';
 
 describe('Errors releated to Schemas', () => {
   it('Should throw InvalidRpcResponseError if storage is not an array', () => {

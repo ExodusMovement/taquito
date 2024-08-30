@@ -1,4 +1,4 @@
-import { MichelsonMap } from '../src/michelson-map';
+import { MichelsonMap } from '../src/michelson-map.js';
 
 describe('Michelson map', () => {
   describe('get', () => {

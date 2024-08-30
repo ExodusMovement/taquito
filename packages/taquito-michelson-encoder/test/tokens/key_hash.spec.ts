@@ -1,4 +1,4 @@
-import { KeyHashToken, KeyHashValidationError } from '../../src/tokens/comparable/key_hash';
+import { KeyHashToken, KeyHashValidationError } from '../../src/tokens/comparable/key_hash.js';
 
 describe('KeyHash token', () => {
   let token: KeyHashToken;

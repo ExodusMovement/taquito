@@ -1,5 +1,5 @@
-import { SaplingTransactionTokenSchema } from '../schema/types';
-import { SemanticEncoding, Token, TokenFactory, TokenValidationError } from './token';
+import { SaplingTransactionTokenSchema } from '../schema/types.js';
+import { SemanticEncoding, Token, TokenFactory, TokenValidationError } from './token.js';
 
 export class SaplingTransactionValidationError extends TokenValidationError {
   name = 'SaplingTransactionValidationError';

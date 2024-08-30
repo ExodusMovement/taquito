@@ -1,5 +1,5 @@
-import { ListToken } from '../../src/tokens/list';
-import { createToken } from '../../src/tokens/createToken';
+import { ListToken } from '../../src/tokens/list.js';
+import { createToken } from '../../src/tokens/createToken.js';
 
 describe('List token', () => {
   let token: ListToken;

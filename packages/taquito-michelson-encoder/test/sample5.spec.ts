@@ -1,8 +1,8 @@
 import BigNumber from 'bignumber.js';
-import { rpcContractResponse as rpcContractResponse5, storage as storage5 } from '../data/sample5';
-import { Schema } from '../src/schema/storage';
-import { MichelsonMap } from '../src/michelson-map';
-import { expectMichelsonMap } from './utils';
+import { rpcContractResponse as rpcContractResponse5, storage as storage5 } from '../data/sample5.js';
+import { Schema } from '../src/schema/storage.js';
+import { MichelsonMap } from '../src/michelson-map.js';
+import { expectMichelsonMap } from './utils.js';
 
 describe('Schema test', () => {
   it('Should parse storage properly', () => {

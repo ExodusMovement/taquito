@@ -1,5 +1,5 @@
-import { ListTokenSchema } from '../schema/types';
-import { Token, TokenFactory, Semantic, TokenValidationError, SemanticEncoding } from './token';
+import { ListTokenSchema } from '../schema/types.js';
+import { Token, TokenFactory, Semantic, TokenValidationError, SemanticEncoding } from './token.js';
 
 export class ListValidationError extends TokenValidationError {
   name = 'ListValidationError';

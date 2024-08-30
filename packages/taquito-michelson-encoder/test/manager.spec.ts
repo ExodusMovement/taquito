@@ -1,6 +1,6 @@
-import { doSchema, rpcContractResponse, storage } from '../data/manager';
-import { ParameterSchema } from '../src/schema/parameter';
-import { Schema } from '../src/schema/storage';
+import { doSchema, rpcContractResponse, storage } from '../data/manager.js';
+import { ParameterSchema } from '../src/schema/parameter.js';
+import { Schema } from '../src/schema/storage.js';
 
 describe('Schema test', () => {
   it('Should parse storage schema properly', () => {

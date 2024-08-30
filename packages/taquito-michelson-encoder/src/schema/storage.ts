@@ -4,20 +4,20 @@ import {
   MichelsonV1ExpressionExtended,
   ScriptResponse,
 } from '@exodus/taquito-rpc';
-import { BigMapToken } from '../tokens/bigmap';
-import { createToken } from '../tokens/createToken';
-import { MapToken } from '../tokens/map';
-import { OrToken } from '../tokens/or';
-import { PairToken } from '../tokens/pair';
-import { TicketToken } from '../tokens/ticket';
-import { TicketDeprecatedToken } from '../tokens/ticket-deprecated';
+import { BigMapToken } from '../tokens/bigmap.js';
+import { createToken } from '../tokens/createToken.js';
+import { MapToken } from '../tokens/map.js';
+import { OrToken } from '../tokens/or.js';
+import { PairToken } from '../tokens/pair.js';
+import { TicketToken } from '../tokens/ticket.js';
+import { TicketDeprecatedToken } from '../tokens/ticket-deprecated.js';
 import {
   BigMapKeyType,
   Semantic,
   SemanticEncoding,
   Token,
   TokenValidationError,
-} from '../tokens/token';
+} from '../tokens/token.js';
 import {
   InvalidRpcResponseError,
   InvalidBigMapSchema,
@@ -25,9 +25,9 @@ import {
   BigMapEncodingError,
   StorageEncodingError,
   MissingArgumentError,
-} from './error';
-import { RpcTransaction } from './model';
-import { Falsy, TokenSchema } from './types';
+} from './error.js';
+import { RpcTransaction } from './model.js';
+import { Falsy, TokenSchema } from './types.js';
 
 const schemaTypeSymbol = Symbol.for('taquito-schema-type-symbol');
 

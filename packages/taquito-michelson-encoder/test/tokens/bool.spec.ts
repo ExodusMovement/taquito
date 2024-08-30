@@ -1,4 +1,4 @@
-import { BoolToken } from '../../src/tokens/comparable/bool';
+import { BoolToken } from '../../src/tokens/comparable/bool.js';
 
 describe('Bool token', () => {
   let token: BoolToken;

@@ -1,5 +1,5 @@
-import { SetToken } from '../../src/tokens/set';
-import { createToken } from '../../src/tokens/createToken';
+import { SetToken } from '../../src/tokens/set.js';
+import { createToken } from '../../src/tokens/createToken.js';
 
 describe('Set token', () => {
   let token: SetToken;

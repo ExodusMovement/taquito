@@ -1,5 +1,5 @@
-import { params } from '../data/sample14_bool_parameter';
-import { ParameterSchema } from '../src/schema/parameter';
+import { params } from '../data/sample14_bool_parameter.js';
+import { ParameterSchema } from '../src/schema/parameter.js';
 
 describe('Bool parameter encoding', () => {
   test('Bool parameter are encoded properly when truthy (true)', () => {

@@ -4,9 +4,9 @@ import {
   ComparableToken,
   TokenValidationError,
   SemanticEncoding,
-} from '../token';
+} from '../token.js';
 import BigNumber from 'bignumber.js';
-import { BaseTokenSchema } from '../../schema/types';
+import { BaseTokenSchema } from '../../schema/types.js';
 
 export class MutezValidationError extends TokenValidationError {
   name = 'MutezValidationError';

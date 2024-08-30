@@ -3,10 +3,10 @@ import {
   params as params3,
   rpcContractResponse as rpcContractResponse3,
   storage as storage3,
-} from '../data/sample3';
-import { ParameterSchema } from '../src/schema/parameter';
-import { Schema } from '../src/schema/storage';
-import { MichelsonMap } from '../src/michelson-map';
+} from '../data/sample3.js';
+import { ParameterSchema } from '../src/schema/parameter.js';
+import { Schema } from '../src/schema/storage.js';
+import { MichelsonMap } from '../src/michelson-map.js';
 
 describe('Schema test', () => {
   it('Should parse storage with mutez properly', () => {

@@ -1,6 +1,6 @@
-import { createToken } from '../../src/tokens/createToken';
-import { MapToken } from '../../src/tokens/map';
-import { MichelsonMap } from '../../src/michelson-map';
+import { createToken } from '../../src/tokens/createToken.js';
+import { MapToken } from '../../src/tokens/map.js';
+import { MichelsonMap } from '../../src/michelson-map.js';
 import BigNumber from 'bignumber.js';
 
 describe('Map token', () => {

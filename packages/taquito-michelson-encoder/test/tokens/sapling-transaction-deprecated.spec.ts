@@ -1,7 +1,7 @@
 import {
   SaplingTransactionDeprecatedToken,
   SaplingTransactionDeprecatedValidationError,
-} from '../../src/tokens/sapling-transaction-deprecated';
+} from '../../src/tokens/sapling-transaction-deprecated.js';
 
 describe('Sapling Transaction Deprecated token', () => {
   let token: SaplingTransactionDeprecatedToken;

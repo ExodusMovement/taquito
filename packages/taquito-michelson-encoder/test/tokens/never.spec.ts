@@ -1,8 +1,8 @@
-import { createToken } from '../../src/tokens/createToken';
-import { PairToken } from '../../src/tokens/pair';
-import { NeverToken, NeverTokenError } from '../../src/tokens/never'
-import { OptionToken } from '../../src/tokens/option';
-import { ParameterSchema } from '../../src/taquito-michelson-encoder';
+import { createToken } from '../../src/tokens/createToken.js';
+import { PairToken } from '../../src/tokens/pair.js';
+import { NeverToken, NeverTokenError } from '../../src/tokens/never.js'
+import { OptionToken } from '../../src/tokens/option.js';
+import { ParameterSchema } from '../../src/taquito-michelson-encoder.js';
 
 describe('Never token', () => {
 

@@ -1,4 +1,4 @@
-import { NatToken, NatValidationError } from '../../src/tokens/comparable/nat';
+import { NatToken, NatValidationError } from '../../src/tokens/comparable/nat.js';
 
 describe('Nat token', () => {
   let token: NatToken;

@@ -1,5 +1,5 @@
-import { createToken } from '../../src/tokens/createToken';
-import { expectMichelsonMap } from '../utils';
+import { createToken } from '../../src/tokens/createToken.js';
+import { expectMichelsonMap } from '../utils.js';
 
 describe('BigMap', () => {
   const bigMap = createToken({ prim: 'big_map', args: [{ prim: 'address' }, { prim: 'int' }] }, 0);

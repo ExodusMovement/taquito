@@ -1,5 +1,5 @@
-import { OptionTokenSchema } from '../schema/types';
-import { Token, TokenFactory, Semantic, ComparableToken, SemanticEncoding } from './token';
+import { OptionTokenSchema } from '../schema/types.js';
+import { Token, TokenFactory, Semantic, ComparableToken, SemanticEncoding } from './token.js';
 
 export class OptionToken extends ComparableToken {
   static prim: 'option' = 'option' as const;

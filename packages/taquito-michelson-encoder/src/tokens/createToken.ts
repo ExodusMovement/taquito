@@ -1,6 +1,6 @@
-import { tokens } from './tokens';
-import { Token } from './token';
-import { PairToken } from './pair';
+import { tokens } from './tokens.js';
+import { Token } from './token.js';
+import { PairToken } from './pair.js';
 
 /**
  *  @category Error

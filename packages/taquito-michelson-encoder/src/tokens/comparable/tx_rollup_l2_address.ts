@@ -1,4 +1,4 @@
-import { BaseTokenSchema } from '../../schema/types';
+import { BaseTokenSchema } from '../../schema/types.js';
 import {
   b58decodeL2Address,
   encodeL2Address,
@@ -11,7 +11,7 @@ import {
   Token,
   TokenFactory,
   TokenValidationError,
-} from '../token';
+} from '../token.js';
 
 export class TxRollupL2AddressValidationError extends TokenValidationError {
   name = 'TxRollupL2AddressValidationError';

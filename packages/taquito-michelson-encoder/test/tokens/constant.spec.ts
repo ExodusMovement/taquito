@@ -1,10 +1,10 @@
-import { PairToken } from '../../src/tokens/pair';
+import { PairToken } from '../../src/tokens/pair.js';
 import {
   GlobalConstantToken,
   GlobalConstantEncodingError,
   GlobalConstantDecodingError,
-} from '../../src/tokens/constant';
-import { createToken } from '../../src/tokens/createToken';
+} from '../../src/tokens/constant.js';
+import { createToken } from '../../src/tokens/createToken.js';
 
 describe('Global constant token', () => {
   let token: GlobalConstantToken;

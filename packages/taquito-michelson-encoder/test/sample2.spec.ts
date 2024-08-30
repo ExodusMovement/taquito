@@ -1,7 +1,7 @@
-import { rpcContractResponse as rpcContractResponse2, storage as storage2 } from '../data/sample2';
-import { Schema } from '../src/schema/storage';
-import { MichelsonMap } from '../src/michelson-map';
-import { expectMichelsonMap } from './utils';
+import { rpcContractResponse as rpcContractResponse2, storage as storage2 } from '../data/sample2.js';
+import { Schema } from '../src/schema/storage.js';
+import { MichelsonMap } from '../src/michelson-map.js';
+import { expectMichelsonMap } from './utils.js';
 
 describe('Schema test', () => {
   it('Should parse storage with map that have string as key properly', () => {
