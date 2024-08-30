@@ -1,4 +1,4 @@
-export {
+export type {
   OpKind,
   withKind,
   ParamsWithKind,
@@ -27,9 +27,13 @@ export {
   BallotParams,
   RPCBallotOperation,
 } from './types.js';
+
+export type {
+  TezosOperationErrorWithMessage,
+} from './operation-errors.js';
+
 export {
   TezosOperationError,
-  TezosOperationErrorWithMessage,
   TezosPreapplyFailureError,
   InvalidEstimateValueError,
 } from './operation-errors.js';

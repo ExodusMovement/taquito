@@ -32,10 +32,10 @@ import { ParserProvider } from './parser/interface.js';
 import { MichelCodecParser } from './parser/michel-codec-parser.js';
 
 export { MichelsonMap, UnitValue } from '@exodus/taquito-michelson-encoder';
-export { AsyncForger, ForgeParams, ForgeResponse } from '@exodus/taquito-local-forging';
+export type { AsyncForger, ForgeParams, ForgeResponse } from '@exodus/taquito-local-forging';
 export * from './constants.js';
 export * from './context.js';
-export { TaquitoProvider } from './context.js';
+export type { TaquitoProvider } from './context.js';
 export * from './contract/index.js';
 export * from './contract/big-map.js';
 export { CompositeForger } from './forger/composite-forger.js';
@@ -44,12 +44,12 @@ export * from './operations/index.js';
 export { OperationBatch } from './batch/rpc-batch-provider.js';
 export * from './signer/interface.js';
 export * from './subscribe/interface.js';
-export { SubscribeProvider } from './subscribe/interface.js';
+export type { SubscribeProvider } from './subscribe/interface.js';
 export { PollingSubscribeProvider } from './subscribe/polling-subcribe-provider.js';
 export { ObservableSubscription } from './subscribe/observable-subscription.js';
 export * from './tz/interface.js';
 export * from './wallet/index.js';
-export { Extension } from './extension/extension.js';
+export type { Extension } from './extension/extension.js';
 export * from './parser/interface.js';
 export * from './parser/michel-codec-parser.js';
 export * from './parser/noop-parser.js';
@@ -59,7 +59,7 @@ export * from './packer/rpc-packer.js';
 export * from './global-constants/default-global-constants-provider.js';
 export * from './global-constants/error.js';
 export * from './global-constants/interface-global-constants-provider.js';
-export {
+export type {
   BigMapQuery,
   SaplingStateQuery,
   BlockIdentifier,

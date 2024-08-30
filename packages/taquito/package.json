@@ -28,8 +28,8 @@
     "node": ">=16"
   },
   "scripts": {
-    "test": "jest --coverage",
-    "test:watch": "jest --coverage --watch",
+    "test": "exodus-test --jest --esbuild --coverage",
+    "test:watch": "npm run test -- --watch",
     "test:prod": "npm run lint && npm run test -- --no-cache",
     "lint": "eslint --ext .js,.ts .",
     "precommit": "lint-staged",
@@ -57,13 +57,6 @@
       "tsx",
       "js"
     ],
-    "moduleNameMapper": {
-      "^@exodus/taquito-rpc$": "<rootDir>/../taquito-rpc/src/taquito-rpc.ts",
-      "^@exodus/taquito-michelson-encoder$": "<rootDir>/../taquito-michelson-encoder/src/taquito-michelson-encoder.ts",
-      "^@exodus/taquito-michel-codec$": "<rootDir>/../taquito-michel-codec/src/taquito-michel-codec.ts",
-      "^@exodus/taquito-http-utils$": "<rootDir>/../taquito-http-utils/src/taquito-http-utils.ts",
-      "^@exodus/taquito-utils$": "<rootDir>/../taquito-utils/src/taquito-utils.ts"
-    },
     "coveragePathIgnorePatterns": [
       "/node_modules/",
       "/test/"
