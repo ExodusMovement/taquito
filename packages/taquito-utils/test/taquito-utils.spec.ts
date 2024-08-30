@@ -15,7 +15,7 @@ import {
   hex2Bytes,
   b58decodeL2Address,
   encodeL2Address,
-} from '../src/taquito-utils';
+} from '../src/taquito-utils.js';
 import BigNumber from 'bignumber.js';
 
 describe('Encode expr', () => {
