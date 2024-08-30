@@ -1,5 +1,5 @@
 import BigNumber from 'bignumber.js';
-import { ContractProvider } from './interface';
+import { ContractProvider } from './interface.js';
 
 export class SaplingStateAbstraction {
     constructor(private id: BigNumber, private provider: ContractProvider) { }

@@ -3,15 +3,15 @@ import {
   OperationContentsAndResultTxRollupOrigination,
 } from '@exodus/taquito-rpc';
 import { BigNumber } from 'bignumber.js';
-import { Context } from '../context';
-import { Operation } from './operations';
+import { Context } from '../context.js';
+import { Operation } from './operations.js';
 import {
   FeeConsumingOperation,
   ForgedBytes,
   GasConsumingOperation,
   RPCTxRollupOriginationOperation,
   StorageConsumingOperation,
-} from './types';
+} from './types.js';
 
 /**
  * @description TxRollupOriginationOperation provides utility functions to fetch a newly issued operation of kind tx_rollup_origination

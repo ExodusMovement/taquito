@@ -1,8 +1,8 @@
-import { ForgedBytes } from '../../src/operations/types';
+import { ForgedBytes } from '../../src/operations/types.js';
 import { OperationContentsAndResult } from '@exodus/taquito-rpc';
-import { defaultConfigConfirmation } from '../../src/context';
-import { UpdateConsensusKeyOperation } from '../../src/operations/update-consensus-key-operation';
-import { UpdateConsensusKeyOperationBuilder } from '../helpers';
+import { defaultConfigConfirmation } from '../../src/context.js';
+import { UpdateConsensusKeyOperation } from '../../src/operations/update-consensus-key-operation.js';
+import { UpdateConsensusKeyOperationBuilder } from '../helpers.js';
 
 describe('Update Consensus Key operation', () => {
   let fakeContext: any;

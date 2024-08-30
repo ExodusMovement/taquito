@@ -1,5 +1,5 @@
-import { TaquitoLocalForger } from '../../src/forger/taquito-local-forger';
-import { Context, Protocols } from '../../src/taquito';
+import { TaquitoLocalForger } from '../../src/forger/taquito-local-forger.js';
+import { Context, Protocols } from '../../src/taquito.js';
 
 describe('Taquito local forger', () => {
   const mockRpcClient = {

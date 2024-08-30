@@ -1,9 +1,9 @@
 import BigNumber from 'bignumber.js';
-import { Context } from '../context';
-import { OperationEmitter } from '../operations/operation-emitter';
-import { Operation } from '../operations/operations';
-import { RPCActivateOperation } from '../operations/types';
-import { TzProvider } from './interface';
+import { Context } from '../context.js';
+import { OperationEmitter } from '../operations/operation-emitter.js';
+import { Operation } from '../operations/operations.js';
+import { RPCActivateOperation } from '../operations/types.js';
+import { TzProvider } from './interface.js';
 import { OpKind } from '@exodus/taquito-rpc';
 import {
   validateAddress,

@@ -1,14 +1,14 @@
 import { OperationContentsAndResult, OperationContentsAndResultDelegation } from '@exodus/taquito-rpc';
 import { BigNumber } from 'bignumber.js';
-import { Context } from '../context';
-import { Operation } from './operations';
+import { Context } from '../context.js';
+import { Operation } from './operations.js';
 import {
   FeeConsumingOperation,
   ForgedBytes,
   GasConsumingOperation,
   RPCDelegateOperation,
   StorageConsumingOperation,
-} from './types';
+} from './types.js';
 
 /**
  * @description Delegation operation provide utility function to fetch newly issued delegation

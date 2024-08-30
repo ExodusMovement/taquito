@@ -1,7 +1,7 @@
-import { TezosToolkit } from '../../src/taquito';
-import { ContractAbstraction } from '../../src/contract/contract';
-import { Wallet } from '../../src/wallet/wallet';
-import { script } from '../contract/data-lambda-view-class';
+import { TezosToolkit } from '../../src/taquito.js';
+import { ContractAbstraction } from '../../src/contract/contract.js';
+import { Wallet } from '../../src/wallet/wallet.js';
+import { script } from '../contract/data-lambda-view-class.js';
 
 class ContractAbstractionTest {
   constructor(private abs: ContractAbstraction<Wallet>) {}

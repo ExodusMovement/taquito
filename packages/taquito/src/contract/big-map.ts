@@ -1,6 +1,6 @@
 import { Schema, BigMapKeyType } from '@exodus/taquito-michelson-encoder';
 import BigNumber from 'bignumber.js';
-import { ContractProvider } from './interface';
+import { ContractProvider } from './interface.js';
 import { HttpResponseError, STATUS_CODE } from '@exodus/taquito-http-utils';
 
 export class BigMapAbstraction {

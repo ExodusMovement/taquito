@@ -1,14 +1,14 @@
 import { ViewSchema } from '@exodus/taquito-michelson-encoder';
-import { OnChainView } from '../../src/contract/contract-methods/contract-on-chain-view';
+import { OnChainView } from '../../src/contract/contract-methods/contract-on-chain-view.js';
 import BigNumber from 'bignumber.js';
 import {
   InvalidViewParameterError,
   InvalidViewSimulationContext,
   ViewSimulationError,
-} from '../../src/contract';
+} from '../../src/contract/index.js';
 import { HttpResponseError, STATUS_CODE } from '@exodus/taquito-http-utils';
-import { RpcReadAdapter } from '../../src/read-provider/rpc-read-adapter';
-import { Protocols } from '../../src/constants';
+import { RpcReadAdapter } from '../../src/read-provider/rpc-read-adapter.js';
+import { Protocols } from '../../src/constants.js';
 
 describe('OnChainView test on K protocol', () => {
   let view: OnChainView;

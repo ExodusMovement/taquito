@@ -3,15 +3,15 @@ import {
   OperationContentsAndResultSmartRollupAddMessages,
 } from '@exodus/taquito-rpc';
 
-import { Context } from '../context';
-import { Operation } from './operations';
+import { Context } from '../context.js';
+import { Operation } from './operations.js';
 import {
   FeeConsumingOperation,
   ForgedBytes,
   GasConsumingOperation,
   StorageConsumingOperation,
   RPCSmartRollupAddMessagesOperation,
-} from './types';
+} from './types.js';
 
 /**
  * @description SmartRollupAddMessagesOperation provides utility to fetch properties of SmartRollupAddMessages

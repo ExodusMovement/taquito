@@ -1,8 +1,8 @@
 import { BlockResponse } from '@exodus/taquito-rpc';
 import { rxSandbox } from '@exodus/rx-sandbox';
-import { Context } from '../../src/context';
-import { WalletOperation } from '../../src/wallet';
-import { blockResponse } from './data';
+import { Context } from '../../src/context.js';
+import { WalletOperation } from '../../src/wallet/index.js';
+import { blockResponse } from './data.js';
 
 describe('WalletOperation', () => {
   const toJSON = (x: any) => JSON.parse(JSON.stringify(x));

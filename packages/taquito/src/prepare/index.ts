@@ -1,2 +1,2 @@
-export * from './interface';
-export * from './prepare-provider';
+export * from './interface.js';
+export * from './prepare-provider.js';

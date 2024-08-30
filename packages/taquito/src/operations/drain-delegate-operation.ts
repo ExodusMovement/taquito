@@ -1,7 +1,7 @@
 import { OperationContentsAndResult, OperationContentsAndResultDrainDelegate } from '@exodus/taquito-rpc';
-import { Context } from '../context';
-import { Operation } from './operations';
-import { ForgedBytes, RPCDrainDelegateOperation } from './types';
+import { Context } from '../context.js';
+import { Operation } from './operations.js';
+import { ForgedBytes, RPCDrainDelegateOperation } from './types.js';
 
 /**
  *

@@ -1,7 +1,7 @@
 import { OperationContentsAndResult, OperationContentsAndResultProposals } from '@exodus/taquito-rpc';
-import { Context } from '../context';
-import { Operation } from './operations';
-import { ForgedBytes, RPCProposalsOperation } from './types';
+import { Context } from '../context.js';
+import { Operation } from './operations.js';
+import { ForgedBytes, RPCProposalsOperation } from './types.js';
 
 /**
  *

@@ -26,15 +26,15 @@ import {
   ParamsWithKind,
   SmartRollupAddMessagesParams,
   SmartRollupOriginateParams,
-} from '../operations/types';
-import { PreparationProvider, PreparedOperation } from './interface';
-import { Protocols } from '../constants';
+} from '../operations/types.js';
+import { PreparationProvider, PreparedOperation } from './interface.js';
+import { Protocols } from '../constants.js';
 import { InvalidOperationKindError, DeprecationError } from '@exodus/taquito-utils';
-import { RPCResponseError } from '../error';
-import { Context } from '../context';
-import { ContractMethod } from '../contract/contract-methods/contract-method-flat-param';
-import { ContractMethodObject } from '../contract/contract-methods/contract-method-object-param';
-import { ContractProvider } from '../contract/interface';
+import { RPCResponseError } from '../error.js';
+import { Context } from '../context.js';
+import { ContractMethod } from '../contract/contract-methods/contract-method-flat-param.js';
+import { ContractMethodObject } from '../contract/contract-methods/contract-method-object-param.js';
+import { ContractProvider } from '../contract/interface.js';
 import {
   createSetDelegateOperation,
   createTransferOperation,
@@ -54,9 +54,9 @@ import {
   ContractStorageType,
   createSmartRollupAddMessagesOperation,
   createSmartRollupOriginateOperation,
-} from '../contract';
-import { Estimate } from '../estimate';
-import { OperationBatch } from '../batch/rpc-batch-provider';
+} from '../contract/index.js';
+import { Estimate } from '../estimate/index.js';
+import { OperationBatch } from '../batch/rpc-batch-provider.js';
 import { ForgeParams } from '@exodus/taquito-local-forging';
 
 /**

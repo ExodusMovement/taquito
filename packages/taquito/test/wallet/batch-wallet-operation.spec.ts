@@ -1,12 +1,12 @@
 import { BlockResponse } from '@exodus/taquito-rpc';
 import { rxSandbox } from '@exodus/rx-sandbox';
-import { Context } from '../../src/context';
-import { BatchWalletOperation } from '../../src/wallet/batch-operation';
+import { Context } from '../../src/context.js';
+import { BatchWalletOperation } from '../../src/wallet/batch-operation.js';
 import {
   resultOriginations,
   resultWithoutOrigination,
   resultSingleOrigination,
-} from '../data/batch-results';
+} from '../data/batch-results.js';
 
 const createFakeBlock = (level: number, opHash?: string) => {
   const op = {

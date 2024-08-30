@@ -13,11 +13,11 @@ import {
   TxRollupBatchParams,
   TxRollupOriginateParams,
   UpdateConsensusKeyParams,
-} from '../operations/types';
-import { ContractMethod } from '../contract/contract-methods/contract-method-flat-param';
-import { ContractMethodObject } from '../contract/contract-methods/contract-method-object-param';
-import { ContractProvider } from '../contract/interface';
-import { ParamsWithKind } from '../operations/types';
+} from '../operations/types.js';
+import { ContractMethod } from '../contract/contract-methods/contract-method-flat-param.js';
+import { ContractMethodObject } from '../contract/contract-methods/contract-method-object-param.js';
+import { ContractProvider } from '../contract/interface.js';
+import { ParamsWithKind } from '../operations/types.js';
 import { ForgeParams } from '@exodus/taquito-local-forging';
 
 /**

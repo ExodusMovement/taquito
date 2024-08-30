@@ -1,13 +1,13 @@
 import { BigMapKeyType, MichelsonMap, MichelsonMapKey, Schema } from '@exodus/taquito-michelson-encoder';
 import { SaplingDiffResponse } from '@exodus/taquito-rpc';
-import { OperationBatch } from '../batch/rpc-batch-provider';
-import { Context } from '../context';
-import { DelegateOperation } from '../operations/delegate-operation';
-import { OriginationOperation } from '../operations/origination-operation';
-import { RegisterGlobalConstantOperation } from '../operations/register-global-constant-operation';
-import { RevealOperation } from '../operations/reveal-operation';
-import { TxRollupOriginationOperation } from '../operations/tx-rollup-origination-operation';
-import { TransactionOperation } from '../operations/transaction-operation';
+import { OperationBatch } from '../batch/rpc-batch-provider.js';
+import { Context } from '../context.js';
+import { DelegateOperation } from '../operations/delegate-operation.js';
+import { OriginationOperation } from '../operations/origination-operation.js';
+import { RegisterGlobalConstantOperation } from '../operations/register-global-constant-operation.js';
+import { RevealOperation } from '../operations/reveal-operation.js';
+import { TxRollupOriginationOperation } from '../operations/tx-rollup-origination-operation.js';
+import { TransactionOperation } from '../operations/transaction-operation.js';
 import {
   DelegateParams,
   OriginateParams,
@@ -26,17 +26,17 @@ import {
   UpdateConsensusKeyParams,
   SmartRollupAddMessagesParams,
   SmartRollupOriginateParams,
-} from '../operations/types';
-import { ContractAbstraction, ContractStorageType, DefaultContractType } from './contract';
-import { TxRollupBatchOperation } from '../operations/tx-rollup-batch-operation';
-import { IncreasePaidStorageOperation } from '../operations/increase-paid-storage-operation';
-import { TransferTicketOperation } from '../operations/transfer-ticket-operation';
-import { DrainDelegateOperation } from '../operations';
-import { BallotOperation } from '../operations';
-import { ProposalsOperation } from '../operations/proposals-operation';
-import { UpdateConsensusKeyOperation } from '../operations/update-consensus-key-operation';
-import { SmartRollupAddMessagesOperation } from '../operations/smart-rollup-add-messages-operation';
-import { SmartRollupOriginateOperation } from '../operations/smart-rollup-originate-operation';
+} from '../operations/types.js';
+import { ContractAbstraction, ContractStorageType, DefaultContractType } from './contract.js';
+import { TxRollupBatchOperation } from '../operations/tx-rollup-batch-operation.js';
+import { IncreasePaidStorageOperation } from '../operations/increase-paid-storage-operation.js';
+import { TransferTicketOperation } from '../operations/transfer-ticket-operation.js';
+import { DrainDelegateOperation } from '../operations/index.js';
+import { BallotOperation } from '../operations/index.js';
+import { ProposalsOperation } from '../operations/proposals-operation.js';
+import { UpdateConsensusKeyOperation } from '../operations/update-consensus-key-operation.js';
+import { SmartRollupAddMessagesOperation } from '../operations/smart-rollup-add-messages-operation.js';
+import { SmartRollupOriginateOperation } from '../operations/smart-rollup-originate-operation.js';
 
 export type ContractSchema = Schema | unknown;
 

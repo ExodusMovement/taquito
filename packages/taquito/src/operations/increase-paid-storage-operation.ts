@@ -2,15 +2,15 @@ import {
   OperationContentsAndResult,
   OperationContentsAndResultIncreasePaidStorage,
 } from '@exodus/taquito-rpc';
-import { Context } from '../context';
-import { Operation } from './operations';
+import { Context } from '../context.js';
+import { Operation } from './operations.js';
 import {
   FeeConsumingOperation,
   ForgedBytes,
   GasConsumingOperation,
   RPCIncreasePaidStorageOperation,
   StorageConsumingOperation,
-} from './types';
+} from './types.js';
 
 /**
  *

@@ -1,11 +1,11 @@
-import { DrainDelegateOperation } from '../../src/operations';
+import { DrainDelegateOperation } from '../../src/operations/index.js';
 import {
   OperationContentsAndResult,
   OpKind,
   OperationContentsAndResultDrainDelegate,
 } from '@exodus/taquito-rpc';
-import { ForgedBytes } from '../../src/operations/types';
-import { defaultConfigConfirmation } from '../../src/context';
+import { ForgedBytes } from '../../src/operations/types.js';
+import { defaultConfigConfirmation } from '../../src/context.js';
 
 describe('DrainDelegate operation', () => {
   let fakeContext: any;

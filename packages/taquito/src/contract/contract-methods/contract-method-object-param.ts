@@ -1,10 +1,10 @@
-import { TransactionOperation } from '../../operations/transaction-operation';
-import { TransferParams } from '../../operations/types';
-import { ContractProvider } from '../interface';
-import { TransactionWalletOperation, Wallet } from '../../wallet';
+import { TransactionOperation } from '../../operations/transaction-operation.js';
+import { TransferParams } from '../../operations/types.js';
+import { ContractProvider } from '../interface.js';
+import { TransactionWalletOperation, Wallet } from '../../wallet/index.js';
 import { ParameterSchema } from "@exodus/taquito-michelson-encoder";
-import { ContractMethodInterface, ExplicitTransferParams, SendParams } from './contract-method-interface';
-import { DEFAULT_SMART_CONTRACT_METHOD_NAME } from '../contract';
+import { ContractMethodInterface, ExplicitTransferParams, SendParams } from './contract-method-interface.js';
+import { DEFAULT_SMART_CONTRACT_METHOD_NAME } from '../contract.js';
 
 /**
  * @description Utility class to send smart contract operation

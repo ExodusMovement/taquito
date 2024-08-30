@@ -1,12 +1,12 @@
-import { ForgedBytes, RPCTransferTicketOperation } from '../../src/operations/types';
+import { ForgedBytes, RPCTransferTicketOperation } from '../../src/operations/types.js';
 import {
   METADATA_BALANCE_UPDATES_CATEGORY,
   OperationContentsAndResult,
   OperationContentsAndResultTransferTicket,
   OpKind,
 } from '@exodus/taquito-rpc';
-import { defaultConfigConfirmation } from '../../src/context';
-import { TransferTicketOperation } from '../../src/operations/transfer-ticket-operation';
+import { defaultConfigConfirmation } from '../../src/context.js';
+import { TransferTicketOperation } from '../../src/operations/transfer-ticket-operation.js';
 
 describe('Transfer Operation L2 Tx Rollup', () => {
   let fakeContext: any;

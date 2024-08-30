@@ -1,6 +1,6 @@
-import { RpcTzProvider } from '../../src/tz/rpc-tz-provider';
+import { RpcTzProvider } from '../../src/tz/rpc-tz-provider.js';
 import BigNumber from 'bignumber.js';
-import { Context } from '../../src/context';
+import { Context } from '../../src/context.js';
 
 describe('RpcTzProvider test', () => {
   it('is instantiable', () => {

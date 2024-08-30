@@ -1,4 +1,4 @@
-import { DefaultGlobalConstantsProvider } from '../../src/global-constants/default-global-constants-provider';
+import { DefaultGlobalConstantsProvider } from '../../src/global-constants/default-global-constants-provider.js';
 
 describe('DefaultGlobalConstantsProvider tests', () => {
     const michelineExpr = {

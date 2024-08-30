@@ -1,6 +1,6 @@
-import { RpcReadAdapter } from '../../src/read-provider/rpc-read-adapter';
+import { RpcReadAdapter } from '../../src/read-provider/rpc-read-adapter.js';
 import BigNumber from 'bignumber.js';
-import { BlockIdentifier } from '../../src/read-provider/interface';
+import { BlockIdentifier } from '../../src/read-provider/interface.js';
 import {
   bigmapValue,
   blockHeader,
@@ -12,7 +12,7 @@ import {
   contractStorage,
   liveBlocks,
   saplingState,
-} from './data';
+} from './data.js';
 import { RpcClient } from '@exodus/taquito-rpc';
 
 describe('RpcReadAdapter test', () => {

@@ -1,9 +1,9 @@
 import { BlockResponse } from '@exodus/taquito-rpc';
 import { rxSandbox } from '@exodus/rx-sandbox';
-import { Context } from '../../src/context';
-import { createIncreasePaidStorageOperation } from '../../src/contract';
-import { Wallet } from '../../src/wallet';
-import { IncreasePaidStorageWalletOperation } from '../../src/wallet/increase-paid-storage-operation';
+import { Context } from '../../src/context.js';
+import { createIncreasePaidStorageOperation } from '../../src/contract/index.js';
+import { Wallet } from '../../src/wallet/index.js';
+import { IncreasePaidStorageWalletOperation } from '../../src/wallet/increase-paid-storage-operation.js';
 
 describe('WalletOperation', () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

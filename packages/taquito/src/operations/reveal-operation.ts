@@ -1,15 +1,15 @@
 import { OperationContentsAndResult, OperationContentsAndResultReveal } from '@exodus/taquito-rpc';
 import { BigNumber } from 'bignumber.js';
-import { Context } from '../context';
-import { flattenErrors, flattenOperationResult } from './operation-errors';
-import { Operation } from './operations';
+import { Context } from '../context.js';
+import { flattenErrors, flattenOperationResult } from './operation-errors.js';
+import { Operation } from './operations.js';
 import {
   FeeConsumingOperation,
   ForgedBytes,
   GasConsumingOperation,
   RPCRevealOperation,
   StorageConsumingOperation,
-} from './types';
+} from './types.js';
 
 /**
  * @description Reveal operation provides utility functions to fetch a newly issued revelation

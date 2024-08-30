@@ -1,4 +1,4 @@
-import { DelegateParams, IncreasePaidStorageParams, OriginateParams, TransferParams } from '../operations/types';
+import { DelegateParams, IncreasePaidStorageParams, OriginateParams, TransferParams } from '../operations/types.js';
 
 export type WalletDefinedFields = 'source';
 

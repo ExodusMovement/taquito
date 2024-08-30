@@ -2,15 +2,15 @@ import {
   OperationContentsAndResult,
   OperationContentsAndResultUpdateConsensusKey,
 } from '@exodus/taquito-rpc';
-import { Context } from '../context';
-import { Operation } from './operations';
+import { Context } from '../context.js';
+import { Operation } from './operations.js';
 import {
   FeeConsumingOperation,
   ForgedBytes,
   GasConsumingOperation,
   RPCUpdateConsensusKeyOperation,
   StorageConsumingOperation,
-} from './types';
+} from './types.js';
 
 /**
  *

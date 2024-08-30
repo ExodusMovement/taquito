@@ -1,5 +1,5 @@
 import { InternalOperationResult } from '@exodus/taquito-rpc';
-import { evaluateOpFilter, evaluateExpression, eventFilter } from '../../src/subscribe/filters';
+import { evaluateOpFilter, evaluateExpression, eventFilter } from '../../src/subscribe/filters.js';
 
 const mockInternalOperationResult = {
   kind: 'event',

@@ -26,17 +26,17 @@ export {
   RPCDrainDelegateOperation,
   BallotParams,
   RPCBallotOperation,
-} from './types';
+} from './types.js';
 export {
   TezosOperationError,
   TezosOperationErrorWithMessage,
   TezosPreapplyFailureError,
   InvalidEstimateValueError,
-} from './operation-errors';
-export { BatchOperation } from './batch-operation';
-export { DelegateOperation } from './delegate-operation';
-export { OriginationOperation } from './origination-operation';
-export { TransactionOperation } from './transaction-operation';
-export { BallotOperation } from './ballot-operation';
-export { DrainDelegateOperation } from './drain-delegate-operation';
-export { Operation } from './operations';
+} from './operation-errors.js';
+export { BatchOperation } from './batch-operation.js';
+export { DelegateOperation } from './delegate-operation.js';
+export { OriginationOperation } from './origination-operation.js';
+export { TransactionOperation } from './transaction-operation.js';
+export { BallotOperation } from './ballot-operation.js';
+export { DrainDelegateOperation } from './drain-delegate-operation.js';
+export { Operation } from './operations.js';

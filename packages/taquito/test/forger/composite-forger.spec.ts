@@ -1,4 +1,4 @@
-import { CompositeForger, AsyncForger } from '../../src/taquito';
+import { CompositeForger, AsyncForger } from '../../src/taquito.js';
 
 describe('Composite forger', () => {
   const mockForgerThatReturn = (val: string): AsyncForger => ({ forge: () => Promise.resolve(val) });

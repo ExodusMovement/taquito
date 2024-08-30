@@ -1,4 +1,4 @@
-import { TransferParams } from '../../src/operations/types';
+import { TransferParams } from '../../src/operations/types.js';
 
 const errorBuilder = (result: any) => {
   return {

@@ -1,5 +1,5 @@
 import { AsyncForger, ForgeParams, ForgeResponse } from '@exodus/taquito-local-forging';
-import { Context } from '../context';
+import { Context } from '../context.js';
 
 export class RpcForger implements AsyncForger {
   constructor(private context: Context) {}

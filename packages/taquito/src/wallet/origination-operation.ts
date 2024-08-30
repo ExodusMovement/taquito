@@ -5,10 +5,10 @@ import {
   OpKind,
 } from '@exodus/taquito-rpc';
 import { Observable } from '@exodus/rxjs';
-import { Context } from '../context';
-import { DefaultWalletType } from '../contract/contract';
-import { findWithKind } from '../operations/types';
-import { WalletOperation, OperationStatus } from './operation';
+import { Context } from '../context.js';
+import { DefaultWalletType } from '../contract/contract.js';
+import { findWithKind } from '../operations/types.js';
+import { WalletOperation, OperationStatus } from './operation.js';
 
 export class OriginationWalletOperation<TWallet extends DefaultWalletType = DefaultWalletType> extends WalletOperation {
   constructor(

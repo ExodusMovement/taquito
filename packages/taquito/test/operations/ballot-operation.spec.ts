@@ -1,7 +1,7 @@
-import { BallotOperation } from '../../src/operations/ballot-operation';
+import { BallotOperation } from '../../src/operations/ballot-operation.js';
 import { OperationContentsAndResult } from '@exodus/taquito-rpc';
-import { ForgedBytes } from '../../src/operations/types';
-import { defaultConfigConfirmation } from '../../src/context';
+import { ForgedBytes } from '../../src/operations/types.js';
+import { defaultConfigConfirmation } from '../../src/context.js';
 
 describe('Ballot operation', () => {
   let fakeContext: any;

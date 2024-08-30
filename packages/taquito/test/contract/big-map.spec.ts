@@ -1,7 +1,7 @@
 import { HttpResponseError, STATUS_CODE } from '@exodus/taquito-http-utils';
 import BigNumber from 'bignumber.js';
 import { MichelsonMap, Schema } from '@exodus/taquito-michelson-encoder';
-import { BigMapAbstraction } from '../../src/contract/big-map';
+import { BigMapAbstraction } from '../../src/contract/big-map.js';
 
 /**
  * BigMapAbstraction test

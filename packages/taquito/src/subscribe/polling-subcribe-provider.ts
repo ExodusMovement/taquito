@@ -14,8 +14,8 @@ import {
   retry,
   switchMap,
 } from '@exodus/rxjs/operators';
-import { Context } from '../context';
-import { evaluateFilter, eventFilter } from './filters';
+import { Context } from '../context.js';
+import { evaluateFilter, eventFilter } from './filters.js';
 import {
   Filter,
   EventFilter,
@@ -23,8 +23,8 @@ import {
   Subscription,
   OperationContent,
   EventSubscription,
-} from './interface';
-import { ObservableSubscription } from './observable-subscription';
+} from './interface.js';
+import { ObservableSubscription } from './observable-subscription.js';
 import BigNumber from 'bignumber.js';
 
 export interface PollingSubscribeProviderConfig {

@@ -1,4 +1,4 @@
-import { Packer } from './interface';
+import { Packer } from './interface.js';
 import { packDataBytes, MichelsonData, MichelsonType } from '@exodus/taquito-michel-codec'
 import { PackDataResponse, PackDataParams } from '@exodus/taquito-rpc';
 

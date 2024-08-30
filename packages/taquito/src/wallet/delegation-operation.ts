@@ -5,8 +5,8 @@ import {
   OpKind,
 } from '@exodus/taquito-rpc';
 import { Observable } from '@exodus/rxjs';
-import { Context } from '../context';
-import { WalletOperation, OperationStatus } from './operation';
+import { Context } from '../context.js';
+import { WalletOperation, OperationStatus } from './operation.js';
 
 export class DelegationWalletOperation extends WalletOperation {
   constructor(

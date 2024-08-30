@@ -1,21 +1,21 @@
-import { Context } from '../context';
+import { Context } from '../context.js';
 import {
   ContractAbstraction,
   ContractStorageType,
   DefaultWalletType,
   SendParams,
-} from '../contract';
-import { ContractMethod } from '../contract/contract-methods/contract-method-flat-param';
-import { ContractMethodObject } from '../contract/contract-methods/contract-method-object-param';
-import { OpKind, withKind } from '../operations/types';
-import { OriginationWalletOperation } from './origination-operation';
+} from '../contract/index.js';
+import { ContractMethod } from '../contract/contract-methods/contract-method-flat-param.js';
+import { ContractMethodObject } from '../contract/contract-methods/contract-method-object-param.js';
+import { OpKind, withKind } from '../operations/types.js';
+import { OriginationWalletOperation } from './origination-operation.js';
 import {
   WalletDelegateParams,
   WalletIncreasePaidStorageParams,
   WalletOriginateParams,
   WalletProvider,
   WalletTransferParams,
-} from './interface';
+} from './interface.js';
 
 import {
   validateAddress,

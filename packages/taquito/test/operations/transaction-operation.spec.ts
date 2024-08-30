@@ -1,8 +1,8 @@
-import { ForgedBytes } from '../../src/operations/types';
+import { ForgedBytes } from '../../src/operations/types.js';
 import { OperationContentsAndResult } from '@exodus/taquito-rpc';
-import { TransactionOperation } from '../../src/operations/transaction-operation';
-import { defaultConfigConfirmation } from '../../src/context';
-import { TransferOperationBuilder, RevealOperationBuilder } from '../helpers';
+import { TransactionOperation } from '../../src/operations/transaction-operation.js';
+import { defaultConfigConfirmation } from '../../src/context.js';
+import { TransferOperationBuilder, RevealOperationBuilder } from '../helpers.js';
 
 describe('Transfer operation', () => {
   let fakeContext: any;

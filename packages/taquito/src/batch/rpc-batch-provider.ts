@@ -1,8 +1,8 @@
-import { Context } from '../context';
-import { ContractStorageType, DefaultContractType } from '../contract/contract';
-import { ContractMethod } from '../contract/contract-methods/contract-method-flat-param';
-import { SendParams } from '../contract/contract-methods/contract-method-interface';
-import { ContractProvider } from '../contract/interface';
+import { Context } from '../context.js';
+import { ContractStorageType, DefaultContractType } from '../contract/contract.js';
+import { ContractMethod } from '../contract/contract-methods/contract-method-flat-param.js';
+import { SendParams } from '../contract/contract-methods/contract-method-interface.js';
+import { ContractProvider } from '../contract/interface.js';
 import {
   createOriginationOperation,
   createRegisterGlobalConstantOperation,
@@ -15,9 +15,9 @@ import {
   createIncreasePaidStorageOperation,
   createSmartRollupAddMessagesOperation,
   createSmartRollupOriginateOperation,
-} from '../contract/prepare';
-import { BatchOperation } from '../operations/batch-operation';
-import { OperationEmitter } from '../operations/operation-emitter';
+} from '../contract/prepare.js';
+import { BatchOperation } from '../operations/batch-operation.js';
+import { OperationEmitter } from '../operations/operation-emitter.js';
 import {
   ActivationParams,
   DelegateParams,
@@ -35,9 +35,9 @@ import {
   IncreasePaidStorageParams,
   SmartRollupAddMessagesParams,
   SmartRollupOriginateParamsWithProof,
-} from '../operations/types';
+} from '../operations/types.js';
 import { OpKind } from '@exodus/taquito-rpc';
-import { ContractMethodObject } from '../contract/contract-methods/contract-method-object-param';
+import { ContractMethodObject } from '../contract/contract-methods/contract-method-object-param.js';
 import {
   validateAddress,
   validateKeyHash,
@@ -46,7 +46,7 @@ import {
   ValidationResult,
   InvalidOperationKindError,
 } from '@exodus/taquito-utils';
-import { EstimationProvider } from '../estimate/estimate-provider-interface';
+import { EstimationProvider } from '../estimate/estimate-provider-interface.js';
 
 export const BATCH_KINDS = [
   OpKind.ACTIVATION,

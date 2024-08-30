@@ -12,15 +12,15 @@ import {
   InvalidChainIdError,
   DeprecationError,
 } from '@exodus/taquito-utils';
-import { ChainIds } from '../constants';
-import { TzReadProvider } from '../read-provider/interface';
-import { Wallet } from '../wallet';
-import { ContractMethodFactory } from './contract-methods/contract-method-factory';
-import { ContractMethod } from './contract-methods/contract-method-flat-param';
-import { ContractMethodObject } from './contract-methods/contract-method-object-param';
-import { OnChainView } from './contract-methods/contract-on-chain-view';
-import { InvalidParameterError } from './errors';
-import { ContractProvider, StorageProvider } from './interface';
+import { ChainIds } from '../constants.js';
+import { TzReadProvider } from '../read-provider/interface.js';
+import { Wallet } from '../wallet/index.js';
+import { ContractMethodFactory } from './contract-methods/contract-method-factory.js';
+import { ContractMethod } from './contract-methods/contract-method-flat-param.js';
+import { ContractMethodObject } from './contract-methods/contract-method-object-param.js';
+import { OnChainView } from './contract-methods/contract-on-chain-view.js';
+import { InvalidParameterError } from './errors.js';
+import { ContractProvider, StorageProvider } from './interface.js';
 
 export const DEFAULT_SMART_CONTRACT_METHOD_NAME = 'default';
 

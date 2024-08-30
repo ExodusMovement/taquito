@@ -1,9 +1,9 @@
 import { OperationContentsAndResult, OperationContentsAndResultOrigination } from '@exodus/taquito-rpc';
 import BigNumber from 'bignumber.js';
-import { BATCH_KINDS } from '../batch/rpc-batch-provider';
-import { Context } from '../context';
-import { flattenErrors, flattenOperationResult } from './operation-errors';
-import { Operation } from './operations';
+import { BATCH_KINDS } from '../batch/rpc-batch-provider.js';
+import { Context } from '../context.js';
+import { flattenErrors, flattenOperationResult } from './operation-errors.js';
+import { Operation } from './operations.js';
 import {
   FeeConsumingOperation,
   ForgedBytes,
@@ -11,7 +11,7 @@ import {
   RPCOperation,
   StorageConsumingOperation,
   hasMetadataWithResult,
-} from './types';
+} from './types.js';
 
 export class BatchOperation
   extends Operation

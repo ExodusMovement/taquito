@@ -1,6 +1,6 @@
-import LambdaView from '../../src/contract/lambda-view';
-import { TezosToolkit } from '../../src/taquito';
-import { entrypoints, script } from './data-lambda-view-class';
+import LambdaView from '../../src/contract/lambda-view.js';
+import { TezosToolkit } from '../../src/taquito.js';
+import { entrypoints, script } from './data-lambda-view-class.js';
 
 describe('LambdaView test', () => {
   let mockRpcClientView: any;

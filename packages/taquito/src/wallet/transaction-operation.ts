@@ -1,5 +1,5 @@
-import { WalletOperation, OperationStatus } from './operation';
-import { Context } from '../context';
+import { WalletOperation, OperationStatus } from './operation.js';
+import { Context } from '../context.js';
 import { Observable } from '@exodus/rxjs';
 import {
   BlockResponse,

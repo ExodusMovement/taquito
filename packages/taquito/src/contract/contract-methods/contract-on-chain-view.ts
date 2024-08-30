@@ -7,13 +7,13 @@ import {
   RPCRunScriptViewParam,
 } from '@exodus/taquito-rpc';
 import { validateAddress, ValidationResult } from '@exodus/taquito-utils';
-import { TzReadProvider } from '../../read-provider/interface';
+import { TzReadProvider } from '../../read-provider/interface.js';
 import {
   InvalidViewSimulationContext,
   InvalidViewParameterError,
   ViewSimulationError,
   validateAndExtractFailwith,
-} from '../errors';
+} from '../errors.js';
 
 export interface ExecutionContextParams {
   source?: string;

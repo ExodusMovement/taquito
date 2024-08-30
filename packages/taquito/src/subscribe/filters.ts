@@ -7,11 +7,11 @@ import {
   KindFilter,
   DestinationFilter,
   OperationContent,
-} from './interface';
+} from './interface.js';
 
 import { InternalOperationResult } from '@exodus/taquito-rpc';
 
-import { InvalidFilterExpressionError } from '../error';
+import { InvalidFilterExpressionError } from '../error.js';
 
 const opHashFilter = (op: OperationContent, filter: OpHashFilter) => op.hash === filter.opHash;
 
